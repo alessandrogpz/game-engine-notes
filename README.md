@@ -1,6 +1,6 @@
 # Data-Oriented Design (DOD) & Cache Locality Vault
 
-This repository is a personal learning vault dedicated to **Data-Oriented Design (DOD)**, **CPU cache locality**, and **memory layout optimizations**. It contains structured Obsidian notes alongside runnable C++ benchmarks that demonstrate how memory layouts affect real-world execution speeds.
+This repository is a personal learning vault dedicated to **Data-Oriented Design (DOD)**, **CPU cache locality**, and **memory layout optimizations**. It contains structured learning notes alongside runnable C++ benchmarks that demonstrate how memory layouts affect real-world execution speeds.
 
 ---
 
@@ -51,8 +51,6 @@ g++ -std=c++20 03_Multi_Threading_and_Parallelism/multi_threading.cpp -o mt_benc
 
 ---
 
-## Obsidian Vault Integration
+## Getting Started
 
-This repository is formatted as a local **Obsidian Vault**. You can open the root folder directly in Obsidian to navigate the notes with full backlink resolution. 
-
-*   Start with the master note: **[`Intro to Data-Oriented Design (DOD).md`](./Intro%20to%20Data-Oriented%20Design%20(DOD).md)**
+To explore the structured notes, start with the master index note: **[`Intro to Data-Oriented Design (DOD).md`](./Intro%20to%20Data-Oriented%20Design%20(DOD).md)**
