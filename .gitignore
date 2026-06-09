@@ -1,0 +1,23 @@
+# Compiled Binaries & Object Files
+*.o
+*.obj
+*.out
+*.exe
+*.app
+*test
+*test_align
+*test_aos
+*test_mt
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# VS Code Workspace Files
+.vscode/ipch/
+.vscode/extensions.json
+*.code-workspace
+
+# Obsidian Workspace Files
+.obsidian/workspace.json
+**/workspace.json
