@@ -15,38 +15,20 @@ DOD focuses on organizing data in contiguous memory blocks first, then processin
 
 ---
 
-## Learning Path
+## Learning Path & Repository Structure
 
 Explore the core concepts step-by-step:
 
-1. **[[cache_locality]]**
-   * Understand CPU bottlenecks, memory latency tiers, the 64-byte Cache Line, and AoS vs. SoA layouts.
-   * *Companion Code:* [`aos_vs_soa.cpp`](./01_cache_locality/aos_vs_soa.cpp)
-2. **[[memory_alignment]]**
-   * Learn about hardware word sizes, compiler padding, and struct sorting rules.
-   * *Companion Code:* [`alignment.cpp`](./02_memory_alignment/alignment.cpp)
-3. **[[multi_threading]]**
-   * Design lock-free parallel systems, analyze race conditions, and avoid False Sharing.
-   * *Companion Code:* [`multi_threading.cpp`](./03_multi_threading/multi_threading.cpp)
-4. **[[dod_optimizations]]**
-   * A practical, step-by-step guide to refactoring OOP entities into DOD structures, achieving up to a 40x speedup.
-5. **[[advanced_dod]]**
-   * Deep dive into advanced techniques: AoSoA hybrid layouts, SIMD vectorization, ECS architecture, Custom Allocators, and Instruction Cache optimizations.
-
----
-
-## Repository Structure
-
-*   **[`01_cache_locality`](./01_cache_locality)**
-    *   *Notes:* Memory latency hierarchy cycles, 64-byte Cache Lines, and Array of Structures (AoS) vs. Structure of Arrays (SoA).
-    *   *Code:* [`aos_vs_soa.cpp`](./01_cache_locality/aos_vs_soa.cpp) — Stride vs. sequential access benchmark (Row-Major vs. Column-Major matrix traversal).
-*   **[`02_memory_alignment`](./02_memory_alignment)**
-    *   *Notes:* Hardware word boundaries, compiler padding rules, and struct member ordering to maximize cache line density.
-    *   *Code:* [`alignment.cpp`](./02_memory_alignment/alignment.cpp) — Size comparison of aligned (`GoodLayout`) and padded (`BadLayout`) structures.
-*   **[`03_multi_threading`](./03_multi_threading)**
-    *   *Notes:* Concurrency without lock contention, atomic instruction costs, and the hardware mechanics of **False Sharing** (cache line ping-ponging).
-    *   *Code:* [`multi_threading.cpp`](./03_multi_threading/multi_threading.cpp) — Race condition demonstration on shared memory.
-*   **[`04_dod_optimizations`](./04_dod_optimizations)**
-    *   *Notes:* The 8 sequential optimization steps to refactor traditional OOP systems into high-performance DOD systems to achieve up to a ~40x speedup.
-*   **[`05_advanced_dod`](./05_advanced_dod)**
-    *   *Notes:* Advanced architectures: Array of Structures of Arrays (AoSoA) hybrid layouts, SIMD vectorization (AVX/NEON), Entity Component System (ECS) principles, custom allocators (Arenas/Pools), and L1i instruction cache optimizations.
+*   **[`01_cache_locality`](./01_cache_locality)** — **[[cache_locality]]**
+    *   *Concept:* Understand CPU bottlenecks, memory latency tiers, 64-byte Cache Lines, and the difference between Array of Structures (AoS) and Structure of Arrays (SoA).
+    *   *Companion Code:* [`aos_vs_soa.cpp`](./01_cache_locality/aos_vs_soa.cpp) (Stride vs. sequential access matrix traversal).
+*   **[`02_memory_alignment`](./02_memory_alignment)** — **[[memory_alignment]]**
+    *   *Concept:* Learn about hardware word sizes, compiler padding, and struct sorting rules to maximize cache line density.
+    *   *Companion Code:* [`alignment.cpp`](./02_memory_alignment/alignment.cpp) (Size comparison of aligned vs. padded structures).
+*   **[`03_multi_threading`](./03_multi_threading)** — **[[multi_threading]]**
+    *   *Concept:* Design lock-free parallel systems, analyze race conditions, and avoid False Sharing (cache line ping-ponging).
+    *   *Companion Code:* [`multi_threading.cpp`](./03_multi_threading/multi_threading.cpp) (Race condition demonstration on shared memory).
+*   **[`04_dod_optimizations`](./04_dod_optimizations)** — **[[dod_optimizations]]**
+    *   *Concept:* A practical, 8-step guide to refactoring OOP entities into DOD structures, achieving up to a 40x speedup.
+*   **[`05_advanced_dod`](./05_advanced_dod)** — **[[advanced_dod]]**
+    *   *Concept:* Deep dive into advanced techniques: AoSoA hybrid layouts, SIMD vectorization, ECS architecture, Custom Allocators, and Instruction Cache optimizations.
