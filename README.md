@@ -4,7 +4,7 @@ This repository is a personal learning vault dedicated to **Data-Oriented Design
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 The project is organized into self-contained folders, each containing study notes and companion code:
 
@@ -24,7 +24,7 @@ The project is organized into self-contained folders, each containing study note
 
 ---
 
-## 🚀 Compiling & Running Benchmarks
+## Compiling & Running Benchmarks
 
 All code files are written in modern C++ (C++20). You can compile and run them using any standard compiler (like GCC or Clang).
 
@@ -51,7 +51,7 @@ g++ -std=c++20 03_Multi_Threading_and_Parallelism/multi_threading.cpp -o mt_benc
 
 ---
 
-## 📓 Obsidian Vault Integration
+## Obsidian Vault Integration
 
 This repository is formatted as a local **Obsidian Vault**. You can open the root folder directly in Obsidian to navigate the notes with full backlink resolution. 
 
