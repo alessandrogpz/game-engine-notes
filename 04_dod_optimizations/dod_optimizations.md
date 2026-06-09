@@ -68,7 +68,7 @@ This guide outlines the 8 sequential steps to optimize CPU-bound code. Convertin
 ## Step 5: Enforce Memory Alignment
 * **Fix:** Order variables declared inside structs from largest data type to smallest.
 * **Why:** Prevents the compiler from injecting empty padding bytes to satisfy hardware alignment rules, reducing data structure size (~10% speedup).
-* *For detail and code examples, see the dedicated note:* **[[Memory_Alignment]]**
+* *For detail and code examples, see the dedicated note:* **[[memory_alignment]]**
 
 ---
 

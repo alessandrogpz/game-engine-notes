@@ -19,34 +19,34 @@ DOD focuses on organizing data in contiguous memory blocks first, then processin
 
 Explore the core concepts step-by-step:
 
-1. **[[Cache_Locality_and_Memory_Layout]]**
+1. **[[cache_locality]]**
    * Understand CPU bottlenecks, memory latency tiers, the 64-byte Cache Line, and AoS vs. SoA layouts.
-   * *Companion Code:* [`aos_vs_soa.cpp`](./01_Cache_Locality_and_Memory_Layout/aos_vs_soa.cpp)
-2. **[[Memory_Alignment]]**
+   * *Companion Code:* [`aos_vs_soa.cpp`](./01_cache_locality/aos_vs_soa.cpp)
+2. **[[memory_alignment]]**
    * Learn about hardware word sizes, compiler padding, and struct sorting rules.
-   * *Companion Code:* [`alignment.cpp`](./02_Memory_Alignment/alignment.cpp)
-3. **[[Multi_Threading_and_Parallelism]]**
+   * *Companion Code:* [`alignment.cpp`](./02_memory_alignment/alignment.cpp)
+3. **[[multi_threading]]**
    * Design lock-free parallel systems, analyze race conditions, and avoid False Sharing.
-   * *Companion Code:* [`multi_threading.cpp`](./03_Multi_Threading_and_Parallelism/multi_threading.cpp)
-4. **[[DOD_Optimization_Steps]]**
+   * *Companion Code:* [`multi_threading.cpp`](./03_multi_threading/multi_threading.cpp)
+4. **[[dod_optimizations]]**
    * A practical, step-by-step guide to refactoring OOP entities into DOD structures, achieving up to a 40x speedup.
-5. **[[Advanced_DOD_and_Hardware]]**
+5. **[[advanced_dod]]**
    * Deep dive into advanced techniques: AoSoA hybrid layouts, SIMD vectorization, ECS architecture, Custom Allocators, and Instruction Cache optimizations.
 
 ---
 
 ## Repository Structure
 
-*   **[`01_Cache_Locality_and_Memory_Layout`](./01_Cache_Locality_and_Memory_Layout)**
+*   **[`01_cache_locality`](./01_cache_locality)**
     *   *Notes:* Memory latency hierarchy cycles, 64-byte Cache Lines, and Array of Structures (AoS) vs. Structure of Arrays (SoA).
-    *   *Code:* [`aos_vs_soa.cpp`](./01_Cache_Locality_and_Memory_Layout/aos_vs_soa.cpp) — Stride vs. sequential access benchmark (Row-Major vs. Column-Major matrix traversal).
-*   **[`02_Memory_Alignment`](./02_Memory_Alignment)**
+    *   *Code:* [`aos_vs_soa.cpp`](./01_cache_locality/aos_vs_soa.cpp) — Stride vs. sequential access benchmark (Row-Major vs. Column-Major matrix traversal).
+*   **[`02_memory_alignment`](./02_memory_alignment)**
     *   *Notes:* Hardware word boundaries, compiler padding rules, and struct member ordering to maximize cache line density.
-    *   *Code:* [`alignment.cpp`](./02_Memory_Alignment/alignment.cpp) — Size comparison of aligned (`GoodLayout`) and padded (`BadLayout`) structures.
-*   **[`03_Multi_Threading_and_Parallelism`](./03_Multi_Threading_and_Parallelism)**
+    *   *Code:* [`alignment.cpp`](./02_memory_alignment/alignment.cpp) — Size comparison of aligned (`GoodLayout`) and padded (`BadLayout`) structures.
+*   **[`03_multi_threading`](./03_multi_threading)**
     *   *Notes:* Concurrency without lock contention, atomic instruction costs, and the hardware mechanics of **False Sharing** (cache line ping-ponging).
-    *   *Code:* [`multi_threading.cpp`](./03_Multi_Threading_and_Parallelism/multi_threading.cpp) — Race condition demonstration on shared memory.
-*   **[`04_DOD_Optimization_Steps`](./04_DOD_Optimization_Steps)**
+    *   *Code:* [`multi_threading.cpp`](./03_multi_threading/multi_threading.cpp) — Race condition demonstration on shared memory.
+*   **[`04_dod_optimizations`](./04_dod_optimizations)**
     *   *Notes:* The 8 sequential optimization steps to refactor traditional OOP systems into high-performance DOD systems to achieve up to a ~40x speedup.
-*   **[`05_Advanced_DOD_and_Hardware`](./05_Advanced_DOD_and_Hardware)**
+*   **[`05_advanced_dod`](./05_advanced_dod)**
     *   *Notes:* Advanced architectures: Array of Structures of Arrays (AoSoA) hybrid layouts, SIMD vectorization (AVX/NEON), Entity Component System (ECS) principles, custom allocators (Arenas/Pools), and L1i instruction cache optimizations.
