@@ -1,12 +1,10 @@
 # Data-Oriented Design (DOD) & Cache Locality Vault
 
-This repository is a personal learning vault dedicated to **Data-Oriented Design (DOD)**, **CPU cache locality**, and **memory layout optimizations**. It contains structured learning notes alongside runnable C++ benchmarks that demonstrate how memory layouts affect real-world execution speeds.
+This repository is a personal learning vault dedicated to **Data-Oriented Design (DOD)**, **CPU cache locality**, and **memory layout optimizations**.
 
 ---
 
 ## Repository Structure
-
-The project is organized into self-contained folders, each containing study notes and companion code:
 
 *   **[`01_Cache_Locality_and_Memory_Layout`](./01_Cache_Locality_and_Memory_Layout)**
     *   *Notes:* Memory latency hierarchy cycles, 64-byte Cache Lines, and Array of Structures (AoS) vs. Structure of Arrays (SoA).
@@ -23,34 +21,3 @@ The project is organized into self-contained folders, each containing study note
     *   *Notes:* Advanced architectures: Array of Structures of Arrays (AoSoA) hybrid layouts, SIMD vectorization (AVX/NEON), Entity Component System (ECS) principles, custom allocators (Arenas/Pools), and L1i instruction cache optimizations.
 
 ---
-
-## Compiling & Running Benchmarks
-
-All code files are written in modern C++ (C++20). You can compile and run them using any standard compiler (like GCC or Clang).
-
-### 1. Cache Locality (AoS vs. SoA / Matrix Traversal)
-Compare sequential memory access with stride memory access:
-```bash
-g++ -std=c++20 01_Cache_Locality_and_Memory_Layout/aos_vs_soa.cpp -o aos_benchmark
-./aos_benchmark
-```
-
-### 2. Memory Alignment & Padding
-See how data member ordering changes structure size:
-```bash
-g++ -std=c++20 02_Memory_Alignment/alignment.cpp -o alignment_benchmark
-./alignment_benchmark
-```
-
-### 3. Multi-Threading Concurrency
-Observe the behavior of concurrent thread writes on a shared variable:
-```bash
-g++ -std=c++20 03_Multi_Threading_and_Parallelism/multi_threading.cpp -o mt_benchmark
-./mt_benchmark
-```
-
----
-
-## Getting Started
-
-To explore the structured notes, start with the master index note: **[`Intro to Data-Oriented Design (DOD).md`](./Intro%20to%20Data-Oriented%20Design%20(DOD).md)**

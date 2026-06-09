@@ -80,7 +80,7 @@ SoA (DOD Style):   [ X, X, X... ][ Y, Y, Y... ][ Z, Z, Z... ][ R, R, R... ]
 
 ### Code Demonstration: Spatial Locality
 C++ multidimensional arrays are stored in **Row-Major** format (contiguous rows).
-* Compare the performance in [aos_vs_soa.cpp](file:///home/aper/Documents/CacheLocalityAndMemoryLayout/01_Cache_Locality_and_Memory_Layout/aos_vs_soa.cpp).
+* Compare the performance in [aos_vs_soa.cpp](./aos_vs_soa.cpp).
 
 * **Row-Major Traversal (Contiguous access):**
   ```cpp

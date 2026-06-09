@@ -15,7 +15,7 @@ To leverage modern multi-core processors, you must keep cores busy with **indepe
 
 ## Race Conditions & Synchronization Costs
 
-In [multi_threading.cpp](file:///home/aper/Documents/CacheLocalityAndMemoryLayout/03_Multi_Threading_and_Parallelism/multi_threading.cpp), we see a race condition where multiple threads attempt to modify a single global variable concurrently:
+In [multi_threading.cpp](./multi_threading.cpp), we see a race condition where multiple threads attempt to modify a single global variable concurrently:
 
 ```cpp
 int counter = 0;

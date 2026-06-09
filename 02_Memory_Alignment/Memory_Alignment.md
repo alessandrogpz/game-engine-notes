@@ -24,7 +24,7 @@ To minimize padding bytes and reduce structure size:
 ---
 
 ### Code Demonstration: Struct Alignment & Size
-Compare the sizes of the two structures implemented in [alignment.cpp](file:///home/aper/Documents/CacheLocalityAndMemoryLayout/02_Memory_Alignment/alignment.cpp):
+Compare the sizes of the two structures implemented in [alignment.cpp](./alignment.cpp):
 
 #### 1. Bad Layout (12 Bytes)
 ```cpp
@@ -38,7 +38,7 @@ struct BadLayout {
 ```
 * **Memory Visualizer:**
   `[a][pad][pad][pad][ b ][ b ][ b ][ b ][c][pad][pad][pad]`
-* *Code Link:* [BadLayout struct](file:///home/aper/Documents/CacheLocalityAndMemoryLayout/02_Memory_Alignment/alignment.cpp#L3-L7)
+* *Code Link:* [BadLayout struct](./alignment.cpp#L3-L7)
 
 #### 2. Good Layout (8 Bytes)
 ```cpp
@@ -51,7 +51,7 @@ struct GoodLayout {
 ```
 * **Memory Visualizer:**
   `[ b ][ b ][ b ][ b ][a][c][pad][pad]`
-* *Code Link:* [GoodLayout struct](file:///home/aper/Documents/CacheLocalityAndMemoryLayout/02_Memory_Alignment/alignment.cpp#L9-L13)
+* *Code Link:* [GoodLayout struct](./alignment.cpp#L9-L13)
 
 ### Performance Impact
 By ordering from largest to smallest, we save **4 bytes per struct** (a 33% size reduction). At scale:
