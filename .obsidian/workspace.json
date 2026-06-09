@@ -1,0 +1,209 @@
+{
+  "main": {
+    "id": "6a4dc547f7a6f5cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4697e615202d5f1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e906812a62a1ca5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Intro to Data-Oriented Design (DOD).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Intro to Data-Oriented Design (DOD)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2852cf2161bee861",
+    "type": "split",
+    "children": [
+      {
+        "id": "87e4ab5a94e7cd78",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0f362952b6a06127",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "3537b1612bb5cc8c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "2f60a98024fca3b3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300.5
+  },
+  "right": {
+    "id": "8b625b68d021adf7",
+    "type": "split",
+    "children": [
+      {
+        "id": "fabcff653580322d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ad78700cc120a79",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Intro to Data-Oriented Design (DOD).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Intro to Data-Oriented Design (DOD)"
+            }
+          },
+          {
+            "id": "758c248de18989bb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Intro to Data-Oriented Design (DOD).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Intro to Data-Oriented Design (DOD)"
+            }
+          },
+          {
+            "id": "dedb45158cd5dff6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b6e918a44b79ee0c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "06681d9384906be7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Intro to Data-Oriented Design (DOD).md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Intro to Data-Oriented Design (DOD)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "0e906812a62a1ca5",
+  "lastOpenFiles": [
+    "03_Multi_Threading_and_Parallelism/mt_test",
+    "02_Memory_Alignment/align_test",
+    "01_Cache_Locality_and_Memory_Layout/aos_test",
+    "05_Advanced_DOD_and_Hardware/Advanced_DOD_and_Hardware.md",
+    "05_Advanced_DOD_and_Hardware",
+    "04_DOD_Optimization_Steps/DOD_Optimization_Steps.md",
+    "04_DOD_Optimization_Steps",
+    "03_Multi_Threading_and_Parallelism/Multi_Threading_and_Parallelism.md",
+    "03_Multi_Threading_and_Parallelism/multi_threading.cpp",
+    "03_Multi_Threading_and_Parallelism",
+    "02_Memory_Alignment/Memory_Alignment.md",
+    "02_Memory_Alignment/alignment.cpp",
+    "02_Memory_Alignment",
+    "01_Cache_Locality_and_Memory_Layout/Cache_Locality_and_Memory_Layout.md",
+    "01_Cache_Locality_and_Memory_Layout/aos_vs_soa.cpp",
+    "01_Cache_Locality_and_Memory_Layout",
+    "The Core Problem & Hardware Realities.md",
+    "The 8 Optimization Steps.md",
+    "Rules of Thumb for Fast CPU Code.md",
+    "Intro to Data-Oriented Design (DOD).md"
+  ]
+}
