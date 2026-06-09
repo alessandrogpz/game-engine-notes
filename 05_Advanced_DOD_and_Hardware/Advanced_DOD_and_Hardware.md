@@ -97,4 +97,4 @@ CPUs do not just cache data; they also cache the compiled machine instructions i
   * Separate objects into different arrays based on state (Step 8 of DOD), replacing conditional branching with data organization.
 
 ---
-*Back to **[[Intro to Data-Oriented Design (DOD)]]***
+*Back to **[[README]]***

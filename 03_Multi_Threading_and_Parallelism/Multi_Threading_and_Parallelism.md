@@ -59,4 +59,4 @@ void increment_task(){
 * **Accumulate Locally:** Do not write directly to shared memory inside loops. Keep accumulation inside registers (local variables) and write to the shared array once upon task completion.
 
 ---
-*Back to **[[Intro to Data-Oriented Design (DOD)]]***
+*Back to **[[README]]***
