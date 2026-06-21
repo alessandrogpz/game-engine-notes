@@ -27,7 +27,8 @@ Explore the core concepts step-by-step:
     *   *Companion Code:* [`alignment.cpp`](./02_memory_alignment/alignment.cpp) (Size comparison of aligned vs. padded structures).
 *   **[`03_multi_threading`](./03_multi_threading)** — **[[multi_threading]]**
     *   *Concept:* Design lock-free parallel systems, analyze race conditions, and avoid False Sharing (cache line ping-ponging).
-    *   *Companion Code:* [`multi_threading.cpp`](./03_multi_threading/multi_threading.cpp) (Race condition demonstration on shared memory).
+    *   *Companion Code:* [`multi_threading.cpp`](./03_multi_threading/multi_threading.cpp) (Chef-customer queue concurrency simulation).
+    *   *Glossary:* [`glossary.md`](./03_multi_threading/glossary.md) (Reference guide for C++ concurrency terms and primitives).
 *   **[`04_dod_optimizations`](./04_dod_optimizations)** — **[[dod_optimizations]]**
     *   *Concept:* A practical, 8-step guide to refactoring OOP entities into DOD structures, achieving up to a 40x speedup.
 *   **[`05_advanced_dod`](./05_advanced_dod)** — **[[advanced_dod]]**
@@ -35,12 +36,12 @@ Explore the core concepts step-by-step:
 
 ---
 
-## Compiling & Running Benchmarks
+## Compiling & Running the Programs
 
-To compile the C++ benchmark examples, make sure to enable optimizations using the **capital `-O3` flag**:
+All examples in this project use **C++23**. You can compile and run any of the C++ files from the root of the repository using this general command:
 
 ```bash
-g++ -O3 -std=c++20 01_cache_locality/aos_vs_soa.cpp -o main
+g++ -std=c++23 -O3 <path_to_file.cpp> -o main
 ./main
 ```
 
@@ -48,4 +49,4 @@ g++ -O3 -std=c++20 01_cache_locality/aos_vs_soa.cpp -o main
 > **Use Capital `-O3`, Not Lowercase `-o3`**
 > *   **`-O3` (Capital O)** enables Level 3 optimizations (loop unrolling, auto-vectorization, and function inlining).
 > *   **`-o3` (Lowercase o)** is treated as an output directive, writing the executable to a file named `3` without enabling any code optimization.
-> *   Without optimizations, standard library vector access (`operator[]`) incurs function call overhead on every iteration. This overhead is so large that it masks cache locality benefits, causing the benchmark speedup to disappear.
+> *   For benchmarks (like the AoS vs. SoA benchmark), compilation without `-O3` leaves standard library vector access (`operator[]`) un-inlined. The resulting function call overhead is so large that it masks cache locality benefits, causing the benchmark speedup to disappear.
