@@ -1,4 +1,12 @@
-import std;
+#include <iostream>
+#include <thread>
+#include <vector>
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
+#include <algorithm>
+#include <atomic>
+#include <print>
 
 using namespace std;
 
