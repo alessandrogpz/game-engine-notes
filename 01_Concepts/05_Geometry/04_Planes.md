@@ -50,6 +50,24 @@ $$
 \mathbf{n} \cdot \mathbf{p} + d = 0
 $$
 
+### Proof: Why $-\mathbf{n} \cdot \mathbf{q}$ is Constant for All Points on the Plane
+
+For any vector $\mathbf{v}$ lying flat inside the plane, the dot product with the perpendicular normal vector $\mathbf{n}$ is zero ($\mathbf{n} \cdot \mathbf{v} = 0$).
+
+Let $\mathbf{v}$ be the displacement vector connecting any two arbitrary points $\mathbf{q}_1$ and $\mathbf{q}_2$ on the plane ($\mathbf{v} = \mathbf{q}_2 - \mathbf{q}_1$):
+
+$$
+\mathbf{n} \cdot (\mathbf{q}_2 - \mathbf{q}_1) = 0
+$$
+
+Distributing the dot product:
+
+$$
+(\mathbf{n} \cdot \mathbf{q}_2) - (\mathbf{n} \cdot \mathbf{q}_1) = 0 \implies \mathbf{n} \cdot \mathbf{q}_2 = \mathbf{n} \cdot \mathbf{q}_1
+$$
+
+This proves that taking the dot product of $\mathbf{n}$ with **any** point on the plane always yields the exact same constant value. Therefore, $d = -\mathbf{n} \cdot \mathbf{q}$ is a fixed, constant property for the entire plane.
+
 Since $\mathbf{n}$ is constituted of $n_x, n_y, n_z$, we can then compact it into a 4D vector (including $d$):
 
 $$
