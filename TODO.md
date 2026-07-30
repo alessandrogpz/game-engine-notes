@@ -11,7 +11,7 @@ These solution files still contain `[Insert ...]` placeholders that need LaTeX m
 - [x] Complete **Normal Vectors** derivation (cross product calculation & normal-transformation proofs): [S_02_Normal_Vectors.md](02_Exercises/05_Geometry/Solutions/S_02_Normal_Vectors.md)
 - [x] Complete **Lines and Rays** derivation (point-to-line & skew line distance derivations): [S_03_Lines_and_Rays.md](02_Exercises/05_Geometry/Solutions/S_03_Lines_and_Rays.md)
 - [x] Complete **Planes** derivation (parametric plane & 4D implicit plane calculations): [S_04_Planes.md](02_Exercises/05_Geometry/Solutions/S_04_Planes.md)
-- [ ] Complete **Distance Between a Point and a Plane** derivation (plane normalization & signed distance calculations): [S_05_Distance_Point_and_Plane.md](02_Exercises/05_Geometry/Solutions/S_05_Distance_Point_and_Plane.md)
+- [x] Complete **Distance Between a Point and a Plane** derivation (plane normalization & signed distance calculations): [S_05_Distance_Point_and_Plane.md](02_Exercises/05_Geometry/Solutions/S_05_Distance_Point_and_Plane.md)
 
 ---
 
