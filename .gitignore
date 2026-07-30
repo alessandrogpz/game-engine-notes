@@ -27,6 +27,13 @@ build/
 .obsidian/plugins/
 Daily_Practice.md
 
+# Claude Code
+# Note: local machine state and atomic-write temp files. Shared config
+# (.claude/settings.json, .claude/agents/) stays tracked.
+.claude/settings.local.json
+.claude/*.tmp.*
+.claude/**/*.tmp.*
+
 # Local Memory/Temp (if any)
 .gemini/
 memory/
