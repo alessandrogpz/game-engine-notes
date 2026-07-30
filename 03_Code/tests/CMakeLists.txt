@@ -14,6 +14,7 @@ add_executable(LinearAlgebraTests
     Matrices/Determinants_tests.cpp
     Matrices/Inversion_tests.cpp
     Matrices/Orthogonal_tests.cpp
+    Matrices/Projection_tests.cpp
     Transforms/Rotations_tests.cpp
     Transforms/Scales_tests.cpp
     Transforms/Reflections_tests.cpp

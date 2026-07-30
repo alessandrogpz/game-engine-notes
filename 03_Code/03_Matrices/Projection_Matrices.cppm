@@ -46,7 +46,14 @@ export namespace matrices {
     [[nodiscard]]
     Matrix4x4 orthogonalRejMatrix(const vectors::vector3 b)
     {
-        return Matrix4x4::identity() - projMatrix(b);
+        Matrix4x4 R = Matrix4x4::identity() - projMatrix(b);
+
+        // Both operands carry 1 in the homogeneous slot, so the subtraction
+        // leaves R[3, 3] = 0 and the result is not a valid affine matrix.
+        // Restore it so R composes with other 4x4 transforms.
+        R[3, 3] = 1.0f;
+
+        return R;
     }
 
     [[nodiscard]]
