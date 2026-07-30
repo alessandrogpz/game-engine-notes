@@ -1,3 +1,9 @@
 {
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "userIgnoreFilters": [
+    "03_Code/cmake-build-debug",
+    "03_Code/cmake-build-release",
+    "03_Code/build",
+    "/^03_Code\\/cmake-build-/"
+  ]
 }
