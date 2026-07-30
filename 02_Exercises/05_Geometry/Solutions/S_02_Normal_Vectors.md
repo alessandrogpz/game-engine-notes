@@ -19,42 +19,42 @@ $$
 
 ---
 
-### Question 1: Edge Vectors $\vec{P_0P_1}$ and $\vec{P_0P_2}$
+### Question 1: Edge Vectors $\mathbf{P_0P_1}$ and $\mathbf{P_0P_2}$
 
 Calculating the displacement vectors from $P_0$:
 
 $$
-\vec{P_0P_1} = P_1 - P_0 = \begin{bmatrix} 2 \\\\ 3 \\\\ 0 \end{bmatrix} - \begin{bmatrix} 2 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix}
+\mathbf{P_0P_1} = P_1 - P_0 = \begin{bmatrix} 2 \\\\ 3 \\\\ 0 \end{bmatrix} - \begin{bmatrix} 2 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix}
 $$
 
 $$
-\vec{P_0P_2} = P_2 - P_0 = \begin{bmatrix} 2 \\\\ 0 \\\\ 4 \end{bmatrix} - \begin{bmatrix} 2 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix}
+\mathbf{P_0P_2} = P_2 - P_0 = \begin{bmatrix} 2 \\\\ 0 \\\\ 4 \end{bmatrix} - \begin{bmatrix} 2 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix}
 $$
 
 ---
 
-### Question 2: Face Normal $\vec{N}$, Magnitude $\|\vec{N}\|$, and Unit Normal $\hat{n}$
+### Question 2: Face Normal $\mathbf{N}$, Magnitude $\|\mathbf{N}\|$, and Unit Normal $\hat{n}$
 
 Computing the face normal using the [[04_Cross_Product|cross product]]:
 
 $$
-\vec{N} = \vec{P_0P_1} \times \vec{P_0P_2} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \times \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix}
+\mathbf{N} = \mathbf{P_0P_1} \times \mathbf{P_0P_2} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \times \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix}
 $$
 
 $$
-\vec{N} = \begin{bmatrix} (3)(4) - (0)(0) \\\\ (0)(0) - (0)(4) \\\\ (0)(0) - (3)(0) \end{bmatrix} = \begin{bmatrix} 12 \\\\ 0 \\\\ 0 \end{bmatrix}
+\mathbf{N} = \begin{bmatrix} (3)(4) - (0)(0) \\\\ (0)(0) - (0)(4) \\\\ (0)(0) - (3)(0) \end{bmatrix} = \begin{bmatrix} 12 \\\\ 0 \\\\ 0 \end{bmatrix}
 $$
 
-Calculating the magnitude of $\vec{N}$:
+Calculating the magnitude of $\mathbf{N}$:
 
 $$
-\|\vec{N}\| = \sqrt{12^2 + 0^2 + 0^2} = \sqrt{144} = 12
+\|\mathbf{N}\| = \sqrt{12^2 + 0^2 + 0^2} = \sqrt{144} = 12
 $$
 
 Normalizing to get the unit normal $\hat{n}$:
 
 $$
-\hat{n} = \frac{\vec{N}}{\|\vec{N}\|} = \frac{1}{12} \begin{bmatrix} 12 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}
+\hat{n} = \frac{\mathbf{N}}{\|\mathbf{N}\|} = \frac{1}{12} \begin{bmatrix} 12 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}
 $$
 
 ---
@@ -64,7 +64,7 @@ $$
 The area of a triangle formed by two edge vectors is equal to half the magnitude of their cross product:
 
 $$
-\text{Area} = \frac{1}{2} \|\vec{N}\| = \frac{12}{2} = 6
+\text{Area} = \frac{1}{2} \|\mathbf{N}\| = \frac{12}{2} = 6
 $$
 
 Thus, the area of the triangular face is **$6$ square units**.
@@ -76,7 +76,7 @@ Thus, the area of the triangular face is **$6$ square units**.
 If the vertices are wound in the order $P_0, P_2, P_1$, the face normal is computed as:
 
 $$
-\vec{N}' = \vec{P_0P_2} \times \vec{P_0P_1} = \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix} \times \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} = \begin{bmatrix} -12 \\\\ 0 \\\\ 0 \end{bmatrix}
+\mathbf{N}' = \mathbf{P_0P_2} \times \mathbf{P_0P_1} = \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix} \times \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} = \begin{bmatrix} -12 \\\\ 0 \\\\ 0 \end{bmatrix}
 $$
 
 Corresponding unit normal:
@@ -85,7 +85,7 @@ $$
 \hat{n}' = \begin{bmatrix} -1 \\\\ 0 \\\\ 0 \end{bmatrix}
 $$
 
-* **Demonstration / Significance:** Reversing the winding order flips the direction of the normal vector due to the anti-commutativity of the cross product ($\vec{a} \times \vec{b} = -(\vec{b} \times \vec{a})$). This demonstrates why maintaining a **consistent winding order** (e.g. counter-clockwise as seen from outside the mesh) is crucial across a 3D model—otherwise, half the surface normals will point inward into the mesh, causing backface culling errors and inverted lighting/shading.
+* **Demonstration / Significance:** Reversing the winding order flips the direction of the normal vector due to the anti-commutativity of the cross product ($\mathbf{a} \times \mathbf{b} = -(\mathbf{b} \times \mathbf{a})$). This demonstrates why maintaining a **consistent winding order** (e.g. counter-clockwise as seen from outside the mesh) is crucial across a 3D model—otherwise, half the surface normals will point inward into the mesh, causing backface culling errors and inverted lighting/shading.
 
 ---
 
@@ -124,17 +124,17 @@ $$
 Calculating the transformed face's edge vectors:
 
 $$
-\vec{P_0'P_1'} = P_1' - P_0' = \begin{bmatrix} 2 \\\\ 5 \\\\ 0 \end{bmatrix} - \begin{bmatrix} 2 \\\\ 2 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix}
+\mathbf{P_0'P_1'} = P_1' - P_0' = \begin{bmatrix} 2 \\\\ 5 \\\\ 0 \end{bmatrix} - \begin{bmatrix} 2 \\\\ 2 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix}
 $$
 
 $$
-\vec{P_0'P_2'} = P_2' - P_0' = \begin{bmatrix} 2 \\\\ 2 \\\\ 4 \end{bmatrix} - \begin{bmatrix} 2 \\\\ 2 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix}
+\mathbf{P_0'P_2'} = P_2' - P_0' = \begin{bmatrix} 2 \\\\ 2 \\\\ 4 \end{bmatrix} - \begin{bmatrix} 2 \\\\ 2 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix}
 $$
 
 Recomputing the true face normal from the transformed edge vectors:
 
 $$
-\vec{N}' = \vec{P_0'P_1'} \times \vec{P_0'P_2'} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \times \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix} = \begin{bmatrix} 12 \\\\ 0 \\\\ 0 \end{bmatrix} \implies \hat{n}_{\text{true}} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}
+\mathbf{N}' = \mathbf{P_0'P_1'} \times \mathbf{P_0'P_2'} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \times \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix} = \begin{bmatrix} 12 \\\\ 0 \\\\ 0 \end{bmatrix} \implies \hat{n}_{\text{true}} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}
 $$
 
 Since $\hat{n}_{\text{true}} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} \neq \begin{bmatrix} 1 \\\\ 1 \\\\ 0 \end{bmatrix} = \hat{n}_{\text{naive}}$, transforming the normal vector naively using $\mathbf{M}$ fails.
@@ -188,11 +188,11 @@ This matches the true recomputed normal $\hat{n}_{\text{true}} = \begin{bmatrix}
 Checking the dot product of $\hat{n}_B$ with both transformed edge vectors:
 
 $$
-\vec{P_0'P_1'} \cdot \hat{n}_B = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} = (0)(1) + (3)(0) + (0)(0) = 0 \quad \checkmark
+\mathbf{P_0'P_1'} \cdot \hat{n}_B = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} = (0)(1) + (3)(0) + (0)(0) = 0 \quad \checkmark
 $$
 
 $$
-\vec{P_0'P_2'} \cdot \hat{n}_B = \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} = (0)(1) + (0)(0) + (4)(0) = 0 \quad \checkmark
+\mathbf{P_0'P_2'} \cdot \hat{n}_B = \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} = (0)(1) + (0)(0) + (4)(0) = 0 \quad \checkmark
 $$
 
 Since both dot products equal $0$, the transformed normal $\hat{n}_B$ is proven to be orthogonal to both transformed edge vectors.

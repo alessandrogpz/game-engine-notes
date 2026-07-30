@@ -7,9 +7,9 @@ tags: [exercise, question, normal-vector, cross-product, normal-transformation]
 ## Part 1: Calculation
 A triangular mesh face lies entirely in the plane $x = 2$, with vertices $P_0 = (2, 0, 0)$, $P_1 = (2, 3, 0)$, and $P_2 = (2, 0, 4)$.
 
-1. Calculate the edge vectors $\vec{P_0P_1}$ and $\vec{P_0P_2}$.
-2. Compute the face normal $\vec{N} = \vec{P_0P_1} \times \vec{P_0P_2}$, its magnitude $\|\vec{N}\|$, and the unit normal $\hat{n}$.
-3. Use $\|\vec{N}\|$ to compute the area of the triangle.
+1. Calculate the edge vectors $\mathbf{P_0P_1}$ and $\mathbf{P_0P_2}$.
+2. Compute the face normal $\mathbf{N} = \mathbf{P_0P_1} \times \mathbf{P_0P_2}$, its magnitude $\|\mathbf{N}\|$, and the unit normal $\hat{n}$.
+3. Use $\|\mathbf{N}\|$ to compute the area of the triangle.
 4. If the vertices were instead wound in the order $P_0, P_2, P_1$, what would the resulting normal be? What does this demonstrate about the importance of consistent winding order across a mesh?
 
 ## Part 2: Conceptual Understanding
