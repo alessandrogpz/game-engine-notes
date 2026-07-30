@@ -43,11 +43,11 @@ TEST(Vector3Basics, ScalarMultiplicationDivision) {
     EXPECT_FLOAT_EQ(quot.y, -2.0);
     EXPECT_FLOAT_EQ(quot.z, 4.0);
 
-    // Division by zero edge case
+    // Division by zero is degenerate and yields the zero vector
     vectors::vector3 divZero = v / 0.0;
-    EXPECT_FLOAT_EQ(divZero.x, v.x);
-    EXPECT_FLOAT_EQ(divZero.y, v.y);
-    EXPECT_FLOAT_EQ(divZero.z, v.z);
+    EXPECT_FLOAT_EQ(divZero.x, 0.0);
+    EXPECT_FLOAT_EQ(divZero.y, 0.0);
+    EXPECT_FLOAT_EQ(divZero.z, 0.0);
 }
 
 TEST(Vector3Basics, MagnitudeAndNormalization) {

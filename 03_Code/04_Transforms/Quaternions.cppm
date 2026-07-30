@@ -30,10 +30,12 @@ export namespace transforms {
             };
         }
 
+        [[nodiscard]]
         Quaternion operator/(const float value) const
         {
+            // Degenerate divisor yields the zero quaternion, matching qInverse()
             if (util::floatEqual(value, 0.0f)) {
-                return *this;
+                return {};
             }
             const float reciprocal = 1.0 / value;
             return { w * reciprocal, x * reciprocal, y * reciprocal, z * reciprocal };

@@ -33,8 +33,9 @@ export namespace vectors {
 
         [[nodiscard]]
         vector3 operator/(const float value) const {
+            // Degenerate divisor yields the zero vector, matching normalized()
             if (util::floatEqual(value, 0.0f))
-                return {x, y, z};
+                return {0.0f, 0.0f, 0.0f};
 
             const float reciprocal = 1.0 / value;
             return { x * reciprocal, y * reciprocal, z * reciprocal };
@@ -86,8 +87,9 @@ export namespace vectors {
 
         [[nodiscard]]
         vector4 operator/(const float value) const {
+            // Degenerate divisor yields the zero vector, matching normalized()
             if (util::floatEqual(value, 0.0f))
-                return {x, y, z, w};
+                return {0.0f, 0.0f, 0.0f, 0.0f};
 
             const float reciprocal = 1.0 / value;
             return { x * reciprocal, y * reciprocal, z * reciprocal, w * reciprocal };
