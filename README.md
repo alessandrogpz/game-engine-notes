@@ -14,23 +14,32 @@ LinearAlgebra/
 │   ├── 01_Systems_of_Equations/
 │   ├── 02_Vectors/            # e.g., Dot Product, Cross Product, Projections
 │   ├── 03_Matrices/
-│   └── 04_Transforms/         # e.g., Rotations, Reflections, Quaternions
+│   ├── 04_Transforms/         # e.g., Rotations, Reflections, Quaternions
+│   └── 05_Geometry/           # e.g., Planes, Normal Vectors, Intersections
 ├── 02_Exercises/              # Practical questions and complete step-by-step solutions
 │   ├── 01_Systems_of_Equations/
 │   │   ├── Questions/         # md files named: Q_[Exercise_Name].md
 │   │   └── Solutions/         # md files named: S_[Exercise_Name].md
 │   ├── 02_Vectors/
 │   ├── 03_Matrices/
-│   └── 04_Transforms/
-├── 03_Code/                   # (Optional) Code implementations (C++, Python, etc.)
+│   ├── 04_Transforms/
+│   └── 05_Geometry/
+├── 03_Code/                   # C++23 module implementations, mirroring the topic folders
+│   ├── 00_Utils/              # Shared helpers (float comparison)
+│   ├── 01_Systems_of_Equations/ ... 05_Geometry/   # One .cppm per concept note
+│   ├── linear_algebra.cppm    # Umbrella module re-exporting every sub-module
+│   ├── tests/                 # GoogleTest unit tests, one file per module
+│   └── CMakeLists.txt         # Requires a compiler with `import std;` support
+├── 98_Assets/                 # Diagrams and figures embedded by the notes
+│   └── Concepts/
 ├── 99_Templates/              # Templates and formatting guides
 │   ├── Template_Question.md
 │   ├── Template_Solution.md
 │   ├── Math_Formatting_Conventions.md # Reference guide for Obsidian & GitHub math syntax
 │   └── __template__usage__.md
-├── Raw Anotations/            # Unorganized scratch notes, screenshots, or raw imports
 ├── randomizer.py              # CLI tool to filter questions and scaffold new ones
 ├── README_Randomizer.md       # Help/Documentation for the CLI tool
+├── TODO.md                    # Remaining solution notes and unimplemented code modules
 └── README.md                  # This repository-level overview
 ```
 
@@ -79,10 +88,10 @@ Spend 15–30 minutes a day solving random exercises using the `randomizer.py` t
    ```bash
    python3 randomizer.py -n 3 --practice
    ```
-2. Open **Obsidian** and open the newly created [Daily_Practice.md](file:///home/aper/Documents/LinearAlgebra/Daily_Practice.md) in your root folder.
+2. Open **Obsidian** and open the newly created `Daily_Practice.md` in the vault root.
 3. Because of **transclusions (`![[Q_...]]`)**, you will see all 3 questions rendered inline inside the single daily practice note!
 4. Write down your solutions on paper or scratchpad, then click the **Check Answer** links to instantly verify your derivations.
-5. Delete or commit `Daily_Practice.md` when done.
+5. Delete `Daily_Practice.md` when done — it is gitignored, so it is scratch space and never committed.
 
 ### 2. Expanding the Repository (Adding Questions)
 When you study a new topic or find a good textbook exercise, add it to your database using the CLI scaffolder:
