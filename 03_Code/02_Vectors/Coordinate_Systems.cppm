@@ -23,9 +23,9 @@ export namespace vectors {
 
     struct cylindrical
     {
-        float rho{0.0};    // Radial distance in XY plane
-        float phi{0.0};    // Azimuthal angle in XY plane in radians
-        float z{0.0};      // Height along Z-axis
+        float rho{0.0};    // Radial distance in XZ plane
+        float phi{0.0};    // Azimuthal angle in XZ plane in radians
+        float y{0.0};      // Height along Y-axis
     };
 
     // --- 1. Handedness Conversions ---
@@ -89,14 +89,17 @@ export namespace vectors {
         };
     }
 
-    // --- 3. Cylindrical Coordinate Conversions (Z-up height) ---
+    // --- 3. Cylindrical Coordinate Conversions (Y-up convention) ---
+    // Shares the Y-up convention used by the spherical conversions above:
+    // the radial distance and azimuth both live in the XZ plane, and the
+    // height runs along Y. Note this differs from the textbook Z-up form.
 
     [[nodiscard]]
     cylindrical cartesianToCylindrical(const vector3& v)
     {
-        const float rho = std::sqrt(v.x * v.x + v.y * v.y);
-        const float phi = std::atan2(v.y, v.x);
-        return { rho, phi, v.z };
+        const float rho = std::sqrt(v.x * v.x + v.z * v.z);
+        const float phi = std::atan2(v.z, v.x);
+        return { rho, phi, v.y };
     }
 
     [[nodiscard]]
@@ -104,8 +107,8 @@ export namespace vectors {
     {
         return {
             c.rho * std::cos(c.phi),
-            c.rho * std::sin(c.phi),
-            c.z
+            c.y,
+            c.rho * std::sin(c.phi)
         };
     }
 }

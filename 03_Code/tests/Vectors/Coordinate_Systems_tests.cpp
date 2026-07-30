@@ -64,10 +64,11 @@ TEST(CoordinateSystems, SphericalRoundTrip) {
 TEST(CoordinateSystems, CylindricalRoundTrip) {
     vectors::vector3 p(-2.5, 6.1, 8.4);
     vectors::cylindrical c = vectors::cartesianToCylindrical(p);
-    
-    // rho = sqrt(x^2 + y^2)
-    EXPECT_NEAR(c.rho, std::sqrt(2.5*2.5 + 6.1*6.1), 1e-5f);
-    
+
+    // Y-up convention: rho = sqrt(x^2 + z^2), height is carried in y
+    EXPECT_NEAR(c.rho, std::sqrt(2.5*2.5 + 8.4*8.4), 1e-5f);
+    EXPECT_NEAR(c.y, 6.1, 1e-5f);
+
     vectors::vector3 round_trip = vectors::cylindricalToCartesian(c);
     EXPECT_NEAR(round_trip.x, p.x, 1e-5f);
     EXPECT_NEAR(round_trip.y, p.y, 1e-5f);
