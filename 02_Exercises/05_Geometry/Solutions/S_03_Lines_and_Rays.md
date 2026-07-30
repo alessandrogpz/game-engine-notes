@@ -149,7 +149,7 @@ When finding the parameters $t_1, t_2$ of closest approach between two 3D lines,
 
 $$
 \begin{cases}
-(L_2(t_2) - L_1(t_1)) \cdot \mathbf{v}_1 = 0 \\
+(L_2(t_2) - L_1(t_1)) \cdot \mathbf{v}_1 = 0 \\\\
 (L_2(t_2) - L_1(t_1)) \cdot \mathbf{v}_2 = 0
 \end{cases}
 $$
@@ -157,13 +157,13 @@ $$
 Rearranging into a matrix system:
 
 $$
-\begin{bmatrix} \mathbf{v}_1^2 & -\mathbf{v}_1 \cdot \mathbf{v}_2 \\ \mathbf{v}_1 \cdot \mathbf{v}_2 & -\mathbf{v}_2^2 \end{bmatrix} \begin{bmatrix} t_1 \\ t_2 \end{bmatrix} = \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
+\begin{bmatrix} \mathbf{v}_1^2 & -\mathbf{v}_1 \cdot \mathbf{v}_2 \\\\ \mathbf{v}_1 \cdot \mathbf{v}_2 & -\mathbf{v}_2^2 \end{bmatrix} \begin{bmatrix} t_1 \\\\ t_2 \end{bmatrix} = \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\\\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
 $$
 
 Inverting the matrix yields the determinant in the denominator:
 
 $$
-\begin{bmatrix} t_1 \\ t_2 \end{bmatrix} = \frac{1}{(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2} \begin{bmatrix} -\mathbf{v}_2^2 & \mathbf{v}_1 \cdot \mathbf{v}_2 \\ -\mathbf{v}_1 \cdot \mathbf{v}_2 & \mathbf{v}_1^2 \end{bmatrix} \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
+\begin{bmatrix} t_1 \\\\ t_2 \end{bmatrix} = \frac{1}{(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2} \begin{bmatrix} -\mathbf{v}_2^2 & \mathbf{v}_1 \cdot \mathbf{v}_2 \\\\ -\mathbf{v}_1 \cdot \mathbf{v}_2 & \mathbf{v}_1^2 \end{bmatrix} \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\\\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
 $$
 
 When the lines are **parallel**, the denominator $(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2$ becomes **$0$**. Geometrically, parallel lines remain at a constant distance everywhere, so there is no single unique point of closest approach—instead, there are infinitely many perpendicular connecting segments of equal length.

@@ -28,7 +28,7 @@ $$
 #### 2. Normal Vector $\mathbf{n} = \mathbf{u} \times \mathbf{v}$
 
 $$
-\mathbf{n} = \mathbf{u} \times \mathbf{v} = \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} \times \begin{bmatrix} 0 \\ 3 \\ 1 \end{bmatrix}
+\mathbf{n} = \mathbf{u} \times \mathbf{v} = \begin{bmatrix} 1 \\\\ 0 \\\\ 2 \end{bmatrix} \times \begin{bmatrix} 0 \\\\ 3 \\\\ 1 \end{bmatrix}
 $$
 
 $$

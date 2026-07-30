@@ -127,7 +127,7 @@ We can express the orthogonality requirement using [[02_Dot_Product|dot products
 
 $$
 \begin{cases}
-(L_2(t_2) - L_1(t_1)) \cdot \mathbf{v}_1 = 0 \\
+(L_2(t_2) - L_1(t_1)) \cdot \mathbf{v}_1 = 0 \\\\
 (L_2(t_2) - L_1(t_1)) \cdot \mathbf{v}_2 = 0
 \end{cases}
 $$
@@ -136,7 +136,7 @@ Substituting the line equations:
 
 $$
 \begin{cases}
-(P_2 + t_2 \mathbf{v}_2 - P_1 - t_1 \mathbf{v}_1) \cdot \mathbf{v}_1 = 0 \\
+(P_2 + t_2 \mathbf{v}_2 - P_1 - t_1 \mathbf{v}_1) \cdot \mathbf{v}_1 = 0 \\\\
 (P_2 + t_2 \mathbf{v}_2 - P_1 - t_1 \mathbf{v}_1) \cdot \mathbf{v}_2 = 0
 \end{cases}
 $$
@@ -144,19 +144,19 @@ $$
 Rearranging into matrix form:
 
 $$
-\begin{bmatrix} \mathbf{v}_1^2 & -\mathbf{v}_1 \cdot \mathbf{v}_2 \\ \mathbf{v}_1 \cdot \mathbf{v}_2 & -\mathbf{v}_2^2 \end{bmatrix} \begin{bmatrix} t_1 \\ t_2 \end{bmatrix} = \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
+\begin{bmatrix} \mathbf{v}_1^2 & -\mathbf{v}_1 \cdot \mathbf{v}_2 \\\\ \mathbf{v}_1 \cdot \mathbf{v}_2 & -\mathbf{v}_2^2 \end{bmatrix} \begin{bmatrix} t_1 \\\\ t_2 \end{bmatrix} = \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\\\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
 $$
 
 Solving for $t_1$ and $t_2$ using the [[04_Matrix_Inversion|matrix inverse]]:
 
 $$
-\begin{bmatrix} t_1 \\ t_2 \end{bmatrix} = \begin{bmatrix} \mathbf{v}_1^2 & -\mathbf{v}_1 \cdot \mathbf{v}_2 \\ \mathbf{v}_1 \cdot \mathbf{v}_2 & -\mathbf{v}_2^2 \end{bmatrix}^{-1} \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
+\begin{bmatrix} t_1 \\\\ t_2 \end{bmatrix} = \begin{bmatrix} \mathbf{v}_1^2 & -\mathbf{v}_1 \cdot \mathbf{v}_2 \\\\ \mathbf{v}_1 \cdot \mathbf{v}_2 & -\mathbf{v}_2^2 \end{bmatrix}^{-1} \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\\\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
 $$
 
 Expanding the $2 \times 2$ matrix inverse:
 
 $$
-\begin{bmatrix} t_1 \\ t_2 \end{bmatrix} = \frac{1}{(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2} \begin{bmatrix} -\mathbf{v}_2^2 & \mathbf{v}_1 \cdot \mathbf{v}_2 \\ -\mathbf{v}_1 \cdot \mathbf{v}_2 & \mathbf{v}_1^2 \end{bmatrix} \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
+\begin{bmatrix} t_1 \\\\ t_2 \end{bmatrix} = \frac{1}{(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2} \begin{bmatrix} -\mathbf{v}_2^2 & \mathbf{v}_1 \cdot \mathbf{v}_2 \\\\ -\mathbf{v}_1 \cdot \mathbf{v}_2 & \mathbf{v}_1^2 \end{bmatrix} \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\\\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
 $$
 
 ---
