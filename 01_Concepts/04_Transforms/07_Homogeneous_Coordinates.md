@@ -114,7 +114,7 @@ $$
 $$
 
 ### Derivation from the General Skew Formula
-We can derive this exact matrix using the general 3D skew formula from [[05_Skews.md|05_Skews]]:
+We can derive this exact matrix using the general 3D skew formula from [[05_Skews]]:
 
 $$
 \mathbf{M}_{\text{skew}} = \mathbf{I} + \tan\theta \, (\vec{a}\vec{b}^T)
@@ -191,4 +191,5 @@ By lifting our 3D coordinates to 4D projective space and fixing the last coordin
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/04_Transforms/07_Homogeneous_Coordinates.cppm|07_Homogeneous_Coordinates.cppm]]
+*   **C++ Source Code:** Homogeneous coordinates are carried by the 4D types themselves:
+    [[03_Code/02_Vectors/Basics.cppm|Basics.cppm]] (`vector4`), [[03_Code/03_Matrices/Basics.cppm|Basics.cppm]] (`Matrix4x4`), [[03_Code/04_Transforms/Translations.cppm|Translations.cppm]]

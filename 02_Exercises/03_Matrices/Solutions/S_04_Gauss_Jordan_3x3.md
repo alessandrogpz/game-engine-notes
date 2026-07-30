@@ -135,4 +135,4 @@ $$
 \text{Total Operations} = n + (n^2 - n) = n^2 \text{ operations}
 $$
 
-**Back to Question:** [[Q_04_Gauss_Jordan_3x3]] | **Related Concepts:** [[03_Matrices]]
+**Back to Question:** [[Q_04_Gauss_Jordan_3x3]] | **Related Concepts:** [[04_Matrix_Inversion]], [[01_Linear_Systems]]

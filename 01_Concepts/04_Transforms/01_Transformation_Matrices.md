@@ -159,4 +159,5 @@ This elegant formula is how operations themselves (such as scaling, rotations, o
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/04_Transforms/01_Transformation_Matrices.cppm|01_Transformation_Matrices.cppm]]
+*   **C++ Source Code:** The individual transformation matrices are implemented per transform:
+    [[03_Code/04_Transforms/Rotations.cppm|Rotations.cppm]], [[03_Code/04_Transforms/Reflections.cppm|Reflections.cppm]], [[03_Code/04_Transforms/Scales.cppm|Scales.cppm]], [[03_Code/04_Transforms/Skews.cppm|Skews.cppm]], [[03_Code/04_Transforms/Translations.cppm|Translations.cppm]]
