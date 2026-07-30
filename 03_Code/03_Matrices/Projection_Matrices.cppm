@@ -1,6 +1,4 @@
 // Related Concept: [[01_Concepts/03_Matrices/06_Projection_Matrices|06_Projection_Matrices]]
-module;
-
 export module matrices_projection;
 
 import vectors_basics;

@@ -1,6 +1,4 @@
 // Related Concept: [[01_Concepts/02_Vectors/04_Cross_Product|04_Cross_Product]]
-module;
-
 export module vectors_cross_product;
 
 import vectors_basics;
