@@ -193,17 +193,6 @@ def generate_daily_practice(questions, output_path="Daily_Practice.md"):
         print(f"Error generating Daily Practice note: {e}")
         return False
 
-def safe_sample(population, k):
-    """
-    Safely samples k elements from a population without raising a ValueError if k > len(population).
-    Falls back to returning the full population in a shuffled state.
-    """
-    if len(population) <= k:
-        shuffled = list(population)
-        random.shuffle(shuffled)
-        return shuffled
-    return random.sample(population, k)
-
 def get_default_distribution_questions(base_path="02_Exercises"):
     """
     Scans the repository and randomly picks exactly one question,
