@@ -112,3 +112,32 @@ TEST(MatrixVectorMultiplication, HomogeneousTransform) {
     EXPECT_FLOAT_EQ(p_dir_trans.x, 2.0); // translation ignored for direction w=0
     EXPECT_FLOAT_EQ(p_dir_trans.w, 0.0);
 }
+
+TEST(Vector3Basics, TransformPointVersusDirection) {
+    // Translation-only matrix: a point moves, a direction does not.
+    matrices::Matrix4x4 t = matrices::Matrix4x4::identity();
+    t[0, 3] = 10.0;
+    t[1, 3] = 20.0;
+    t[2, 3] = 30.0;
+
+    vectors::vector3 v(1.0, 2.0, 3.0);
+
+    vectors::vector3 asPoint = vectors::transformPoint(t, v);
+    EXPECT_FLOAT_EQ(asPoint.x, 11.0);
+    EXPECT_FLOAT_EQ(asPoint.y, 22.0);
+    EXPECT_FLOAT_EQ(asPoint.z, 33.0);
+
+    vectors::vector3 asDirection = vectors::transformDirection(t, v);
+    EXPECT_FLOAT_EQ(asDirection.x, 1.0);
+    EXPECT_FLOAT_EQ(asDirection.y, 2.0);
+    EXPECT_FLOAT_EQ(asDirection.z, 3.0);
+
+    // A direction keeps its length under a pure translation; a point does not.
+    EXPECT_FLOAT_EQ(asDirection.magnitude(), v.magnitude());
+
+    // operator* is the point form, so it must agree with transformPoint.
+    vectors::vector3 viaOperator = t * v;
+    EXPECT_FLOAT_EQ(viaOperator.x, asPoint.x);
+    EXPECT_FLOAT_EQ(viaOperator.y, asPoint.y);
+    EXPECT_FLOAT_EQ(viaOperator.z, asPoint.z);
+}

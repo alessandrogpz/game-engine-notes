@@ -123,14 +123,41 @@ export namespace vectors {
         };
     }
 
+    // Treats v as a POINT: applies the 3x3 linear part and the translation
+    // column, i.e. an implicit w = 1. Directions and normals must not pick up
+    // translation, so use transformDirection() for those instead.
     [[nodiscard]]
     vector3 operator*(const matrices::Matrix4x4& m, const vector3& v)
     {
-        // Apply affine transformation (3x3 linear part + translation 4th column)
         return vector3{
             m[0, 0]*v.x + m[0, 1]*v.y + m[0, 2]*v.z + m[0, 3],
             m[1, 0]*v.x + m[1, 1]*v.y + m[1, 2]*v.z + m[1, 3],
             m[2, 0]*v.x + m[2, 1]*v.y + m[2, 2]*v.z + m[2, 3]
+        };
+    }
+
+    // Explicit spelling of the operator* above, for call sites where the
+    // point-vs-direction distinction should be obvious to the reader.
+    [[nodiscard]]
+    vector3 transformPoint(const matrices::Matrix4x4& m, const vector3& v)
+    {
+        return m * v;
+    }
+
+    // Treats v as a DIRECTION: applies only the 3x3 linear part, ignoring the
+    // translation column (implicit w = 0). Translating a direction is
+    // meaningless and would corrupt any downstream length or angle.
+    //
+    // Note this is still the wrong transform for a normal vector under a
+    // non-uniform scale or skew; normals require the inverse-transpose of the
+    // linear part.
+    [[nodiscard]]
+    vector3 transformDirection(const matrices::Matrix4x4& m, const vector3& v)
+    {
+        return vector3{
+            m[0, 0]*v.x + m[0, 1]*v.y + m[0, 2]*v.z,
+            m[1, 0]*v.x + m[1, 1]*v.y + m[1, 2]*v.z,
+            m[2, 0]*v.x + m[2, 1]*v.y + m[2, 2]*v.z
         };
     }
 
