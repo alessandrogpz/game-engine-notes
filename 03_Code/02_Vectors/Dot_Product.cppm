@@ -4,6 +4,7 @@ export module vectors_dot_product;
 import std;
 
 import vectors_basics;
+import linear_algebra_util;
 
 export namespace vectors {
 
@@ -27,7 +28,7 @@ export namespace vectors {
     {
         const float magA = magnitude(a);
         const float magB = magnitude(b);
-        if (magA == 0.0 || magB == 0.0) return 0.0;
+        if (util::floatEqual(magA, 0.0f) || util::floatEqual(magB, 0.0f)) return 0.0f;
 
         const float cosTheta = dot(a, b) / (magA * magB);
 

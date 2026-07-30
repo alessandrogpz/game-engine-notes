@@ -5,6 +5,7 @@ export module vectors_projection;
 
 import vectors_basics;
 import vectors_dot_product;
+import linear_algebra_util;
 
 
 export namespace vectors {
@@ -13,8 +14,8 @@ export namespace vectors {
     float scalarProj ( const vector3 a, const vector3 b ) {
 
         const float magB = magnitude(b);
-        if (magB == 0.0)
-            return 0.0;
+        if (util::floatEqual(magB, 0.0f))
+            return 0.0f;
 
         return dot(a, b) / magB;
     }
@@ -22,8 +23,8 @@ export namespace vectors {
     [[nodiscard]]
     vector3 vecProj ( const vector3 a, const vector3 b ) {
         const float magB = magnitude(b);
-        if (magB == 0.0)
-            return {0.0, 0.0, 0.0};
+        if (util::floatEqual(magB, 0.0f))
+            return {0.0f, 0.0f, 0.0f};
 
         const float sProj = scalarProj(a, b);
         return b * (sProj / magB);
