@@ -28,11 +28,10 @@ build/
 Daily_Practice.md
 
 # Claude Code
-# Note: local machine state and atomic-write temp files. Shared config
-# (.claude/settings.json, .claude/agents/) stays tracked.
-.claude/settings.local.json
-.claude/*.tmp.*
-.claude/**/*.tmp.*
+# Note: assistant-specific config and instructions are local-only, never committed.
+.claude/
+CLAUDE.md
+CLAUDE.local.md
 
 # Local Memory/Temp (if any)
 .gemini/
