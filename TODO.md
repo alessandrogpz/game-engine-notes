@@ -12,6 +12,7 @@ These solution files still contain `[Insert ...]` placeholders that need LaTeX m
 - [x] Complete **Lines and Rays** derivation (point-to-line & skew line distance derivations): [S_03_Lines_and_Rays.md](02_Exercises/05_Geometry/Solutions/S_03_Lines_and_Rays.md)
 - [x] Complete **Planes** derivation (parametric plane & 4D implicit plane calculations): [S_04_Planes.md](02_Exercises/05_Geometry/Solutions/S_04_Planes.md)
 - [x] Complete **Distance Between a Point and a Plane** derivation (plane normalization & signed distance calculations): [S_05_Distance_Point_and_Plane.md](02_Exercises/05_Geometry/Solutions/S_05_Distance_Point_and_Plane.md)
+- [ ] Complete **Reflection Through a Plane** derivation (closest-point & reflected-point calculations, $4 \times 4$ reflection matrix construction): [S_06_Reflection_Through_Plane.md](02_Exercises/05_Geometry/Solutions/S_06_Reflection_Through_Plane.md)
 
 ---
 
@@ -28,3 +29,4 @@ These files contain only console-log helper tests and need their core mathematic
 - [ ] Implement **Lines and Rays** calculations (point-to-line & skew/parallel line distances): [Lines_and_Rays.cppm](03_Code/05_Geometry/Lines_and_Rays.cppm)
 - [ ] Implement **Planes** representations (parametric plane, implicit plane dot product, 4D plane vector): [Planes.cppm](03_Code/05_Geometry/Planes.cppm)
 - [ ] Implement **Distance Between a Point and a Plane** calculations (plane normalization, signed distance evaluation): [Distance_Point_and_Plane.cppm](03_Code/05_Geometry/Distance_Point_and_Plane.cppm)
+- [ ] Implement **Reflection Through a Plane** calculations (closest point in plane, reflected point, $4 \times 4$ reflection matrix construction): [Reflection_Through_Plane.cppm](03_Code/05_Geometry/Reflection_Through_Plane.cppm)
