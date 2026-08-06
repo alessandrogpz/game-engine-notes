@@ -12,7 +12,7 @@ These solution files still contain `[Insert ...]` placeholders that need LaTeX m
 - [x] Complete **Lines and Rays** derivation (point-to-line & skew line distance derivations): [S_03_Lines_and_Rays.md](02_Exercises/05_Geometry/Solutions/S_03_Lines_and_Rays.md)
 - [x] Complete **Planes** derivation (parametric plane & 4D implicit plane calculations): [S_04_Planes.md](02_Exercises/05_Geometry/Solutions/S_04_Planes.md)
 - [x] Complete **Distance Between a Point and a Plane** derivation (plane normalization & signed distance calculations): [S_05_Distance_Point_and_Plane.md](02_Exercises/05_Geometry/Solutions/S_05_Distance_Point_and_Plane.md)
-- [ ] Complete **Reflection Through a Plane** derivation (closest-point & reflected-point calculations, $4 \times 4$ reflection matrix construction): [S_06_Reflection_Through_Plane.md](02_Exercises/05_Geometry/Solutions/S_06_Reflection_Through_Plane.md)
+- [x] Complete **Reflection Through a Plane** derivation (closest-point & reflected-point calculations, $4 \times 4$ reflection matrix construction): [S_06_Reflection_Through_Plane.md](02_Exercises/05_Geometry/Solutions/S_06_Reflection_Through_Plane.md)
 
 ---
 
