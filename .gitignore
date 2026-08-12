@@ -13,11 +13,14 @@
 .DS_Store
 Thumbs.db
 
-# VS Code Workspace Files
+# VS Code
+# tasks.json and c_cpp_properties.json ARE tracked: shared build + IntelliSense config.
 .vscode/ipch/
 .vscode/extensions.json
 *.code-workspace
 
-# Obsidian Workspace Files
-.obsidian/workspace.json
-**/workspace.json
+# Obsidian
+# App state and personal UI preferences, not vault content. Obsidian regenerates
+# this directory on first open. Also keeps plugin data (which can hold API keys)
+# out of the repo.
+.obsidian/
