@@ -58,7 +58,7 @@ g++ -std=c++23 -O3 -pthread <path_to_file.cpp> -o main
 g++ -std=c++23 -g -O0 -pthread <path_to_file.cpp> -o main
 ```
 
-**Race detection** — instruments memory accesses and reports data races even when the timing happened to work out. Costs a 5–15× slowdown, so it is a debug tool only (see **[[concurrency_cpp17]]**):
+**Race detection** — instruments memory accesses and reports data races even when the timing happened to work out. Costs a 5–15× slowdown, so it is a debug tool only (see [`concurrency_cpp17.md`](./03_multi_threading/concurrency_cpp17.md)):
 
 ```bash
 g++ -std=c++23 -g -O1 -pthread -fsanitize=thread <path_to_file.cpp> -o main
