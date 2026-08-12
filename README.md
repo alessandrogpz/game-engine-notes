@@ -28,7 +28,8 @@ Explore the core concepts step-by-step:
 *   **[`03_multi_threading`](./03_multi_threading)** — **[[multi_threading]]**
     *   *Concept:* Design lock-free parallel systems, analyze race conditions, and avoid False Sharing (cache line ping-ponging).
     *   *Companion Code:* [`multi_threading.cpp`](./03_multi_threading/multi_threading.cpp) (Chef-customer queue concurrency simulation).
-    *   *Glossary:* [`glossary.md`](./03_multi_threading/glossary.md) (Reference guide for C++ concurrency terms and primitives).
+    *   *Primitives:* [`concurrency_cpp17.md`](./03_multi_threading/concurrency_cpp17.md) — **[[concurrency_cpp17]]** (Threads, mutexes, atomics, condition variables, and deadlock, with synchronization cost measurements).
+    *   *Glossary:* [`concurrency_glossary.md`](./03_multi_threading/concurrency_glossary.md) (Reference guide for C++ concurrency terms and primitives).
 *   **[`04_dod_optimizations`](./04_dod_optimizations)** — **[[dod_optimizations]]**
     *   *Concept:* A practical, 8-step guide to refactoring OOP entities into DOD structures, achieving up to a 40x speedup.
 *   **[`05_advanced_dod`](./05_advanced_dod)** — **[[advanced_dod]]**

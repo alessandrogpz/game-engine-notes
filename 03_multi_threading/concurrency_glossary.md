@@ -1,6 +1,6 @@
 # C++ Concurrency Glossary
 
-A quick-reference guide to all the multithreading concepts, classes, and functions we have covered so far.
+A quick-reference guide to all the multithreading concepts, classes, and functions we have covered so far. Standard versions are marked per entry — for the full explanation of each primitive, see **[[concurrency_cpp17]]**.
 
 ---
 
@@ -114,3 +114,6 @@ A quick-reference guide to all the multithreading concepts, classes, and functio
     using namespace std::chrono_literals;
     std::this_thread::sleep_for(500ms);
     ```
+
+---
+*Back to **[[multi_threading]]** · **[[README]]***

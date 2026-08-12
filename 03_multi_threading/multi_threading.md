@@ -2,6 +2,8 @@
 
 This note covers how to write high-performance multi-threaded code by aligning software structure with hardware concurrency limits.
 
+*For the language primitives themselves — threads, mutexes, atomics, condition variables — see **[[concurrency_cpp17]]**.*
+
 ---
 
 ## The Concurrency Goal
