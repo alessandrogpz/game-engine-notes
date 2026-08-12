@@ -2,12 +2,14 @@
 
 This note covers the concurrency toolkit available up to **C++17**: launching
 threads, the two ways to make shared state safe (mutexes and atomics), waiting
-without burning CPU (condition variables), and the failure modes of each.
+without burning CPU (condition variables), and the failure modes of each. The
+scope here is the correctness and cost of the primitives themselves.
 
-Scope: correctness and cost of the primitives themselves. For *why* a DOD
-program tries to avoid them entirely, see
-**[multi_threading](./multi_threading.md)**. For a one-line-per-class lookup
-table, see **[concurrency_glossary](./concurrency_glossary.md)**.
+> [!NOTE]
+> **In this folder**
+> * [`multi_threading.md`](./multi_threading.md) — The DOD angle: why a fast program avoids these primitives in hot loops.
+> * [`concurrency_glossary.md`](./concurrency_glossary.md) — One-line lookup for each class and function.
+> * [`multi_threading.cpp`](./multi_threading.cpp) — Chef-customer queue simulation.
 
 ---
 

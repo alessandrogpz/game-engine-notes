@@ -1,6 +1,12 @@
 # C++ Concurrency Glossary
 
-A quick-reference guide to all the multithreading concepts, classes, and functions we have covered so far. Standard versions are marked per entry — for the full explanation of each primitive, see **[concurrency_cpp17](./concurrency_cpp17.md)**.
+A quick-reference guide to all the multithreading concepts, classes, and functions we have covered so far. Standard versions are marked per entry.
+
+> [!NOTE]
+> **In this folder**
+> * [`concurrency_cpp17.md`](./concurrency_cpp17.md) — The full explanation behind every entry here, with synchronization cost measurements.
+> * [`multi_threading.md`](./multi_threading.md) — The DOD angle: why a fast program avoids these primitives in hot loops.
+> * [`multi_threading.cpp`](./multi_threading.cpp) — Chef-customer queue simulation.
 
 ---
 

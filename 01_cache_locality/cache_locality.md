@@ -2,6 +2,10 @@
 
 This note covers the hardware-level details of CPU cache locality and how data layouts affect memory access speed.
 
+> [!NOTE]
+> **In this folder**
+> * [`aos_vs_soa.cpp`](./aos_vs_soa.cpp) — Particle AoS vs SoA layout benchmark.
+
 ---
 
 ## The Core Problem

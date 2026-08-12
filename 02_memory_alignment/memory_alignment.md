@@ -2,6 +2,10 @@
 
 This note covers how data alignment, padding, and layout in memory affect structural sizes and CPU cache line packing.
 
+> [!NOTE]
+> **In this folder**
+> * [`alignment.cpp`](./alignment.cpp) — Size comparison of aligned vs. padded structures.
+
 ---
 
 ## What is Memory Alignment?
