@@ -5,8 +5,9 @@ threads, the two ways to make shared state safe (mutexes and atomics), waiting
 without burning CPU (condition variables), and the failure modes of each.
 
 Scope: correctness and cost of the primitives themselves. For *why* a DOD
-program tries to avoid them entirely, see **[[multi_threading]]**. For a
-one-line-per-class lookup table, see **[[concurrency_glossary]]**.
+program tries to avoid them entirely, see
+**[multi_threading](./multi_threading.md)**. For a one-line-per-class lookup
+table, see **[concurrency_glossary](./concurrency_glossary.md)**.
 
 ---
 
@@ -247,8 +248,9 @@ Two threads, 1,000,000 increments each. Expected count: 2,000,000.
 Read as a hierarchy: **no sharing > atomic > mutex**. Even the atomic costs 9×
 the single-threaded run, because every increment has to be made visible to the
 other core. This is the measurement behind the DOD advice in
-**[[multi_threading]]** — give each thread its own destination and combine the
-results once at the end, so no synchronization is needed in the hot loop at all.
+**[multi_threading](./multi_threading.md)** — give each thread its own
+destination and combine the results once at the end, so no synchronization is
+needed in the hot loop at all.
 
 ---
 
@@ -469,4 +471,4 @@ cancellation via `std::stop_token`), `std::latch` and `std::barrier`,
 Covered in **[[concurrency_cpp20]]**.
 
 ---
-*Back to **[[multi_threading]]** · **[[README]]***
+*Back to **[multi_threading](./multi_threading.md)** · **[README](../README.md)***

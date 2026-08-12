@@ -1,6 +1,6 @@
 # C++ Concurrency Glossary
 
-A quick-reference guide to all the multithreading concepts, classes, and functions we have covered so far. Standard versions are marked per entry — for the full explanation of each primitive, see **[[concurrency_cpp17]]**.
+A quick-reference guide to all the multithreading concepts, classes, and functions we have covered so far. Standard versions are marked per entry — for the full explanation of each primitive, see **[concurrency_cpp17](./concurrency_cpp17.md)**.
 
 ---
 
@@ -116,4 +116,4 @@ A quick-reference guide to all the multithreading concepts, classes, and functio
     ```
 
 ---
-*Back to **[[multi_threading]]** · **[[README]]***
+*Back to **[multi_threading](./multi_threading.md)** · **[README](../README.md)***

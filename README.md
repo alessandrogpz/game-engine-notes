@@ -19,20 +19,20 @@ DOD focuses on organizing data in contiguous memory blocks first, then processin
 
 Explore the core concepts step-by-step:
 
-*   **[`01_cache_locality`](./01_cache_locality)** — **[[cache_locality]]**
+*   **[`01_cache_locality`](./01_cache_locality)** — **[cache_locality](./01_cache_locality/cache_locality.md)**
     *   *Concept:* Understand CPU bottlenecks, memory latency tiers, 64-byte Cache Lines, and the difference between Array of Structures (AoS) and Structure of Arrays (SoA).
     *   *Companion Code:* [`aos_vs_soa.cpp`](./01_cache_locality/aos_vs_soa.cpp) (Simple particle AoS vs SoA layout benchmark).
-*   **[`02_memory_alignment`](./02_memory_alignment)** — **[[memory_alignment]]**
+*   **[`02_memory_alignment`](./02_memory_alignment)** — **[memory_alignment](./02_memory_alignment/memory_alignment.md)**
     *   *Concept:* Learn about hardware word sizes, compiler padding, and struct sorting rules to maximize cache line density.
     *   *Companion Code:* [`alignment.cpp`](./02_memory_alignment/alignment.cpp) (Size comparison of aligned vs. padded structures).
-*   **[`03_multi_threading`](./03_multi_threading)** — **[[multi_threading]]**
+*   **[`03_multi_threading`](./03_multi_threading)** — **[multi_threading](./03_multi_threading/multi_threading.md)**
     *   *Concept:* Design lock-free parallel systems, analyze race conditions, and avoid False Sharing (cache line ping-ponging).
     *   *Companion Code:* [`multi_threading.cpp`](./03_multi_threading/multi_threading.cpp) (Chef-customer queue concurrency simulation).
-    *   *Primitives:* [`concurrency_cpp17.md`](./03_multi_threading/concurrency_cpp17.md) — **[[concurrency_cpp17]]** (Threads, mutexes, atomics, condition variables, and deadlock, with synchronization cost measurements).
+    *   *Primitives:* [`concurrency_cpp17.md`](./03_multi_threading/concurrency_cpp17.md) (Threads, mutexes, atomics, condition variables, and deadlock, with synchronization cost measurements).
     *   *Glossary:* [`concurrency_glossary.md`](./03_multi_threading/concurrency_glossary.md) (Reference guide for C++ concurrency terms and primitives).
-*   **[`04_dod_optimizations`](./04_dod_optimizations)** — **[[dod_optimizations]]**
+*   **[`04_dod_optimizations`](./04_dod_optimizations)** — **[dod_optimizations](./04_dod_optimizations/dod_optimizations.md)**
     *   *Concept:* A practical, 8-step guide to refactoring OOP entities into DOD structures, achieving up to a 40x speedup.
-*   **[`05_advanced_dod`](./05_advanced_dod)** — **[[advanced_dod]]**
+*   **[`05_advanced_dod`](./05_advanced_dod)** — **[advanced_dod](./05_advanced_dod/advanced_dod.md)**
     *   *Concept:* Deep dive into advanced techniques: AoSoA hybrid layouts, SIMD vectorization, ECS architecture, Custom Allocators, and Instruction Cache optimizations.
 
 ---

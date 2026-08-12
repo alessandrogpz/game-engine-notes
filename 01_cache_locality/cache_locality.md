@@ -101,4 +101,4 @@ C++ multidimensional arrays are stored in **Row-Major** format (contiguous rows)
   ```
 
 ---
-*Back to **[[README]]***
+*Back to **[README](../README.md)***

@@ -2,7 +2,7 @@
 
 This note covers how to write high-performance multi-threaded code by aligning software structure with hardware concurrency limits.
 
-*For the language primitives themselves — threads, mutexes, atomics, condition variables — see **[[concurrency_cpp17]]**.*
+*For the language primitives themselves — threads, mutexes, atomics, condition variables — see **[concurrency_cpp17](./concurrency_cpp17.md)**.*
 
 ---
 
@@ -61,4 +61,4 @@ void increment_task(){
 * **Accumulate Locally:** Do not write directly to shared memory inside loops. Keep accumulation inside registers (local variables) and write to the shared array once upon task completion.
 
 ---
-*Back to **[[README]]***
+*Back to **[README](../README.md)***
