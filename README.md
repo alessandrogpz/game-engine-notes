@@ -42,8 +42,26 @@ Explore the core concepts step-by-step:
 All examples in this project use **C++23**. You can compile and run any of the C++ files from the root of the repository using this general command:
 
 ```bash
-g++ -std=c++23 -O3 <path_to_file.cpp> -o main
+g++ -std=c++23 -O3 -pthread <path_to_file.cpp> -o main
 ./main
+```
+
+| Flag | Why it is required |
+| :--- | :--- |
+| `-std=c++23` | The examples use `<print>` / `std::println` and CTAD on lock wrappers. Set your editor's IntelliSense standard to `c++23` as well, or it will report false errors on code that compiles cleanly. |
+| `-O3` | Mandatory for every benchmark — see the warning below. |
+| `-pthread` | Needed by the threading examples. Modern glibc links `std::thread` without it, but it is the correct portable flag and sets `-D_REENTRANT`. |
+
+**Debug build** — for stepping through code. Timings from this build are meaningless:
+
+```bash
+g++ -std=c++23 -g -O0 -pthread <path_to_file.cpp> -o main
+```
+
+**Race detection** — instruments memory accesses and reports data races even when the timing happened to work out. Costs a 5–15× slowdown, so it is a debug tool only (see **[[concurrency_cpp17]]**):
+
+```bash
+g++ -std=c++23 -g -O1 -pthread -fsanitize=thread <path_to_file.cpp> -o main
 ```
 
 > [!WARNING]
