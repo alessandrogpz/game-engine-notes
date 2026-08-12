@@ -26,7 +26,7 @@ To visualize memory and execution relationships:
 * **Data = Ingredients:** What the instructions operate on.
 
 ### The Big O Fallacy
-Big O notation (e.g., $O(n \log n)$) only measures the number of operations performed once data is in the workspace. It ignores the massive latency cost of moving data into the registers (fetching ingredients from the pantry or refrigerator). 
+Big O notation (e.g., `O(n log n)`) only measures the number of operations performed once data is in the workspace. It ignores the massive latency cost of moving data into the registers (fetching ingredients from the pantry or refrigerator). 
 
 ---
 

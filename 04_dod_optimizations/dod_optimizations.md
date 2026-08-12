@@ -94,7 +94,7 @@ This guide outlines the 8 sequential steps to optimize CPU-bound code. Convertin
 
 ## Step 7: Use Swap-Back Arrays for Deletion
 * **Fix:** Avoid standard list removals (which shift elements down). Instead, copy the last element of the array over the deleted slot, then decrement the array count.
-* **Why:** Standard list deletion shifts subsequent elements, causing high memory overhead ($O(n)$). Swap-back arrays perform a single copy operation ($O(1)$), running ~4x faster.
+* **Why:** Standard list deletion shifts subsequent elements, causing high memory overhead (`O(n)`). Swap-back arrays perform a single copy operation (`O(1)`), running ~4x faster.
 * **C++ Implementation:**
   ```cpp
   void RemoveAt(std::vector<Entity>& list, size_t index) {

@@ -76,12 +76,12 @@ General-purpose heap allocation (`new` or `malloc`) is slow and causes memory fr
 
 ### Arena (Stack) Allocator
 * **Mechanism:** Allocates a single large buffer. When memory is requested, it simply increments an offset pointer. 
-* **Complexity:** Allocation is $O(1)$, and deallocation is a single operation that resets the offset pointer back to zero.
+* **Complexity:** Allocation is `O(1)`, and deallocation is a single operation that resets the offset pointer back to zero.
 * **Ideal for:** Frame-based temporary allocations (e.g., clearing temporary buffers at the end of each frame).
 
 ### Pool Allocator
 * **Mechanism:** Divides a block of memory into fixed-size slots (e.g., exactly 64 bytes each). It tracks free slots using a linked list of free blocks stored within the empty slots themselves.
-* **Complexity:** Allocation and deallocation are both $O(1)$.
+* **Complexity:** Allocation and deallocation are both `O(1)`.
 * **Ideal for:** Repeatedly spawning and destroying entities of a fixed type without causing fragmentation.
 
 ---

@@ -12,7 +12,7 @@ This note covers how data alignment, padding, and layout in memory affect struct
 
 CPUs do not read from and write to physical memory in single-byte increments. Instead, they access memory in **word-sized blocks** (typically 4 bytes on 32-bit systems or 8 bytes on 64-bit systems). 
 
-* **Aligned Access:** When a variable of size $N$ bytes is stored at a memory address that is a multiple of $N$, the CPU can retrieve it in a single memory cycle.
+* **Aligned Access:** When a variable of size `N` bytes is stored at a memory address that is a multiple of `N`, the CPU can retrieve it in a single memory cycle.
 * **Unaligned Access:** If data is unaligned (e.g., a 4-byte integer starting at address `0x03`), the CPU must execute two separate memory reads, mask out the unwanted bytes, and merge the remaining bytes. This degrades performance and, on some architectures, causes hardware exceptions.
 
 ---
