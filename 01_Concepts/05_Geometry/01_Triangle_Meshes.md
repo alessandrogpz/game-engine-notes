@@ -57,21 +57,21 @@ where:
 #### Examples:
 * **Sphere / Box ($g = 0$ holes):**
   
-  $$
-  V - E + F = 2 - 2(0) = 2
-  $$
+$$
+V - E + F = 2 - 2(0) = 2
+$$
 
 * **Torus / Donut ($g = 1$ hole):**
   
-  $$
-  V - E + F = 2 - 2(1) = 0
-  $$
+$$
+V - E + F = 2 - 2(1) = 0
+$$
 
 * **Double Donut ($g = 2$ holes):**
   
-  $$
-  V - E + F = 2 - 2(2) = -2
-  $$
+$$
+V - E + F = 2 - 2(2) = -2
+$$
 
 ---
 

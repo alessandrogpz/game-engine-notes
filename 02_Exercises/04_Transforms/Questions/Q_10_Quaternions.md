@@ -37,7 +37,12 @@ q_1^{-1} = \frac{q_1^*}{\|q_1\|^2}
 $$
 
 ### 3. 3D Vector Rotation
-Suppose we want to rotate a 3D vector $\vec{v} = \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix}$ by an angle $\theta = 90^\circ$ counterclockwise around the normalized vertical axis $\vec{u} = \begin{bmatrix} 0 \\\\ 0 \\\\ 1 \end{bmatrix}$ (the $z$-axis).
+Suppose we want to rotate a 3D vector $\vec{v}$ by an angle $\theta = 90^\circ$ counterclockwise around the normalized vertical axis $\vec{u}$ (the $z$-axis):
+
+$$
+\vec{v} = \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix}, \qquad \vec{u} = \begin{bmatrix} 0 \\\\ 0 \\\\ 1 \end{bmatrix}
+$$
+
 1. Construct the unit rotation quaternion $q$ using the formula:
 
 $$

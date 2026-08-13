@@ -27,23 +27,23 @@ $$
 
 *   **Projection of $\vec{v}$:**
     
-    $$
-    \vec{v} \cdot \vec{u} = 3(1) + 0(2) + 1(-1) = 2
-    $$
+$$
+\vec{v} \cdot \vec{u} = 3(1) + 0(2) + 1(-1) = 2
+$$
     
-    $$
-    \vec{p}_v = \text{proj}_{\vec{u}}\vec{v} = \frac{\vec{v} \cdot \vec{u}}{\|\vec{u}\|^2}\vec{u} = \frac{2}{6} \begin{bmatrix} 1 \\\\ 2 \\\\ -1 \end{bmatrix} = \begin{bmatrix} 1/3 \\\\ 2/3 \\\\ -1/3 \end{bmatrix}
-    $$
+$$
+\vec{p}_v = \text{proj}_{\vec{u}}\vec{v} = \frac{\vec{v} \cdot \vec{u}}{\|\vec{u}\|^2}\vec{u} = \frac{2}{6} \begin{bmatrix} 1 \\\\ 2 \\\\ -1 \end{bmatrix} = \begin{bmatrix} 1/3 \\\\ 2/3 \\\\ -1/3 \end{bmatrix}
+$$
 
 *   **Projection of $\vec{w}$:**
     
-    $$
-    \vec{w} \cdot \vec{u} = -1(1) + 4(2) + 2(-1) = 5
-    $$
+$$
+\vec{w} \cdot \vec{u} = -1(1) + 4(2) + 2(-1) = 5
+$$
     
-    $$
-    \vec{p}_w = \text{proj}_{\vec{u}}\vec{w} = \frac{\vec{w} \cdot \vec{u}}{\|\vec{u}\|^2}\vec{u} = \frac{5}{6} \begin{bmatrix} 1 \\\\ 2 \\\\ -1 \end{bmatrix} = \begin{bmatrix} 5/6 \\\\ 5/3 \\\\ -5/6 \end{bmatrix}
-    $$
+$$
+\vec{p}_w = \text{proj}_{\vec{u}}\vec{w} = \frac{\vec{w} \cdot \vec{u}}{\|\vec{u}\|^2}\vec{u} = \frac{5}{6} \begin{bmatrix} 1 \\\\ 2 \\\\ -1 \end{bmatrix} = \begin{bmatrix} 5/6 \\\\ 5/3 \\\\ -5/6 \end{bmatrix}
+$$
 
 ### 2. Linearity Verification ($\vec{p}_{v+w} = \vec{p}_v + \vec{p}_w$)
 
@@ -108,15 +108,15 @@ $$
 Let $\vec{x} = [3, 0, 1]^T$, $\vec{y} = [2, 2, 1]^T$ and let scalar $c=2$, so $c\vec{y} = [4, 4, 2]^T$:
 *   **Projection onto $\vec{y}$:**
     
-    $$
-    \text{proj}_{\vec{y}}\vec{x} = \frac{3(2) + 0(2) + 1(1)}{2^2 + 2^2 + 1^2}\vec{y} = \frac{7}{9}\begin{bmatrix} 2 \\\\ 2 \\\\ 1 \end{bmatrix} = \begin{bmatrix} 14/9 \\\\ 14/9 \\\\ 7/9 \end{bmatrix}
-    $$
+$$
+\text{proj}_{\vec{y}}\vec{x} = \frac{3(2) + 0(2) + 1(1)}{2^2 + 2^2 + 1^2}\vec{y} = \frac{7}{9}\begin{bmatrix} 2 \\\\ 2 \\\\ 1 \end{bmatrix} = \begin{bmatrix} 14/9 \\\\ 14/9 \\\\ 7/9 \end{bmatrix}
+$$
     
 *   **Projection onto $2\vec{y}$:**
     
-    $$
-    \text{proj}_{2\vec{y}}\vec{x} = \frac{3(4) + 0(4) + 1(2)}{4^2 + 4^2 + 2^2}(2\vec{y}) = \frac{14}{36}\begin{bmatrix} 4 \\\\ 4 \\\\ 2 \end{bmatrix} = \frac{7}{18}\begin{bmatrix} 4 \\\\ 4 \\\\ 2 \end{bmatrix} = \begin{bmatrix} 14/9 \\\\ 14/9 \\\\ 7/9 \end{bmatrix}
-    $$
+$$
+\text{proj}_{2\vec{y}}\vec{x} = \frac{3(4) + 0(4) + 1(2)}{4^2 + 4^2 + 2^2}(2\vec{y}) = \frac{14}{36}\begin{bmatrix} 4 \\\\ 4 \\\\ 2 \end{bmatrix} = \frac{7}{18}\begin{bmatrix} 4 \\\\ 4 \\\\ 2 \end{bmatrix} = \begin{bmatrix} 14/9 \\\\ 14/9 \\\\ 7/9 \end{bmatrix}
+$$
 
 #### Geometric Intuition
 The vector $\vec{y}$ defines a line of projection. Scaling $\vec{y}$ by a non-zero scalar changes its length (and flips its direction if $c < 0$), but it **does not alter the line itself**. Since the line of projection is invariant, the shadow (projection) cast onto it remains identical.

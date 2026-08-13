@@ -23,21 +23,21 @@ We apply three transformations in the standard **SRT (Scale $\to$ Rotate $\to$ T
 
 *   **Scale Matrix ($\mathbf{S}$):** Uniform scale by 3.
     
-    $$
-    \mathbf{S} = \begin{bmatrix} 3 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 1 \end{bmatrix}
-    $$
+$$
+\mathbf{S} = \begin{bmatrix} 3 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 1 \end{bmatrix}
+$$
 
 *   **Rotation Matrix ($\mathbf{R}$):** Rotate $90^\circ$ counter-clockwise (about the $z$-axis).
     
-    $$
-    \mathbf{R} = \begin{bmatrix} \cos(90^\circ) & -\sin(90^\circ) & 0 \\\\ \sin(90^\circ) & \cos(90^\circ) & 0 \\\\ 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} 0 & -1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1 \end{bmatrix}
-    $$
+$$
+\mathbf{R} = \begin{bmatrix} \cos(90^\circ) & -\sin(90^\circ) & 0 \\\\ \sin(90^\circ) & \cos(90^\circ) & 0 \\\\ 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} 0 & -1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1 \end{bmatrix}
+$$
 
 *   **Translation Matrix ($\mathbf{T}$):** Translate by $T_x = 5$ and $T_y = -2$.
     
-    $$
-    \mathbf{T} = \begin{bmatrix} 1 & 0 & 5 \\\\ 0 & 1 & -2 \\\\ 0 & 0 & 1 \end{bmatrix}
-    $$
+$$
+\mathbf{T} = \begin{bmatrix} 1 & 0 & 5 \\\\ 0 & 1 & -2 \\\\ 0 & 0 & 1 \end{bmatrix}
+$$
 
 ### 2. Sequential Application of Operations
 
@@ -45,21 +45,21 @@ To evaluate the operations sequentially:
 
 1.  **Scale ($\mathbf{S}\vec{p}$):**
     
-    $$
-    \vec{p}_{\text{scaled}} = \mathbf{S}\vec{p} = \begin{bmatrix} 3 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 2 \\\\ 1 \\\\ 1 \end{bmatrix} = \begin{bmatrix} 6 \\\\ 3 \\\\ 1 \end{bmatrix}
-    $$
+$$
+\vec{p}_{\text{scaled}} = \mathbf{S}\vec{p} = \begin{bmatrix} 3 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 2 \\\\ 1 \\\\ 1 \end{bmatrix} = \begin{bmatrix} 6 \\\\ 3 \\\\ 1 \end{bmatrix}
+$$
 
 2.  **Rotate ($\mathbf{R}\vec{p}_{\text{scaled}}$):**
     
-    $$
-    \vec{p}_{\text{rotated}} = \mathbf{R}\vec{p}_{\text{scaled}} = \begin{bmatrix} 0 & -1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 6 \\\\ 3 \\\\ 1 \end{bmatrix} = \begin{bmatrix} -3 \\\\ 6 \\\\ 1 \end{bmatrix}
-    $$
+$$
+\vec{p}_{\text{rotated}} = \mathbf{R}\vec{p}_{\text{scaled}} = \begin{bmatrix} 0 & -1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 6 \\\\ 3 \\\\ 1 \end{bmatrix} = \begin{bmatrix} -3 \\\\ 6 \\\\ 1 \end{bmatrix}
+$$
 
 3.  **Translate ($\mathbf{T}\vec{p}_{\text{rotated}}$):**
     
-    $$
-    \vec{p}_{\text{final}} = \mathbf{T}\vec{p}_{\text{rotated}} = \begin{bmatrix} 1 & 0 & 5 \\\\ 0 & 1 & -2 \\\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} -3 \\\\ 6 \\\\ 1 \end{bmatrix} = \begin{bmatrix} (-3 + 5) \\\\ (6 - 2) \\\\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\\\ 4 \\\\ 1 \end{bmatrix}
-    $$
+$$
+\vec{p}_{\text{final}} = \mathbf{T}\vec{p}_{\text{rotated}} = \begin{bmatrix} 1 & 0 & 5 \\\\ 0 & 1 & -2 \\\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} -3 \\\\ 6 \\\\ 1 \end{bmatrix} = \begin{bmatrix} (-3 + 5) \\\\ (6 - 2) \\\\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\\\ 4 \\\\ 1 \end{bmatrix}
+$$
 
 The final transformed point is **$(2, 4)$**.
 
@@ -110,9 +110,9 @@ If the order is changed to **TRS (Translate $\to$ Rotate $\to$ Scale)**:
 For the combined matrix $\mathbf{M}$:
 *   The absolute value of the determinant ($|\det(\mathbf{M})|$) represents the **area scaling factor** of the transformation on 2D shapes. Here, the scale factor is 3 in both directions, meaning the area scales by a factor of $3^2 = 9$.
     
-    $$
-    \det(\mathbf{M}) = 0(0 - 0) - (-3)(3 - 0) + 5(0 - 0) = 9
-    $$
+$$
+\det(\mathbf{M}) = 0(0 - 0) - (-3)(3 - 0) + 5(0 - 0) = 9
+$$
     
 *   The sign of the determinant indicates whether **orientation** is preserved (positive) or flipped/reflected (negative). Since $\det(\mathbf{M}) = 9 > 0$, the orientation is preserved.
 

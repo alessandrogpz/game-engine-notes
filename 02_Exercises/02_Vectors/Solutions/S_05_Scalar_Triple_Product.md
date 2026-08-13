@@ -61,21 +61,21 @@ $$
 ### 3. Order of Operations and Cyclic Order
 *   **Order of Operations**: The expression $(\vec{u} \times \vec{v}) \cdot \vec{w}$ requires the cross product to be evaluated first because $\vec{v} \cdot \vec{w}$ yields a scalar, and a cross product between a vector and a scalar ($\vec{u} \times \text{scalar}$) is undefined. However, the dot and cross operator positions can be swapped:
     
-    $$
-    (\vec{u} \times \vec{v}) \cdot \vec{w} = \vec{u} \cdot (\vec{v} \times \vec{w})
-    $$
+$$
+(\vec{u} \times \vec{v}) \cdot \vec{w} = \vec{u} \cdot (\vec{v} \times \vec{w})
+$$
     
 *   **Cyclic Order**: As long as the cyclic order of the vectors is preserved ($\vec{u} \to \vec{v} \to \vec{w} \to \vec{u}$), the scalar triple product remains unchanged:
     
-    $$
-    (\vec{u} \times \vec{v}) \cdot \vec{w} = (\vec{v} \times \vec{w}) \cdot \vec{u} = (\vec{w} \times \vec{u}) \cdot \vec{v}
-    $$
+$$
+(\vec{u} \times \vec{v}) \cdot \vec{w} = (\vec{v} \times \vec{w}) \cdot \vec{u} = (\vec{w} \times \vec{u}) \cdot \vec{v}
+$$
     
     If the cyclic order is reversed (e.g. swapping any two vectors), the sign of the result flips:
     
-    $$
-    (\vec{v} \times \vec{u}) \cdot \vec{w} = -9
-    $$
+$$
+(\vec{v} \times \vec{u}) \cdot \vec{w} = -9
+$$
 
 ---
 **Back to Question:** [[Q_05_Scalar_Triple_Product]] | **Related Concepts:** [[05_Scalar_Triple_Product]]

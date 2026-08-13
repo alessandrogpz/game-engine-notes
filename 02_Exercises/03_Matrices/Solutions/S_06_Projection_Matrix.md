@@ -88,9 +88,9 @@ $$
 
 *   **Algebraic Proof**: The columns of any projection matrix of the form $\mathbf{P} = \vec{v}\vec{v}^T$ are linearly dependent. For example, if we take $\vec{v} = [1, 2, 3]^T$, the matrix is:
     
-    $$
-    \mathbf{P} = \begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \end{bmatrix}
-    $$
+$$
+\mathbf{P} = \begin{bmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \end{bmatrix}
+$$
     
     Row 2 is $2 \times$ Row 1, and Row 3 is $3 \times$ Row 1. Because the rows are linearly dependent, the matrix is singular (rank 1), meaning its determinant must be 0.
 *   **Geometric Intuition**: The determinant represents the volume scaling factor of the transformation. A projection matrix collapses 3D space onto a 1D line, shrinking all 3D volume down to exactly zero. Since the transformed volume is zero, the determinant must be $0$ (the object's volume has completely vanished).

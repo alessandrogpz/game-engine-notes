@@ -94,9 +94,9 @@ $$
 Strictly speaking, the mathematical cross product is only defined for **3D vectors** (resulting in a 3D vector). It does not exist as a binary vector operation in 2D space.
 *   **In 2D Physics/Graphics**: We often define a pseudo 2D cross product of two vectors $\vec{u} = (u_x, u_y)$ and $\vec{v} = (v_x, v_y)$ that yields a **scalar**:
     
-    $$
-    \vec{u} \times_{\text{2D}} \vec{v} = u_x v_y - u_y v_x
-    $$
+$$
+\vec{u} \times_{\text{2D}} \vec{v} = u_x v_y - u_y v_x
+$$
     
     This scalar represents the signed area of the 2D parallelogram, and corresponds to the $z$-component of a 3D cross product if the 2D vectors were placed in the $xy$-plane (with $z = 0$).
 

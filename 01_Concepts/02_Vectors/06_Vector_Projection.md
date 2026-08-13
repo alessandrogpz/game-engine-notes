@@ -77,6 +77,7 @@ Multiplying the denominators ($\|\vec{b}\| \cdot \|\vec{b}\| = \|\vec{b}\|^2$):
 $$
 \text{proj}_{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{\|\vec{b}\|^2} \vec{b}
 $$
+
 ---
 
 ## Vector Rejection
@@ -88,6 +89,7 @@ Think of vector rejection as removing the parallel projection component from the
 * **Physical Meaning:** In game physics (like collision response), if $\vec{b}$ is a surface normal vector, the vector projection is the component pushing *into* the surface (penetration), while the vector rejection is the component **parallel to the surface** (the sliding direction along the plane).
 
 ### Algebraic Formula
+
 $$
 \text{rej}_{\vec{b}}\vec{a} = \vec{a} - \text{proj}_{\vec{b}}\vec{a}
 $$

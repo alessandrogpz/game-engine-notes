@@ -20,21 +20,21 @@ We want to construct a $4 \times 4$ Model Matrix $\mathbf{M}$ for a 3D object th
 
 *   **Scaling Matrix ($\mathbf{S}$):**
     
-    $$
-    \mathbf{S} = \begin{bmatrix} 2 & 0 & 0 & 0 \\\\ 0 & 2 & 0 & 0 \\\\ 0 & 0 & 2 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}
-    $$
+$$
+\mathbf{S} = \begin{bmatrix} 2 & 0 & 0 & 0 \\\\ 0 & 2 & 0 & 0 \\\\ 0 & 0 & 2 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}
+$$
 
 *   **Rotation Matrix ($\mathbf{R}$):** Rotation of $90^\circ$ about the $z$-axis.
     
-    $$
-    \mathbf{R} = \begin{bmatrix} \cos(90^\circ) & -\sin(90^\circ) & 0 & 0 \\\\ \sin(90^\circ) & \cos(90^\circ) & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} 0 & -1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}
-    $$
+$$
+\mathbf{R} = \begin{bmatrix} \cos(90^\circ) & -\sin(90^\circ) & 0 & 0 \\\\ \sin(90^\circ) & \cos(90^\circ) & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} = \begin{bmatrix} 0 & -1 & 0 & 0 \\\\ 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}
+$$
 
 *   **Translation Matrix ($\mathbf{T}$):**
     
-    $$
-    \mathbf{T} = \begin{bmatrix} 1 & 0 & 0 & 3 \\\\ 0 & 1 & 0 & -1 \\\\ 0 & 0 & 1 & 4 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}
-    $$
+$$
+\mathbf{T} = \begin{bmatrix} 1 & 0 & 0 & 3 \\\\ 0 & 1 & 0 & -1 \\\\ 0 & 0 & 1 & 4 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}
+$$
 
 ### 2. Combined Model Matrix $\mathbf{M}$
 
@@ -86,9 +86,9 @@ Which corresponds to the Euclidean coordinate point **$(-1, 1, 2)$**.
 Vertex shaders process millions of vertices per frame in modern game engines. The Model-View-Projection (MVP) pipeline optimizes this through pre-multiplication:
 *   Because matrix multiplication is associative, the engine multiplies the projection, view, and model matrices together once on the CPU per object (or per frame) to form a single combined transformation matrix:
     
-    $$
-    \mathbf{M}_{\text{Total}} = \mathbf{M}_{\text{Projection}} \cdot \mathbf{M}_{\text{View}} \cdot \mathbf{M}_{\text{Model}}
-    $$
+$$
+\mathbf{M}_{\text{Total}} = \mathbf{M}_{\text{Projection}} \cdot \mathbf{M}_{\text{View}} \cdot \mathbf{M}_{\text{Model}}
+$$
     
 *   Instead of performing three separate matrix-vector multiplications per vertex on the GPU, the shader only has to perform a **single matrix-vector multiplication** ($\vec{v}' = \mathbf{M}_{\text{Total}}\vec{v}$) for each of the millions of vertices. This reduces arithmetic operations per vertex by two-thirds, saving substantial computational time and preventing bottlenecks.
 

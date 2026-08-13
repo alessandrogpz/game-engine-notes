@@ -85,6 +85,7 @@ $$
 $$
 
 ### Explicit Matrix Expansion
+
 $$
 \mathbf{P}_{\perp u} = \begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \end{bmatrix} - \begin{bmatrix} u_x^2 & u_x u_y & u_x u_z \\\\ u_x u_y & u_y^2 & u_y u_z \\\\ u_x u_z & u_y u_z & u_z^2 \end{bmatrix} = \begin{bmatrix} 1 - u_x^2 & -u_x u_y & -u_x u_z \\\\ -u_x u_y & 1 - u_y^2 & -u_y u_z \\\\ -u_x u_z & -u_y u_z & 1 - u_z^2 \end{bmatrix}
 $$

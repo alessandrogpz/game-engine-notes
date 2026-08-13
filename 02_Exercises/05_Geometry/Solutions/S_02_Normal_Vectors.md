@@ -101,7 +101,12 @@ $$
 
 ### Question 1: Naive Normal Transformation Failure
 
-Applying $\mathbf{M}$ directly to the original unit normal $\hat{n}_A = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}$:
+Applying $\mathbf{M}$ directly to the original unit normal $\hat{n}_A$:
+
+$$
+\hat{n}_A = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}
+$$
+
 
 $$
 \hat{n}_{\text{naive}} = \mathbf{M}\hat{n}_A = \begin{bmatrix} 1 & 0 & 0 \\\\ 1 & 1 & 0 \\\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 1 \\\\ 0 \end{bmatrix}
@@ -137,7 +142,13 @@ $$
 \mathbf{N}' = \mathbf{P_0'P_1'} \times \mathbf{P_0'P_2'} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \times \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix} = \begin{bmatrix} 12 \\\\ 0 \\\\ 0 \end{bmatrix} \implies \hat{n}_{\text{true}} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}
 $$
 
-Since $\hat{n}_{\text{true}} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} \neq \begin{bmatrix} 1 \\\\ 1 \\\\ 0 \end{bmatrix} = \hat{n}_{\text{naive}}$, transforming the normal vector naively using $\mathbf{M}$ fails.
+Comparing the true normal against the naively transformed one:
+
+$$
+\hat{n}_{\text{true}} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} \neq \begin{bmatrix} 1 \\\\ 1 \\\\ 0 \end{bmatrix} = \hat{n}_{\text{naive}}
+$$
+
+Transforming the normal vector naively using $\mathbf{M}$ therefore fails.
 
 ---
 
@@ -182,7 +193,12 @@ $$
 \hat{n}_B = (\mathbf{M}^{-1})^T \hat{n}_A = \begin{bmatrix} 1 & -1 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \end{bmatrix} \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}
 $$
 
-This matches the true recomputed normal $\hat{n}_{\text{true}} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}$.
+This matches the true recomputed normal:
+
+$$
+\hat{n}_{\text{true}} = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}
+$$
+
 
 #### 4. Proving Orthogonality
 Checking the dot product of $\hat{n}_B$ with both transformed edge vectors:

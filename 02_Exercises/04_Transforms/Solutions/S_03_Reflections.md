@@ -92,11 +92,13 @@ $$
 To analyze the orientation-preserving properties of these transformations, we compute the determinants of the specific matrices constructed in Part 1 (where $\vec{a} = [0, 0, 1]^T$):
 
 #### Plane Reflection Determinant:
+
 $$
 \det\big(\mathbf{M}_{\text{reflect}}(\vec{a})\big) = \det\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & -1 \end{bmatrix} = (1)(1)(-1) = -1
 $$
 
 #### Axis Reflection (Involution) Determinant:
+
 $$
 \det\big(\mathbf{M}_{\text{invol}}(\vec{a})\big) = \det\begin{bmatrix} -1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \end{bmatrix} = (-1)(-1)(1) = 1
 $$
@@ -145,6 +147,7 @@ Two consecutive reflections across the same plane cancel each other out, yieldin
 ---
 
 #### Product of Plane Reflection and Axis Reflection (Point Reflection / Inversion)
+
 $$
 \mathbf{M}_{\text{reflect}}(\vec{a})\mathbf{M}_{\text{invol}}(\vec{a})
 $$

@@ -132,27 +132,27 @@ $$
 *   **Singularity**: A square $n \times n$ matrix $M$ has a determinant of $0$ if and only if it is **singular** (not invertible).
 *   **Rank**: A singular matrix has linearly dependent rows and columns. Consequently, the dimension of its column space (its rank) must be strictly less than $n$:
     
-    $$
-    \text{rank}(M) < n
-    $$
+$$
+\text{rank}(M) < n
+$$
     
 *   **Rank-Nullity Theorem**: The theorem states that for any $n \times n$ matrix $M$:
     
-    $$
-    \text{rank}(M) + \text{nullity}(M) = n
-    $$
+$$
+\text{rank}(M) + \text{nullity}(M) = n
+$$
     
     Rearranging for nullity:
     
-    $$
-    \text{nullity}(M) = n - \text{rank}(M)
-    $$
+$$
+\text{nullity}(M) = n - \text{rank}(M)
+$$
     
     Since $\text{rank}(M) < n$, it follows that:
     
-    $$
-    \text{nullity}(M) > 0
-    $$
+$$
+\text{nullity}(M) > 0
+$$
     
     This guarantees the existence of a non-trivial null space (at least one non-zero vector $\vec{x} \neq \vec{0}$ such that $M\vec{x} = \vec{0}$).
 
