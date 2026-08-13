@@ -21,4 +21,4 @@ $$
 3. Prove that for any $2 \times 2$ matrix  $M$, the inverse matrix $M^{-1}$ exists if and only if $ad - bc \neq 0$.
 
 ---
-**Check Answer:** [[S_04_Matrix_Inversion_2x2]] | **Related Concepts:** [[03_Determinants]]
+**Check Answer:** [S_04_Matrix_Inversion_2x2](../Solutions/S_04_Matrix_Inversion_2x2.md) | **Related Concepts:** [03_Determinants](../../../01_Concepts/03_Matrices/03_Determinants.md)

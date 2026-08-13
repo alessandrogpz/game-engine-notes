@@ -6,7 +6,7 @@ In computer graphics, physics simulations, and geometric modeling, translation i
 
 ## 1. Geometric Definition of Translation
 
-Until now, all our 3D transformations assumed that our object (or vector) was centered at the world origin. Translation moves an object within the [[03_Coordinate_Systems|coordinate system]] by adding a constant offset vector $\vec{t}$ to every point of the object:
+Until now, all our 3D transformations assumed that our object (or vector) was centered at the world origin. Translation moves an object within the [coordinate system](../02_Vectors/03_Coordinate_Systems.md) by adding a constant offset vector $\vec{t}$ to every point of the object:
 
 $$
 \vec{v}' = \vec{v} + \vec{t}
@@ -41,7 +41,7 @@ For any point on the object, adding $\vec{t}$ shifts it to its new corresponding
 
 ## 2. The Mathematical Bottleneck
 
-We cannot represent translation using a standard $3 \times 3$ (or $2 \times 2$ in 2D) [[02_Matrix_Multiplication|matrix multiplication]]. 
+We cannot represent translation using a standard $3 \times 3$ (or $2 \times 2$ in 2D) [matrix multiplication](../03_Matrices/02_Matrix_Multiplication.md). 
 
 By definition, any linear transformation $f(\vec{v}) = \mathbf{M}\vec{v}$ must preserve the origin (i.e., mapping the origin to itself):
 
@@ -73,7 +73,7 @@ This creates a major bottleneck: we cannot combine (compose) a sequence of rotat
 
 ## 3. The Solution: Introducing a New Dimension
 
-To combine translations with other transformations into a single matrix operation, we must introduce an additional dimension. This leads to the concept of **[[07_Homogeneous_Coordinates|homogeneous coordinates]]**.
+To combine translations with other transformations into a single matrix operation, we must introduce an additional dimension. This leads to the concept of **[homogeneous coordinates](07_Homogeneous_Coordinates.md)**.
 
 Let's see how this works for a 2D vector $[x, y]^T$. We start with the identity transformation:
 
@@ -116,7 +116,7 @@ $$
 $$
 
 Where:
-*   $\mathbf{M}$ is the $3 \times 3$ linear [[01_Transformation_Matrices|transformation matrix]].
+*   $\mathbf{M}$ is the $3 \times 3$ linear [transformation matrix](01_Transformation_Matrices.md).
 *   $\vec{t}$ is the $3 \times 1$ translation vector.
 
 ### Order of Operations
@@ -172,4 +172,4 @@ $$
 ---
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/04_Transforms/Translations.cppm|Translations.cppm]]
+*   **C++ Source Code:** [Translations.cppm](../../03_Code/04_Transforms/Translations.cppm)

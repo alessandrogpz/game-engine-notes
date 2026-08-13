@@ -5,7 +5,7 @@ tags: [exercise, question, transformation, scaling, rotation, translation, homog
 ---
 # Question
 ## Part 1: Calculation
-A 2D point is located at $(2, 1)$. Using [[07_Homogeneous_Coordinates|homogeneous coordinates]], its column vector is:
+A 2D point is located at $(2, 1)$. Using [homogeneous coordinates](../../../01_Concepts/04_Transforms/07_Homogeneous_Coordinates.md), its column vector is:
 
 $$
 \vec{p} = \begin{bmatrix} 2 \\\\ 1 \\\\ 1 \end{bmatrix}
@@ -16,12 +16,12 @@ Apply the following operations mathematically in the standard SRT order (Scale, 
 2. Rotate $90^\circ$ counter-clockwise.
 3. Translate by $T_x = 5$ and $T_y = -2$.
 
-Construct the three distinct $3 \times 3$ matrices, multiply them together to create a single [[01_Transformation_Matrices|transformation matrix]] $M$, and find the final coordinates.
+Construct the three distinct $3 \times 3$ matrices, multiply them together to create a single [transformation matrix](../../../01_Concepts/04_Transforms/01_Transformation_Matrices.md) $M$, and find the final coordinates.
 
 ## Part 2: Conceptual Understanding
 1. Why do we use $3 \times 3$ matrices for 2D transformations instead of $2 \times 2$? What specific transformation is made possible by the third dimension?
 2. If we changed the order of operations to TRS (Translate, Rotate, Scale), would the final position of the point be the same? Why or why not?
-3. What is the geometric interpretation of the [[03_Determinants|determinant]] of the combined transformation matrix $M$ (ignoring the translation component)?
+3. What is the geometric interpretation of the [determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) of the combined transformation matrix $M$ (ignoring the translation component)?
 
 ---
-**Check Answer:** [[S_02_Matrix_Multiplication]] | **Related Concepts:** [[02_Matrix_Multiplication]]
+**Check Answer:** [S_02_Matrix_Multiplication](../Solutions/S_02_Matrix_Multiplication.md) | **Related Concepts:** [02_Matrix_Multiplication](../../../01_Concepts/03_Matrices/02_Matrix_Multiplication.md)

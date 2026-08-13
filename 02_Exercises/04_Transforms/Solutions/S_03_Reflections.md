@@ -4,7 +4,7 @@ tags: [exercise, solution, reflections, plane-reflection, axis-reflection]
 ---
 # Solution: Reflections in 3D Space
 
-This note provides the step-by-step solutions to the exercises in [[Q_03_Reflections]].
+This note provides the step-by-step solutions to the exercises in [Q_03_Reflections](../Questions/Q_03_Reflections.md).
 
 ---
 
@@ -89,7 +89,7 @@ $$
 ## Part 2: Conceptual Understanding
 
 ### 1. Determinant Intuition
-To analyze the orientation-preserving properties of these transformations, we compute the [[03_Determinants|determinants]] of the specific matrices constructed in Part 1 (where $\vec{a} = [0, 0, 1]^T$):
+To analyze the orientation-preserving properties of these transformations, we compute the [determinants](../../../01_Concepts/03_Matrices/03_Determinants.md) of the specific matrices constructed in Part 1 (where $\vec{a} = [0, 0, 1]^T$):
 
 #### Plane Reflection Determinant:
 
@@ -105,7 +105,7 @@ $$
 
 #### Geometric Significance of the Signs in 3D Space:
 *   **Determinant of $+1$ (Orientation-Preserving):** 
-    An [[05_Orthogonal_Matrices|orthogonal matrix]] with a determinant of $+1$ preserves the chirality (handedness) of the [[03_Coordinate_Systems|coordinate system]]. A right-handed basis (like the standard $xyz$ coordinate axes) remains right-handed after the transformation. Geometrically, this corresponds to a **pure rigid rotation** in 3D space. For $\mathbf{M}_{\text{invol}}(\vec{a})$, the transformation is a $180^\circ$ rotation about the axis $\vec{a}$, which is a physical rotation that does not mirror or invert space.
+    An [orthogonal matrix](../../../01_Concepts/03_Matrices/05_Orthogonal_Matrices.md) with a determinant of $+1$ preserves the chirality (handedness) of the [coordinate system](../../../01_Concepts/02_Vectors/03_Coordinate_Systems.md). A right-handed basis (like the standard $xyz$ coordinate axes) remains right-handed after the transformation. Geometrically, this corresponds to a **pure rigid rotation** in 3D space. For $\mathbf{M}_{\text{invol}}(\vec{a})$, the transformation is a $180^\circ$ rotation about the axis $\vec{a}$, which is a physical rotation that does not mirror or invert space.
 *   **Determinant of $-1$ (Orientation-Reversing):** 
     An orthogonal matrix with a determinant of $-1$ reverses the chirality of the coordinate system, transforming a right-handed system into a left-handed one (and vice versa). Geometrically, this represents a **reflection** (or improper rotation). It is a transformation that cannot be achieved through physical rotation alone; it "flips" the space to its mirror image.
 
@@ -182,4 +182,4 @@ Applying a plane reflection followed by an axis reflection (with normal/axis alo
 
 ---
 
-**Back to Question:** [[Q_03_Reflections]] | **Related Concepts:** [[03_Reflections]]
+**Back to Question:** [Q_03_Reflections](../Questions/Q_03_Reflections.md) | **Related Concepts:** [03_Reflections](../../../01_Concepts/04_Transforms/03_Reflections.md)

@@ -35,7 +35,7 @@ $$
 
 ### Question 2: Face Normal $\mathbf{N}$, Magnitude $\|\mathbf{N}\|$, and Unit Normal $\hat{n}$
 
-Computing the face normal using the [[04_Cross_Product|cross product]]:
+Computing the face normal using the [cross product](../../../01_Concepts/02_Vectors/04_Cross_Product.md):
 
 $$
 \mathbf{N} = \mathbf{P_0P_1} \times \mathbf{P_0P_2} = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \times \begin{bmatrix} 0 \\\\ 0 \\\\ 4 \end{bmatrix}
@@ -201,7 +201,7 @@ $$
 
 
 #### 4. Proving Orthogonality
-Checking the [[02_Dot_Product|dot product]] of $\hat{n}_B$ with both transformed edge vectors:
+Checking the [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) of $\hat{n}_B$ with both transformed edge vectors:
 
 $$
 \mathbf{P_0'P_1'} \cdot \hat{n}_B = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} = (0)(1) + (3)(0) + (0)(0) = 0 \quad \checkmark
@@ -225,7 +225,7 @@ $$
 
 * **Justification:** Yes, the $\text{sign}(\det(\mathbf{M}))$ correction is **necessary**.
 * When an object undergoes a reflection ($\det(\mathbf{M}) < 0$), space is inverted and spatial handedness is flipped. Applying $(\mathbf{M}^{-1})^T$ alone produces a vector pointing in the **opposite direction** of the true outward normal of the reflected surface.
-* To correct for this, we must include the sign of the [[03_Determinants|determinant]]:
+* To correct for this, we must include the sign of the [determinant](../../../01_Concepts/03_Matrices/03_Determinants.md):
 
 $$
 \hat{n}_B = \text{sign}(\det(\mathbf{M})) (\mathbf{M}^{-1})^T \hat{n}_A
@@ -241,4 +241,4 @@ This flips the normal vector back so that it points outwards from the newly refl
 
 ---
 
-**Back to Question:** [[Q_02_Normal_Vectors]] | **Related Concepts:** [[02_Normal_Vectors]]
+**Back to Question:** [Q_02_Normal_Vectors](../Questions/Q_02_Normal_Vectors.md) | **Related Concepts:** [02_Normal_Vectors](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md)

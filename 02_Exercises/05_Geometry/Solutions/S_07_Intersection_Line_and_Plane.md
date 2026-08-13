@@ -116,7 +116,7 @@ $$
 
 * **Conclusion:** Both routes yield the same $t = \frac{9}{4}$, so **normalization is not necessary** for this calculation. Dividing the plane by $\|\mathbf{n}\| = 3$ divided the numerator and the denominator by the same factor, and the ratio absorbed it.
 
-This contrasts sharply with the [[05_Distance_Point_and_Plane|point-plane distance]], which is a single [[02_Dot_Product|dot product]] rather than a ratio. There, $\mathbf{f} \cdot \mathbf{p} = D\|\mathbf{n}\|$, so any scale left in $\mathbf{f}$ passes straight through into the answer and corrupts the measured length. A ratio cancels scale; a lone dot product does not.
+This contrasts sharply with the [point-plane distance](../../../01_Concepts/05_Geometry/05_Distance_Point_and_Plane.md), which is a single [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) rather than a ratio. There, $\mathbf{f} \cdot \mathbf{p} = D\|\mathbf{n}\|$, so any scale left in $\mathbf{f}$ passes straight through into the answer and corrupts the measured length. A ratio cancels scale; a lone dot product does not.
 
 ---
 
@@ -318,7 +318,7 @@ In a real simulation scenario, we are only concerned with rays that begin betwee
 
 #### Why $\mathbf{f} \cdot \mathbf{v} < 0$ is a Backface Cull
 
-The sign of $\mathbf{f} \cdot \mathbf{v}$ is the angle relationship between the ray and the surface normal. When it is negative, the ray opposes the normal and therefore strikes the surface's **front** face. When it is positive, the ray arrives from behind and would strike the **back** face — exactly the surfaces a renderer discards. Rejecting $\mathbf{f} \cdot \mathbf{v} > 0$ is therefore the same operation as backface culling, expressed as a single sign test. See [[02_Normal_Vectors|Normal Vectors]] for why consistent winding order is what makes that normal point outward in the first place.
+The sign of $\mathbf{f} \cdot \mathbf{v}$ is the angle relationship between the ray and the surface normal. When it is negative, the ray opposes the normal and therefore strikes the surface's **front** face. When it is positive, the ray arrives from behind and would strike the **back** face — exactly the surfaces a renderer discards. Rejecting $\mathbf{f} \cdot \mathbf{v} > 0$ is therefore the same operation as backface culling, expressed as a single sign test. See [Normal Vectors](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md) for why consistent winding order is what makes that normal point outward in the first place.
 
 #### Why Testing Signs Before Dividing is Preferable
 
@@ -330,4 +330,4 @@ The correctness argument matters even more than the speed: the sign test is what
 
 ---
 
-**Back to Question:** [[Q_07_Intersection_Line_and_Plane]] | **Related Concepts:** [[07_Intersection_Line_and_Plane]]
+**Back to Question:** [Q_07_Intersection_Line_and_Plane](../Questions/Q_07_Intersection_Line_and_Plane.md) | **Related Concepts:** [07_Intersection_Line_and_Plane](../../../01_Concepts/05_Geometry/07_Intersection_Line_and_Plane.md)

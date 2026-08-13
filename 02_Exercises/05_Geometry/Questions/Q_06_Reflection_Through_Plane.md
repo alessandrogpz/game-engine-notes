@@ -7,7 +7,7 @@ tags: [exercise, question, reflection-plane, implicit-plane, normal-vector]
 ## Part 1: Calculation
 1. A plane is defined by the non-normalized 4D vector $\mathbf{f} = [1, 2, 2, -6]$, and a point is given as $\mathbf{p} = (3, 3, 3)$:
    * Compute $\|\mathbf{n}\|$ and normalize the plane to obtain $\mathbf{f}_{\text{norm}} = [\hat{n} \mid d_{\text{norm}}]$.
-   * Calculate the [[05_Distance_Point_and_Plane|signed perpendicular distance]] $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}$.
+   * Calculate the [signed perpendicular distance](../../../01_Concepts/05_Geometry/05_Distance_Point_and_Plane.md) $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}$.
    * Compute the closest point $\mathbf{q}$ lying in the plane using $\mathbf{q} = \mathbf{p} - (\mathbf{f} \cdot \mathbf{p})\hat{n}$, and verify your result by confirming that $\mathbf{f} \cdot \mathbf{q} = 0$.
    * Compute the reflected point $\mathbf{p}'$ using $\mathbf{p}' = \mathbf{p} - 2(\mathbf{f} \cdot \mathbf{p})\hat{n}$, then verify that $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}'$ has the same magnitude as $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}$ but the opposite sign.
 
@@ -24,7 +24,7 @@ tags: [exercise, question, reflection-plane, implicit-plane, normal-vector]
 1. Explain geometrically why the vector separating $\mathbf{p}$ from its closest plane point $\mathbf{q}$ is exactly $(\mathbf{f} \cdot \mathbf{p})\mathbf{n}$, and why subtracting that same vector a **second** time lands precisely on the mirror image rather than merely somewhere behind the plane.
 2. The derivation writes an arbitrary point as $\mathbf{p} = \mathbf{q} + t\mathbf{n}$ and concludes $\mathbf{f} \cdot \mathbf{p} = t$. Identify which two facts cause the terms $(\mathbf{n} \cdot \mathbf{q} + d)$ and $(\mathbf{n} \cdot \mathbf{n})$ to collapse, and state what $\mathbf{f} \cdot \mathbf{p}$ would evaluate to if $\mathbf{n}$ were **not** unit length. Why does a non-unit normal corrupt the reflection formula in **two** separate ways?
 3. When building the $4 \times 4$ matrix, $\mathbf{n}$ is regarded as a 4D column vector with a $w$ coordinate of **zero**, while $\mathbf{p}$ carries $w = 1$. Explain why the normal must have $w = 0$, and what the bottom row $[0, 0, 0, 1]$ guarantees about the transformation.
-4. Show that reflecting a point twice returns the original point ($\mathbf{H}_{\text{reflect}}^2 = \mathbf{I}_4$). What is $\det(\mathbf{H}_{\text{reflect}})$, and how does that value connect to the sign correction $\text{sign}(\det(\mathbf{M}))$ required when transforming [[02_Normal_Vectors|normal vectors]] through a reflection?
+4. Show that reflecting a point twice returns the original point ($\mathbf{H}_{\text{reflect}}^2 = \mathbf{I}_4$). What is $\det(\mathbf{H}_{\text{reflect}})$, and how does that value connect to the sign correction $\text{sign}(\det(\mathbf{M}))$ required when transforming [normal vectors](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md) through a reflection?
 
 ---
-**Check Answer:** [[S_06_Reflection_Through_Plane]] | **Related Concepts:** [[06_Reflection_Through_Plane]]
+**Check Answer:** [S_06_Reflection_Through_Plane](../Solutions/S_06_Reflection_Through_Plane.md) | **Related Concepts:** [06_Reflection_Through_Plane](../../../01_Concepts/05_Geometry/06_Reflection_Through_Plane.md)

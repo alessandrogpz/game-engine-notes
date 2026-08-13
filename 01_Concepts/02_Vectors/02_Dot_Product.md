@@ -33,4 +33,4 @@ $$
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/02_Vectors/Dot_Product.cppm|Dot_Product.cppm]]
+*   **C++ Source Code:** [Dot_Product.cppm](../../03_Code/02_Vectors/Dot_Product.cppm)

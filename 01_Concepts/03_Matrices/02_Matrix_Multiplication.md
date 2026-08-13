@@ -7,7 +7,7 @@ Two matrices $A$ and $B$ can only be multiplied if the number of columns in $A$ 
 - If $A$ is $m \times n$ and $B$ is $n \times p$, the resulting matrix $C = AB$ will be $m \times p$.
 
 ## General Formula
-The entry $(AB)_{ij}$ is calculated by taking the [[02_Dot_Product|dot product]] of the $i$-th row of $A$ and the $j$-th column of $B$:
+The entry $(AB)_{ij}$ is calculated by taking the [dot product](../02_Vectors/02_Dot_Product.md) of the $i$-th row of $A$ and the $j$-th column of $B$:
 
 $$
 (AB)_{ij} = \sum_{k=1}^n A_{ik} B_{kj}
@@ -26,4 +26,4 @@ $$
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/03_Matrices/Matrix_Multiplication.cppm|Matrix_Multiplication.cppm]]
+*   **C++ Source Code:** [Matrix_Multiplication.cppm](../../03_Code/03_Matrices/Matrix_Multiplication.cppm)

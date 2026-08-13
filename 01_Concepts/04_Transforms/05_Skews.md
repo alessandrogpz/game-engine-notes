@@ -29,7 +29,7 @@ To define the displacement vector, we need:
 ## 2. Derivation of the Skew Formula
 
 ### Step 1: Measuring Height
-The amount of slide is proportional to the perpendicular distance (height) from the plane perpendicular to $\vec{b}$ (often a coordinate plane). For any vector $\vec{v}$, this height is the [[06_Vector_Projection|scalar projection]] of $\vec{v}$ onto the unit vector $\vec{b}$:
+The amount of slide is proportional to the perpendicular distance (height) from the plane perpendicular to $\vec{b}$ (often a coordinate plane). For any vector $\vec{v}$, this height is the [scalar projection](../02_Vectors/06_Vector_Projection.md) of $\vec{v}$ onto the unit vector $\vec{b}$:
 
 $$
 \text{height} = \text{comp}_{\vec{b}}\vec{v} = \vec{b} \cdot \vec{v}
@@ -105,7 +105,7 @@ $$
 \vec{v} = \mathbf{I}\vec{v}
 $$
    
-2. **Outer Product Substitution:** Express the [[02_Dot_Product|dot product]] $\vec{b} \cdot \vec{v}$ as $\vec{b}^T \vec{v}$:
+2. **Outer Product Substitution:** Express the [dot product](../02_Vectors/02_Dot_Product.md) $\vec{b} \cdot \vec{v}$ as $\vec{b}^T \vec{v}$:
    
 $$
 (\vec{b} \cdot \vec{v})\vec{a} = \vec{a}(\vec{b}^T\vec{v}) = (\vec{a}\vec{b}^T)\vec{v}
@@ -150,7 +150,7 @@ $$
 ## 6. Key Properties of Skew Matrices
 
 * **Volume Preservation:** 
-  The [[03_Determinants|determinant]] of a skew matrix is always $+1$. We can prove this algebraically using the **matrix determinant lemma**, which states that for any column vectors $\vec{u}, \vec{v}$ of the same size:
+  The [determinant](../03_Matrices/03_Determinants.md) of a skew matrix is always $+1$. We can prove this algebraically using the **matrix determinant lemma**, which states that for any column vectors $\vec{u}, \vec{v}$ of the same size:
   
 $$
 \det(\mathbf{I} + \vec{u}\vec{v}^T) = 1 + \vec{u} \cdot \vec{v}
@@ -179,4 +179,4 @@ $$
 ---
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/04_Transforms/Skews.cppm|Skews.cppm]]
+*   **C++ Source Code:** [Skews.cppm](../../03_Code/04_Transforms/Skews.cppm)

@@ -17,4 +17,4 @@ tags: [exercise, question, triangle-mesh, euler-formula, triangulation]
 3. Real-time rendering hardware requires all polygons to be triangulated before rasterization. Name at least one geometric property that is guaranteed for a 3-vertex polygon but is **not** guaranteed for a polygon with 4 or more vertices, and explain why this matters for rendering.
 
 ---
-**Check Answer:** [[S_01_Triangle_Meshes]] | **Related Concepts:** [[01_Triangle_Meshes]]
+**Check Answer:** [S_01_Triangle_Meshes](../Solutions/S_01_Triangle_Meshes.md) | **Related Concepts:** [01_Triangle_Meshes](../../../01_Concepts/05_Geometry/01_Triangle_Meshes.md)

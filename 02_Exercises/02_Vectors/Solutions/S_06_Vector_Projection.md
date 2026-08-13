@@ -17,7 +17,7 @@ $$
 \vec{v} = \begin{bmatrix} 4 \\\\ -3 \\\\ 1 \end{bmatrix}
 $$
     
-*   **Surface [[02_Normal_Vectors|Normal Vector]] (Unit Vector):**
+*   **Surface [Normal Vector](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md) (Unit Vector):**
     
 $$
 \vec{n} = \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} \implies \|\vec{n}\| = 1
@@ -30,7 +30,7 @@ $$
 \text{comp}_{\vec{n}}\vec{v} = \frac{\vec{v} \cdot \vec{n}}{\|\vec{n}\|}
 $$
 
-Calculate the [[02_Dot_Product|dot product]]:
+Calculate the [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md):
 
 $$
 \vec{v} \cdot \vec{n} = 4(0) + (-3)(1) + 1(0) = -3
@@ -95,4 +95,4 @@ This parallel component is known as the **orthogonal rejection** of $\vec{v}$ fr
 
 ---
 
-**Back to Question:** [[Q_06_Vector_Projection]] | **Related Concepts:** [[06_Vector_Projection]]
+**Back to Question:** [Q_06_Vector_Projection](../Questions/Q_06_Vector_Projection.md) | **Related Concepts:** [06_Vector_Projection](../../../01_Concepts/02_Vectors/06_Vector_Projection.md)

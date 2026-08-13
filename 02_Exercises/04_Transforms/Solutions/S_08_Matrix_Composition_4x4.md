@@ -84,7 +84,7 @@ Which corresponds to the Euclidean coordinate point **$(-1, 1, 2)$**.
 
 ### 2. MVP Pipeline Optimization
 Vertex shaders process millions of vertices per frame in modern game engines. The Model-View-Projection (MVP) pipeline optimizes this through pre-multiplication:
-*   Because [[02_Matrix_Multiplication|matrix multiplication]] is associative, the engine multiplies the projection, view, and model matrices together once on the CPU per object (or per frame) to form a single combined [[01_Transformation_Matrices|transformation matrix]]:
+*   Because [matrix multiplication](../../../01_Concepts/03_Matrices/02_Matrix_Multiplication.md) is associative, the engine multiplies the projection, view, and model matrices together once on the CPU per object (or per frame) to form a single combined [transformation matrix](../../../01_Concepts/04_Transforms/01_Transformation_Matrices.md):
     
 $$
 \mathbf{M}_{\text{Total}} = \mathbf{M}_{\text{Projection}} \cdot \mathbf{M}_{\text{View}} \cdot \mathbf{M}_{\text{Model}}
@@ -93,4 +93,4 @@ $$
 *   Instead of performing three separate matrix-vector multiplications per vertex on the GPU, the shader only has to perform a **single matrix-vector multiplication** ($\vec{v}' = \mathbf{M}_{\text{Total}}\vec{v}$) for each of the millions of vertices. This reduces arithmetic operations per vertex by two-thirds, saving substantial computational time and preventing bottlenecks.
 
 ---
-**Back to Question:** [[Q_08_Matrix_Composition_4x4]] | **Related Concepts:** [[08_Matrix_Composition_4x4]]
+**Back to Question:** [Q_08_Matrix_Composition_4x4](../Questions/Q_08_Matrix_Composition_4x4.md) | **Related Concepts:** [08_Matrix_Composition_4x4](../../../01_Concepts/04_Transforms/08_Matrix_Composition_4x4.md)

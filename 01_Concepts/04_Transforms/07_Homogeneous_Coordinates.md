@@ -37,7 +37,7 @@ Let's assume we have a 2D space containing a green square object $v$. Any point 
 	<img src="../../98_Assets/Concepts/homogeneous_projection_2d_plane.webp" width="400" height="350">
 </center>
 
-In a homogeneous [[03_Coordinate_Systems|coordinate system]], we can observe this 2D plane as a projection in 3D space.
+In a homogeneous [coordinate system](../02_Vectors/03_Coordinate_Systems.md), we can observe this 2D plane as a projection in 3D space.
 
 Here, our 2D Euclidean world is represented as the flat gray plane $z = 1$ embedded in 3D space (where the $z$-axis acts as our homogeneous component, typically labeled $w$ in general projective systems, and the yellow line along the vertical axis highlights the $z = 1$ offset). All points of the object $v$ can still be represented by $x$ and $y$, but they now sit at the depth coordinate $z = 1$. 
 
@@ -114,7 +114,7 @@ $$
 $$
 
 ### Derivation from the General Skew Formula
-We can derive this exact matrix using the general 3D skew formula from [[05_Skews]]:
+We can derive this exact matrix using the general 3D skew formula from [05_Skews](05_Skews.md):
 
 $$
 \mathbf{M}_{\text{skew}} = \mathbf{I} + \tan\theta \, (\vec{a}\vec{b}^T)
@@ -192,4 +192,4 @@ By lifting our 3D coordinates to 4D projective space and fixing the last coordin
 ## Code Implementation
 
 *   **C++ Source Code:** Homogeneous coordinates are carried by the 4D types themselves:
-    [[03_Code/02_Vectors/Basics.cppm|Basics.cppm]] (`vector4`), [[03_Code/03_Matrices/Basics.cppm|Basics.cppm]] (`Matrix4x4`), [[03_Code/04_Transforms/Translations.cppm|Translations.cppm]]
+    [Basics.cppm](../../03_Code/02_Vectors/Basics.cppm) (`vector4`), [Basics.cppm](../../03_Code/03_Matrices/Basics.cppm) (`Matrix4x4`), [Translations.cppm](../../03_Code/04_Transforms/Translations.cppm)

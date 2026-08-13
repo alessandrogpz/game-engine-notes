@@ -82,4 +82,4 @@ Explain why a single quaternion multiplication (e.g., $p' = qp$) cannot be used 
 Explain why we construct the rotation quaternion using the half-angle $\frac{\theta}{2}$ in $q = \cos(\theta/2) + \vec{u}\sin(\theta/2)$ instead of the full angle $\theta$. How does this relate to the double multiplication in the sandwich product $qpq^{-1}$?
 
 ---
-**Check Answer:** [[S_10_Quaternions]] | **Related Concepts:** [[10_Quaternions]]
+**Check Answer:** [S_10_Quaternions](../Solutions/S_10_Quaternions.md) | **Related Concepts:** [10_Quaternions](../../../01_Concepts/04_Transforms/10_Quaternions.md)

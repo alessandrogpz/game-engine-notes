@@ -47,10 +47,10 @@ $$
 
 ### 1. Zero Scalar Triple Product
 If the scalar triple product $(\vec{u} \times \vec{v}) \cdot \vec{w} = 0$, it means that the three vectors are **coplanar** (they all lie in the same 2D plane). 
-*   **Geometric reasoning**: The [[04_Cross_Product|cross product]] $\vec{u} \times \vec{v}$ yields a [[02_Normal_Vectors|normal vector]] perpendicular to the plane of $\vec{u}$ and $\vec{v}$. If the [[02_Dot_Product|dot product]] of this normal vector and $\vec{w}$ is $0$, then $\vec{w}$ is orthogonal to the normal vector, meaning $\vec{w}$ must lie within the plane spanned by $\vec{u}$ and $\vec{v}$.
+*   **Geometric reasoning**: The [cross product](../../../01_Concepts/02_Vectors/04_Cross_Product.md) $\vec{u} \times \vec{v}$ yields a [normal vector](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md) perpendicular to the plane of $\vec{u}$ and $\vec{v}$. If the [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) of this normal vector and $\vec{w}$ is $0$, then $\vec{w}$ is orthogonal to the normal vector, meaning $\vec{w}$ must lie within the plane spanned by $\vec{u}$ and $\vec{v}$.
 
 ### 2. Matrix Determinant Equivalence
-Calculating the scalar triple product is completely equivalent to calculating the [[03_Determinants|determinant]] of the $3 \times 3$ matrix whose rows (or columns) are the three vectors:
+Calculating the scalar triple product is completely equivalent to calculating the [determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) of the $3 \times 3$ matrix whose rows (or columns) are the three vectors:
 
 $$
 (\vec{u} \times \vec{v}) \cdot \vec{w} = \det \begin{bmatrix} u_x & u_y & u_z \\\\ v_x & v_y & v_z \\\\ w_x & w_y & w_z \end{bmatrix}
@@ -78,4 +78,4 @@ $$
 $$
 
 ---
-**Back to Question:** [[Q_05_Scalar_Triple_Product]] | **Related Concepts:** [[05_Scalar_Triple_Product]]
+**Back to Question:** [Q_05_Scalar_Triple_Product](../Questions/Q_05_Scalar_Triple_Product.md) | **Related Concepts:** [05_Scalar_Triple_Product](../../../01_Concepts/02_Vectors/05_Scalar_Triple_Product.md)

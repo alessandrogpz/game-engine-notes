@@ -6,4 +6,4 @@
 
 ## Code Implementation
 
-* **C++ Source Code:** [[03_Code/05_Geometry/Transforming_Planes.cppm|Transforming_Planes.cppm]]
+* **C++ Source Code:** [Transforming_Planes.cppm](../../03_Code/05_Geometry/Transforming_Planes.cppm)

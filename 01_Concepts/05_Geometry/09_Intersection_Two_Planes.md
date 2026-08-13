@@ -2,7 +2,7 @@
 
 Two **non-parallel** planes $[\mathbf{n}_1 \mid d_1]$ and $[\mathbf{n}_2 \mid d_2]$ intersect at a **line** that is contained in both planes.
 
-To express this line in the [[03_Lines_and_Rays|parametric form]] $L(t) = \mathbf{p} + t\mathbf{v}$, we need to find any starting point $\mathbf{p}$ on the line and the direction $\mathbf{v}$ to which the line runs parallel.
+To express this line in the [parametric form](03_Lines_and_Rays.md) $L(t) = \mathbf{p} + t\mathbf{v}$, we need to find any starting point $\mathbf{p}$ on the line and the direction $\mathbf{v}$ to which the line runs parallel.
 
 ---
 
@@ -14,7 +14,7 @@ $$
 \mathbf{v} = \mathbf{n}_1 \times \mathbf{n}_2
 $$
 
-It is so because the line lies inside both planes at once, so its direction must be **perpendicular to both [[02_Normal_Vectors|normal vectors]]** — and the [[04_Cross_Product|cross product]] produces exactly the vector orthogonal to the two operands.
+It is so because the line lies inside both planes at once, so its direction must be **perpendicular to both [normal vectors](02_Normal_Vectors.md)** — and the [cross product](../02_Vectors/04_Cross_Product.md) produces exactly the vector orthogonal to the two operands.
 
 ---
 
@@ -26,7 +26,7 @@ The point $\mathbf{p}$ can be calculated by introducing a **third plane** $[\mat
 	<img src="../../98_Assets/Concepts/intersection_two_planes.webp" width="430" height="237" alt="Intersection of Two Planes">
 </center>
 
-Solving the problem of a [[08_Intersection_Three_Planes|three-plane intersection]] is how to find $\mathbf{p}$.
+Solving the problem of a [three-plane intersection](08_Intersection_Three_Planes.md) is how to find $\mathbf{p}$.
 
 Setting $\mathbf{n}_3 = \mathbf{v}$ and $d_3 = 0$, the system becomes:
 
@@ -48,13 +48,13 @@ The general three-plane solution carries a third term $d_3(\mathbf{n}_2 \times \
 
 ### Why the Denominator is $\mathbf{v}^2$
 
-The three-plane denominator is the [[05_Scalar_Triple_Product|scalar triple product]] $[\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3]$. Substituting $\mathbf{n}_3 = \mathbf{v}$ and using the cyclic property of the triple product:
+The three-plane denominator is the [scalar triple product](../02_Vectors/05_Scalar_Triple_Product.md) $[\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3]$. Substituting $\mathbf{n}_3 = \mathbf{v}$ and using the cyclic property of the triple product:
 
 $$
 [\mathbf{n}_1, \mathbf{n}_2, \mathbf{v}] = \mathbf{v} \cdot (\mathbf{n}_1 \times \mathbf{n}_2) = \mathbf{v} \cdot \mathbf{v} = \mathbf{v}^2
 $$
 
-The [[03_Determinants|determinant]] collapses into a plain squared length precisely because the third normal *was chosen to be* $\mathbf{n}_1 \times \mathbf{n}_2$.
+The [determinant](../03_Matrices/03_Determinants.md) collapses into a plain squared length precisely because the third normal *was chosen to be* $\mathbf{n}_1 \times \mathbf{n}_2$.
 
 ---
 
@@ -84,7 +84,7 @@ $$
 \mathbf{v} = \mathbf{n}_1 \times \mathbf{n}_2 = \mathbf{0} \implies \mathbf{v}^2 = 0
 $$
 
-and the formula divides by zero. As with the [[07_Intersection_Line_and_Plane|line-plane intersection]], the vanishing denominator hides two geometrically different situations:
+and the formula divides by zero. As with the [line-plane intersection](07_Intersection_Line_and_Plane.md), the vanishing denominator hides two geometrically different situations:
 
 | Condition | Meaning |
 | :--- | :--- |
@@ -100,4 +100,4 @@ Any implementation must therefore test $\mathbf{v}^2$ before dividing, and in fl
 
 ## Code Implementation
 
-* **C++ Source Code:** [[03_Code/05_Geometry/Intersection_Two_Planes.cppm|Intersection_Two_Planes.cppm]]
+* **C++ Source Code:** [Intersection_Two_Planes.cppm](../../03_Code/05_Geometry/Intersection_Two_Planes.cppm)

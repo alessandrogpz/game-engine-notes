@@ -26,7 +26,7 @@ $$
 \vec{v}_{\parallel a} = \text{proj}_{\vec{a}}\vec{v} = (\vec{v} \cdot \vec{a})\vec{a}
 $$
     
-    Using matrix notation for the [[02_Dot_Product|dot product]] of $3 \times 1$ column vectors $\vec{v}$ and $\vec{a}$:
+    Using matrix notation for the [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) of $3 \times 1$ column vectors $\vec{v}$ and $\vec{a}$:
     
 $$
 \vec{v} \cdot \vec{a} = \vec{a}^T\vec{v}
@@ -97,7 +97,7 @@ Evaluating the matrix elements:
 *   $(s-1)a_y a_z = 2\left(\frac{1}{2}\right) = 1$
 *   $(s-1)a_z^2 + 1 = 2\left(\frac{1}{2}\right) + 1 = 2$
 
-This yields the complete [[01_Transformation_Matrices|transformation matrix]]:
+This yields the complete [transformation matrix](../../../01_Concepts/04_Transforms/01_Transformation_Matrices.md):
 
 $$
 \mathbf{M}_{\text{scale}}(3, \vec{a}) = \begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 1 \\\\ 0 & 1 & 2 \end{bmatrix}
@@ -171,7 +171,7 @@ $$
 \vec{v}' = 3\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \end{bmatrix} + \begin{bmatrix} 4 \\\\ 1 \\\\ -1 \end{bmatrix} = \begin{bmatrix} 4 \\\\ 1 \\\\ -1 \end{bmatrix}
 $$
 
-This perfectly matches the [[02_Matrix_Multiplication|matrix multiplication]] result from Step 2!
+This perfectly matches the [matrix multiplication](../../../01_Concepts/03_Matrices/02_Matrix_Multiplication.md) result from Step 2!
 
 ---
 
@@ -179,7 +179,7 @@ This perfectly matches the [[02_Matrix_Multiplication|matrix multiplication]] re
 
 ### 1. Determinant of Scaling
 
-*   **Geometric Representation of the [[03_Determinants|Determinant]]:**
+*   **Geometric Representation of the [Determinant](../../../01_Concepts/03_Matrices/03_Determinants.md):**
     The determinant of any transformation matrix represents the volume scaling factor of the transformation on the 3D space.
 *   **1D Stretch:**
     Arbitrary scaling along the axis $\vec{a}$ stretches (or compresses) space by a factor of exactly $s$ in a single 1D direction.
@@ -217,7 +217,7 @@ $$
 *   **Geometric Transformation:**
     Setting $s = 0$ completely flattens (projects) all 3D vectors onto the 2D plane passing through the origin perpendicular to $\vec{a}$. 
 *   **Relationship to Projections:**
-    This matrix is exactly the **Orthogonal Rejection Matrix** (often denoted as $\text{Rej}_{\vec{a}}\vec{v} = \mathbf{I} - \vec{a}\vec{a}^T$). Geometrically, it represents an orthogonal projection onto the plane perpendicular to the [[02_Normal_Vectors|normal vector]] $\vec{a}$:
+    This matrix is exactly the **Orthogonal Rejection Matrix** (often denoted as $\text{Rej}_{\vec{a}}\vec{v} = \mathbf{I} - \vec{a}\vec{a}^T$). Geometrically, it represents an orthogonal projection onto the plane perpendicular to the [normal vector](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md) $\vec{a}$:
     
 $$
 \vec{v}' = 0\vec{v}_{\parallel a} + \vec{v}_{\perp a} = \vec{v}_{\perp a} = \text{proj}_{\perp a}\vec{v}
@@ -254,4 +254,4 @@ $$
 
 ---
 
-**Back to Question:** [[Q_04_Scales]] | **Related Concepts:** [[04_Scales]]
+**Back to Question:** [Q_04_Scales](../Questions/Q_04_Scales.md) | **Related Concepts:** [04_Scales](../../../01_Concepts/04_Transforms/04_Scales.md)

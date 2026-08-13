@@ -122,4 +122,4 @@ $$
     Since the translation terms are multiplied by $0$, the vector remains unchanged.
 
 ---
-**Back to Question:** [[Q_07_Homogeneous_Coordinates]] | **Related Concepts:** [[07_Homogeneous_Coordinates]]
+**Back to Question:** [Q_07_Homogeneous_Coordinates](../Questions/Q_07_Homogeneous_Coordinates.md) | **Related Concepts:** [07_Homogeneous_Coordinates](../../../01_Concepts/04_Transforms/07_Homogeneous_Coordinates.md)

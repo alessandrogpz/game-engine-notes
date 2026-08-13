@@ -22,7 +22,7 @@ where:
 
 ## Implicit Planes
 
-Since $\mathbf{u}$ and $\mathbf{v}$ vectors lie in the same plane, we can calculate their [[04_Cross_Product|cross product]] to extract a [[02_Normal_Vectors|normal vector]] $\mathbf{n}$ of the plane itself:
+Since $\mathbf{u}$ and $\mathbf{v}$ vectors lie in the same plane, we can calculate their [cross product](../02_Vectors/04_Cross_Product.md) to extract a [normal vector](02_Normal_Vectors.md) $\mathbf{n}$ of the plane itself:
 
 $$
 \mathbf{n} = \mathbf{u} \times \mathbf{v}
@@ -52,7 +52,7 @@ $$
 
 ### Proof: Why $-\mathbf{n} \cdot \mathbf{q}$ is Constant for All Points on the Plane
 
-For any vector $\mathbf{v}$ lying flat inside the plane, the [[02_Dot_Product|dot product]] with the perpendicular normal vector $\mathbf{n}$ is zero ($\mathbf{n} \cdot \mathbf{v} = 0$).
+For any vector $\mathbf{v}$ lying flat inside the plane, the [dot product](../02_Vectors/02_Dot_Product.md) with the perpendicular normal vector $\mathbf{n}$ is zero ($\mathbf{n} \cdot \mathbf{v} = 0$).
 
 Let $\mathbf{v}$ be the displacement vector connecting any two arbitrary points $\mathbf{q}_1$ and $\mathbf{q}_2$ on the plane ($\mathbf{v} = \mathbf{q}_2 - \mathbf{q}_1$):
 
@@ -90,4 +90,4 @@ $$
 
 ## Code Implementation
 
-* **C++ Source Code:** [[03_Code/05_Geometry/Planes.cppm|Planes.cppm]]
+* **C++ Source Code:** [Planes.cppm](../../03_Code/05_Geometry/Planes.cppm)

@@ -6,7 +6,7 @@ tags: [exercise, question, distance-point-plane, implicit-plane, normal-vector]
 # Question
 ## Part 1: Calculation
 1. A plane is defined by the non-normalized 4D vector $\mathbf{f} = [2, -1, 2, -12]$:
-   * Compute the magnitude of the [[02_Normal_Vectors|normal vector]] $\|\mathbf{n}\|$.
+   * Compute the magnitude of the [normal vector](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md) $\|\mathbf{n}\|$.
    * Normalize the plane vector $\mathbf{f}$ by multiplying all 4 components by $\frac{1}{\|\mathbf{n}\|}$ to obtain $\mathbf{f}_{\text{norm}} = [\hat{n} \mid d_{\text{norm}}]$.
    * Calculate the signed perpendicular distance from point $\mathbf{p} = (3, 4, 1)$ to the plane by evaluating $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}$. State whether $\mathbf{p}$ is in front of, behind, or on the plane.
 
@@ -20,4 +20,4 @@ tags: [exercise, question, distance-point-plane, implicit-plane, normal-vector]
 3. In camera frustum culling, how do game engines use the sign of $\mathbf{f} \cdot \mathbf{p}$ to classify whether an object lies inside, outside, or intersecting a view plane?
 
 ---
-**Check Answer:** [[S_05_Distance_Point_and_Plane]] | **Related Concepts:** [[05_Distance_Point_and_Plane]]
+**Check Answer:** [S_05_Distance_Point_and_Plane](../Solutions/S_05_Distance_Point_and_Plane.md) | **Related Concepts:** [05_Distance_Point_and_Plane](../../../01_Concepts/05_Geometry/05_Distance_Point_and_Plane.md)

@@ -5,7 +5,7 @@ The scalar triple product involves three vectors $\vec{a}$, $\vec{b}$, and $\vec
 ## Conceptual Understanding: "3D Volume Measure"
 Think of the scalar triple product as the 3D version of the cross-product's area.
 - **What it calculates:** It finds the volume of the 3D "tilted box" (parallelepiped) formed by the three vectors.
-- **The Logic:** You first find the area of the base ([[04_Cross_Product|cross product]] $\vec{a} \times \vec{b}$) and then multiply it by the "height" using the [[02_Dot_Product|dot product]] with $\vec{c}$.
+- **The Logic:** You first find the area of the base ([cross product](04_Cross_Product.md) $\vec{a} \times \vec{b}$) and then multiply it by the "height" using the [dot product](02_Dot_Product.md) with $\vec{c}$.
 - **Coplanarity:** If the result is **zero**, it means all three vectors lie in the same 2D plane (the box has no height).
 
 ## Formula
@@ -25,4 +25,4 @@ $$
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/02_Vectors/Scalar_Triple_Product.cppm|Scalar_Triple_Product.cppm]]
+*   **C++ Source Code:** [Scalar_Triple_Product.cppm](../../03_Code/02_Vectors/Scalar_Triple_Product.cppm)

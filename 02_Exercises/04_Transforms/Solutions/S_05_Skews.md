@@ -5,7 +5,7 @@ tags: [exercise, solution, skew, shear, linear-transformation]
 
 # Solution: Skew (Shear) in 3D Space
 
-This solution note is scaffolded to record your step-by-step derivations for the skew exercises in [[Q_05_Skews]].
+This solution note is scaffolded to record your step-by-step derivations for the skew exercises in [Q_05_Skews](../Questions/Q_05_Skews.md).
 
 ---
 
@@ -83,7 +83,7 @@ $$
 \vec{v}' = \vec{v} + (\vec{b} \cdot \vec{v})\tan\theta \, \vec{a}
 $$
 
-1. **Calculate the [[02_Dot_Product|Dot Product]] (Projection Height):**
+1. **Calculate the [Dot Product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) (Projection Height):**
    
 $$
 \vec{b} \cdot \vec{v} = \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} \cdot \begin{bmatrix} 2 \\\\ 3 \\\\ 5 \end{bmatrix} = (0)(2) + (1)(3) + (0)(5) = 3
@@ -96,7 +96,7 @@ $$
 \vec{v}' = \begin{bmatrix} 2 \\\\ 3 \\\\ 5 \end{bmatrix} + (3)(1)\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 2 \\\\ 3 \\\\ 5 \end{bmatrix} + \begin{bmatrix} 3 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 5 \\\\ 3 \\\\ 5 \end{bmatrix}
 $$
 
-Both the [[02_Matrix_Multiplication|matrix multiplication]] result and the geometric formula yield the identical result:
+Both the [matrix multiplication](../../../01_Concepts/03_Matrices/02_Matrix_Multiplication.md) result and the geometric formula yield the identical result:
 
 $$
 \vec{v}' = \begin{bmatrix} 5 \\\\ 3 \\\\ 5 \end{bmatrix}
@@ -109,7 +109,7 @@ $$
 ### 1. Determinant of Skew
 Geometrically, a skew (shear) transformation is a volume-preserving operation (Cavalieri's Principle). 
 
-In 3D space, the [[03_Determinants|determinant]] of a matrix represents the volume scaling factor of any transformed object. A skew transformation shifts parallel layers of an object (like sliding a deck of cards) without changing the area of any cross-section or the perpendicular height between them. Since both the base area and the height remain constant, the volume of any 3D object is unchanged, and its orientation is preserved. Therefore, the volume scaling factor is exactly $1$, which means:
+In 3D space, the [determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) of a matrix represents the volume scaling factor of any transformed object. A skew transformation shifts parallel layers of an object (like sliding a deck of cards) without changing the area of any cross-section or the perpendicular height between them. Since both the base area and the height remain constant, the volume of any 3D object is unchanged, and its orientation is preserved. Therefore, the volume scaling factor is exactly $1$, which means:
 
 $$
 \det(\mathbf{M}_{\text{skew}}) = 1
@@ -194,4 +194,4 @@ $$
 
 ---
 
-**Back to Question:** [[Q_05_Skews]] | **Related Concepts:** [[05_Skews]]
+**Back to Question:** [Q_05_Skews](../Questions/Q_05_Skews.md) | **Related Concepts:** [05_Skews](../../../01_Concepts/04_Transforms/05_Skews.md)

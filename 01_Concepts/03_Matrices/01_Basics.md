@@ -77,4 +77,4 @@ $$
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/03_Matrices/Basics.cppm|Basics.cppm]]
+*   **C++ Source Code:** [Basics.cppm](../../03_Code/03_Matrices/Basics.cppm)

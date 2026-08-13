@@ -51,7 +51,7 @@ $$
 
 ### 3. Classical Formula Verification
 
-Calculate the same [[06_Vector_Projection|vector projection]] using the classical [[02_Dot_Product|dot product]] formula:
+Calculate the same [vector projection](../../../01_Concepts/02_Vectors/06_Vector_Projection.md) using the classical [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) formula:
 
 $$
 \text{proj}_{\hat{u}}\vec{a} = (\vec{a} \cdot \hat{u})\hat{u}
@@ -80,7 +80,7 @@ Both methods yield the exact same resulting vector $\vec{p} = [6/25, \, 0, \, 8/
 *   **Special spatial filter**: It behaves like a filter because it completely "blocks" (ignores) any components of a vector that are perpendicular to the target axis $\hat{u}$ ($\vec{a}_{\perp}$), while letting the component parallel to $\hat{u}$ ($\vec{a}_{\parallel}$) pass through. For our vector $\vec{a}$, the $y$-axis component and other parts perpendicular to $\hat{u}$ are filtered out (resulting in $y = 0$).
 
 ### 2. Determinant of a Projection Matrix
-The [[03_Determinants|determinant]] of this projection matrix is:
+The [determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) of this projection matrix is:
 
 $$
 \det(\mathbf{P}) = 0
@@ -109,4 +109,4 @@ $$
 
 ---
 
-**Back to Question:** [[Q_06_Projection_Matrix]] | **Related Concepts:** [[06_Projection_Matrices]]
+**Back to Question:** [Q_06_Projection_Matrix](../Questions/Q_06_Projection_Matrix.md) | **Related Concepts:** [06_Projection_Matrices](../../../01_Concepts/03_Matrices/06_Projection_Matrices.md)

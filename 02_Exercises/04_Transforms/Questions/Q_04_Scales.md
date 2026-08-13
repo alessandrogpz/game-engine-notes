@@ -42,10 +42,10 @@ $$
 
 ## Part 2: Conceptual Understanding
 
-1. **[[03_Determinants|Determinant]] of Scaling:** Explain geometrically why the determinant of the arbitrary scaling matrix $\mathbf{M}_{\text{scale}}(s, \vec{a})$ is exactly $s$.
+1. **[Determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) of Scaling:** Explain geometrically why the determinant of the arbitrary scaling matrix $\mathbf{M}_{\text{scale}}(s, \vec{a})$ is exactly $s$.
 2. **Operator Unification ($s = 0$):** What transformation is produced if you set the scale factor $s = 0$? Write down the resulting matrix equation and identify its geometric relationship to vector projections.
 3. **Operator Unification ($s = -1$):** What transformation is produced if you set the scale factor $s = -1$? Compare the resulting matrix formula to the plane reflection matrix $\mathbf{M}_{\text{reflect}}(\vec{a})$.
 
 ---
 
-**Check Answer:** [[S_04_Scales]] | **Related Concepts:** [[04_Scales]]
+**Check Answer:** [S_04_Scales](../Solutions/S_04_Scales.md) | **Related Concepts:** [04_Scales](../../../01_Concepts/04_Transforms/04_Scales.md)

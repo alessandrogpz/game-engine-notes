@@ -23,4 +23,4 @@ tags: [exercise, question, parametric-line, skew-lines, line-distance]
 3. In computer graphics applications, why is the point-to-line distance formula often written as $d = \sqrt{\frac{(\mathbf{u} \times \mathbf{v})^2}{v^2}}$ rather than $d = \frac{\|\mathbf{u} \times \mathbf{v}\|}{\|\mathbf{v}\|}$?
 
 ---
-**Check Answer:** [[S_03_Lines_and_Rays]] | **Related Concepts:** [[03_Lines_and_Rays]]
+**Check Answer:** [S_03_Lines_and_Rays](../Solutions/S_03_Lines_and_Rays.md) | **Related Concepts:** [03_Lines_and_Rays](../../../01_Concepts/05_Geometry/03_Lines_and_Rays.md)

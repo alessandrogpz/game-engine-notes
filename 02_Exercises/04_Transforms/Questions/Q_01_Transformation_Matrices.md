@@ -5,7 +5,7 @@ tags: [exercise, question, orthogonal-matrix, similarity-transform, change-of-ba
 ---
 # Question: Orthogonal and Similarity Transformations
 
-This exercise explores the geometric and algebraic properties of **orthogonal transformations** (length/angle preservation and [[03_Determinants|determinants]]) and **similarity transformations** (changing the basis of a linear operator).
+This exercise explores the geometric and algebraic properties of **orthogonal transformations** (length/angle preservation and [determinants](../../../01_Concepts/03_Matrices/03_Determinants.md)) and **similarity transformations** (changing the basis of a linear operator).
 
 ---
 
@@ -16,16 +16,16 @@ $$
 \mathbf{M} = \begin{bmatrix} \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & 0 \\\\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 0 \\\\ 0 & 0 & 1 \end{bmatrix}
 $$
 
-Suppose we have two vectors in our initial [[03_Coordinate_Systems|coordinate system]]:
+Suppose we have two vectors in our initial [coordinate system](../../../01_Concepts/02_Vectors/03_Coordinate_Systems.md):
 
 $$
 \vec{v} = \begin{bmatrix} 2 \\\\ 2 \\\\ 1 \end{bmatrix} \quad \text{and} \quad \vec{w} = \begin{bmatrix} 0 \\\\ 4 \\\\ -3 \end{bmatrix}
 $$
 
-1.  **Orthonormality:** Prove that $\mathbf{M}$ is an [[05_Orthogonal_Matrices|orthogonal matrix]] by checking that its columns are mutually perpendicular unit vectors, or by showing that $\mathbf{M}^T\mathbf{M} = \mathbf{I}$.
+1.  **Orthonormality:** Prove that $\mathbf{M}$ is an [orthogonal matrix](../../../01_Concepts/03_Matrices/05_Orthogonal_Matrices.md) by checking that its columns are mutually perpendicular unit vectors, or by showing that $\mathbf{M}^T\mathbf{M} = \mathbf{I}$.
 2.  **Vector Transformation:** Calculate the transformed vectors $\vec{v}' = \mathbf{M}\vec{v}$ and $\vec{w}' = \mathbf{M}\vec{w}$.
 3.  **Preservation Verification:**
-    *   Calculate the original [[02_Dot_Product|dot product]] $\vec{v} \cdot \vec{w}$ and the transformed dot product $\vec{v}' \cdot \vec{w}'$. Verify that they are equal.
+    *   Calculate the original [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) $\vec{v} \cdot \vec{w}$ and the transformed dot product $\vec{v}' \cdot \vec{w}'$. Verify that they are equal.
     *   Calculate the lengths $\|\vec{v}\|$ and $\|\vec{v}'\|$. Verify that they are equal.
 4.  **Orientation:** Calculate $\det(\mathbf{M})$. Does this transformation represent a pure rotation or does it involve a reflection? Explain your reasoning.
 
@@ -54,4 +54,4 @@ $$
 2.  **Geometric Intuition:** Explain the geometric meaning of your resulting matrix $\mathbf{S}_B$. Why does stretching space along the x-axis in system $A$ correspond to this specific operation in system $B$?
 
 ---
-**Check Answer:** [[S_01_Transformation_Matrices]] | **Related Concepts:** [[01_Transformation_Matrices]]
+**Check Answer:** [S_01_Transformation_Matrices](../Solutions/S_01_Transformation_Matrices.md) | **Related Concepts:** [01_Transformation_Matrices](../../../01_Concepts/04_Transforms/01_Transformation_Matrices.md)

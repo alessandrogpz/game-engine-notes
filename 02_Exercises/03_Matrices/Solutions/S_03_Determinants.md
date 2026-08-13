@@ -71,7 +71,7 @@ Since $A^T = A$, the matrix $A$ is **symmetric**.
 ## Part 2: Conceptual Understanding
 
 ### 1. Determinant of $Q^T Q$ for Orthogonal $Q$
-For an [[05_Orthogonal_Matrices|orthogonal matrix]] $Q$, the definition states that:
+For an [orthogonal matrix](../../../01_Concepts/03_Matrices/05_Orthogonal_Matrices.md) $Q$, the definition states that:
 
 $$
 Q^T Q = I
@@ -157,4 +157,4 @@ $$
     This guarantees the existence of a non-trivial null space (at least one non-zero vector $\vec{x} \neq \vec{0}$ such that $M\vec{x} = \vec{0}$).
 
 ---
-**Back to Question:** [[Q_03_Determinants]] **Related Concepts:** [[03_Determinants]], [[01_Basics]], [[07_Rank_Nullity]]
+**Back to Question:** [Q_03_Determinants](../Questions/Q_03_Determinants.md) **Related Concepts:** [03_Determinants](../../../01_Concepts/03_Matrices/03_Determinants.md), [01_Basics](../../../01_Concepts/03_Matrices/01_Basics.md), [07_Rank_Nullity](../../../01_Concepts/03_Matrices/07_Rank_Nullity.md)

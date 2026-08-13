@@ -65,7 +65,7 @@ $$
 \mathbf{p}' = \mathbf{p} - 2(\mathbf{f} \cdot \mathbf{p})\hat{n} = (3, 3, 3) - (2, 4, 4) = (1, -1, -1)
 $$
 
-Verifying the [[05_Distance_Point_and_Plane|signed distance]] of the reflected point:
+Verifying the [signed distance](../../../01_Concepts/05_Geometry/05_Distance_Point_and_Plane.md) of the reflected point:
 
 $$
 \mathbf{f}_{\text{norm}} \cdot \mathbf{p}' = \frac{1}{3}(1) + \frac{2}{3}(-1) + \frac{2}{3}(-1) - 2 = \frac{1}{3} - \frac{2}{3} - \frac{2}{3} - 2 = -1 - 2 = -3
@@ -204,7 +204,7 @@ $$
 
 The corruption then enters $\mathbf{p}' = \mathbf{p} - 2(\mathbf{f} \cdot \mathbf{p})\mathbf{n}$ at **two separate points**:
 
-1. **Inside the [[02_Dot_Product|dot product]]:** $\mathbf{f} \cdot \mathbf{p}$ returns the distance already scaled by $\|\mathbf{n}\|^2$ instead of the true distance.
+1. **Inside the [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md):** $\mathbf{f} \cdot \mathbf{p}$ returns the distance already scaled by $\|\mathbf{n}\|^2$ instead of the true distance.
 2. **In the multiplication outside:** that scalar is then multiplied by $\mathbf{n}$, whose own length is $\|\mathbf{n}\|$ rather than $1$, contributing yet another factor.
 
 The resulting displacement vector has magnitude $t\|\mathbf{n}\|^3$, when the correct displacement $\mathbf{p} - \mathbf{q} = t\mathbf{n}$ has magnitude $t\|\mathbf{n}\|$ — an overshoot by a factor of $\|\mathbf{n}\|^2$. The reflected point flies far past its true mirror position along the correct line. Recovering the formula requires dividing by $\|\mathbf{n}\|^2$:
@@ -219,7 +219,7 @@ $$
 
 $\mathbf{n}$ is a **vector** — it is a direction, so it must have $w = 0$. $\mathbf{p}$, by contrast, is a **position**, which has $w = 1$.
 
-Setting $w = 0$ makes the normal ignore the matrix's translation column entirely, so moving the origin does not move the vector. A direction is defined only by its orientation and magnitude, not by where it sits in space; translating a direction must leave it unchanged, and the $w = 0$ component is what enforces that. See [[07_Homogeneous_Coordinates|Homogeneous Coordinates]].
+Setting $w = 0$ makes the normal ignore the matrix's translation column entirely, so moving the origin does not move the vector. A direction is defined only by its orientation and magnitude, not by where it sits in space; translating a direction must leave it unchanged, and the $w = 0$ component is what enforces that. See [Homogeneous Coordinates](../../../01_Concepts/04_Transforms/07_Homogeneous_Coordinates.md).
 
 The bottom row $[0, 0, 0, 1]$ guarantees that the transformation is **affine**: it keeps points as points and directions as directions ($w = 1$ stays $1$, and $w = 0$ stays $0$). It never introduces a perspective divide, so no amount of reflecting will convert a position into a direction or vice versa.
 
@@ -259,11 +259,11 @@ $$
 \det(\mathbf{H}_{\text{reflect}}) = (-1)(+1)(+1)(1) = -1
 $$
 
-Both matrices built in Part 1 confirm this. A negative [[03_Determinants|determinant]] means the transformation is **orientation-reversing**: it flips handedness, turning a right-handed basis into a left-handed one. The magnitude of $1$ confirms that no volume is lost or gained — a reflection only mirrors.
+Both matrices built in Part 1 confirm this. A negative [determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) means the transformation is **orientation-reversing**: it flips handedness, turning a right-handed basis into a left-handed one. The magnitude of $1$ confirms that no volume is lost or gained — a reflection only mirrors.
 
 #### Connection to Transforming Normal Vectors
 
-This is exactly the case flagged in [[02_Normal_Vectors|Normal Vectors]]. Normals transform by the [[04_Matrix_Inversion|inverse transpose]], $(\mathbf{M}^{-1})^T$, which preserves orthogonality to the surface but not the *direction along* that perpendicular line. Under an orientation-reversing transformation, every face of the object is mirrored, and the inverse transpose alone leaves the resulting normal pointing **inward** instead of outward.
+This is exactly the case flagged in [Normal Vectors](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md). Normals transform by the [inverse transpose](../../../01_Concepts/03_Matrices/04_Matrix_Inversion.md), $(\mathbf{M}^{-1})^T$, which preserves orthogonality to the surface but not the *direction along* that perpendicular line. Under an orientation-reversing transformation, every face of the object is mirrored, and the inverse transpose alone leaves the resulting normal pointing **inward** instead of outward.
 
 Because $\det(\mathbf{H}_{\text{reflect}}) = -1 < 0$, the sign correction is what restores the outward direction:
 
@@ -278,4 +278,4 @@ For a pure reflection this simplifies further: since $\mathbf{H}_{\text{reflect}
 
 ---
 
-**Back to Question:** [[Q_06_Reflection_Through_Plane]] | **Related Concepts:** [[06_Reflection_Through_Plane]]
+**Back to Question:** [Q_06_Reflection_Through_Plane](../Questions/Q_06_Reflection_Through_Plane.md) | **Related Concepts:** [06_Reflection_Through_Plane](../../../01_Concepts/05_Geometry/06_Reflection_Through_Plane.md)

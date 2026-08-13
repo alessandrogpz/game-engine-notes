@@ -23,13 +23,13 @@ q_2 = 2 - i + 2j - k \quad (s_2 = 2, \, \vec{v}_2 = [-1, 2, -1]^T)
 $$
 
 - **Calculation of $q_1 q_2$:**
-  First, compute the vector [[02_Dot_Product|dot product]] $\vec{v}_1 \cdot \vec{v}_2$:
+  First, compute the vector [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) $\vec{v}_1 \cdot \vec{v}_2$:
   
 $$
 \vec{v}_1 \cdot \vec{v}_2 = 2(-1) + (-1)(2) + 1(-1) = -2 - 2 - 1 = -5
 $$
   
-  Next, compute the vector [[04_Cross_Product|cross product]] $\vec{v}_1 \times \vec{v}_2$:
+  Next, compute the vector [cross product](../../../01_Concepts/02_Vectors/04_Cross_Product.md) $\vec{v}_1 \times \vec{v}_2$:
   
 $$
 \vec{v}_1 \times \vec{v}_2 = \begin{bmatrix} (-1)(-1) - (1)(2) \\\\ (1)(-1) - (2)(-1) \\\\ (2)(2) - (-1)(-1) \end{bmatrix} = \begin{bmatrix} 1 - 2 \\\\ -1 + 2 \\\\ 4 - 1 \end{bmatrix} = \begin{bmatrix} -1 \\\\ 1 \\\\ 3 \end{bmatrix} = -i + j + 3k
@@ -222,4 +222,4 @@ $$
 This ensures the combined sandwich multiplication yields exactly the expected physical rotation angle $\theta$.
 
 ---
-**Back to Question:** [[Q_10_Quaternions]] | **Related Concepts:** [[10_Quaternions]]
+**Back to Question:** [Q_10_Quaternions](../Questions/Q_10_Quaternions.md) | **Related Concepts:** [10_Quaternions](../../../01_Concepts/04_Transforms/10_Quaternions.md)

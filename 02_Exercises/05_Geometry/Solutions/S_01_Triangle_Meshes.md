@@ -121,9 +121,9 @@ $$
 * **Guaranteed Property:** **Planarity**. Triangles always define a 2D plane in 3D space—a 3-vertex polygon is **100% planar**.
 * **Failure for $n$-gons ($4+$ vertices):** With 4 or more vertices (such as a quad), one or more vertices can be twisted, pushed, or pulled out of the plane formed by the other vertices, making the polygon non-planar.
 * **Why it matters for rendering:**
-  1. **Surface Normals & Lighting:** Light calculations depend on computing a single, orthogonal surface [[02_Normal_Vectors|normal vector]] $\mathbf{n} = (P_1 - P_0) \times (P_2 - P_0)$. On a non-planar polygon, the normal vector changes depending on which vertices are chosen, leading to shading artifacts and ambiguous rendering.
+  1. **Surface Normals & Lighting:** Light calculations depend on computing a single, orthogonal surface [normal vector](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md) $\mathbf{n} = (P_1 - P_0) \times (P_2 - P_0)$. On a non-planar polygon, the normal vector changes depending on which vertices are chosen, leading to shading artifacts and ambiguous rendering.
   2. **Convexity & GPU Rasterization:** Triangles are guaranteed to be convex, which allows GPU hardware to perform fast half-space rasterization tests. Polygons with 4+ vertices can be non-convex or self-intersecting, which breaks standard hardware rasterizers.
 
 ---
 
-**Back to Question:** [[Q_01_Triangle_Meshes]] | **Related Concepts:** [[01_Triangle_Meshes]]
+**Back to Question:** [Q_01_Triangle_Meshes](../Questions/Q_01_Triangle_Meshes.md) | **Related Concepts:** [01_Triangle_Meshes](../../../01_Concepts/05_Geometry/01_Triangle_Meshes.md)

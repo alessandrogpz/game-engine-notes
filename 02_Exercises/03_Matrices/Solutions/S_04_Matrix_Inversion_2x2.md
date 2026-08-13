@@ -164,7 +164,7 @@ $$
 \mathbf{X} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\\\ -c & a \end{bmatrix}
 $$
 
-    We verify $\mathbf{X}$ is the inverse by direct [[02_Matrix_Multiplication|matrix multiplication]]:
+    We verify $\mathbf{X}$ is the inverse by direct [matrix multiplication](../../../01_Concepts/03_Matrices/02_Matrix_Multiplication.md):
     
 $$
 \mathbf{A}\mathbf{X} = \begin{bmatrix} a & b \\\\ c & d \end{bmatrix} \left( \frac{1}{ad - bc} \begin{bmatrix} d & -b \\\\ -c & a \end{bmatrix} \right) = \frac{1}{ad - bc} \begin{bmatrix} ad - bc & -ab + ab \\\\ cd - cd & -bc + ad \end{bmatrix} = \frac{1}{ad - bc} \begin{bmatrix} ad - bc & 0 \\\\ 0 & ad - bc \end{bmatrix} = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} = \mathbf{I}
@@ -172,4 +172,4 @@ $$
 
     Similarly, $\mathbf{X}\mathbf{A} = \mathbf{I}$. Since $\mathbf{X}$ satisfies all conditions of a matrix inverse, $\mathbf{A}^{-1}$ is proven to exist.
 
-**Back to Question:** [[Q_04_Matrix_Inversion_2x2]] | **Related Concepts:** [[03_Determinants]], [[04_Matrix_Inversion]]
+**Back to Question:** [Q_04_Matrix_Inversion_2x2](../Questions/Q_04_Matrix_Inversion_2x2.md) | **Related Concepts:** [03_Determinants](../../../01_Concepts/03_Matrices/03_Determinants.md), [04_Matrix_Inversion](../../../01_Concepts/03_Matrices/04_Matrix_Inversion.md)

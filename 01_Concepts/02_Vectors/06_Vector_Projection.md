@@ -40,7 +40,7 @@ $$
 $$
 
 ### 2. Connect to the Dot Product
-We know the geometric definition of the [[02_Dot_Product|dot product]] is:
+We know the geometric definition of the [dot product](02_Dot_Product.md) is:
 
 $$
 \vec{a} \cdot \vec{b} = \|\vec{a}\| \|\vec{b}\| \cos(\theta)
@@ -86,7 +86,7 @@ While vector projection finds the component of a vector $\vec{a}$ that is parall
 
 ### Conceptual Understanding: "The Sliding Component"
 Think of vector rejection as removing the parallel projection component from the original vector.
-* **Physical Meaning:** In game physics (like collision response), if $\vec{b}$ is a surface [[02_Normal_Vectors|normal vector]], the vector projection is the component pushing *into* the surface (penetration), while the vector rejection is the component **parallel to the surface** (the sliding direction along the plane).
+* **Physical Meaning:** In game physics (like collision response), if $\vec{b}$ is a surface [normal vector](../05_Geometry/02_Normal_Vectors.md), the vector projection is the component pushing *into* the surface (penetration), while the vector rejection is the component **parallel to the surface** (the sliding direction along the plane).
 
 ### Algebraic Formula
 
@@ -98,4 +98,4 @@ $$
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/02_Vectors/Vector_Projection.cppm|Vector_Projection.cppm]]
+*   **C++ Source Code:** [Vector_Projection.cppm](../../03_Code/02_Vectors/Vector_Projection.cppm)

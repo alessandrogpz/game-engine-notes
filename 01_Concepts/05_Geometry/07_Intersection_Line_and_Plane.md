@@ -1,6 +1,6 @@
 # Intersection of a Line and a Plane
 
-Let $\mathbf{f} = [\mathbf{n} \mid d]$ be the plane, and let $L(t) = \mathbf{p} + t\mathbf{v}$ be a [[03_Lines_and_Rays|parametric line]], such that:
+Let $\mathbf{f} = [\mathbf{n} \mid d]$ be the plane, and let $L(t) = \mathbf{p} + t\mathbf{v}$ be a [parametric line](03_Lines_and_Rays.md), such that:
 
 $$
 \mathbf{n} \cdot \mathbf{v} \neq 0
@@ -14,7 +14,7 @@ $$
 \mathbf{f} \cdot L(t) = 0
 $$
 
-This is simply the [[04_Planes|implicit plane equation]] applied to the line: a point lies on the plane exactly when its 4D [[02_Dot_Product|dot product]] with $\mathbf{f}$ vanishes, so we ask which value of $t$ drives the line's position onto the plane.
+This is simply the [implicit plane equation](04_Planes.md) applied to the line: a point lies on the plane exactly when its 4D [dot product](../02_Vectors/02_Dot_Product.md) with $\mathbf{f}$ vanishes, so we ask which value of $t$ drives the line's position onto the plane.
 
 ---
 
@@ -47,7 +47,7 @@ Where the two dot products are **not** the same kind of operation:
 * $\mathbf{f} \cdot \mathbf{p}$ is a **4D calculation**, because $\mathbf{p}$ is a position and carries $w = 1$, so it picks up the constant $d$.
 * $\mathbf{f} \cdot \mathbf{v}$ is effectively a **3D calculation**, because $\mathbf{v}$ is a direction and carries $w = 0$, so the $d$ term drops out entirely and it reduces to $\mathbf{n} \cdot \mathbf{v}$.
 
-This is why the non-parallel condition is stated as $\mathbf{n} \cdot \mathbf{v} \neq 0$: it is exactly the condition $\mathbf{f} \cdot \mathbf{v} \neq 0$ that keeps the denominator from vanishing. See [[07_Homogeneous_Coordinates|Homogeneous Coordinates]] for why $w = 0$ makes a direction immune to the translation term.
+This is why the non-parallel condition is stated as $\mathbf{n} \cdot \mathbf{v} \neq 0$: it is exactly the condition $\mathbf{f} \cdot \mathbf{v} \neq 0$ that keeps the denominator from vanishing. See [Homogeneous Coordinates](../04_Transforms/07_Homogeneous_Coordinates.md) for why $w = 0$ makes a direction immune to the translation term.
 
 ---
 
@@ -62,7 +62,7 @@ $$
 This is the point that intersects with plane $\mathbf{f}$ at point $\mathbf{q}$.
 
 > [!NOTE]
-> **The plane does not need to be normalized.** Scaling $\mathbf{f}$ by any factor $s$ scales both $\mathbf{f} \cdot \mathbf{p}$ and $\mathbf{f} \cdot \mathbf{v}$ by that same $s$, and the ratio cancels it out. Unlike the [[05_Distance_Point_and_Plane|point-plane distance]], which measures a physical length and therefore requires $\|\mathbf{n}\| = 1$, this calculation only asks *where* along the line the crossing happens — a scale-invariant question.
+> **The plane does not need to be normalized.** Scaling $\mathbf{f}$ by any factor $s$ scales both $\mathbf{f} \cdot \mathbf{p}$ and $\mathbf{f} \cdot \mathbf{v}$ by that same $s$, and the ratio cancels it out. Unlike the [point-plane distance](05_Distance_Point_and_Plane.md), which measures a physical length and therefore requires $\|\mathbf{n}\| = 1$, this calculation only asks *where* along the line the crossing happens — a scale-invariant question.
 
 ---
 
@@ -105,4 +105,4 @@ so that the ray is pointing back toward the front face of the plane. The signs a
 
 ## Code Implementation
 
-* **C++ Source Code:** [[03_Code/05_Geometry/Intersection_Line_and_Plane.cppm|Intersection_Line_and_Plane.cppm]]
+* **C++ Source Code:** [Intersection_Line_and_Plane.cppm](../../03_Code/05_Geometry/Intersection_Line_and_Plane.cppm)

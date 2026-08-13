@@ -114,4 +114,4 @@ $$
 
 ---
 
-**Back to Question:** [[Q_02_Dot_Product]] | **Related Concepts:** [[02_Dot_Product]]
+**Back to Question:** [Q_02_Dot_Product](../Questions/Q_02_Dot_Product.md) | **Related Concepts:** [02_Dot_Product](../../../01_Concepts/02_Vectors/02_Dot_Product.md)

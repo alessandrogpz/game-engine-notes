@@ -17,9 +17,9 @@ $$
 4. Calculate $A^T$. Is this matrix symmetric ($A = A^T$)?
 
 ## Part 2: Conceptual Understanding
-1. If a matrix $Q$ is orthogonal, what is $\text{det}(Q^T Q)$? Explain using the properties of determinants and [[05_Orthogonal_Matrices|orthogonal matrices]].
+1. If a matrix $Q$ is orthogonal, what is $\text{det}(Q^T Q)$? Explain using the properties of determinants and [orthogonal matrices](../../../01_Concepts/03_Matrices/05_Orthogonal_Matrices.md).
 2. Suppose you have two matrices $A$ and $B$. Even if $AB \neq BA$, prove that $\text{tr}(AB) = \text{tr}(BA)$ for $2 \times 2$ matrices.
-3. Why does a matrix with a determinant of $0$ have a [[07_Rank_Nullity|nullity]] greater than $0$? (Reference the Rank-Nullity theorem).
+3. Why does a matrix with a determinant of $0$ have a [nullity](../../../01_Concepts/03_Matrices/07_Rank_Nullity.md) greater than $0$? (Reference the Rank-Nullity theorem).
 
 ---
-**Check Answer:** [[S_03_Determinants]] | **Related Concepts:** [[03_Determinants]]
+**Check Answer:** [S_03_Determinants](../Solutions/S_03_Determinants.md) | **Related Concepts:** [03_Determinants](../../../01_Concepts/03_Matrices/03_Determinants.md)

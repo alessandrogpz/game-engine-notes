@@ -90,4 +90,4 @@ where:
 
 ## Code Implementation
 
-* **C++ Source Code:** [[03_Code/05_Geometry/Triangle_Meshes.cppm|Triangle_Meshes.cppm]]
+* **C++ Source Code:** [Triangle_Meshes.cppm](../../03_Code/05_Geometry/Triangle_Meshes.cppm)

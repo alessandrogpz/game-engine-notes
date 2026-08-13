@@ -101,4 +101,4 @@ $$
     This scalar represents the signed area of the 2D parallelogram, and corresponds to the $z$-component of a 3D cross product if the 2D vectors were placed in the $xy$-plane (with $z = 0$).
 
 ---
-**Back to Question:** [[Q_04_Cross_Product]] | **Related Concepts:** [[04_Cross_Product]]
+**Back to Question:** [Q_04_Cross_Product](../Questions/Q_04_Cross_Product.md) | **Related Concepts:** [04_Cross_Product](../../../01_Concepts/02_Vectors/04_Cross_Product.md)

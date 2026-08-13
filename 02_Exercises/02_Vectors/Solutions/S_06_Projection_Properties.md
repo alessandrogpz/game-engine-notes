@@ -169,4 +169,4 @@ $$
 This completes the algebraic proof of idempotency ($P^2 = P$).
 
 ---
-**Back to Question:** [[Q_06_Projection_Properties]] | **Related Concepts:** [[06_Vector_Projection]]
+**Back to Question:** [Q_06_Projection_Properties](../Questions/Q_06_Projection_Properties.md) | **Related Concepts:** [06_Vector_Projection](../../../01_Concepts/02_Vectors/06_Vector_Projection.md)

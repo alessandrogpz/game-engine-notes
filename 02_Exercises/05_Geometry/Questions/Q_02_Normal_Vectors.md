@@ -21,7 +21,7 @@ $$
 
 1. Compute the naively transformed normal $\mathbf{M}\hat{n}$, and show that it fails to remain orthogonal to the face's (unchanged) edge vectors from Part 1.
 2. Compute $\mathbf{M}^{-1}$ and use it to find the correctly transformed normal $(\mathbf{M}^{-1})^T \hat{n}$. Verify that it is orthogonal to both edge vectors.
-3. If instead this face were transformed by the reflection $\mathbf{M} = \text{diag}(1, -1, 1)$, would the $\text{sign}(\det(\mathbf{M}))$ correction described in [[02_Normal_Vectors]] be necessary? Justify your answer using $\det(\mathbf{M})$.
+3. If instead this face were transformed by the reflection $\mathbf{M} = \text{diag}(1, -1, 1)$, would the $\text{sign}(\det(\mathbf{M}))$ correction described in [02_Normal_Vectors](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md) be necessary? Justify your answer using $\det(\mathbf{M})$.
 
 ---
-**Check Answer:** [[S_02_Normal_Vectors]] | **Related Concepts:** [[02_Normal_Vectors]]
+**Check Answer:** [S_02_Normal_Vectors](../Solutions/S_02_Normal_Vectors.md) | **Related Concepts:** [02_Normal_Vectors](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md)

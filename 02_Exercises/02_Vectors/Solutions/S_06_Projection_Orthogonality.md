@@ -102,4 +102,4 @@ If the dot product is negative, the angle $\theta$ between vectors $\vec{a}$ and
 *   This implies that the "shadow" or projection vector will point in the **exact opposite direction** (turned $180^\circ$) relative to the vector $\vec{b}$ (i.e. along the direction of $-\vec{b}$).
 
 ---
-**Back to Question:** [[Q_06_Projection_Orthogonality]] **Related Concepts:** [[06_Vector_Projection]], [[02_Dot_Product]]
+**Back to Question:** [Q_06_Projection_Orthogonality](../Questions/Q_06_Projection_Orthogonality.md) **Related Concepts:** [06_Vector_Projection](../../../01_Concepts/02_Vectors/06_Vector_Projection.md), [02_Dot_Product](../../../01_Concepts/02_Vectors/02_Dot_Product.md)

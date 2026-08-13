@@ -39,8 +39,8 @@ $$
 ---
 
 ## Part 2: Conceptual Understanding
-1.  **[[03_Determinants|Determinant]] Intuition:** Calculate the determinants $\det\big(\mathbf{M}_{\text{reflect}}(\vec{a})\big)$ and $\det\big(\mathbf{M}_{\text{invol}}(\vec{a})\big)$ for the matrices you constructed in Part 1. Explain the geometric significance of their signs ($+1$ vs. $-1$) in 3D space.
+1.  **[Determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) Intuition:** Calculate the determinants $\det\big(\mathbf{M}_{\text{reflect}}(\vec{a})\big)$ and $\det\big(\mathbf{M}_{\text{invol}}(\vec{a})\big)$ for the matrices you constructed in Part 1. Explain the geometric significance of their signs ($+1$ vs. $-1$) in 3D space.
 2.  **Composition of Reflections:** What geometric transformation is produced if you perform two plane reflections consecutively across the exact same plane? Prove this algebraically by calculating the matrix product $\mathbf{M}_{\text{reflect}}(\vec{a})\mathbf{M}_{\text{reflect}}(\vec{a})$.
 
 ---
-**Check Answer:** [[S_03_Reflections]] | **Related Concepts:** [[03_Reflections]]
+**Check Answer:** [S_03_Reflections](../Solutions/S_03_Reflections.md) | **Related Concepts:** [03_Reflections](../../../01_Concepts/04_Transforms/03_Reflections.md)

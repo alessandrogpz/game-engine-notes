@@ -9,7 +9,7 @@ In graphics programming and game physics engines, vector projections are almost 
 ### The Outer Product
 The **outer product** (denoted as $\vec{a}\vec{b}^T$ or $\vec{a} \otimes \vec{b}$) is a linear algebra operation that multiplies a column vector by a row vector to construct a matrix.
 
-* **Conceptual Meaning:** While the [[02_Dot_Product|dot product]] acts as a **compressor** (collapsing two vectors into a single scalar number based on their alignment), the outer product acts as an **expander** (generating a grid showing how every individual dimension of the first vector interacts with every individual dimension of the second vector).
+* **Conceptual Meaning:** While the [dot product](../02_Vectors/02_Dot_Product.md) acts as a **compressor** (collapsing two vectors into a single scalar number based on their alignment), the outer product acts as an **expander** (generating a grid showing how every individual dimension of the first vector interacts with every individual dimension of the second vector).
 
 ---
 
@@ -21,7 +21,7 @@ The **outer product** (denoted as $\vec{a}\vec{b}^T$ or $\vec{a} \otimes \vec{b}
 ---
 
 ### Derivation of the Projection Matrix
-For any vector $\vec{a}$ and a unit direction vector $\hat{u}$ (where $\|\hat{u}\|^2 = 1$), the [[06_Vector_Projection|vector projection]] is:
+For any vector $\vec{a}$ and a unit direction vector $\hat{u}$ (where $\|\hat{u}\|^2 = 1$), the [vector projection](../02_Vectors/06_Vector_Projection.md) is:
 
 $$
 \text{proj}_{\hat{u}}\vec{a} = (\vec{a} \cdot \hat{u})\hat{u}
@@ -96,7 +96,7 @@ Multiplying any vector $\vec{a}$ by this matrix filters out everything parallel 
 
 ## 3. Determinant and Trace of a Projection Matrix
 
-A projection matrix $\mathbf{P} = \hat{u}\hat{u}^T$ has unique eigenvalues, [[03_Determinants|determinant]], and trace properties that carry significant geometric meaning.
+A projection matrix $\mathbf{P} = \hat{u}\hat{u}^T$ has unique eigenvalues, [determinant](03_Determinants.md), and trace properties that carry significant geometric meaning.
 
 ### A. Determinant of a Projection Matrix ($\det(\mathbf{P})$)
 For any projection matrix $\mathbf{P}$ that projects onto a proper subspace (like a 1D line or a 2D plane in 3D space), the determinant is always:
@@ -123,4 +123,4 @@ $$
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/03_Matrices/Projection_Matrices.cppm|Projection_Matrices.cppm]]
+*   **C++ Source Code:** [Projection_Matrices.cppm](../../03_Code/03_Matrices/Projection_Matrices.cppm)

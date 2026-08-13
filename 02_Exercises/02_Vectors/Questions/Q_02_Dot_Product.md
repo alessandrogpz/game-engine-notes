@@ -21,4 +21,4 @@ $$
 3. How does the dot product relate to the concept of "projection" that we studied?
 
 ---
-**Check Answer:** [[S_02_Dot_Product]] | **Related Concepts:** [[02_Dot_Product]]
+**Check Answer:** [S_02_Dot_Product](../Solutions/S_02_Dot_Product.md) | **Related Concepts:** [02_Dot_Product](../../../01_Concepts/02_Vectors/02_Dot_Product.md)

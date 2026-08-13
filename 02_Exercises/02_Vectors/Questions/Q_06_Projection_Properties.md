@@ -38,5 +38,5 @@ $$
    Prove that the vector projection operator is idempotent.
 
 ---
-**Check Answer:** [[S_06_Projection_Properties]] | **Related Concepts:** [[06_Vector_Projection]]
+**Check Answer:** [S_06_Projection_Properties](../Solutions/S_06_Projection_Properties.md) | **Related Concepts:** [06_Vector_Projection](../../../01_Concepts/02_Vectors/06_Vector_Projection.md)
 

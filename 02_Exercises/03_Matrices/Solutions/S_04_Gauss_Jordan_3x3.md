@@ -79,7 +79,7 @@ $$
 ## Part 2: Conceptual Understanding
 
 ### 1. Zero Row in Gauss-Jordan
-**Question:** During the Gauss-Jordan process, if you find a row of zeros on the left side, what does that imply about matrix $\mathbf{A}$ and its [[03_Determinants|determinant]]?
+**Question:** During the Gauss-Jordan process, if you find a row of zeros on the left side, what does that imply about matrix $\mathbf{A}$ and its [determinant](../../../01_Concepts/03_Matrices/03_Determinants.md)?
 
 **Answer:**
 If a row of zeros is encountered on the left side of the augmented matrix during the Gauss-Jordan elimination process, it implies:
@@ -90,7 +90,7 @@ If a row of zeros is encountered on the left side of the augmented matrix during
 ---
 
 ### 2. Why the Augmented Matrix Approach Works
-**Question:** Explain why the augmented matrix approach $[\mathbf{A} \mid \mathbf{I}] \to [\mathbf{I} \mid \mathbf{A}^{-1}]$ works. What fundamental property of [[02_Matrix_Multiplication|matrix multiplication]] are we exploiting?
+**Question:** Explain why the augmented matrix approach $[\mathbf{A} \mid \mathbf{I}] \to [\mathbf{I} \mid \mathbf{A}^{-1}]$ works. What fundamental property of [matrix multiplication](../../../01_Concepts/03_Matrices/02_Matrix_Multiplication.md) are we exploiting?
 
 **Answer:**
 The augmented matrix method exploits two core properties of linear algebra:
@@ -135,4 +135,4 @@ $$
 \text{Total Operations} = n + (n^2 - n) = n^2 \text{ operations}
 $$
 
-**Back to Question:** [[Q_04_Gauss_Jordan_3x3]] | **Related Concepts:** [[04_Matrix_Inversion]], [[01_Linear_Systems]]
+**Back to Question:** [Q_04_Gauss_Jordan_3x3](../Questions/Q_04_Gauss_Jordan_3x3.md) | **Related Concepts:** [04_Matrix_Inversion](../../../01_Concepts/03_Matrices/04_Matrix_Inversion.md), [01_Linear_Systems](../../../01_Concepts/01_Systems_of_Equations/01_Linear_Systems.md)

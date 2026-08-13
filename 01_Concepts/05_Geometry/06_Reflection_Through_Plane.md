@@ -2,7 +2,7 @@
 
 When a point $\mathbf{p}$ gets reflected through a plane, the result is a new point $\mathbf{p}'$ that lies at the same distance from the plane compared to $\mathbf{p}$, but on the opposite side.
 
-The line connecting $\mathbf{p}'$ to $\mathbf{p}$, passing through the plane, is **parallel to the plane's [[02_Normal_Vectors|normal vector]]**.
+The line connecting $\mathbf{p}'$ to $\mathbf{p}$, passing through the plane, is **parallel to the plane's [normal vector](02_Normal_Vectors.md)**.
 
 Let $\mathbf{f} = [\mathbf{n} \mid d]$ be the plane, such that $\mathbf{n}$ has unit length, and let $\mathbf{q}$ be the point closest to $\mathbf{p}$ lying in the plane.
 
@@ -16,7 +16,7 @@ Let $\mathbf{f} = [\mathbf{n} \mid d]$ be the plane, such that $\mathbf{n}$ has 
 
 ## The Closest Point in the Plane
 
-The difference between $\mathbf{p}$ and $\mathbf{q}$ is $(\mathbf{f} \cdot \mathbf{p})\mathbf{n}$, because the scalar quantity $\mathbf{f} \cdot \mathbf{p}$ is the [[05_Distance_Point_and_Plane|perpendicular distance]] between the plane $\mathbf{f}$ and the point $\mathbf{p}$.
+The difference between $\mathbf{p}$ and $\mathbf{q}$ is $(\mathbf{f} \cdot \mathbf{p})\mathbf{n}$, because the scalar quantity $\mathbf{f} \cdot \mathbf{p}$ is the [perpendicular distance](05_Distance_Point_and_Plane.md) between the plane $\mathbf{f}$ and the point $\mathbf{p}$.
 
 When this vector is subtracted from $\mathbf{p}$, the result is the point $\mathbf{q}$:
 
@@ -40,7 +40,7 @@ $$
 \mathbf{n} \cdot \mathbf{x} + d = 0
 $$
 
-A point $\mathbf{p} = (p_x, p_y, p_z, 1)$ in [[07_Homogeneous_Coordinates|homogeneous coordinates]] gives the 4D [[02_Dot_Product|dot product]] $\mathbf{f} \cdot \mathbf{p}$, which represents the signed distance of $\mathbf{p}$ compared to the plane:
+A point $\mathbf{p} = (p_x, p_y, p_z, 1)$ in [homogeneous coordinates](../04_Transforms/07_Homogeneous_Coordinates.md) gives the 4D [dot product](../02_Vectors/02_Dot_Product.md) $\mathbf{f} \cdot \mathbf{p}$, which represents the signed distance of $\mathbf{p}$ compared to the plane:
 
 $$
 \mathbf{f} \cdot \mathbf{p} = \mathbf{n} \cdot \mathbf{p} + d
@@ -119,4 +119,4 @@ $$
 
 ## Code Implementation
 
-* **C++ Source Code:** [[03_Code/05_Geometry/Reflection_Through_Plane.cppm|Reflection_Through_Plane.cppm]]
+* **C++ Source Code:** [Reflection_Through_Plane.cppm](../../03_Code/05_Geometry/Reflection_Through_Plane.cppm)

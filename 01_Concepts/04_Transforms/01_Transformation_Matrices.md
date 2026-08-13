@@ -1,6 +1,6 @@
 # Transformation Matrices
 
-In game engines, 3D graphics, and physical simulations, we frequently represent objects in multiple [[03_Coordinate_Systems|coordinate systems]] (e.g., local/object space, world space, camera/view space). Understanding how to move position vectors and linear operators between these systems is a core requirement of linear algebra.
+In game engines, 3D graphics, and physical simulations, we frequently represent objects in multiple [coordinate systems](../02_Vectors/03_Coordinate_Systems.md) (e.g., local/object space, world space, camera/view space). Understanding how to move position vectors and linear operators between these systems is a core requirement of linear algebra.
 
 ---
 
@@ -64,7 +64,7 @@ $$
 
 ## 2. Orthogonal Transforms
 
-An **[[05_Orthogonal_Matrices|orthogonal matrix]]** is a square matrix whose columns form an orthonormal set (mutually perpendicular unit-length vectors). In game physics and graphics, pure rotation matrices are orthogonal.
+An **[orthogonal matrix](../03_Matrices/05_Orthogonal_Matrices.md)** is a square matrix whose columns form an orthonormal set (mutually perpendicular unit-length vectors). In game physics and graphics, pure rotation matrices are orthogonal.
 
 Let $\mathbf{M}$ be a matrix with orthonormal columns:
 
@@ -95,7 +95,7 @@ The following statements are mathematically identical for a square matrix $\math
 
 ### Preservation Properties
 Orthogonal transformations preserve the geometric relationships between vectors:
-*   **Preservation of [[02_Dot_Product|Dot Product]]:** The dot product of two transformed vectors is equal to their original dot product:
+*   **Preservation of [Dot Product](../02_Vectors/02_Dot_Product.md):** The dot product of two transformed vectors is equal to their original dot product:
     
 **(2.6)**
 
@@ -105,7 +105,7 @@ $$
 
 *   **Preservation of Length:** Because dot products are preserved, the length of any vector is invariant under an orthogonal transform: $\|\mathbf{M}\vec{v}\| = \|\vec{v}\|$.
 *   **Preservation of Angle:** The angle $\theta$ between any two vectors is invariant.
-*   **[[03_Determinants|Determinant]]:** The determinant of any orthogonal matrix is always $\det(\mathbf{M}) = \pm 1$.
+*   **[Determinant](../03_Matrices/03_Determinants.md):** The determinant of any orthogonal matrix is always $\det(\mathbf{M}) = \pm 1$.
     *   $\det(\mathbf{M}) = 1$: Represents a **pure rotation** (preserves the orientation handedness).
     *   $\det(\mathbf{M}) = -1$: Represents a **reflection** (reverses the handedness, e.g. switching right-handed to left-handed systems).
 
@@ -121,7 +121,7 @@ $$
 \vec{v}' = \mathbf{M}_2(\mathbf{M}_1\vec{v})
 $$
 
-Because [[02_Matrix_Multiplication|matrix multiplication]] is associative, we can group the matrices together first to pre-multiply them into a single transform matrix $\mathbf{N} = \mathbf{M}_2\mathbf{M}_1$:
+Because [matrix multiplication](../03_Matrices/02_Matrix_Multiplication.md) is associative, we can group the matrices together first to pre-multiply them into a single transform matrix $\mathbf{N} = \mathbf{M}_2\mathbf{M}_1$:
 
 $$
 \vec{v}' = \mathbf{N}\vec{v}
@@ -160,4 +160,4 @@ This elegant formula is how operations themselves (such as scaling, rotations, o
 ## Code Implementation
 
 *   **C++ Source Code:** The individual transformation matrices are implemented per transform:
-    [[03_Code/04_Transforms/Rotations.cppm|Rotations.cppm]], [[03_Code/04_Transforms/Reflections.cppm|Reflections.cppm]], [[03_Code/04_Transforms/Scales.cppm|Scales.cppm]], [[03_Code/04_Transforms/Skews.cppm|Skews.cppm]], [[03_Code/04_Transforms/Translations.cppm|Translations.cppm]]
+    [Rotations.cppm](../../03_Code/04_Transforms/Rotations.cppm), [Reflections.cppm](../../03_Code/04_Transforms/Reflections.cppm), [Scales.cppm](../../03_Code/04_Transforms/Scales.cppm), [Skews.cppm](../../03_Code/04_Transforms/Skews.cppm), [Translations.cppm](../../03_Code/04_Transforms/Translations.cppm)

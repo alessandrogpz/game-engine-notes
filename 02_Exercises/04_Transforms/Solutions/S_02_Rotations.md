@@ -133,7 +133,7 @@ $$
 ### 1. Component Decomposition
 
 #### A. Calculate the Parallel Component ($\vec{v}_{\parallel a}$)
-Geometrically, the parallel component $\vec{v}_{\parallel a}$ is the [[06_Vector_Projection|vector projection]] of $\vec{v}$ onto the unit axis $\vec{a}$ ($\text{proj}_{\vec{a}} \vec{v}$):
+Geometrically, the parallel component $\vec{v}_{\parallel a}$ is the [vector projection](../../../01_Concepts/02_Vectors/06_Vector_Projection.md) of $\vec{v}$ onto the unit axis $\vec{a}$ ($\text{proj}_{\vec{a}} \vec{v}$):
 
 $$
 \vec{v} \cdot \vec{a} = \|\vec{v}\| \|\vec{a}\| \cos\phi
@@ -153,7 +153,7 @@ $$
 \vec{v}_{\parallel a} = \text{proj}_{\vec{a}} \vec{v} = (\vec{v} \cdot \vec{a})\vec{a}
 $$
 
-Calculating the [[02_Dot_Product|dot product]]:
+Calculating the [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md):
 
 $$
 \vec{v} \cdot \vec{a} = (1)(0) + (0)\left(\frac{\sqrt{2}}{2}\right) + (1)\left(\frac{\sqrt{2}}{2}\right) = \frac{\sqrt{2}}{2}
@@ -184,7 +184,7 @@ $$
 
 We setup our local orthonormal coordinate frame in the plane of rotation:
 *   **Local X-axis:** The perpendicular component $\vec{v}_{\perp a}$ (on local $x$).
-*   **Local Y-axis:** The [[04_Cross_Product|cross product]] $\vec{a} \times \vec{v}$ (on local $y$).
+*   **Local Y-axis:** The [cross product](../../../01_Concepts/02_Vectors/04_Cross_Product.md) $\vec{a} \times \vec{v}$ (on local $y$).
 *   **Stationary component:** The parallel component $\vec{v}_{\parallel a}$ (on axis $\vec{a}$).
 
 The rotated vector is:
@@ -284,4 +284,4 @@ This perfectly verifies the rotated vector computed using Rodrigues' Formula.
 
 ---
 
-**Back to Question:** [[Q_02_Rotations]] | **Related Concepts:** [[02_Rotations]]
+**Back to Question:** [Q_02_Rotations](../Questions/Q_02_Rotations.md) | **Related Concepts:** [02_Rotations](../../../01_Concepts/04_Transforms/02_Rotations.md)

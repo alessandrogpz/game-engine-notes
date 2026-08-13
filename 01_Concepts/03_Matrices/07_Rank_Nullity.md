@@ -1,6 +1,6 @@
 # Rank and Nullity
 
-Rank and nullity are fundamental properties of matrices that describe the dimensions of the vector subspaces associated with a matrix (specifically, its range and its kernel). They play a central role in determining the solvability of [[01_Linear_Systems|linear systems]].
+Rank and nullity are fundamental properties of matrices that describe the dimensions of the vector subspaces associated with a matrix (specifically, its range and its kernel). They play a central role in determining the solvability of [linear systems](../01_Systems_of_Equations/01_Linear_Systems.md).
 
 ---
 
@@ -64,8 +64,8 @@ For a linear system $\mathbf{A}\vec{x} = \vec{b}$ with $n$ variables:
 ## 5. Connection to Matrix Invertibility (Square Matrices)
 
 For an $n \times n$ square matrix $\mathbf{A}$, the following statements are equivalent:
-*   $\mathbf{A}$ is [[04_Matrix_Inversion|invertible]] ($\mathbf{A}^{-1}$ exists).
-*   $\det(\mathbf{A}) \neq 0$ (its [[03_Determinants|determinant]] is non-zero).
+*   $\mathbf{A}$ is [invertible](04_Matrix_Inversion.md) ($\mathbf{A}^{-1}$ exists).
+*   $\det(\mathbf{A}) \neq 0$ (its [determinant](03_Determinants.md) is non-zero).
 *   $\mathbf{A}$ has full rank: $\text{rank}(\mathbf{A}) = n$.
 *   $\mathbf{A}$ has zero nullity: $\text{nullity}(\mathbf{A}) = 0$.
 

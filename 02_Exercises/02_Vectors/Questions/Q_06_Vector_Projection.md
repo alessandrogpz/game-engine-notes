@@ -5,7 +5,7 @@ tags: [exercise, question, projection, force-decomposition]
 ---
 # Question
 ## Part 1: Calculation
-You have a velocity vector and a surface [[02_Normal_Vectors|normal vector]]:
+You have a velocity vector and a surface [normal vector](../../../01_Concepts/05_Geometry/02_Normal_Vectors.md):
 
 $$
 \vec{v} = \begin{bmatrix} 4 \\\\ -3 \\\\ 1 \end{bmatrix} \quad \text{and} \quad \vec{n} = \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix}
@@ -20,4 +20,4 @@ $$
 3. How can you use the vector projection to find the component of $\vec{v}$ that is parallel to the surface (perpendicular to $\vec{n}$)?
 
 ---
-**Check Answer:** [[S_06_Vector_Projection]] | **Related Concepts:** [[06_Vector_Projection]]
+**Check Answer:** [S_06_Vector_Projection](../Solutions/S_06_Vector_Projection.md) | **Related Concepts:** [06_Vector_Projection](../../../01_Concepts/02_Vectors/06_Vector_Projection.md)

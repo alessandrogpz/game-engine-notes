@@ -113,11 +113,11 @@ $$
 ---
 
 ### 3. Other Methods
-- **[[04_Matrix_Inversion|Matrix Inverse]]**: If $A$ is square and invertible, the system can be solved directly via $\vec{x} = A^{-1}\vec{b}$.
-- **Cramer's Rule:** Uses [[03_Determinants|determinants]] to compute each variable individually (best suited for small systems).
+- **[Matrix Inverse](../03_Matrices/04_Matrix_Inversion.md)**: If $A$ is square and invertible, the system can be solved directly via $\vec{x} = A^{-1}\vec{b}$.
+- **Cramer's Rule:** Uses [determinants](../03_Matrices/03_Determinants.md) to compute each variable individually (best suited for small systems).
 
 ---
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/01_Systems_of_Equations/Linear_Systems.cppm|Linear_Systems.cppm]]
+*   **C++ Source Code:** [Linear_Systems.cppm](../../03_Code/01_Systems_of_Equations/Linear_Systems.cppm)

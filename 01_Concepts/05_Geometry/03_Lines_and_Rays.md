@@ -46,7 +46,7 @@ Geometrically, $d$ can be found directly without squaring. However, textbook for
 
 ### Method 1: Rejection & Pythagorean Formula
 
-The distance $d$ is equal to the magnitude of the [[06_Vector_Projection|rejection vector]] of $\mathbf{u}$ from $\mathbf{v}$:
+The distance $d$ is equal to the magnitude of the [rejection vector](../02_Vectors/06_Vector_Projection.md) of $\mathbf{u}$ from $\mathbf{v}$:
 
 $$
 d = \|\mathbf{u} - \text{proj}_{\mathbf{v}}\mathbf{u}\|
@@ -72,7 +72,7 @@ $$
 
 ### Method 2: Parallelogram Area / Base Formula
 
-Geometrically, the area of the parallelogram formed by $\mathbf{u}$ and $\mathbf{v}$ ([[04_Cross_Product|cross product]]) is $\text{Area} = \text{base} \times \text{height} = \|\mathbf{v}\| \times d$. 
+Geometrically, the area of the parallelogram formed by $\mathbf{u}$ and $\mathbf{v}$ ([cross product](../02_Vectors/04_Cross_Product.md)) is $\text{Area} = \text{base} \times \text{height} = \|\mathbf{v}\| \times d$. 
 
 Rearranging directly yields the un-squared formula for $d$:
 
@@ -123,7 +123,7 @@ $$
 d = \|L_2(t_2) - L_1(t_1)\|
 $$
 
-We can express the orthogonality requirement using [[02_Dot_Product|dot products]] with both direction vectors $\mathbf{v}_1$ and $\mathbf{v}_2$:
+We can express the orthogonality requirement using [dot products](../02_Vectors/02_Dot_Product.md) with both direction vectors $\mathbf{v}_1$ and $\mathbf{v}_2$:
 
 $$
 \begin{cases}
@@ -147,7 +147,7 @@ $$
 \begin{bmatrix} \mathbf{v}_1^2 & -\mathbf{v}_1 \cdot \mathbf{v}_2 \\\\ \mathbf{v}_1 \cdot \mathbf{v}_2 & -\mathbf{v}_2^2 \end{bmatrix} \begin{bmatrix} t_1 \\\\ t_2 \end{bmatrix} = \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\\\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
 $$
 
-Solving for $t_1$ and $t_2$ using the [[04_Matrix_Inversion|matrix inverse]]:
+Solving for $t_1$ and $t_2$ using the [matrix inverse](../03_Matrices/04_Matrix_Inversion.md):
 
 $$
 \begin{bmatrix} t_1 \\\\ t_2 \end{bmatrix} = \begin{bmatrix} \mathbf{v}_1^2 & -\mathbf{v}_1 \cdot \mathbf{v}_2 \\\\ \mathbf{v}_1 \cdot \mathbf{v}_2 & -\mathbf{v}_2^2 \end{bmatrix}^{-1} \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\\\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
@@ -163,7 +163,7 @@ $$
 
 ### Special Case: Parallel Lines
 
-If $(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2 = 0$, the matrix [[03_Determinants|determinant]] is zero and the system cannot be inverted. This means the lines are **not skew—they are parallel**, maintaining the same distance from one another at all times.
+If $(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2 = 0$, the matrix [determinant](../03_Matrices/03_Determinants.md) is zero and the system cannot be inverted. This means the lines are **not skew—they are parallel**, maintaining the same distance from one another at all times.
 
 In this case, the distance formula simplifies to:
 
@@ -181,4 +181,4 @@ $$
 
 ## Code Implementation
 
-* **C++ Source Code:** [[03_Code/05_Geometry/Lines_and_Rays.cppm|Lines_and_Rays.cppm]]
+* **C++ Source Code:** [Lines_and_Rays.cppm](../../03_Code/05_Geometry/Lines_and_Rays.cppm)

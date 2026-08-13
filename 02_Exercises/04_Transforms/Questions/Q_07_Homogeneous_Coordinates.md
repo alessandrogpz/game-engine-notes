@@ -28,4 +28,4 @@ $$
 2. In computer graphics, how do we mathematically distinguish a point from a direction vector using homogeneous coordinates? Why are direction vectors invariant under translation matrices?
 
 ---
-**Check Answer:** [[S_07_Homogeneous_Coordinates]] | **Related Concepts:** [[07_Homogeneous_Coordinates]]
+**Check Answer:** [S_07_Homogeneous_Coordinates](../Solutions/S_07_Homogeneous_Coordinates.md) | **Related Concepts:** [07_Homogeneous_Coordinates](../../../01_Concepts/04_Transforms/07_Homogeneous_Coordinates.md)

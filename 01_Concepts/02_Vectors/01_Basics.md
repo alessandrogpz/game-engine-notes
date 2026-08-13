@@ -49,4 +49,4 @@ Vectors must have the same number of components to be added or subtracted.
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/02_Vectors/Basics.cppm|Basics.cppm]]
+*   **C++ Source Code:** [Basics.cppm](../../03_Code/02_Vectors/Basics.cppm)

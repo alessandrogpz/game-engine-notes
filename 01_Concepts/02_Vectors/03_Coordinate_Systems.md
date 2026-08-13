@@ -22,10 +22,10 @@ This establishes the standard right-handed space. In a left-handed space (using 
 
 
 ## Why It Matters
-When working with **[[04_Cross_Product|Cross Products]]**, the resulting vector $\vec{a} \times \vec{b}$ is defined to follow the **Right-Hand Rule**. If you are working in a Left-Handed coordinate system, your visual intuition for "up" or "forward" might be inverted compared to the mathematical result.
+When working with **[Cross Products](04_Cross_Product.md)**, the resulting vector $\vec{a} \times \vec{b}$ is defined to follow the **Right-Hand Rule**. If you are working in a Left-Handed coordinate system, your visual intuition for "up" or "forward" might be inverted compared to the mathematical result.
 
 ---
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/02_Vectors/Coordinate_Systems.cppm|Coordinate_Systems.cppm]]
+*   **C++ Source Code:** [Coordinate_Systems.cppm](../../03_Code/02_Vectors/Coordinate_Systems.cppm)

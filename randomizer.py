@@ -140,11 +140,11 @@ def scaffold_new_question(name, topic_query, difficulty=None, base_path="02_Exer
         diff_val = difficulty.capitalize() if difficulty else ""
         q_content = q_content.replace("topic: ", f"topic: {clean_topic_name}")
         q_content = q_content.replace("difficulty: ", f"difficulty: {diff_val}")
-        q_content = q_content.replace("[[Solution_Name]]", f"[[S_{base_name}]]")
+        q_content = q_content.replace("[Solution_Name](../Solutions/Solution_Name.md)", f"[S_{base_name}](../Solutions/S_{base_name}.md)")
         
         # Prefill Solution template
         s_content = s_content.replace("topic: ", f"topic: {clean_topic_name}")
-        s_content = s_content.replace("[[Question_Name]]", f"[[Q_{base_name}]]")
+        s_content = s_content.replace("[Question_Name](../Questions/Question_Name.md)", f"[Q_{base_name}](../Questions/Q_{base_name}.md)")
         
         # Write outputs
         with open(q_path, "w", encoding="utf-8") as f:

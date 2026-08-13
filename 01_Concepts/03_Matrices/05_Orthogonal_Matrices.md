@@ -24,17 +24,17 @@ $$
 | **Efficient Inverse** | $Q^{-1} = Q^T$ (Inversion is just transposition) |
 
 ## Examples
-- **[[02_Rotations|Rotation Matrices]]**: In 2D, the rotation matrix:
+- **[Rotation Matrices](../04_Transforms/02_Rotations.md)**: In 2D, the rotation matrix:
   
 $$
 R_\theta = \begin{bmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{bmatrix}
 $$
   
   is orthogonal.
-- **[[03_Reflections|Reflection Matrices]]**: Matrices that reflect vectors across a line or plane.
+- **[Reflection Matrices](../04_Transforms/03_Reflections.md)**: Matrices that reflect vectors across a line or plane.
 
 ---
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/03_Matrices/Orthogonal_Matrices.cppm|Orthogonal_Matrices.cppm]]
+*   **C++ Source Code:** [Orthogonal_Matrices.cppm](../../03_Code/03_Matrices/Orthogonal_Matrices.cppm)

@@ -11,10 +11,10 @@ This solution contains the complete, step-by-step mathematical proofs and calcul
 ## Part 1: Orthogonal Transforms and Geometric Preservation
 
 ### 1. Orthonormality Proof
-To prove that $\mathbf{M}$ is an [[05_Orthogonal_Matrices|orthogonal matrix]], we verify two conditions:
+To prove that $\mathbf{M}$ is an [orthogonal matrix](../../../01_Concepts/03_Matrices/05_Orthogonal_Matrices.md), we verify two conditions:
 1.  **Unit Length (Magnitude = 1):** The columns must be unit vectors.
-2.  **Orthogonality (Angle = 90°):** The [[02_Dot_Product|dot product]] between any two distinct columns must be $0$.
-*(Note: As a property of any orthogonal matrix, its [[03_Determinants|determinant]] will always be $\pm 1$)*.
+2.  **Orthogonality (Angle = 90°):** The [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) between any two distinct columns must be $0$.
+*(Note: As a property of any orthogonal matrix, its [determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) will always be $\pm 1$)*.
 
 Let the column vectors of $\mathbf{M}$ be:
 
@@ -199,5 +199,5 @@ Because System $A$ is rotated $-90^\circ$ relative to System $B$, System $A$'s l
 
 ---
 
-**Back to Question:** [[Q_01_Transformation_Matrices]] | **Related Concepts:** [[01_Transformation_Matrices]]
+**Back to Question:** [Q_01_Transformation_Matrices](../Questions/Q_01_Transformation_Matrices.md) | **Related Concepts:** [01_Transformation_Matrices](../../../01_Concepts/04_Transforms/01_Transformation_Matrices.md)
 

@@ -1,7 +1,7 @@
 # Quaternions
 
 > [!NOTE]
-> For a detailed geometric intuition and the dimensional build-up using 1D, 2D, and 3D stereographic projections, see the optional background note: [[09_Quaternion_Intuition]].
+> For a detailed geometric intuition and the dimensional build-up using 1D, 2D, and 3D stereographic projections, see the optional background note: [09_Quaternion_Intuition](09_Quaternion_Intuition.md).
 
 In graphics programming, game engines, physics simulations, and quantum mechanics, quaternions provide an elegant, compact, and computationally efficient way to represent and compute 3D rotations without suffering from **Gimbal Lock**.
 
@@ -73,8 +73,8 @@ q_1 q_2 = (s_1 s_2 - \vec{v}_1 \cdot \vec{v}_2) + (s_1 \vec{v}_2 + s_2 \vec{v}_1
 $$
 
 This splits the result into:
-*   **Scalar part:** $s_1 s_2 - \vec{v}_1 \cdot \vec{v}_2$ (the product of the scalars minus the [[02_Dot_Product|dot product]] of the vectors).
-*   **Vector part:** $s_1 \vec{v}_2 + s_2 \vec{v}_1 + \vec{v}_1 \times \vec{v}_2$ (the scaled vector parts plus their [[04_Cross_Product|cross product]]).
+*   **Scalar part:** $s_1 s_2 - \vec{v}_1 \cdot \vec{v}_2$ (the product of the scalars minus the [dot product](../02_Vectors/02_Dot_Product.md) of the vectors).
+*   **Vector part:** $s_1 \vec{v}_2 + s_2 \vec{v}_1 + \vec{v}_1 \times \vec{v}_2$ (the scaled vector parts plus their [cross product](../02_Vectors/04_Cross_Product.md)).
 
 ##### The Commutativity Difference
 Because the vector part contains a cross product, reversing the order of multiplication yields a different result:
@@ -266,6 +266,6 @@ This ensures the final output remains in the 3D imaginary subspace.
 
 ## Code Implementation
 
-*   **C++ Source Code:** [[03_Code/04_Transforms/Quaternions.cppm|Quaternions.cppm]]
+*   **C++ Source Code:** [Quaternions.cppm](../../03_Code/04_Transforms/Quaternions.cppm)
 
 

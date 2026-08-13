@@ -1,6 +1,8 @@
 # Linear Algebra Study Repository
 
-This repository is designed to integrate seamlessly with **Obsidian**, utilizing cross-links (`[[Internal Link]]`) and tags to build a visual, highly connected graph of theoretical concepts, programming implementations, and practice exercises.
+This repository is designed to integrate seamlessly with **Obsidian** while remaining fully readable on **GitHub**, utilizing relative markdown cross-links (`[Label](relative/path.md)`) and tags to build a visual, highly connected graph of theoretical concepts, programming implementations, and practice exercises.
+
+> **Note on link format:** links use standard markdown with relative paths rather than Obsidian `[[wikilinks]]`, because wikilinks render as raw text on GitHub. Relative markdown links resolve correctly in both Obsidian (including Graph View) and GitHub.
 
 ---
 
@@ -67,11 +69,11 @@ graph TD
 
 1. **Question notes (`Q_*.md`)** contain the problem statement (both numerical calculations and conceptual theory in LaTeX). They end with a link to their corresponding solution:
    ```markdown
-   **Check Answer:** [[S_02_Dot_Product]]
+   **Check Answer:** [S_02_Dot_Product](../Solutions/S_02_Dot_Product.md)
    ```
 2. **Solution notes (`S_*.md`)** contain complete, step-by-step mathematical derivations in LaTeX, and an optional code snippet. They link back to the question and **point to the theoretical concept note** in `01_Concepts/`:
    ```markdown
-   **Back to Question:** [[Q_02_Dot_Product]] | **Related Concepts:** [[02_Dot_Product]]
+   **Back to Question:** [Q_02_Dot_Product](../Questions/Q_02_Dot_Product.md) | **Related Concepts:** [02_Dot_Product](../../../01_Concepts/02_Vectors/02_Dot_Product.md)
    ```
 3. **Obsidian Graph View:** This linking strategy ensures that as you practice, all solved problems form "clusters" around their core mathematical concepts, highlighting which areas you've practiced most and creating a physical web of your knowledge.
 
@@ -102,4 +104,4 @@ When you study a new topic or find a good textbook exercise, add it to your data
    ```
 2. Open the new files inside Obsidian (they are pre-filled with frontmatter and bi-directional links).
 3. Fill in the exercise description in the **Question** note, and write the mathematical steps in the **Solution** note.
-4. Link the solution to its theory concept (e.g. `[[06_Vector_Projection]]`) to bind it to your knowledge graph.
+4. Link the solution to its theory concept (e.g. `[06_Vector_Projection](../../../01_Concepts/02_Vectors/06_Vector_Projection.md)`) to bind it to your knowledge graph.

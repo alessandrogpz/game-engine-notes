@@ -1,6 +1,6 @@
 # Quaternion Intuition: Dimensional Projections
 
-[[10_Quaternions|Quaternions]] are a four-dimensional extension of complex numbers. While complex numbers extend the real numbers into a 2D plane ($\mathbb{C} = \mathbb{R} + i\mathbb{R}$), quaternions extend them into a 4D space ($\mathbb{H} = \mathbb{R} + i\mathbb{R} + j\mathbb{R} + k\mathbb{R}$). 
+[Quaternions](10_Quaternions.md) are a four-dimensional extension of complex numbers. While complex numbers extend the real numbers into a 2D plane ($\mathbb{C} = \mathbb{R} + i\mathbb{R}$), quaternions extend them into a 4D space ($\mathbb{H} = \mathbb{R} + i\mathbb{R} + j\mathbb{R} + k\mathbb{R}$). 
 
 In graphics programming, game engines, physics simulations, and robotics, quaternions are the industry standard for representing 3D rotations. They are preferred over rotation matrices and Euler angles because they are compact (using only 4 numbers instead of 9, from a 3x3 matrix), interpolate smoothly (via SLERP), and completely avoid **Gimbal Lock**.
 
@@ -48,7 +48,7 @@ $$
 > We choose the South Pole source because we want the **identity rotation** ($w = 1, x = 0$) to project directly to the origin ($p = 0$). If we used the North Pole source, the identity rotation would project to infinity, making the flow of rotations much harder to visualize. 
 > 
 > For the detailed, step-by-step linear algebra derivation of how changing the projection pole changes the denominator, see the background note: 
-> [[09a_Stereographic_Projection_Derivation]].
+> [09a_Stereographic_Projection_Derivation](09a_Stereographic_Projection_Derivation.md).
 
 Under this mapping, specific reference points on the circle project as follows:
 *   **The point $+1$ ($w = 1, x = 0$):** Projects to the origin ($0$) in the center of the vertical line (labeled as `1` in the diagram to denote the projection of the point $+1$).
@@ -73,7 +73,7 @@ Thus, a closed 2D rotation of the circle corresponds to a continuous, upward flo
 
 ### 2D Projection (Rotating a 3D Sphere onto a Plane)
 
-We scale this concept up by projecting a 3D unit sphere (a 2-sphere, $S^2$) onto a 2D plane. Let the sphere be defined by $w^2 + x^2 + y^2 = 1$ in a 3D [[03_Coordinate_Systems|coordinate system]] where:
+We scale this concept up by projecting a 3D unit sphere (a 2-sphere, $S^2$) onto a 2D plane. Let the sphere be defined by $w^2 + x^2 + y^2 = 1$ in a 3D [coordinate system](../02_Vectors/03_Coordinate_Systems.md) where:
 *   The vertical axis is the real axis ($w$, representing the scalar component).
 *   The horizontal axes are the imaginary axes ($i$ and $j$, representing the vector components).
 

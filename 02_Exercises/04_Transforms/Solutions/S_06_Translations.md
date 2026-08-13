@@ -5,7 +5,7 @@ tags: [exercise, solution, translations, homogeneous-coordinates, affine-transfo
 
 # Solution: Translations
 
-This solution note provides the step-by-step mathematical calculations, matrix derivations, and conceptual explanations for the translation exercise in [[07_Homogeneous_Coordinates|homogeneous coordinates]].
+This solution note provides the step-by-step mathematical calculations, matrix derivations, and conceptual explanations for the translation exercise in [homogeneous coordinates](../../../01_Concepts/04_Transforms/07_Homogeneous_Coordinates.md).
 
 ---
 
@@ -116,4 +116,4 @@ $$
 *   A **vector** represents a direction and a magnitude (such as a displacement offset, a velocity, or a surface normal), independent of any origin. Moving or shifting a vector's starting location does not change its direction or length. Geometrically, vectors are invariant under translation, which homogeneous coordinates handle automatically by setting the $w$ component to $0$.
 
 ---
-**Back to Question:** [[Q_06_Translations]] | **Related Concepts:** [[06_Translations]]
+**Back to Question:** [Q_06_Translations](../Questions/Q_06_Translations.md) | **Related Concepts:** [06_Translations](../../../01_Concepts/04_Transforms/06_Translations.md)

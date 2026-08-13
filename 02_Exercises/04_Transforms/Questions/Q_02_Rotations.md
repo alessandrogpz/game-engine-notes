@@ -15,7 +15,7 @@ This exercise covers standard 3D rotation matrix calculation, vector rotation ab
 ---
 
 ## Part 1: Coordinate Axis Rotation
-Suppose we have a vector $\vec{v}$ in our standard right-handed [[03_Coordinate_Systems|coordinate system]]:
+Suppose we have a vector $\vec{v}$ in our standard right-handed [coordinate system](../../../01_Concepts/02_Vectors/03_Coordinate_Systems.md):
 
 $$
 \vec{v} = \begin{bmatrix} 1 \\\\ 0 \\\\ 1 \end{bmatrix}
@@ -49,10 +49,10 @@ $$
 \vec{v}' = \vec{v}\cos\theta + (\vec{v} \cdot \vec{a})\vec{a}(1 - \cos\theta) + (\vec{a} \times \vec{v})\sin\theta
 $$
 
-3.  **[[02_Matrix_Multiplication|Matrix Multiplication]] Method:**
+3.  **[Matrix Multiplication](../../../01_Concepts/03_Matrices/02_Matrix_Multiplication.md) Method:**
     *   Compute the $3 \times 3$ skew-symmetric matrix $[\vec{a}]_{\times}$ and the outer product matrix $\vec{a}\vec{a}^T$.
     *   Evaluate the complete rotation matrix $\mathbf{M}_{\text{rot}}(\theta, \vec{a})$.
     *   Multiply $\mathbf{M}_{\text{rot}}(\theta, \vec{a})\vec{v}$ to verify it yields the same rotated vector $\vec{v}'$ calculated in Step 2.
 
 ---
-**Check Answer:** [[S_02_Rotations]] | **Related Concepts:** [[02_Rotations]]
+**Check Answer:** [S_02_Rotations](../Solutions/S_02_Rotations.md) | **Related Concepts:** [02_Rotations](../../../01_Concepts/04_Transforms/02_Rotations.md)

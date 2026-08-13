@@ -26,4 +26,4 @@ $$
 1. Explain algebraically and geometrically the difference in behavior between points ($w = 1$) and vectors ($w = 0$) under translation.
 
 ---
-**Check Answer:** [[S_06_Translations]] | **Related Concepts:** [[06_Translations]]
+**Check Answer:** [S_06_Translations](../Solutions/S_06_Translations.md) | **Related Concepts:** [06_Translations](../../../01_Concepts/04_Transforms/06_Translations.md)

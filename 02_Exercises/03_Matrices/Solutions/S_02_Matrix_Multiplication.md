@@ -11,7 +11,7 @@ This solution note provides the step-by-step calculations and conceptual answers
 
 ## Part 1: Calculation
 
-We start with a 2D point at $(2, 1)$, represented in [[07_Homogeneous_Coordinates|homogeneous coordinates]] as:
+We start with a 2D point at $(2, 1)$, represented in [homogeneous coordinates](../../../01_Concepts/04_Transforms/07_Homogeneous_Coordinates.md) as:
 
 $$
 \vec{p} = \begin{bmatrix} 2 \\\\ 1 \\\\ 1 \end{bmatrix}
@@ -65,7 +65,7 @@ The final transformed point is **$(2, 4)$**.
 
 ### 3. Construction of the Combined Transformation Matrix $\mathbf{M}$
 
-Since operations are applied right-to-left ($\vec{p}' = \mathbf{T}\mathbf{R}\mathbf{S}\vec{p}$), the combined [[01_Transformation_Matrices|transformation matrix]] is:
+Since operations are applied right-to-left ($\vec{p}' = \mathbf{T}\mathbf{R}\mathbf{S}\vec{p}$), the combined [transformation matrix](../../../01_Concepts/04_Transforms/01_Transformation_Matrices.md) is:
 
 $$
 \mathbf{M} = \mathbf{T}\mathbf{R}\mathbf{S}
@@ -108,7 +108,7 @@ If the order is changed to **TRS (Translate $\to$ Rotate $\to$ Scale)**:
 
 ### 3. Geometric Interpretation of the Determinant
 For the combined matrix $\mathbf{M}$:
-*   The absolute value of the [[03_Determinants|determinant]] ($|\det(\mathbf{M})|$) represents the **area scaling factor** of the transformation on 2D shapes. Here, the scale factor is 3 in both directions, meaning the area scales by a factor of $3^2 = 9$.
+*   The absolute value of the [determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) ($|\det(\mathbf{M})|$) represents the **area scaling factor** of the transformation on 2D shapes. Here, the scale factor is 3 in both directions, meaning the area scales by a factor of $3^2 = 9$.
     
 $$
 \det(\mathbf{M}) = 0(0 - 0) - (-3)(3 - 0) + 5(0 - 0) = 9
@@ -118,4 +118,4 @@ $$
 
 ---
 
-**Back to Question:** [[Q_02_Matrix_Multiplication]] **Related Concepts:** [[02_Matrix_Multiplication]]
+**Back to Question:** [Q_02_Matrix_Multiplication](../Questions/Q_02_Matrix_Multiplication.md) **Related Concepts:** [02_Matrix_Multiplication](../../../01_Concepts/03_Matrices/02_Matrix_Multiplication.md)

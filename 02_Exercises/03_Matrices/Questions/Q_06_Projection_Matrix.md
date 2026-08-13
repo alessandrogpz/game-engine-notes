@@ -28,7 +28,7 @@ $$
 \vec{p} = \mathbf{P}\vec{a}
 $$
 
-3.  **Classical Formula Verification:** Calculate the same [[06_Vector_Projection|vector projection]] using the classical [[02_Dot_Product|dot product]] formula:
+3.  **Classical Formula Verification:** Calculate the same [vector projection](../../../01_Concepts/02_Vectors/06_Vector_Projection.md) using the classical [dot product](../../../01_Concepts/02_Vectors/02_Dot_Product.md) formula:
     
 $$
 \text{proj}_{\hat{u}}\vec{a} = (\vec{a} \cdot \hat{u})\hat{u}
@@ -40,8 +40,8 @@ $$
 
 ## Part 2: Conceptual Understanding
 1.  **Subspace Representation:** Explain geometrically what the $3 \times 3$ matrix $\mathbf{P} = \hat{u}\hat{u}^T$ represents and how it behaves as a "spatial filter."
-2.  **[[03_Determinants|Determinant]] of a Projection Matrix:** Calculate or argue what the determinant of $\mathbf{P}$ must be ($\det(\mathbf{P})$). Why is this result geometrically intuitive?
+2.  **[Determinant](../../../01_Concepts/03_Matrices/03_Determinants.md) of a Projection Matrix:** Calculate or argue what the determinant of $\mathbf{P}$ must be ($\det(\mathbf{P})$). Why is this result geometrically intuitive?
 3.  **Trace of a Projection Matrix:** Find the trace of $\mathbf{P}$ (the sum of its diagonal entries). How does the trace of a projection matrix relate to the dimension of the subspace it projects onto?
 
 ---
-**Check Answer:** [[S_06_Projection_Matrix]] | **Related Concepts:** [[06_Projection_Matrices]]
+**Check Answer:** [S_06_Projection_Matrix](../Solutions/S_06_Projection_Matrix.md) | **Related Concepts:** [06_Projection_Matrices](../../../01_Concepts/03_Matrices/06_Projection_Matrices.md)

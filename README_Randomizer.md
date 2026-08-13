@@ -69,8 +69,8 @@ This command will:
 3. Create `Questions/Q_Angle_Between_Vectors.md` with:
    - Topic metadata filled.
    - Difficulty metadata filled.
-   - Interactive Check Answer link `[[S_Angle_Between_Vectors]]`.
+   - Interactive Check Answer link `[S_Angle_Between_Vectors](../Solutions/S_Angle_Between_Vectors.md)`.
 4. Create `Solutions/S_Angle_Between_Vectors.md` with:
    - Topic metadata filled.
-   - Interactive Back to Question link `[[Q_Angle_Between_Vectors]]`.
+   - Interactive Back to Question link `[Q_Angle_Between_Vectors](../Questions/Q_Angle_Between_Vectors.md)`.
 

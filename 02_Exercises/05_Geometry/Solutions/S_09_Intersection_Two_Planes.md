@@ -6,4 +6,4 @@ tags: [exercise, solution, intersection-two-planes, implicit-plane, cross-produc
 ## Derivation
 [Insert step-by-step LaTeX math here]
 
-**Back to Question:** [[Q_09_Intersection_Two_Planes]] | **Related Concepts:** [[09_Intersection_Two_Planes]]
+**Back to Question:** [Q_09_Intersection_Two_Planes](../Questions/Q_09_Intersection_Two_Planes.md) | **Related Concepts:** [09_Intersection_Two_Planes](../../../01_Concepts/05_Geometry/09_Intersection_Two_Planes.md)
