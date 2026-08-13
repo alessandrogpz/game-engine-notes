@@ -17,7 +17,7 @@ $$
 \vec{v} = \begin{bmatrix} 4 \\\\ -3 \\\\ 1 \end{bmatrix}
 $$
     
-*   **Surface Normal Vector (Unit Vector):**
+*   **Surface [[02_Normal_Vectors|Normal Vector]] (Unit Vector):**
     
 $$
 \vec{n} = \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} \implies \|\vec{n}\| = 1
@@ -30,7 +30,7 @@ $$
 \text{comp}_{\vec{n}}\vec{v} = \frac{\vec{v} \cdot \vec{n}}{\|\vec{n}\|}
 $$
 
-Calculate the dot product:
+Calculate the [[02_Dot_Product|dot product]]:
 
 $$
 \vec{v} \cdot \vec{n} = 4(0) + (-3)(1) + 1(0) = -3

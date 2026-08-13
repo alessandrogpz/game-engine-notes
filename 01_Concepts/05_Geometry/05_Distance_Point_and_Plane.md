@@ -8,7 +8,7 @@ $$
 
 Only the first 3 components ($n_x, n_y, n_z$) end up having unit length ($\|\hat{n}\| = 1$).
 
-The advantage of having a normalized plane $\mathbf{f}$ is that the dot product $\mathbf{f} \cdot \mathbf{p}$ is equal to the **signed perpendicular distance** between the plane and the point $\mathbf{p}$.
+The advantage of having a normalized plane $\mathbf{f}$ is that the [[02_Dot_Product|dot product]] $\mathbf{f} \cdot \mathbf{p}$ is equal to the **signed perpendicular distance** between the plane and the point $\mathbf{p}$.
 
 When $\mathbf{n}$ has unit length, the dot product $\mathbf{n} \cdot \mathbf{p}$ is equal to the length of the projection of $\mathbf{p}$ onto $\mathbf{n}$.
 
@@ -28,7 +28,7 @@ This can be understood as the difference between:
 1. The perpendicular distance from point $\mathbf{p}$ to the origin $\mathcal{O}$.
 2. The perpendicular distance from a point $\mathbf{q}$ in the plane to the origin $\mathcal{O}$.
 
-The perpendicular distances are calculated by projecting onto the normal vector so that the difference becomes:
+The perpendicular distances are calculated by projecting onto the [[02_Normal_Vectors|normal vector]] so that the difference becomes:
 
 $$
 \mathbf{n} \cdot \mathbf{p} - \mathbf{n} \cdot \mathbf{q} = \mathbf{n} \cdot \mathbf{p} + d

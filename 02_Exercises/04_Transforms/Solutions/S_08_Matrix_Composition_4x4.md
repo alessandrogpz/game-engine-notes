@@ -84,7 +84,7 @@ Which corresponds to the Euclidean coordinate point **$(-1, 1, 2)$**.
 
 ### 2. MVP Pipeline Optimization
 Vertex shaders process millions of vertices per frame in modern game engines. The Model-View-Projection (MVP) pipeline optimizes this through pre-multiplication:
-*   Because matrix multiplication is associative, the engine multiplies the projection, view, and model matrices together once on the CPU per object (or per frame) to form a single combined transformation matrix:
+*   Because [[02_Matrix_Multiplication|matrix multiplication]] is associative, the engine multiplies the projection, view, and model matrices together once on the CPU per object (or per frame) to form a single combined [[01_Transformation_Matrices|transformation matrix]]:
     
 $$
 \mathbf{M}_{\text{Total}} = \mathbf{M}_{\text{Projection}} \cdot \mathbf{M}_{\text{View}} \cdot \mathbf{M}_{\text{Model}}

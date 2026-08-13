@@ -39,7 +39,7 @@ $$
 
 ### Question 2: Implicit Plane & 4D Vector Point Testing
 
-A plane has a known point $\mathbf{q} = (2, -1, 4)$ lying on its surface and normal vector $\mathbf{n} = \langle 2, 3, -1 \rangle$:
+A plane has a known point $\mathbf{q} = (2, -1, 4)$ lying on its surface and [[02_Normal_Vectors|normal vector]] $\mathbf{n} = \langle 2, 3, -1 \rangle$:
 
 #### 1. Plane Constant $d = -\mathbf{n} \cdot \mathbf{q}$
 
@@ -64,7 +64,7 @@ $$
 $$
 
 #### 4. Testing Point $\mathbf{p}_1 = (1, 2, 2)$
-Convert $\mathbf{p}_1$ to 4D homogeneous coordinates by appending $1$ ($\mathbf{p}_{1,\text{4D}} = [1, 2, 2, 1]$), and evaluate the 4D dot product:
+Convert $\mathbf{p}_1$ to 4D [[07_Homogeneous_Coordinates|homogeneous coordinates]] by appending $1$ ($\mathbf{p}_{1,\text{4D}} = [1, 2, 2, 1]$), and evaluate the 4D [[02_Dot_Product|dot product]]:
 
 $$
 \mathbf{f} \cdot \mathbf{p}_1 = [2, 3, -1, 3] \cdot [1, 2, 2, 1] = (2)(1) + (3)(2) + (-1)(2) + (3)(1) = 2 + 6 - 2 + 3 = 9

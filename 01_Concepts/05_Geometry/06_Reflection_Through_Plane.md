@@ -2,7 +2,7 @@
 
 When a point $\mathbf{p}$ gets reflected through a plane, the result is a new point $\mathbf{p}'$ that lies at the same distance from the plane compared to $\mathbf{p}$, but on the opposite side.
 
-The line connecting $\mathbf{p}'$ to $\mathbf{p}$, passing through the plane, is **parallel to the plane's normal vector**.
+The line connecting $\mathbf{p}'$ to $\mathbf{p}$, passing through the plane, is **parallel to the plane's [[02_Normal_Vectors|normal vector]]**.
 
 Let $\mathbf{f} = [\mathbf{n} \mid d]$ be the plane, such that $\mathbf{n}$ has unit length, and let $\mathbf{q}$ be the point closest to $\mathbf{p}$ lying in the plane.
 
@@ -40,7 +40,7 @@ $$
 \mathbf{n} \cdot \mathbf{x} + d = 0
 $$
 
-A point $\mathbf{p} = (p_x, p_y, p_z, 1)$ in [[07_Homogeneous_Coordinates|homogeneous coordinates]] gives the 4D dot product $\mathbf{f} \cdot \mathbf{p}$, which represents the signed distance of $\mathbf{p}$ compared to the plane:
+A point $\mathbf{p} = (p_x, p_y, p_z, 1)$ in [[07_Homogeneous_Coordinates|homogeneous coordinates]] gives the 4D [[02_Dot_Product|dot product]] $\mathbf{f} \cdot \mathbf{p}$, which represents the signed distance of $\mathbf{p}$ compared to the plane:
 
 $$
 \mathbf{f} \cdot \mathbf{p} = \mathbf{n} \cdot \mathbf{p} + d

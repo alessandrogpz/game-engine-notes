@@ -37,7 +37,7 @@ Classification by sign:
 * $\mathbf{f}_{\text{norm}} \cdot \mathbf{p} < 0 \implies \mathbf{p}$ lies **behind** the plane.
 * $\mathbf{f}_{\text{norm}} \cdot \mathbf{p} > 0 \implies \mathbf{p}$ lies in **front** of the plane.
 
-Convert $\mathbf{p}$ to 4D homogeneous coordinates ($[3, 4, 1, 1]$) and evaluate the 4D dot product:
+Convert $\mathbf{p}$ to 4D [[07_Homogeneous_Coordinates|homogeneous coordinates]] ($[3, 4, 1, 1]$) and evaluate the 4D [[02_Dot_Product|dot product]]:
 
 $$
 \mathbf{f}_{\text{norm}} \cdot \mathbf{p} = \left[ \frac{2}{3}, -\frac{1}{3}, \frac{2}{3}, -4 \right] \cdot [3, 4, 1, 1]
@@ -81,7 +81,7 @@ $$
 
 ### 1. Why the Plane Vector Must be Normalized
 
-If the plane is **not** normalized, $\mathbf{f} \cdot \mathbf{p}$ yields the true signed perpendicular distance scaled by the magnitude of the normal vector:
+If the plane is **not** normalized, $\mathbf{f} \cdot \mathbf{p}$ yields the true signed perpendicular distance scaled by the magnitude of the [[02_Normal_Vectors|normal vector]]:
 
 $$
 \mathbf{f} \cdot \mathbf{p} = \text{Distance} \times \|\mathbf{n}\|

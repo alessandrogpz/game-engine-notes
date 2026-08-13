@@ -86,7 +86,7 @@ While vector projection finds the component of a vector $\vec{a}$ that is parall
 
 ### Conceptual Understanding: "The Sliding Component"
 Think of vector rejection as removing the parallel projection component from the original vector.
-* **Physical Meaning:** In game physics (like collision response), if $\vec{b}$ is a surface normal vector, the vector projection is the component pushing *into* the surface (penetration), while the vector rejection is the component **parallel to the surface** (the sliding direction along the plane).
+* **Physical Meaning:** In game physics (like collision response), if $\vec{b}$ is a surface [[02_Normal_Vectors|normal vector]], the vector projection is the component pushing *into* the surface (penetration), while the vector rejection is the component **parallel to the surface** (the sliding direction along the plane).
 
 ### Algebraic Formula
 

@@ -16,7 +16,7 @@ $$
 $$
 
 ### Matrix Representation
-To represent this as a linear transformation matrix, we multiply the main diagonal of the identity matrix by the scalar value $s$:
+To represent this as a linear [[01_Transformation_Matrices|transformation matrix]], we multiply the main diagonal of the identity matrix by the scalar value $s$:
 
 $$
 \vec{v}' = \begin{bmatrix} s & 0 & 0 \\\\ 0 & s & 0 \\\\ 0 & 0 & s \end{bmatrix} \vec{v}
@@ -123,7 +123,7 @@ $$
 
 ## 5. Properties of Scaling Matrices
 
-* **Determinant:** 
+* **[[03_Determinants|Determinant]]:** 
   The determinant of a scaling matrix represents the volume scaling factor of the transformation.
   * For **uniform scaling**, $\det(\mathbf{M}) = s^3$.
   * For **non-uniform scaling**, $\det(\mathbf{M}) = s_x s_y s_z$.

@@ -31,7 +31,7 @@ $$
 $$
 
    * Calculate the magnitude of $\vec{u}_{\text{raw}}$.
-   * Normalize $\vec{u}_{\text{raw}}$ to find the unit vector $\vec{u}$ that can be used in a unit quaternion rotation.
+   * Normalize $\vec{u}_{\text{raw}}$ to find the unit vector $\vec{u}$ that can be used in a unit [[10_Quaternions|quaternion]] rotation.
 
 ---
 **Check Answer:** [[S_09_Quaternion_Intuition]] | **Related Concepts:** [[09_Quaternion_Intuition]]

@@ -1,6 +1,6 @@
 # Rotations in 3D Space
 
-In 3D game engines and graphics programming, rotations are fundamental transformations. A rotation typically occurs within a local coordinate system where the axis of rotation is aligned with one of the coordinate axes ($x$, $y$, or $z$), though they can also be performed about an arbitrary axis specified by a unit direction vector.
+In 3D game engines and graphics programming, rotations are fundamental transformations. A rotation typically occurs within a local [[03_Coordinate_Systems|coordinate system]] where the axis of rotation is aligned with one of the coordinate axes ($x$, $y$, or $z$), though they can also be performed about an arbitrary axis specified by a unit direction vector.
 
 ## 1. Handedness and Rotation Conventions
 To ensure consistency across calculations, we follow standard convention:
@@ -11,7 +11,7 @@ To ensure consistency across calculations, we follow standard convention:
 ## 2. Derivation: Rotation About a Coordinate Axis
 A rotation about the $x$, $y$, or $z$ axis occurs in the plane formed by the *other* two axes. 
 
-Let's derive the transformation matrix for a vector $\vec{v}$ rotated through an angle $\theta$ **about the $z$-axis**:
+Let's derive the [[01_Transformation_Matrices|transformation matrix]] for a vector $\vec{v}$ rotated through an angle $\theta$ **about the $z$-axis**:
 *   Using the standard orthogonal basis vectors $\vec{i}$, $\vec{j}$, and $\vec{k}$ parallel to the coordinate axes, we express any vector $\vec{v}$ as:
     
 $$
@@ -120,10 +120,10 @@ $$
 ---
 
 ## 4. Properties of Rotation Matrices
-All principal rotation matrices are **orthogonal matrices**, meaning they exhibit the following key properties:
+All principal rotation matrices are **[[05_Orthogonal_Matrices|orthogonal matrices]]**, meaning they exhibit the following key properties:
 1.  **Inverse equals Transpose:** $\mathbf{M}^{-1} = \mathbf{M}^T$. This makes inverting a rotation incredibly cheap computationally.
-2.  **Determinant equals 1:** $\det(\mathbf{M}) = 1$. This confirms they are orientation-preserving pure rotations.
-3.  **Preservation:** They preserve vector lengths, angles, and dot products.
+2.  **[[03_Determinants|Determinant]] equals 1:** $\det(\mathbf{M}) = 1$. This confirms they are orientation-preserving pure rotations.
+3.  **Preservation:** They preserve vector lengths, angles, and [[02_Dot_Product|dot products]].
 
 > [!NOTE]
 > **General $N \times N$ Rotation Matrix Criteria:**
@@ -233,7 +233,7 @@ $$
 $$
 
 2. **The $(1 - \cos\theta)$ term (Dot Product to Outer Product):**  
-   The dot product of two column vectors can be written as a matrix multiplication using a transpose: $\vec{v} \cdot \vec{a} = \vec{a} \cdot \vec{v} = \vec{a}^T\vec{v}$. Substituting this back into the expression yields:
+   The dot product of two column vectors can be written as a [[02_Matrix_Multiplication|matrix multiplication]] using a transpose: $\vec{v} \cdot \vec{a} = \vec{a} \cdot \vec{v} = \vec{a}^T\vec{v}$. Substituting this back into the expression yields:
    
 $$
 (\vec{v} \cdot \vec{a})\vec{a} = \vec{a}(\vec{a}^T\vec{v}) = (\vec{a}\vec{a}^T)\vec{v}

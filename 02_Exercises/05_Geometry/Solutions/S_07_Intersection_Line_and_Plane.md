@@ -116,7 +116,7 @@ $$
 
 * **Conclusion:** Both routes yield the same $t = \frac{9}{4}$, so **normalization is not necessary** for this calculation. Dividing the plane by $\|\mathbf{n}\| = 3$ divided the numerator and the denominator by the same factor, and the ratio absorbed it.
 
-This contrasts sharply with the [[05_Distance_Point_and_Plane|point-plane distance]], which is a single dot product rather than a ratio. There, $\mathbf{f} \cdot \mathbf{p} = D\|\mathbf{n}\|$, so any scale left in $\mathbf{f}$ passes straight through into the answer and corrupts the measured length. A ratio cancels scale; a lone dot product does not.
+This contrasts sharply with the [[05_Distance_Point_and_Plane|point-plane distance]], which is a single [[02_Dot_Product|dot product]] rather than a ratio. There, $\mathbf{f} \cdot \mathbf{p} = D\|\mathbf{n}\|$, so any scale left in $\mathbf{f}$ passes straight through into the answer and corrupts the measured length. A ratio cancels scale; a lone dot product does not.
 
 ---
 

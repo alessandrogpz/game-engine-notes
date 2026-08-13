@@ -65,7 +65,7 @@ $$
 \mathbf{p}' = \mathbf{p} - 2(\mathbf{f} \cdot \mathbf{p})\hat{n} = (3, 3, 3) - (2, 4, 4) = (1, -1, -1)
 $$
 
-Verifying the signed distance of the reflected point:
+Verifying the [[05_Distance_Point_and_Plane|signed distance]] of the reflected point:
 
 $$
 \mathbf{f}_{\text{norm}} \cdot \mathbf{p}' = \frac{1}{3}(1) + \frac{2}{3}(-1) + \frac{2}{3}(-1) - 2 = \frac{1}{3} - \frac{2}{3} - \frac{2}{3} - 2 = -1 - 2 = -3
@@ -204,7 +204,7 @@ $$
 
 The corruption then enters $\mathbf{p}' = \mathbf{p} - 2(\mathbf{f} \cdot \mathbf{p})\mathbf{n}$ at **two separate points**:
 
-1. **Inside the dot product:** $\mathbf{f} \cdot \mathbf{p}$ returns the distance already scaled by $\|\mathbf{n}\|^2$ instead of the true distance.
+1. **Inside the [[02_Dot_Product|dot product]]:** $\mathbf{f} \cdot \mathbf{p}$ returns the distance already scaled by $\|\mathbf{n}\|^2$ instead of the true distance.
 2. **In the multiplication outside:** that scalar is then multiplied by $\mathbf{n}$, whose own length is $\|\mathbf{n}\|$ rather than $1$, contributing yet another factor.
 
 The resulting displacement vector has magnitude $t\|\mathbf{n}\|^3$, when the correct displacement $\mathbf{p} - \mathbf{q} = t\mathbf{n}$ has magnitude $t\|\mathbf{n}\|$ — an overshoot by a factor of $\|\mathbf{n}\|^2$. The reflected point flies far past its true mirror position along the correct line. Recovering the formula requires dividing by $\|\mathbf{n}\|^2$:
@@ -259,11 +259,11 @@ $$
 \det(\mathbf{H}_{\text{reflect}}) = (-1)(+1)(+1)(1) = -1
 $$
 
-Both matrices built in Part 1 confirm this. A negative determinant means the transformation is **orientation-reversing**: it flips handedness, turning a right-handed basis into a left-handed one. The magnitude of $1$ confirms that no volume is lost or gained — a reflection only mirrors.
+Both matrices built in Part 1 confirm this. A negative [[03_Determinants|determinant]] means the transformation is **orientation-reversing**: it flips handedness, turning a right-handed basis into a left-handed one. The magnitude of $1$ confirms that no volume is lost or gained — a reflection only mirrors.
 
 #### Connection to Transforming Normal Vectors
 
-This is exactly the case flagged in [[02_Normal_Vectors|Normal Vectors]]. Normals transform by the inverse transpose, $(\mathbf{M}^{-1})^T$, which preserves orthogonality to the surface but not the *direction along* that perpendicular line. Under an orientation-reversing transformation, every face of the object is mirrored, and the inverse transpose alone leaves the resulting normal pointing **inward** instead of outward.
+This is exactly the case flagged in [[02_Normal_Vectors|Normal Vectors]]. Normals transform by the [[04_Matrix_Inversion|inverse transpose]], $(\mathbf{M}^{-1})^T$, which preserves orthogonality to the surface but not the *direction along* that perpendicular line. Under an orientation-reversing transformation, every face of the object is mirrored, and the inverse transpose alone leaves the resulting normal pointing **inward** instead of outward.
 
 Because $\det(\mathbf{H}_{\text{reflect}}) = -1 < 0$, the sign correction is what restores the outward direction:
 

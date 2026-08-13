@@ -71,7 +71,7 @@ Since $A^T = A$, the matrix $A$ is **symmetric**.
 ## Part 2: Conceptual Understanding
 
 ### 1. Determinant of $Q^T Q$ for Orthogonal $Q$
-For an orthogonal matrix $Q$, the definition states that:
+For an [[05_Orthogonal_Matrices|orthogonal matrix]] $Q$, the definition states that:
 
 $$
 Q^T Q = I

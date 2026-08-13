@@ -6,7 +6,7 @@ tags: [exercise, question, distance-point-plane, implicit-plane, normal-vector]
 # Question
 ## Part 1: Calculation
 1. A plane is defined by the non-normalized 4D vector $\mathbf{f} = [2, -1, 2, -12]$:
-   * Compute the magnitude of the normal vector $\|\mathbf{n}\|$.
+   * Compute the magnitude of the [[02_Normal_Vectors|normal vector]] $\|\mathbf{n}\|$.
    * Normalize the plane vector $\mathbf{f}$ by multiplying all 4 components by $\frac{1}{\|\mathbf{n}\|}$ to obtain $\mathbf{f}_{\text{norm}} = [\hat{n} \mid d_{\text{norm}}]$.
    * Calculate the signed perpendicular distance from point $\mathbf{p} = (3, 4, 1)$ to the plane by evaluating $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}$. State whether $\mathbf{p}$ is in front of, behind, or on the plane.
 

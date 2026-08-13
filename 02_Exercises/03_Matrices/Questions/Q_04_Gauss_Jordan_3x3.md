@@ -12,8 +12,8 @@ A = \begin{bmatrix} 1 & 0 & 2 \\\\ 0 & 1 & 0 \\\\ 3 & 0 & 1 \end{bmatrix}
 $$
 
 ## Part 2: Conceptual Understanding
-1. During the Gauss-Jordan process, if you encounter a row of zeros on the left side, what does that imply about the matrix $A$ and its determinant?
-2. Explain why the augmented matrix approach $[A | I] \to [I | A^{-1}]$ works. What fundamental property of matrix multiplication are we exploiting?
+1. During the Gauss-Jordan process, if you encounter a row of zeros on the left side, what does that imply about the matrix $A$ and its [[03_Determinants|determinant]]?
+2. Explain why the augmented matrix approach $[A | I] \to [I | A^{-1}]$ works. What fundamental property of [[02_Matrix_Multiplication|matrix multiplication]] are we exploiting?
 3. If $A$ is an $n \times n$ matrix, how many row operations (at most) would you expect to perform to reach the identity matrix?
 
 ---

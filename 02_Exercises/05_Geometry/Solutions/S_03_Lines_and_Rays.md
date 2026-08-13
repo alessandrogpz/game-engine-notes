@@ -81,7 +81,7 @@ d = \|\text{rej}_{\mathbf{v}}\mathbf{u}\| = \sqrt{0^2 + 4^2 + 5^2} = \sqrt{16 + 
 $$
 
 #### 3. Shortest Distance $d$ via Parallelogram Area Method
-Compute the cross product $\mathbf{u} \times \mathbf{v}$:
+Compute the [[04_Cross_Product|cross product]] $\mathbf{u} \times \mathbf{v}$:
 
 $$
 \mathbf{u} \times \mathbf{v} = \langle 3, 4, 5 \rangle \times \langle 1, 0, 0 \rangle = \langle (4)(0) - (5)(0),\; (5)(1) - (3)(0),\; (3)(0) - (4)(1) \rangle = \langle 0, 5, -4 \rangle
@@ -160,7 +160,7 @@ $$
 \begin{bmatrix} \mathbf{v}_1^2 & -\mathbf{v}_1 \cdot \mathbf{v}_2 \\\\ \mathbf{v}_1 \cdot \mathbf{v}_2 & -\mathbf{v}_2^2 \end{bmatrix} \begin{bmatrix} t_1 \\\\ t_2 \end{bmatrix} = \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\\\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}
 $$
 
-Inverting the matrix yields the determinant in the denominator:
+Inverting the matrix yields the [[03_Determinants|determinant]] in the denominator:
 
 $$
 \begin{bmatrix} t_1 \\\\ t_2 \end{bmatrix} = \frac{1}{(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2} \begin{bmatrix} -\mathbf{v}_2^2 & \mathbf{v}_1 \cdot \mathbf{v}_2 \\\\ -\mathbf{v}_1 \cdot \mathbf{v}_2 & \mathbf{v}_1^2 \end{bmatrix} \begin{bmatrix} (P_2 - P_1) \cdot \mathbf{v}_1 \\\\ (P_2 - P_1) \cdot \mathbf{v}_2 \end{bmatrix}

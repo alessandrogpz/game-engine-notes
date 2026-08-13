@@ -1,6 +1,6 @@
 # Quaternion Intuition: Dimensional Projections
 
-Quaternions are a four-dimensional extension of complex numbers. While complex numbers extend the real numbers into a 2D plane ($\mathbb{C} = \mathbb{R} + i\mathbb{R}$), quaternions extend them into a 4D space ($\mathbb{H} = \mathbb{R} + i\mathbb{R} + j\mathbb{R} + k\mathbb{R}$). 
+[[10_Quaternions|Quaternions]] are a four-dimensional extension of complex numbers. While complex numbers extend the real numbers into a 2D plane ($\mathbb{C} = \mathbb{R} + i\mathbb{R}$), quaternions extend them into a 4D space ($\mathbb{H} = \mathbb{R} + i\mathbb{R} + j\mathbb{R} + k\mathbb{R}$). 
 
 In graphics programming, game engines, physics simulations, and robotics, quaternions are the industry standard for representing 3D rotations. They are preferred over rotation matrices and Euler angles because they are compact (using only 4 numbers instead of 9, from a 3x3 matrix), interpolate smoothly (via SLERP), and completely avoid **Gimbal Lock**.
 
@@ -73,7 +73,7 @@ Thus, a closed 2D rotation of the circle corresponds to a continuous, upward flo
 
 ### 2D Projection (Rotating a 3D Sphere onto a Plane)
 
-We scale this concept up by projecting a 3D unit sphere (a 2-sphere, $S^2$) onto a 2D plane. Let the sphere be defined by $w^2 + x^2 + y^2 = 1$ in a 3D coordinate system where:
+We scale this concept up by projecting a 3D unit sphere (a 2-sphere, $S^2$) onto a 2D plane. Let the sphere be defined by $w^2 + x^2 + y^2 = 1$ in a 3D [[03_Coordinate_Systems|coordinate system]] where:
 *   The vertical axis is the real axis ($w$, representing the scalar component).
 *   The horizontal axes are the imaginary axes ($i$ and $j$, representing the vector components).
 

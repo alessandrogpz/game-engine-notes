@@ -35,7 +35,7 @@ Because the [[04_Cross_Product|cross product]] is anti-commutative ($\mathbf{a} 
 
 ## Transforming Normal Vectors
 
-When an object is transformed by a transformation matrix $\mathbf{M}$, there is no guarantee that the normal vector will be transformed correctly by $\mathbf{M}$ — that is, it may no longer be orthogonal to its edge and/or pointing in the right direction.
+When an object is transformed by a [[01_Transformation_Matrices|transformation matrix]] $\mathbf{M}$, there is no guarantee that the normal vector will be transformed correctly by $\mathbf{M}$ — that is, it may no longer be orthogonal to its edge and/or pointing in the right direction.
 
 ### Example: Shearing
 
@@ -61,7 +61,7 @@ $$
 
 ### Scaling and Shearing
 
-For scaling (shearing), we accomplish an orthogonal normal vector by multiplying it by the **inverse of the transpose** of the transformation matrix:
+For scaling (shearing), we accomplish an orthogonal normal vector by multiplying it by the **[[04_Matrix_Inversion|inverse of the transpose]]** of the transformation matrix:
 
 $$
 \mathbf{n}_B = (\mathbf{M}^{-1})^T \mathbf{n}_A

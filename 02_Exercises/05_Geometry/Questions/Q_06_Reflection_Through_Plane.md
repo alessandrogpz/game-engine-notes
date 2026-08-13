@@ -7,7 +7,7 @@ tags: [exercise, question, reflection-plane, implicit-plane, normal-vector]
 ## Part 1: Calculation
 1. A plane is defined by the non-normalized 4D vector $\mathbf{f} = [1, 2, 2, -6]$, and a point is given as $\mathbf{p} = (3, 3, 3)$:
    * Compute $\|\mathbf{n}\|$ and normalize the plane to obtain $\mathbf{f}_{\text{norm}} = [\hat{n} \mid d_{\text{norm}}]$.
-   * Calculate the signed perpendicular distance $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}$.
+   * Calculate the [[05_Distance_Point_and_Plane|signed perpendicular distance]] $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}$.
    * Compute the closest point $\mathbf{q}$ lying in the plane using $\mathbf{q} = \mathbf{p} - (\mathbf{f} \cdot \mathbf{p})\hat{n}$, and verify your result by confirming that $\mathbf{f} \cdot \mathbf{q} = 0$.
    * Compute the reflected point $\mathbf{p}'$ using $\mathbf{p}' = \mathbf{p} - 2(\mathbf{f} \cdot \mathbf{p})\hat{n}$, then verify that $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}'$ has the same magnitude as $\mathbf{f}_{\text{norm}} \cdot \mathbf{p}$ but the opposite sign.
 

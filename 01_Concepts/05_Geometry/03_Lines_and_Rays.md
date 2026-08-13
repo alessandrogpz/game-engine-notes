@@ -163,7 +163,7 @@ $$
 
 ### Special Case: Parallel Lines
 
-If $(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2 = 0$, the matrix determinant is zero and the system cannot be inverted. This means the lines are **not skew—they are parallel**, maintaining the same distance from one another at all times.
+If $(\mathbf{v}_1 \cdot \mathbf{v}_2)^2 - \mathbf{v}_1^2 \mathbf{v}_2^2 = 0$, the matrix [[03_Determinants|determinant]] is zero and the system cannot be inverted. This means the lines are **not skew—they are parallel**, maintaining the same distance from one another at all times.
 
 In this case, the distance formula simplifies to:
 

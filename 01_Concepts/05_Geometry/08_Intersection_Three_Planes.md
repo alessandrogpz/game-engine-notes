@@ -2,7 +2,7 @@
 
 Let $[\mathbf{n}_1 \mid d_1]$, $[\mathbf{n}_2 \mid d_2]$ and $[\mathbf{n}_3 \mid d_3]$ be planes.
 
-So long as the normal vectors $\mathbf{n}_1$, $\mathbf{n}_2$ and $\mathbf{n}_3$ are **linearly independent**, the planes intersect at a single point $\mathbf{p}$ in space.
+So long as the [[02_Normal_Vectors|normal vectors]] $\mathbf{n}_1$, $\mathbf{n}_2$ and $\mathbf{n}_3$ are **linearly independent**, the planes intersect at a single point $\mathbf{p}$ in space.
 
 <center>
 	<img src="../../98_Assets/Concepts/intersection_three_planes.webp" width="300" height="283" alt="Three Planes Intersecting at a Single Point">
@@ -18,7 +18,7 @@ $$
 [\mathbf{n}_i \mid d_i] \cdot \mathbf{p} = 0 \quad \text{for } i = 1, 2, 3
 $$
 
-Expanding the 4D dot product and isolating the constant gives one scalar equation per plane:
+Expanding the 4D [[02_Dot_Product|dot product]] and isolating the constant gives one scalar equation per plane:
 
 $$
 \mathbf{n}_i \cdot \mathbf{p} + d_i = 0 \implies \mathbf{n}_i \cdot \mathbf{p} = -d_i
@@ -64,7 +64,7 @@ In the second, all three planes share a **common line**, so every point along th
 
 ## Solving for $\mathbf{p}$
 
-Granting $\mathbf{A}$ is invertible, we can solve for $\mathbf{p}$ by multiplying both sides by $\mathbf{A}^{-1}$. For a matrix whose *rows* are $\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3$, the [[04_Matrix_Inversion|inverse]] is the matrix whose *columns* are the cross products of the other two normals, scaled by the reciprocal of the determinant:
+Granting $\mathbf{A}$ is invertible, we can solve for $\mathbf{p}$ by multiplying both sides by $\mathbf{A}^{-1}$. For a matrix whose *rows* are $\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3$, the [[04_Matrix_Inversion|inverse]] is the matrix whose *columns* are the cross products of the other two normals, scaled by the reciprocal of the [[03_Determinants|determinant]]:
 
 $$
 \mathbf{A}^{-1} = \frac{1}{[\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3]} \begin{bmatrix} \uparrow & \uparrow & \uparrow \\\\ \mathbf{n}_2 \times \mathbf{n}_3 & \mathbf{n}_3 \times \mathbf{n}_1 & \mathbf{n}_1 \times \mathbf{n}_2 \\\\ \downarrow & \downarrow & \downarrow \end{bmatrix}

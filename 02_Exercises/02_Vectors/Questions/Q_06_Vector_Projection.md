@@ -5,7 +5,7 @@ tags: [exercise, question, projection, force-decomposition]
 ---
 # Question
 ## Part 1: Calculation
-You have a velocity vector and a surface normal vector:
+You have a velocity vector and a surface [[02_Normal_Vectors|normal vector]]:
 
 $$
 \vec{v} = \begin{bmatrix} 4 \\\\ -3 \\\\ 1 \end{bmatrix} \quad \text{and} \quad \vec{n} = \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix}

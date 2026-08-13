@@ -6,7 +6,7 @@ In computer graphics, physics simulations, and geometric modeling, translation i
 
 ## 1. Geometric Definition of Translation
 
-Until now, all our 3D transformations assumed that our object (or vector) was centered at the world origin. Translation moves an object within the coordinate system by adding a constant offset vector $\vec{t}$ to every point of the object:
+Until now, all our 3D transformations assumed that our object (or vector) was centered at the world origin. Translation moves an object within the [[03_Coordinate_Systems|coordinate system]] by adding a constant offset vector $\vec{t}$ to every point of the object:
 
 $$
 \vec{v}' = \vec{v} + \vec{t}
@@ -41,7 +41,7 @@ For any point on the object, adding $\vec{t}$ shifts it to its new corresponding
 
 ## 2. The Mathematical Bottleneck
 
-We cannot represent translation using a standard $3 \times 3$ (or $2 \times 2$ in 2D) matrix multiplication. 
+We cannot represent translation using a standard $3 \times 3$ (or $2 \times 2$ in 2D) [[02_Matrix_Multiplication|matrix multiplication]]. 
 
 By definition, any linear transformation $f(\vec{v}) = \mathbf{M}\vec{v}$ must preserve the origin (i.e., mapping the origin to itself):
 
@@ -116,7 +116,7 @@ $$
 $$
 
 Where:
-*   $\mathbf{M}$ is the $3 \times 3$ linear transformation matrix.
+*   $\mathbf{M}$ is the $3 \times 3$ linear [[01_Transformation_Matrices|transformation matrix]].
 *   $\vec{t}$ is the $3 \times 1$ translation vector.
 
 ### Order of Operations

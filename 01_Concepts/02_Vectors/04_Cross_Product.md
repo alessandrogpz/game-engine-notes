@@ -3,7 +3,7 @@
 The cross product of two 3D vectors is another 3D vector that is perpendicular (orthogonal) to both original vectors.
 
 ## Conceptual Understanding: "Perpendicular Generator"
-Unlike the dot product which gives a number, the cross product gives a **new vector**.
+Unlike the [[02_Dot_Product|dot product]] which gives a number, the cross product gives a **new vector**.
 - **Direction:** The result is always perpendicular to the "floor" or plane created by the two input vectors.
 - **Magnitude:** The length of the resulting vector represents the **area** of the parallelogram formed by the two vectors.
 - **Zero Result:** If the cross product is zero, the vectors are parallel (they don't form a plane).
@@ -92,12 +92,12 @@ $$
 [\vec{a}]_\times \vec{v} = \begin{bmatrix} (0 \cdot v_x) + (-a_z \cdot v_y) + (a_y \cdot v_z) \\\\ (a_z \cdot v_x) + (0 \cdot v_y) + (-a_x \cdot v_z) \\\\ (-a_y \cdot v_x) + (a_x \cdot v_y) + (0 \cdot v_z) \end{bmatrix} = \begin{bmatrix} a_y v_z - a_z v_y \\\\ a_z v_x - a_x v_z \\\\ a_x v_y - a_y v_x \end{bmatrix}
 $$
 
-This matches the algebraic cross-product equation $\vec{a} \times \vec{v}$ exactly, proving that matrix multiplication by $[\vec{a}]_\times$ is completely equivalent to performing the cross product.
+This matches the algebraic cross-product equation $\vec{a} \times \vec{v}$ exactly, proving that [[02_Matrix_Multiplication|matrix multiplication]] by $[\vec{a}]_\times$ is completely equivalent to performing the cross product.
 
 ### Why It's Useful
 In graphics programming, game engines, and physics engines, representing the cross product as a matrix multiplication is extremely powerful:
 * **Linearizing Operations:** It converts the vector-based cross-product operation into a standard $3 \times 3$ matrix multiplication.
-* **Combining Transformations:** Because it is a matrix, it can be combined with rotation, scale, or projection matrices using simple matrix multiplication.
+* **Combining Transformations:** Because it is a matrix, it can be combined with rotation, scale, or [[06_Projection_Matrices|projection matrices]] using simple matrix multiplication.
 * **Rodrigues' Rotation Formula:** As used in 3D rotations, this skew-symmetric matrix represents the circular rotation step about an arbitrary axis $\vec{a}$ (in the term $[\vec{a}]_\times \sin\theta$).
 
 ---

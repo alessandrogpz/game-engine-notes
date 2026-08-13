@@ -12,14 +12,14 @@ Suppose we want to construct a $4 \times 4$ Model Matrix $M$ for a 3D object tha
 2. **Rotation:** Rotation by $90^\circ$ around the vertical $k$-axis (z-axis).
 3. **Translation:** Translation by $\vec{t} = [3, -1, 4]^T$.
 
-1. Write down the individual $4 \times 4$ transformation matrices: the translation matrix $T$, the rotation matrix $R$, and the scaling matrix $S$.
+1. Write down the individual $4 \times 4$ [[01_Transformation_Matrices|transformation matrices]]: the translation matrix $T$, the rotation matrix $R$, and the scaling matrix $S$.
 2. Compute the combined Model Matrix:
 
 $$
 M = T \cdot R \cdot S
 $$
 
-3. Transform the vertex $\vec{v}$ (given in homogeneous coordinates) using your Model Matrix $M$:
+3. Transform the vertex $\vec{v}$ (given in [[07_Homogeneous_Coordinates|homogeneous coordinates]]) using your Model Matrix $M$:
 
 $$
 \vec{v} = \begin{bmatrix} 1 \\\\ 2 \\\\ -1 \\\\ 1 \end{bmatrix}

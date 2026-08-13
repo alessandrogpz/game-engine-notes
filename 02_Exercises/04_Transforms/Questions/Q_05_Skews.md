@@ -36,13 +36,13 @@ $$
 \vec{v}' = \vec{v} + (\vec{b} \cdot \vec{v})\tan\theta \, \vec{a}
 $$
    
-   and checking that it matches your matrix multiplication result.
+   and checking that it matches your [[02_Matrix_Multiplication|matrix multiplication]] result.
 
 ---
 
 ## Part 2: Conceptual Understanding
 
-1. **Determinant of Skew:** Geometrically explain why the determinant of a skew matrix is always $+1$ in 3D space.
+1. **[[03_Determinants|Determinant]] of Skew:** Geometrically explain why the determinant of a skew matrix is always $+1$ in 3D space.
 2. **Composition of Opposite Skews:** Prove algebraically that performing a skew of angle $\theta$ followed by a skew of angle $-\theta$ (along the same vectors $\vec{a}$ and $\vec{b}$) yields the Identity matrix $\mathbf{I}$.
 3. **Orthogonality Constraint:** Why is it mathematically and geometrically required that the slide direction $\vec{a}$ and the measurement axis $\vec{b}$ are perpendicular ($\vec{a} \cdot \vec{b} = 0$)? Explain what would happen if they were parallel.
 

@@ -5,7 +5,7 @@ tags: [exercise, solution, translations, homogeneous-coordinates, affine-transfo
 
 # Solution: Translations
 
-This solution note provides the step-by-step mathematical calculations, matrix derivations, and conceptual explanations for the translation exercise in homogeneous coordinates.
+This solution note provides the step-by-step mathematical calculations, matrix derivations, and conceptual explanations for the translation exercise in [[07_Homogeneous_Coordinates|homogeneous coordinates]].
 
 ---
 

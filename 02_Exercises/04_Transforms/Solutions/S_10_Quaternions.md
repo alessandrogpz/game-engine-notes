@@ -23,13 +23,13 @@ q_2 = 2 - i + 2j - k \quad (s_2 = 2, \, \vec{v}_2 = [-1, 2, -1]^T)
 $$
 
 - **Calculation of $q_1 q_2$:**
-  First, compute the vector dot product $\vec{v}_1 \cdot \vec{v}_2$:
+  First, compute the vector [[02_Dot_Product|dot product]] $\vec{v}_1 \cdot \vec{v}_2$:
   
 $$
 \vec{v}_1 \cdot \vec{v}_2 = 2(-1) + (-1)(2) + 1(-1) = -2 - 2 - 1 = -5
 $$
   
-  Next, compute the vector cross product $\vec{v}_1 \times \vec{v}_2$:
+  Next, compute the vector [[04_Cross_Product|cross product]] $\vec{v}_1 \times \vec{v}_2$:
   
 $$
 \vec{v}_1 \times \vec{v}_2 = \begin{bmatrix} (-1)(-1) - (1)(2) \\\\ (1)(-1) - (2)(-1) \\\\ (2)(2) - (-1)(-1) \end{bmatrix} = \begin{bmatrix} 1 - 2 \\\\ -1 + 2 \\\\ 4 - 1 \end{bmatrix} = \begin{bmatrix} -1 \\\\ 1 \\\\ 3 \end{bmatrix} = -i + j + 3k

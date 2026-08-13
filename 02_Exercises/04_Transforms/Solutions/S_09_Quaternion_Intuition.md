@@ -5,7 +5,7 @@ tags: [exercise, solution, quaternions]
 
 # Solution: Quaternion Intuition
 
-This solution note provides the step-by-step mathematical derivations, projection mappings, and conceptual answers for the quaternion intuition exercise.
+This solution note provides the step-by-step mathematical derivations, projection mappings, and conceptual answers for the [[10_Quaternions|quaternion]] intuition exercise.
 
 ---
 

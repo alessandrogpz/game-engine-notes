@@ -6,10 +6,10 @@ This note will bring everything together, showing how the $3 \times 3$ rotation,
 
 ## 1. Combining 3D Transforms with Translation
 
-To represent 3D affine transformations (rotation, scale, reflection) alongside translation as a single matrix multiplication, we expand our coordinates to 4D homogeneous coordinates $[x, y, z, 1]^T$ and use a $4 \times 4$ matrix.
+To represent 3D affine transformations (rotation, scale, reflection) alongside translation as a single [[02_Matrix_Multiplication|matrix multiplication]], we expand our coordinates to 4D [[07_Homogeneous_Coordinates|homogeneous coordinates]] $[x, y, z, 1]^T$ and use a $4 \times 4$ matrix.
 
 For a 3D transformation represented by a $3 \times 3$ matrix $\mathbf{M}_{3 \times 3}$ and a translation represented by a vector $\vec{t} = [t_x, t_y, t_z]^T$:
-*   The $3 \times 3$ transformation matrix occupies the top-left submatrix.
+*   The $3 \times 3$ [[01_Transformation_Matrices|transformation matrix]] occupies the top-left submatrix.
 *   The translation vector occupies the rightmost column.
 *   The bottom row is filled with $[0, 0, 0, 1]$ to preserve the homogeneous coordinate $w=1$.
 
@@ -68,7 +68,7 @@ $$
 Because this requires division by the depth coordinate $z$, it is a non-linear operation. We cannot write this directly as a standard linear matrix multiplication on Euclidean coordinates.
 
 ### B. Perspective Projection Matrix and Homogeneous Division
-Homogeneous coordinates solve this problem by allowing us to delay the division. We construct a $4 \times 4$ projection matrix that places the depth coordinate $z$ (or a value proportional to it) into the $w$-component of the output vector:
+Homogeneous coordinates solve this problem by allowing us to delay the division. We construct a $4 \times 4$ [[06_Projection_Matrices|projection matrix]] that places the depth coordinate $z$ (or a value proportional to it) into the $w$-component of the output vector:
 
 $$
 \mathbf{P}_{\text{persp}} = \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & \frac{1}{d} & 0 \end{bmatrix}

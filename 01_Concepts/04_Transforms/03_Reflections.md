@@ -6,7 +6,7 @@ In computer graphics, physics simulations, and geometric modeling, reflections a
 
 ## 1. Reflection Across a Plane (Plane Reflection)
 
-We first consider a plane that passes through the origin and is perpendicular to a given unit normal vector $\vec{a}$ (where $\|\vec{a}\| = 1$). 
+We first consider a plane that passes through the origin and is perpendicular to a given unit [[02_Normal_Vectors|normal vector]] $\vec{a}$ (where $\|\vec{a}\| = 1$). 
 
 To reflect any vector $\vec{v}$ across this plane, we decompose it into its components relative to the normal vector $\vec{a}$ and negate the component that lies parallel to the normal (while leaving the perpendicular component untouched).
 
@@ -55,7 +55,7 @@ $$
 ---
 
 ### Transforming to Matrix Form
-To convert this vector equation into a single transformation matrix, we replace the vector operations with their equivalent matrix-vector products:
+To convert this vector equation into a single [[01_Transformation_Matrices|transformation matrix]], we replace the vector operations with their equivalent matrix-vector products:
 1.  **Identity Matrix Substitution:** The original vector $\vec{v}$ is represented using the identity matrix $\mathbf{I}$:
     
 $$
@@ -94,14 +94,14 @@ $$
 
 ## 2. Determinants and Dimensionality
 
-The determinant of any plane reflection matrix $\mathbf{M}_{\text{reflect}}(\vec{a})$ is **always $-1$**:
+The [[03_Determinants|determinant]] of any plane reflection matrix $\mathbf{M}_{\text{reflect}}(\vec{a})$ is **always $-1$**:
 
 $$
 \det\big(\mathbf{M}_{\text{reflect}}(\vec{a})\big) = -1
 $$
 
 ### Intuitive Axis Alignment Approach
-To understand why the determinant is always $-1$, we can align our coordinate system so that the normal vector points perfectly along a coordinate axis (e.g., the $x$-axis, $\vec{a} = [1, 0, 0]^T$). 
+To understand why the determinant is always $-1$, we can align our [[03_Coordinate_Systems|coordinate system]] so that the normal vector points perfectly along a coordinate axis (e.g., the $x$-axis, $\vec{a} = [1, 0, 0]^T$). 
 *   Reflecting across the plane perpendicular to the $x$-axis (the $yz$-plane) simply negates the $x$-coordinate while leaving the $y$ and $z$ coordinates untouched:
     
 $$

@@ -201,7 +201,7 @@ $$
 
 
 #### 4. Proving Orthogonality
-Checking the dot product of $\hat{n}_B$ with both transformed edge vectors:
+Checking the [[02_Dot_Product|dot product]] of $\hat{n}_B$ with both transformed edge vectors:
 
 $$
 \mathbf{P_0'P_1'} \cdot \hat{n}_B = \begin{bmatrix} 0 \\\\ 3 \\\\ 0 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix} = (0)(1) + (3)(0) + (0)(0) = 0 \quad \checkmark
@@ -225,7 +225,7 @@ $$
 
 * **Justification:** Yes, the $\text{sign}(\det(\mathbf{M}))$ correction is **necessary**.
 * When an object undergoes a reflection ($\det(\mathbf{M}) < 0$), space is inverted and spatial handedness is flipped. Applying $(\mathbf{M}^{-1})^T$ alone produces a vector pointing in the **opposite direction** of the true outward normal of the reflected surface.
-* To correct for this, we must include the sign of the determinant:
+* To correct for this, we must include the sign of the [[03_Determinants|determinant]]:
 
 $$
 \hat{n}_B = \text{sign}(\det(\mathbf{M})) (\mathbf{M}^{-1})^T \hat{n}_A

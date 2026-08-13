@@ -164,7 +164,7 @@ $$
 \mathbf{X} = \frac{1}{ad - bc} \begin{bmatrix} d & -b \\\\ -c & a \end{bmatrix}
 $$
 
-    We verify $\mathbf{X}$ is the inverse by direct matrix multiplication:
+    We verify $\mathbf{X}$ is the inverse by direct [[02_Matrix_Multiplication|matrix multiplication]]:
     
 $$
 \mathbf{A}\mathbf{X} = \begin{bmatrix} a & b \\\\ c & d \end{bmatrix} \left( \frac{1}{ad - bc} \begin{bmatrix} d & -b \\\\ -c & a \end{bmatrix} \right) = \frac{1}{ad - bc} \begin{bmatrix} ad - bc & -ab + ab \\\\ cd - cd & -bc + ad \end{bmatrix} = \frac{1}{ad - bc} \begin{bmatrix} ad - bc & 0 \\\\ 0 & ad - bc \end{bmatrix} = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} = \mathbf{I}

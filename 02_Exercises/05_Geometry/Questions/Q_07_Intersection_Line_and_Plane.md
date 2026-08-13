@@ -25,7 +25,7 @@ tags: [exercise, question, intersection-line-plane, implicit-plane, parametric-l
    * State which sign conditions on $\mathbf{f} \cdot \mathbf{p}$ and $\mathbf{f} \cdot \mathbf{v}$ your two results confirm.
 
 ## Part 2: Conceptual Understanding
-1. In the expression $t = -\frac{\mathbf{f} \cdot \mathbf{p}}{\mathbf{f} \cdot \mathbf{v}}$, explain why $\mathbf{f} \cdot \mathbf{p}$ is a genuine 4D dot product while $\mathbf{f} \cdot \mathbf{v}$ collapses to the 3D product $\mathbf{n} \cdot \mathbf{v}$. What role does the $w$ coordinate play in producing that difference?
+1. In the expression $t = -\frac{\mathbf{f} \cdot \mathbf{p}}{\mathbf{f} \cdot \mathbf{v}}$, explain why $\mathbf{f} \cdot \mathbf{p}$ is a genuine 4D [[02_Dot_Product|dot product]] while $\mathbf{f} \cdot \mathbf{v}$ collapses to the 3D product $\mathbf{n} \cdot \mathbf{v}$. What role does the $w$ coordinate play in producing that difference?
 2. Prove that scaling the plane vector $\mathbf{f}$ by any non-zero factor $s$ leaves $t$ unchanged. Why does the [[05_Distance_Point_and_Plane|point-plane distance]] calculation *not* share this property?
 3. The denominator vanishing ($\mathbf{f} \cdot \mathbf{v} = 0$) covers two geometrically distinct situations. Identify both, explain how the value of $\mathbf{f} \cdot \mathbf{p}$ separates them, and describe how a robust implementation should report each case.
 4. In ray casting, a hit is accepted only when $t \ge 0$, and a ray starting in front of the plane additionally requires $\mathbf{f} \cdot \mathbf{v} < 0$. Explain what each condition rejects geometrically, why the second is equivalent to a backface cull, and why testing signs before dividing is preferable in an engine implementation.

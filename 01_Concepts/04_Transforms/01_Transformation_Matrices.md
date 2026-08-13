@@ -1,6 +1,6 @@
 # Transformation Matrices
 
-In game engines, 3D graphics, and physical simulations, we frequently represent objects in multiple coordinate systems (e.g., local/object space, world space, camera/view space). Understanding how to move position vectors and linear operators between these systems is a core requirement of linear algebra.
+In game engines, 3D graphics, and physical simulations, we frequently represent objects in multiple [[03_Coordinate_Systems|coordinate systems]] (e.g., local/object space, world space, camera/view space). Understanding how to move position vectors and linear operators between these systems is a core requirement of linear algebra.
 
 ---
 
@@ -95,7 +95,7 @@ The following statements are mathematically identical for a square matrix $\math
 
 ### Preservation Properties
 Orthogonal transformations preserve the geometric relationships between vectors:
-*   **Preservation of Dot Product:** The dot product of two transformed vectors is equal to their original dot product:
+*   **Preservation of [[02_Dot_Product|Dot Product]]:** The dot product of two transformed vectors is equal to their original dot product:
     
 **(2.6)**
 
@@ -105,7 +105,7 @@ $$
 
 *   **Preservation of Length:** Because dot products are preserved, the length of any vector is invariant under an orthogonal transform: $\|\mathbf{M}\vec{v}\| = \|\vec{v}\|$.
 *   **Preservation of Angle:** The angle $\theta$ between any two vectors is invariant.
-*   **Determinant:** The determinant of any orthogonal matrix is always $\det(\mathbf{M}) = \pm 1$.
+*   **[[03_Determinants|Determinant]]:** The determinant of any orthogonal matrix is always $\det(\mathbf{M}) = \pm 1$.
     *   $\det(\mathbf{M}) = 1$: Represents a **pure rotation** (preserves the orientation handedness).
     *   $\det(\mathbf{M}) = -1$: Represents a **reflection** (reverses the handedness, e.g. switching right-handed to left-handed systems).
 
@@ -121,7 +121,7 @@ $$
 \vec{v}' = \mathbf{M}_2(\mathbf{M}_1\vec{v})
 $$
 
-Because matrix multiplication is associative, we can group the matrices together first to pre-multiply them into a single transform matrix $\mathbf{N} = \mathbf{M}_2\mathbf{M}_1$:
+Because [[02_Matrix_Multiplication|matrix multiplication]] is associative, we can group the matrices together first to pre-multiply them into a single transform matrix $\mathbf{N} = \mathbf{M}_2\mathbf{M}_1$:
 
 $$
 \vec{v}' = \mathbf{N}\vec{v}

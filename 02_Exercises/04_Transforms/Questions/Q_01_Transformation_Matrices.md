@@ -5,7 +5,7 @@ tags: [exercise, question, orthogonal-matrix, similarity-transform, change-of-ba
 ---
 # Question: Orthogonal and Similarity Transformations
 
-This exercise explores the geometric and algebraic properties of **orthogonal transformations** (length/angle preservation and determinants) and **similarity transformations** (changing the basis of a linear operator).
+This exercise explores the geometric and algebraic properties of **orthogonal transformations** (length/angle preservation and [[03_Determinants|determinants]]) and **similarity transformations** (changing the basis of a linear operator).
 
 ---
 
@@ -16,16 +16,16 @@ $$
 \mathbf{M} = \begin{bmatrix} \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} & 0 \\\\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & 0 \\\\ 0 & 0 & 1 \end{bmatrix}
 $$
 
-Suppose we have two vectors in our initial coordinate system:
+Suppose we have two vectors in our initial [[03_Coordinate_Systems|coordinate system]]:
 
 $$
 \vec{v} = \begin{bmatrix} 2 \\\\ 2 \\\\ 1 \end{bmatrix} \quad \text{and} \quad \vec{w} = \begin{bmatrix} 0 \\\\ 4 \\\\ -3 \end{bmatrix}
 $$
 
-1.  **Orthonormality:** Prove that $\mathbf{M}$ is an orthogonal matrix by checking that its columns are mutually perpendicular unit vectors, or by showing that $\mathbf{M}^T\mathbf{M} = \mathbf{I}$.
+1.  **Orthonormality:** Prove that $\mathbf{M}$ is an [[05_Orthogonal_Matrices|orthogonal matrix]] by checking that its columns are mutually perpendicular unit vectors, or by showing that $\mathbf{M}^T\mathbf{M} = \mathbf{I}$.
 2.  **Vector Transformation:** Calculate the transformed vectors $\vec{v}' = \mathbf{M}\vec{v}$ and $\vec{w}' = \mathbf{M}\vec{w}$.
 3.  **Preservation Verification:**
-    *   Calculate the original dot product $\vec{v} \cdot \vec{w}$ and the transformed dot product $\vec{v}' \cdot \vec{w}'$. Verify that they are equal.
+    *   Calculate the original [[02_Dot_Product|dot product]] $\vec{v} \cdot \vec{w}$ and the transformed dot product $\vec{v}' \cdot \vec{w}'$. Verify that they are equal.
     *   Calculate the lengths $\|\vec{v}\|$ and $\|\vec{v}'\|$. Verify that they are equal.
 4.  **Orientation:** Calculate $\det(\mathbf{M})$. Does this transformation represent a pure rotation or does it involve a reflection? Explain your reasoning.
 

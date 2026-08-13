@@ -8,7 +8,7 @@ Stereographic projection is a conformal mapping that projects points from a sphe
 
 In the equation $\text{Line}(t)$, **$t$ is a scalar parameter**. You can think of it as a slider or a timeline that tracks your position as you move along an infinite straight line.
 
-A parametric line equation always follows this structure:
+A [[03_Lines_and_Rays|parametric line]] equation always follows this structure:
 
 $$
 \text{Line}(t) = \text{Start Point} + t \times (\text{Direction Vector})

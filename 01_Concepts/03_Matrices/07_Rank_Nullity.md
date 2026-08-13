@@ -1,6 +1,6 @@
 # Rank and Nullity
 
-Rank and nullity are fundamental properties of matrices that describe the dimensions of the vector subspaces associated with a matrix (specifically, its range and its kernel). They play a central role in determining the solvability of linear systems.
+Rank and nullity are fundamental properties of matrices that describe the dimensions of the vector subspaces associated with a matrix (specifically, its range and its kernel). They play a central role in determining the solvability of [[01_Linear_Systems|linear systems]].
 
 ---
 

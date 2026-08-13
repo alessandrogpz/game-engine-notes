@@ -11,10 +11,10 @@ This solution contains the complete, step-by-step mathematical proofs and calcul
 ## Part 1: Orthogonal Transforms and Geometric Preservation
 
 ### 1. Orthonormality Proof
-To prove that $\mathbf{M}$ is an orthogonal matrix, we verify two conditions:
+To prove that $\mathbf{M}$ is an [[05_Orthogonal_Matrices|orthogonal matrix]], we verify two conditions:
 1.  **Unit Length (Magnitude = 1):** The columns must be unit vectors.
-2.  **Orthogonality (Angle = 90°):** The dot product between any two distinct columns must be $0$.
-*(Note: As a property of any orthogonal matrix, its determinant will always be $\pm 1$)*.
+2.  **Orthogonality (Angle = 90°):** The [[02_Dot_Product|dot product]] between any two distinct columns must be $0$.
+*(Note: As a property of any orthogonal matrix, its [[03_Determinants|determinant]] will always be $\pm 1$)*.
 
 Let the column vectors of $\mathbf{M}$ be:
 

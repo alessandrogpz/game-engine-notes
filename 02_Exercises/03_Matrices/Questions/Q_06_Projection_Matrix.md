@@ -28,7 +28,7 @@ $$
 \vec{p} = \mathbf{P}\vec{a}
 $$
 
-3.  **Classical Formula Verification:** Calculate the same vector projection using the classical dot product formula:
+3.  **Classical Formula Verification:** Calculate the same [[06_Vector_Projection|vector projection]] using the classical [[02_Dot_Product|dot product]] formula:
     
 $$
 \text{proj}_{\hat{u}}\vec{a} = (\vec{a} \cdot \hat{u})\hat{u}
@@ -40,7 +40,7 @@ $$
 
 ## Part 2: Conceptual Understanding
 1.  **Subspace Representation:** Explain geometrically what the $3 \times 3$ matrix $\mathbf{P} = \hat{u}\hat{u}^T$ represents and how it behaves as a "spatial filter."
-2.  **Determinant of a Projection Matrix:** Calculate or argue what the determinant of $\mathbf{P}$ must be ($\det(\mathbf{P})$). Why is this result geometrically intuitive?
+2.  **[[03_Determinants|Determinant]] of a Projection Matrix:** Calculate or argue what the determinant of $\mathbf{P}$ must be ($\det(\mathbf{P})$). Why is this result geometrically intuitive?
 3.  **Trace of a Projection Matrix:** Find the trace of $\mathbf{P}$ (the sum of its diagonal entries). How does the trace of a projection matrix relate to the dimension of the subspace it projects onto?
 
 ---

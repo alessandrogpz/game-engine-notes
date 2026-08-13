@@ -105,7 +105,7 @@ $$
 \vec{v} = \mathbf{I}\vec{v}
 $$
    
-2. **Outer Product Substitution:** Express the dot product $\vec{b} \cdot \vec{v}$ as $\vec{b}^T \vec{v}$:
+2. **Outer Product Substitution:** Express the [[02_Dot_Product|dot product]] $\vec{b} \cdot \vec{v}$ as $\vec{b}^T \vec{v}$:
    
 $$
 (\vec{b} \cdot \vec{v})\vec{a} = \vec{a}(\vec{b}^T\vec{v}) = (\vec{a}\vec{b}^T)\vec{v}
@@ -150,7 +150,7 @@ $$
 ## 6. Key Properties of Skew Matrices
 
 * **Volume Preservation:** 
-  The determinant of a skew matrix is always $+1$. We can prove this algebraically using the **matrix determinant lemma**, which states that for any column vectors $\vec{u}, \vec{v}$ of the same size:
+  The [[03_Determinants|determinant]] of a skew matrix is always $+1$. We can prove this algebraically using the **matrix determinant lemma**, which states that for any column vectors $\vec{u}, \vec{v}$ of the same size:
   
 $$
 \det(\mathbf{I} + \vec{u}\vec{v}^T) = 1 + \vec{u} \cdot \vec{v}

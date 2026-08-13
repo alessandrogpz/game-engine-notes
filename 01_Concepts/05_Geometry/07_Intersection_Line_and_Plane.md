@@ -14,7 +14,7 @@ $$
 \mathbf{f} \cdot L(t) = 0
 $$
 
-This is simply the [[04_Planes|implicit plane equation]] applied to the line: a point lies on the plane exactly when its 4D dot product with $\mathbf{f}$ vanishes, so we ask which value of $t$ drives the line's position onto the plane.
+This is simply the [[04_Planes|implicit plane equation]] applied to the line: a point lies on the plane exactly when its 4D [[02_Dot_Product|dot product]] with $\mathbf{f}$ vanishes, so we ask which value of $t$ drives the line's position onto the plane.
 
 ---
 
