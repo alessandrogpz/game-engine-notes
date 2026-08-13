@@ -15,6 +15,7 @@ These solution files still contain `[Insert ...]` placeholders that need LaTeX m
 - [x] Complete **Reflection Through a Plane** derivation (closest-point & reflected-point calculations, $4 \times 4$ reflection matrix construction): [S_06_Reflection_Through_Plane.md](02_Exercises/05_Geometry/Solutions/S_06_Reflection_Through_Plane.md)
 - [x] Complete **Intersection of a Line and a Plane** derivation (solving for $t$, intersection point, parallel-case classification & ray sign conditions): [S_07_Intersection_Line_and_Plane.md](02_Exercises/05_Geometry/Solutions/S_07_Intersection_Line_and_Plane.md)
 - [ ] Complete **Intersection of Three Planes** derivation (linear system setup, scalar triple product, cross-product solution & singular-case classification): [S_08_Intersection_Three_Planes.md](02_Exercises/05_Geometry/Solutions/S_08_Intersection_Three_Planes.md)
+- [ ] Complete **Intersection of Two Planes** derivation (direction via cross product, third-plane construction, closest-point property & parallel-case classification): [S_09_Intersection_Two_Planes.md](02_Exercises/05_Geometry/Solutions/S_09_Intersection_Two_Planes.md)
 
 ---
 
@@ -34,3 +35,4 @@ These files contain only console-log helper tests and need their core mathematic
 - [ ] Implement **Reflection Through a Plane** calculations (closest point in plane, reflected point, $4 \times 4$ reflection matrix construction): [Reflection_Through_Plane.cppm](03_Code/05_Geometry/Reflection_Through_Plane.cppm)
 - [ ] Implement **Intersection of a Line and a Plane** calculations (parameter $t$ solving, intersection point, parallel-case guard & ray $t \ge 0$ test): [Intersection_Line_and_Plane.cppm](03_Code/05_Geometry/Intersection_Line_and_Plane.cppm)
 - [ ] Implement **Intersection of Three Planes** calculations (scalar triple product determinant, cross-product solution & singular-case handling): [Intersection_Three_Planes.cppm](03_Code/05_Geometry/Intersection_Three_Planes.cppm)
+- [ ] Implement **Intersection of Two Planes** calculations (direction cross product, point solution, parallel & coincident guards): [Intersection_Two_Planes.cppm](03_Code/05_Geometry/Intersection_Two_Planes.cppm)
