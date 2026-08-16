@@ -4,6 +4,8 @@ A growing knowledge base covering the mathematics and systems behind game and re
 
 The vault is organized **domain first**: each top-level numbered folder is a domain (Mathematics, Rendering, Physics, …), each domain holds subjects, and every subject carries its own `Concepts/`, `Exercises/` and `Assets/`. Adding a new domain is a single folder, and cross-domain links (for example a rendering note pointing at a linear algebra proof) stay inside one graph.
 
+Domains that have not been started yet contain only a `00_Roadmap.md` — a scoped study plan naming the subjects to cover, what to deliberately skip, and the resources worth using. They gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
+
 > **Note on link format:** links use standard markdown with relative paths rather than Obsidian `[[wikilinks]]`, because wikilinks render as raw text on GitHub. Relative markdown links resolve correctly in both Obsidian (including Graph View) and GitHub.
 
 ---
@@ -28,10 +30,18 @@ engine-knowledge/
 │       │   │   └── Solutions/         # md files named: S_[Exercise_Name].md
 │       │   └── ... 05_Geometry/
 │       └── Assets/                    #     Diagrams and figures embedded by the notes
-│                                      #
-│   (future subjects: 02_Calculus/, 03_Numerical_Methods/, …)
-│                                      #
-│ (future domains: 02_Rendering/, 03_Physics/, 04_Engine_Architecture/, …)
+│   └── 00_Roadmap.md               #   Remaining subjects + how much of each to learn
+├── 02_Rendering/                      # MVP, rasterization, APIs, shading, shadows
+├── 03_Physics/                        # Collision detection, rigid body dynamics
+├── 04_Engine_Architecture/            # Game loop, memory, ECS, resources, patterns
+├── 05_Data_Structures/                # Spatial structures, cache-aware containers
+├── 06_Algorithms/                     # Computational geometry, pathfinding, procedural
+├── 07_Concurrency_and_Parallelism/    # Memory model, job systems, lock-free
+├── 08_Systems_and_Performance/        # Cache, data-oriented design, SIMD, profiling
+├── 09_Tools_and_Pipeline/             # Asset pipeline, serialization, editor tooling
+├── 10_Audio/                          # Real-time audio, mixing, spatialization
+├── 11_Networking/                     # Transport, state sync, latency hiding
+│                                      # Each domain carries a 00_Roadmap.md until work starts
 ├── 90_Code/                           # One buildable C++23 project, mirroring the topic folders
 │   ├── 00_Utils/                      # Shared helpers (float comparison)
 │   ├── 01_Systems_of_Equations/ ... 05_Geometry/   # One .cppm per concept note
