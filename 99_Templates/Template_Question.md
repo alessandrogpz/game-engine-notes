@@ -11,5 +11,5 @@ tags: [exercise, question]
 [Insert theory/concept-based questions here]
 
 ---
-**Check Answer:** [Solution_Name](../Solutions/Solution_Name.md) | **Related Concepts:** [Concept_Name](../../../01_Concepts/Topic_Folder/Concept_Name.md)
+**Check Answer:** [Solution_Name](../Solutions/Solution_Name.md) | **Related Concepts:** [Concept_Name](../../../Concepts/Topic_Folder/Concept_Name.md)
 

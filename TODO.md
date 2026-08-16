@@ -7,16 +7,16 @@ Use this list to track the remaining exercises and code implementations that nee
 These solution files still contain `[Insert ...]` placeholders that need LaTeX mathematics or conceptual descriptions.
 
 ### Geometry
-- [x] Complete **Triangle Meshes** derivation (Euler's formula calculations & conceptual answers): [S_01_Triangle_Meshes.md](02_Exercises/05_Geometry/Solutions/S_01_Triangle_Meshes.md)
-- [x] Complete **Normal Vectors** derivation (cross product calculation & normal-transformation proofs): [S_02_Normal_Vectors.md](02_Exercises/05_Geometry/Solutions/S_02_Normal_Vectors.md)
-- [x] Complete **Lines and Rays** derivation (point-to-line & skew line distance derivations): [S_03_Lines_and_Rays.md](02_Exercises/05_Geometry/Solutions/S_03_Lines_and_Rays.md)
-- [x] Complete **Planes** derivation (parametric plane & 4D implicit plane calculations): [S_04_Planes.md](02_Exercises/05_Geometry/Solutions/S_04_Planes.md)
-- [x] Complete **Distance Between a Point and a Plane** derivation (plane normalization & signed distance calculations): [S_05_Distance_Point_and_Plane.md](02_Exercises/05_Geometry/Solutions/S_05_Distance_Point_and_Plane.md)
-- [x] Complete **Reflection Through a Plane** derivation (closest-point & reflected-point calculations, $4 \times 4$ reflection matrix construction): [S_06_Reflection_Through_Plane.md](02_Exercises/05_Geometry/Solutions/S_06_Reflection_Through_Plane.md)
-- [x] Complete **Intersection of a Line and a Plane** derivation (solving for $t$, intersection point, parallel-case classification & ray sign conditions): [S_07_Intersection_Line_and_Plane.md](02_Exercises/05_Geometry/Solutions/S_07_Intersection_Line_and_Plane.md)
-- [ ] Complete **Intersection of Three Planes** derivation (linear system setup, scalar triple product, cross-product solution & singular-case classification): [S_08_Intersection_Three_Planes.md](02_Exercises/05_Geometry/Solutions/S_08_Intersection_Three_Planes.md)
-- [ ] Complete **Intersection of Two Planes** derivation (direction via cross product, third-plane construction, closest-point property & parallel-case classification): [S_09_Intersection_Two_Planes.md](02_Exercises/05_Geometry/Solutions/S_09_Intersection_Two_Planes.md)
-- [ ] Complete **Transforming Planes** derivation (adjugate normal transform, $d^B$ derivation, shear/reflection cases & determinant sign handling): [S_10_Transforming_Planes.md](02_Exercises/05_Geometry/Solutions/S_10_Transforming_Planes.md)
+- [x] Complete **Triangle Meshes** derivation (Euler's formula calculations & conceptual answers): [S_01_Triangle_Meshes.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_01_Triangle_Meshes.md)
+- [x] Complete **Normal Vectors** derivation (cross product calculation & normal-transformation proofs): [S_02_Normal_Vectors.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_02_Normal_Vectors.md)
+- [x] Complete **Lines and Rays** derivation (point-to-line & skew line distance derivations): [S_03_Lines_and_Rays.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_03_Lines_and_Rays.md)
+- [x] Complete **Planes** derivation (parametric plane & 4D implicit plane calculations): [S_04_Planes.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_04_Planes.md)
+- [x] Complete **Distance Between a Point and a Plane** derivation (plane normalization & signed distance calculations): [S_05_Distance_Point_and_Plane.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_05_Distance_Point_and_Plane.md)
+- [x] Complete **Reflection Through a Plane** derivation (closest-point & reflected-point calculations, $4 \times 4$ reflection matrix construction): [S_06_Reflection_Through_Plane.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_06_Reflection_Through_Plane.md)
+- [x] Complete **Intersection of a Line and a Plane** derivation (solving for $t$, intersection point, parallel-case classification & ray sign conditions): [S_07_Intersection_Line_and_Plane.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_07_Intersection_Line_and_Plane.md)
+- [ ] Complete **Intersection of Three Planes** derivation (linear system setup, scalar triple product, cross-product solution & singular-case classification): [S_08_Intersection_Three_Planes.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_08_Intersection_Three_Planes.md)
+- [ ] Complete **Intersection of Two Planes** derivation (direction via cross product, third-plane construction, closest-point property & parallel-case classification): [S_09_Intersection_Two_Planes.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_09_Intersection_Two_Planes.md)
+- [ ] Complete **Transforming Planes** derivation (adjugate normal transform, $d^B$ derivation, shear/reflection cases & determinant sign handling): [S_10_Transforming_Planes.md](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_10_Transforming_Planes.md)
 
 ---
 
@@ -25,16 +25,16 @@ These solution files still contain `[Insert ...]` placeholders that need LaTeX m
 These files contain only console-log helper tests and need their core mathematical functions and algorithms implemented.
 
 ### Systems of Equations
-- [ ] Implement **Gaussian Elimination / Solver** logic: [Linear_Systems.cppm](03_Code/01_Systems_of_Equations/Linear_Systems.cppm)
+- [ ] Implement **Gaussian Elimination / Solver** logic: [Linear_Systems.cppm](90_Code/01_Systems_of_Equations/Linear_Systems.cppm)
 
 ### Geometry
-- [ ] Implement **Triangle Mesh** representation (indexed vertex/index buffers, closed-mesh validation): [Triangle_Meshes.cppm](03_Code/05_Geometry/Triangle_Meshes.cppm)
-- [ ] Implement **Normal Vector** calculation and transformation (face normal via cross product, inverse-transpose transform): [Normal_Vectors.cppm](03_Code/05_Geometry/Normal_Vectors.cppm)
-- [ ] Implement **Lines and Rays** calculations (point-to-line & skew/parallel line distances): [Lines_and_Rays.cppm](03_Code/05_Geometry/Lines_and_Rays.cppm)
-- [ ] Implement **Planes** representations (parametric plane, implicit plane dot product, 4D plane vector): [Planes.cppm](03_Code/05_Geometry/Planes.cppm)
-- [ ] Implement **Distance Between a Point and a Plane** calculations (plane normalization, signed distance evaluation): [Distance_Point_and_Plane.cppm](03_Code/05_Geometry/Distance_Point_and_Plane.cppm)
-- [ ] Implement **Reflection Through a Plane** calculations (closest point in plane, reflected point, $4 \times 4$ reflection matrix construction): [Reflection_Through_Plane.cppm](03_Code/05_Geometry/Reflection_Through_Plane.cppm)
-- [ ] Implement **Intersection of a Line and a Plane** calculations (parameter $t$ solving, intersection point, parallel-case guard & ray $t \ge 0$ test): [Intersection_Line_and_Plane.cppm](03_Code/05_Geometry/Intersection_Line_and_Plane.cppm)
-- [ ] Implement **Intersection of Three Planes** calculations (scalar triple product determinant, cross-product solution & singular-case handling): [Intersection_Three_Planes.cppm](03_Code/05_Geometry/Intersection_Three_Planes.cppm)
-- [ ] Implement **Intersection of Two Planes** calculations (direction cross product, point solution, parallel & coincident guards): [Intersection_Two_Planes.cppm](03_Code/05_Geometry/Intersection_Two_Planes.cppm)
-- [ ] Implement **Transforming Planes** calculations (adjugate construction, plane transform via $\operatorname{adj}(\mathbf{H})$, determinant sign correction): [Transforming_Planes.cppm](03_Code/05_Geometry/Transforming_Planes.cppm)
+- [ ] Implement **Triangle Mesh** representation (indexed vertex/index buffers, closed-mesh validation): [Triangle_Meshes.cppm](90_Code/05_Geometry/Triangle_Meshes.cppm)
+- [ ] Implement **Normal Vector** calculation and transformation (face normal via cross product, inverse-transpose transform): [Normal_Vectors.cppm](90_Code/05_Geometry/Normal_Vectors.cppm)
+- [ ] Implement **Lines and Rays** calculations (point-to-line & skew/parallel line distances): [Lines_and_Rays.cppm](90_Code/05_Geometry/Lines_and_Rays.cppm)
+- [ ] Implement **Planes** representations (parametric plane, implicit plane dot product, 4D plane vector): [Planes.cppm](90_Code/05_Geometry/Planes.cppm)
+- [ ] Implement **Distance Between a Point and a Plane** calculations (plane normalization, signed distance evaluation): [Distance_Point_and_Plane.cppm](90_Code/05_Geometry/Distance_Point_and_Plane.cppm)
+- [ ] Implement **Reflection Through a Plane** calculations (closest point in plane, reflected point, $4 \times 4$ reflection matrix construction): [Reflection_Through_Plane.cppm](90_Code/05_Geometry/Reflection_Through_Plane.cppm)
+- [ ] Implement **Intersection of a Line and a Plane** calculations (parameter $t$ solving, intersection point, parallel-case guard & ray $t \ge 0$ test): [Intersection_Line_and_Plane.cppm](90_Code/05_Geometry/Intersection_Line_and_Plane.cppm)
+- [ ] Implement **Intersection of Three Planes** calculations (scalar triple product determinant, cross-product solution & singular-case handling): [Intersection_Three_Planes.cppm](90_Code/05_Geometry/Intersection_Three_Planes.cppm)
+- [ ] Implement **Intersection of Two Planes** calculations (direction cross product, point solution, parallel & coincident guards): [Intersection_Two_Planes.cppm](90_Code/05_Geometry/Intersection_Two_Planes.cppm)
+- [ ] Implement **Transforming Planes** calculations (adjugate construction, plane transform via $\operatorname{adj}(\mathbf{H})$, determinant sign correction): [Transforming_Planes.cppm](90_Code/05_Geometry/Transforming_Planes.cppm)

@@ -64,7 +64,7 @@ python3 randomizer.py vectors --new Angle_Between_Vectors --difficulty Easy
 ```
 
 This command will:
-1. Smart-resolve `vectors` to `02_Exercises/02_Vectors/`.
+1. Smart-resolve `vectors` to `01_Mathematics/01_Linear_Algebra/Exercises/02_Vectors/`.
 2. Retrieve templates `Template_Question.md` and `Template_Solution.md` from `99_Templates/`.
 3. Create `Questions/Q_Angle_Between_Vectors.md` with:
    - Topic metadata filled.

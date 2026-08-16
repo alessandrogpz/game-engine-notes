@@ -1,42 +1,55 @@
 import os
+import glob
 import random
 import argparse
 import re
 from datetime import datetime
 
-def find_topic_folder(topic_query, base_path="02_Exercises"):
+# Exercises live at <NN_Domain>/<NN_Subject>/Exercises/<NN_Topic>/{Questions,Solutions}
+EXERCISES_GLOB = os.path.join("*", "*", "Exercises")
+
+
+def all_topic_folders():
+    """Every <domain>/<subject>/Exercises/<topic> directory in the vault."""
+    return sorted(d for d in glob.glob(os.path.join(EXERCISES_GLOB, "*")) if os.path.isdir(d))
+
+
+def question_files(search_path=None):
+    """All Q_*.md files, optionally restricted to a single topic folder."""
+    if search_path:
+        return sorted(glob.glob(os.path.join(search_path, "**", "Questions", "Q_*.md"), recursive=True))
+    return sorted(glob.glob(os.path.join(EXERCISES_GLOB, "*", "Questions", "Q_*.md")))
+
+
+def topic_names():
+    """Human-readable topic names for error messages."""
+    return [re.sub(r'^\d+_', '', os.path.basename(d)) for d in all_topic_folders()]
+
+def find_topic_folder(topic_query, base_path=None):
     """
-    Finds a topic folder within base_path matching topic_query.
+    Finds a topic folder anywhere in the vault matching topic_query.
     Supports case-insensitive exact matching, numbered prefix ignoring, and substring matching.
     """
     if not topic_query:
         return None
-    if not os.path.exists(base_path):
-        return None
-    
-    # List all directories in base_path
-    try:
-        subdirs = [d for d in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, d))]
-    except Exception as e:
-        print(f"Error accessing base path '{base_path}': {e}")
-        return None
-    
+
+    subdirs = all_topic_folders()
     query_clean = topic_query.lower().strip()
-    
+
     # 1. Try exact or clean match (ignoring prepended numbers like "02_")
     for d in subdirs:
-        d_clean = d.lower()
+        d_clean = os.path.basename(d).lower()
         d_no_prefix = re.sub(r'^\d+_', '', d_clean)
         if query_clean == d_clean or query_clean == d_no_prefix:
-            return os.path.join(base_path, d)
-            
+            return d
+
     # 2. Try substring match
     for d in subdirs:
-        d_clean = d.lower()
+        d_clean = os.path.basename(d).lower()
         d_no_prefix = re.sub(r'^\d+_', '', d_clean)
         if query_clean in d_clean or query_clean in d_no_prefix:
-            return os.path.join(base_path, d)
-            
+            return d
+
     return None
 
 def parse_frontmatter(file_path):
@@ -76,19 +89,15 @@ def parse_frontmatter(file_path):
         print(f"Warning: Error parsing frontmatter for {file_path}: {e}")
     return metadata
 
-def scaffold_new_question(name, topic_query, difficulty=None, base_path="02_Exercises", templates_path="99_Templates"):
+def scaffold_new_question(name, topic_query, difficulty=None, base_path=None, templates_path="99_Templates"):
     """
     Generates a new question and solution file based on templates, with prefilled linking and frontmatter.
     """
     # 1. Resolve topic folder
     topic_folder = find_topic_folder(topic_query, base_path)
     if not topic_folder:
-        print(f"Error: Topic '{topic_query}' not found under '{base_path}'.")
-        try:
-            subdirs = [re.sub(r'^\d+_', '', d) for d in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, d))]
-            print(f"Available topics: {', '.join(subdirs)}")
-        except Exception:
-            pass
+        print(f"Error: Topic '{topic_query}' not found in the vault.")
+        print(f"Available topics: {', '.join(topic_names())}")
         return False
     
     # Extract clean topic name (e.g. "Vectors" from "02_Vectors")
@@ -193,18 +202,13 @@ def generate_daily_practice(questions, output_path="Daily_Practice.md"):
         print(f"Error generating Daily Practice note: {e}")
         return False
 
-def get_default_distribution_questions(base_path="02_Exercises"):
+def get_default_distribution_questions(base_path=None):
     """
     Scans the repository and randomly picks exactly one question,
     with an equal (1/3) chance for each difficulty level (Easy, Medium, Hard).
     """
-    all_questions = []
-    for root, dirs, files in os.walk(base_path):
-        if os.path.basename(root) == "Questions":
-            for file in files:
-                if file.endswith(".md") and file.startswith("Q_"):
-                    all_questions.append(os.path.join(root, file))
-                    
+    all_questions = question_files()
+    
     easy_q = []
     medium_q = []
     hard_q = []
@@ -248,7 +252,7 @@ def get_default_distribution_questions(base_path="02_Exercises"):
     return selected, desc
 
 
-def get_random_questions(count=None, topic_query=None, difficulty_filter=None, tag_filter=None, practice=False, base_path="02_Exercises"):
+def get_random_questions(count=None, topic_query=None, difficulty_filter=None, tag_filter=None, practice=False, base_path=None):
     """
     Walks through topic folders, parses metadata, filters by criteria, and prints random questions.
     If no filtering or count flags are specified, runs the default randomized category distribution.
@@ -280,7 +284,7 @@ def get_random_questions(count=None, topic_query=None, difficulty_filter=None, t
     final_count = count if count is not None else 5
 
     # 1. Resolve search path
-    search_path = base_path
+    search_path = None
     resolved_topic_name = None
     if topic_query:
         topic_folder = find_topic_folder(topic_query, base_path)
@@ -289,16 +293,11 @@ def get_random_questions(count=None, topic_query=None, difficulty_filter=None, t
             folder_name = os.path.basename(topic_folder)
             resolved_topic_name = re.sub(r'^\d+_', '', folder_name).replace("_", " ").title()
         else:
-            print(f"Warning: Topic folder for '{topic_query}' not found under '{base_path}'. Searching all topics instead.")
-            
-    # 2. Walk directory structure
-    all_questions = []
-    for root, dirs, files in os.walk(search_path):
-        if os.path.basename(root) == "Questions":
-            for file in files:
-                if file.endswith(".md") and file.startswith("Q_"):
-                    all_questions.append(os.path.join(root, file))
-                    
+            print(f"Warning: Topic folder for '{topic_query}' not found in the vault. Searching all topics instead.")
+
+    # 2. Collect question files
+    all_questions = question_files(search_path)
+    
     if not all_questions:
         print("No questions found.")
         return
