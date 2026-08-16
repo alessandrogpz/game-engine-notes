@@ -29,20 +29,33 @@ jobs:
   code:
     name: Build and test
     runs-on: ubuntu-latest
+    # `import std;` needs a bleeding-edge toolchain — newer than anything the
+    # runner ships by default. If this job proves unmaintainable it can be
+    # dropped: the build is exercised locally, and the vault job above is what
+    # catches the failures that actually recur.
     steps:
       - uses: actions/checkout@v4
 
-      # `import std;` needs a recent toolchain and the Ninja generator.
-      - name: Install toolchain
+      # CMake gates `import std;` behind an activation UUID that changes every
+      # release. 90_Code/CMakeLists.txt tracks the value per version, so CI is
+      # pinned to a version that table knows about.
+      - name: Install CMake 4.4
+        uses: jwlawson/actions-setup-cmake@v2
+        with:
+          cmake-version: "4.4.2"
+
+      - name: Install Clang 21 and libc++
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ninja-build clang-19 libc++-19-dev libc++abi-19-dev
+          wget -q https://apt.llvm.org/llvm.sh
+          chmod +x llvm.sh
+          sudo ./llvm.sh 21
+          sudo apt-get install -y libc++-21-dev libc++abi-21-dev ninja-build
 
       - name: Configure
         run: >
           cmake -S 90_Code -B build -G Ninja
           -DCMAKE_BUILD_TYPE=Debug
-          -DCMAKE_CXX_COMPILER=clang++-19
+          -DCMAKE_CXX_COMPILER=clang++-21
           -DCMAKE_CXX_FLAGS="-stdlib=libc++"
 
       - name: Build
