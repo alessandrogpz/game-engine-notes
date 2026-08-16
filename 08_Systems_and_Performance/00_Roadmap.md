@@ -1,26 +1,30 @@
 # Systems and Performance — Study Roadmap
 
-What the hardware actually does, and how to write code that suits it. This is where the existing `data-oriented-design` vault belongs.
+What the hardware actually does, and how to write code that suits it.
 
 > [!NOTE]
-> Placeholder. The existing `data-oriented-design` vault is a candidate to fold in here as a subject.
+> [01_Data_Oriented_Design](01_Data_Oriented_Design/README.md) is migrated and in progress. The remaining subjects are placeholders.
 
 ---
 
 ## Suggested Subjects
 
-### 01_Memory_Hierarchy
+### [01_Data_Oriented_Design](01_Data_Oriented_Design/README.md) — *in progress*
+Covered so far, each note with a runnable companion program:
+* [Cache_Locality](01_Data_Oriented_Design/01_Cache_Locality/Cache_Locality.md) — memory latency tiers, 64-byte cache lines, AoS vs SoA
+* [Memory_Alignment](01_Data_Oriented_Design/02_Memory_Alignment/Memory_Alignment.md) — word sizes, compiler padding, struct field ordering
+* [Multi_Threading](01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md) — false sharing and lock-free parallel design, plus a C++17 primitives note and glossary
+* [DOD_Optimizations](01_Data_Oriented_Design/04_DOD_Optimizations/DOD_Optimizations.md) — an 8-step OOP-to-DOD refactor
+* [Advanced_DOD](01_Data_Oriented_Design/05_Advanced_DOD/Advanced_DOD.md) — AoSoA, SIMD, ECS, custom allocators, instruction cache
+
+Still to cover: where OOP costs you (virtual dispatch, pointer chasing, allocation churn) as a consolidated note.
+
+### 02_Memory_Hierarchy
 * Cache lines, levels, associativity
 * Latency numbers worth memorizing
 * Spatial and temporal locality
 * Prefetching, hardware and manual
 * TLB and page behaviour; why huge allocations behave oddly
-
-### 02_Data_Oriented_Design
-* Think about data transformations, not objects
-* AoS vs SoA; hot/cold splitting
-* Existing material: `01_cache_locality`, `02_memory_alignment`, `03_multi_threading`, `04_dod_optimizations`, `05_advanced_dod`
-* Where OOP costs you: virtual dispatch, pointer chasing, allocation churn
 
 ### 03_CPU_Architecture
 * Pipelining, superscalar execution, branch prediction

@@ -1,4 +1,5 @@
-# Compiled Binaries & Object Files
+# Compiled binaries from the standalone examples in this subject.
+# Built ad-hoc with g++ (see README.md), not by the 90_Code CMake project.
 *.o
 *.obj
 *.out
@@ -8,22 +9,3 @@
 *test_align
 *test_aos
 *test_mt
-
-# OS Files
-.DS_Store
-Thumbs.db
-
-# Local agent instructions
-CLAUDE.md
-
-# VS Code
-# Editor-local. The build flags these encoded (-std=c++23 -O3 -pthread, plus the
-# debug and ThreadSanitizer variants) live in the README instead.
-.vscode/
-*.code-workspace
-
-# Obsidian
-# App state and personal UI preferences, not vault content. Obsidian regenerates
-# this directory on first open. Also keeps plugin data (which can hold API keys)
-# out of the repo.
-.obsidian/

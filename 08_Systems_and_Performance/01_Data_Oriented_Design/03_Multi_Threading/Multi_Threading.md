@@ -4,8 +4,8 @@ This note covers how to write high-performance multi-threaded code by aligning s
 
 > [!NOTE]
 > **In this folder**
-> * [`concurrency_cpp17.md`](./concurrency_cpp17.md) — The language primitives: threads, mutexes, atomics, condition variables, deadlock.
-> * [`concurrency_glossary.md`](./concurrency_glossary.md) — One-line lookup for each class and function.
+> * [`concurrency_cpp17.md`](./Concurrency_Cpp17.md) — The language primitives: threads, mutexes, atomics, condition variables, deadlock.
+> * [`concurrency_glossary.md`](./Concurrency_Glossary.md) — One-line lookup for each class and function.
 > * [`multi_threading.cpp`](./multi_threading.cpp) — Chef-customer queue simulation.
 
 ---

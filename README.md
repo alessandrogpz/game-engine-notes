@@ -38,6 +38,7 @@ engine-knowledge/
 ├── 06_Algorithms/                     # Computational geometry, pathfinding, procedural
 ├── 07_Concurrency_and_Parallelism/    # Memory model, job systems, lock-free
 ├── 08_Systems_and_Performance/        # Cache, data-oriented design, SIMD, profiling
+│   └── 01_Data_Oriented_Design/       #   Migrated vault: notes + runnable g++ examples
 ├── 09_Tools_and_Pipeline/             # Asset pipeline, serialization, editor tooling
 ├── 10_Audio/                          # Real-time audio, mixing, spatialization
 ├── 11_Networking/                     # Transport, state sync, latency hiding

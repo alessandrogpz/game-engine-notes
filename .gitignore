@@ -10,6 +10,10 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Editors
+.vscode/
+*.code-workspace
+
 # CLion / JetBrains / CMake
 .idea/
 cmake-build-debug/
