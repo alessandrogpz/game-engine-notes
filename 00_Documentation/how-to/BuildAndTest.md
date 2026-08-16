@@ -48,14 +48,12 @@ g++ -std=c++23 -g -O1 -pthread -fsanitize=thread <file>.cpp -o main
 
 ---
 
-## Not covered by CI
+## Continuous integration
 
-The build is **not** run in continuous integration. C++20 modules need a newer compiler than
-GitHub's runners provide, and getting one installed reliably proved to cost more than it
-returned. CI runs the link and math checks only.
+CI builds and tests the project on every push, using GCC 15 and Ninja. See
+[.github/workflows/checks.yml](../../.github/workflows/checks.yml).
 
-That means the build is verified **locally, by you, on every change** — run the commands
-above before committing anything under `90_Code/`.
+Run the commands above locally before committing anything under `90_Code/`.
 
 ---
 

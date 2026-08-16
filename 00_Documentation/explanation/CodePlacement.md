@@ -1,49 +1,54 @@
-# Why Code Lives Where It Does
+# Code Placement
 
-Code appears in two places in this repository, and the split is deliberate rather than historical accident.
+Code lives in two places.
 
 ---
 
-## Library code: centralized in `90_Code/`
+## Library code: `90_Code/`
 
-`90_Code/` is a single C++23 CMake project — one static library, a shared utility module, an umbrella module re-exporting every sub-module, and one GoogleTest suite.
+A single C++23 CMake project — one static library, a shared utility module, an umbrella
+module re-exporting every sub-module, and one GoogleTest suite.
 
-It is centralized because its parts depend on each other:
+Its parts depend on each other:
 
-* `00_Utils/` provides `floatEqual`, used across every topic. Scattering the modules would mean duplicating that helper or reaching across the notes tree to include it.
-* `engine_notes.cppm` re-exports every sub-module, so it needs them in one module graph.
-* One test suite, one `ctest` invocation, one place where a build failure shows up.
+* `00_Utils/` provides `floatEqual`, used across every topic.
+* `engine_notes.cppm` re-exports every sub-module, requiring them in one module graph.
+* One test suite, one `ctest` invocation.
 
-Fragmenting it across `Concepts/` folders would trade all of that for filesystem adjacency to the notes — and the notes already link to the code explicitly.
-
-The directory mirrors the topic structure, so `05_Geometry/Planes.cppm` sits opposite `Concepts/05_Geometry/04_Planes.md`, and each `.cppm` opens with a link back to its concept note.
+The directory mirrors the topic structure: `05_Geometry/Planes.cppm` corresponds to
+`Concepts/05_Geometry/04_Planes.md`, and each `.cppm` opens with a link to its concept note.
 
 ---
 
 ## Standalone demos: beside the note
 
-Some notes ship a single-file program that exists purely to demonstrate that one note — the AoS-versus-SoA benchmark, the struct padding comparison, the producer-consumer simulation.
+Single-file programs that demonstrate one note — the AoS-versus-SoA benchmark, the struct
+padding comparison, the producer-consumer simulation.
 
-These live in the same folder as the note. They compile independently with a one-line `g++` invocation, share nothing with any other file, and are meaningless away from the prose that explains them. Pulling them into `90_Code/` would add them to a build they do not belong in and separate them from their only context.
+They compile independently with one `g++` invocation, share nothing with other files, and
+carry no meaning apart from the prose that explains them.
 
 ---
 
 ## The rule
 
-> Library code that is part of the built project lives in `90_Code/`.
-> Standalone illustrative snippets live beside the note they illustrate.
+> Code with dependents belongs in `90_Code/`.
+> Code that only ever runs alone to demonstrate one note belongs beside that note.
 
-The distinguishing question is whether the file has dependents. If something else includes or imports it, it belongs in the project. If it only ever runs on its own to make one point, it belongs next to the point it makes.
+The test is whether anything else includes or imports the file.
 
 ---
 
-## Why build artifacts do not pollute the vault
+## Build artifacts
 
-Build directories are gitignored, and Obsidian is separately configured to exclude them via `userIgnoreFilters` in `.obsidian/app.json`. Without that second step a CMake build directory adds thousands of files to Obsidian's index and search results, which makes the vault unusable long before it makes the repository large.
+Build directories are gitignored, and Obsidian excludes them through `userIgnoreFilters` in
+`.obsidian/app.json`. Without the second exclusion, a CMake build directory adds thousands of
+files to Obsidian's index and search results.
 
 ---
 
 ## See also
 
 * [Build and test](../how-to/BuildAndTest.md)
+* [Code conventions](../references/CodeConventions.md)
 * [Build requirements](../references/BuildRequirements.md)

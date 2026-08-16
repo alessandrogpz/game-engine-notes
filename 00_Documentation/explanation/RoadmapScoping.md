@@ -1,49 +1,53 @@
-# Why Roadmaps Say What to Skip
+# Roadmap Scoping
 
-Every domain here carries a `00_Roadmap.md`. Each one names the subjects to cover, the resources worth using, and — for the broad academic fields — **what to deliberately leave out**.
-
-The exclusions are the load-bearing part.
-
----
-
-## The problem they solve
-
-Most of these domains are full academic fields. Calculus, probability, algorithms and signal processing each contain vastly more material than an engine needs. Treated as complete curricula, any one of them absorbs a year and none of them finish.
-
-A roadmap that only lists what to study is a wish. A roadmap that also states what *not* to study is a plan.
+Every domain carries a `00_Roadmap.md` naming the subjects to cover, the resources to use,
+and — for broad academic fields — the material to leave out.
 
 ---
 
-## What the scoping looks like
+## Scope is set by use
 
-**Calculus** — study derivatives, gradients, Jacobians, integrals as accumulation, Taylor series, and ODEs solved numerically. Skip epsilon-delta proofs, series convergence tests, Calculus II integration techniques and real analysis. Engines integrate numerically, never symbolically.
+The selection criterion is what an engine runs, not what a textbook's table of contents
+covers.
 
-**Probability** — study sampling, importance sampling, variance reduction, low-discrepancy sequences. Skip hypothesis testing, confidence intervals and regression; that is inferential statistics, a different discipline serving a different question.
-
-**Algorithms** — emphasize computational geometry and pathfinding. De-emphasize NP-completeness theory, advanced dynamic programming and string algorithms. A standard algorithms curriculum is calibrated for interviews and theory, not for engines.
-
-**Data structures** — emphasize contiguous layouts and spatial structures. De-emphasize red-black tree rotations and Fibonacci heaps. An engine optimizes for a known access pattern over contiguous memory, where a linked list with perfect asymptotics loses badly to a vector that fits in cache.
-
----
-
-## The reasoning
-
-Scope is set by the question *"what does an engine actually run?"* — not by what a textbook's table of contents covers.
-
-That test is what makes the exclusions defensible rather than lazy. Skipping real analysis is not avoiding difficulty; it is recognizing that no engine has ever needed an epsilon-delta proof. Meanwhile numerical methods — often skipped as unglamorous — is flagged as the highest value-per-hour subject in the mathematics domain, because floating-point behaviour and integrator stability are behind a large share of otherwise inexplicable engine bugs.
+Calculus, probability, algorithms and signal processing each contain far more material than
+an engine uses. Stating only what to study leaves each of them unbounded; stating what to
+exclude bounds them.
 
 ---
 
-## Marking things optional rather than deleting them
+## Worked scopes
 
-Some material is genuinely worthwhile but genuinely not required. Geometric algebra is the clearest case: it unifies the intersection formulas already derived in the geometry notes into a single operation, and it is intellectually excellent — but no mainstream engine is built on it.
+**Calculus** — derivatives, gradients, Jacobians, integrals as accumulation, Taylor series,
+ODEs solved numerically. Excluded: epsilon-delta proofs, series convergence tests, Calculus
+II integration techniques, real analysis. Engines integrate numerically.
 
-Rather than silently dropping it, the roadmap keeps it as an explicitly optional subject and records **what would make it worth returning to**. That way the decision is recorded rather than re-litigated every time the topic resurfaces.
+**Probability** — sampling, importance sampling, variance reduction, low-discrepancy
+sequences. Excluded: hypothesis testing, confidence intervals, regression.
+
+**Algorithms** — computational geometry and pathfinding carry the weight. De-emphasized:
+NP-completeness theory, advanced dynamic programming, string algorithms.
+
+**Data structures** — contiguous layouts and spatial structures. De-emphasized: balanced BST
+rotations, exotic heaps. An engine's workload is a known access pattern over contiguous
+memory.
+
+Numerical methods is marked highest value-per-hour in the mathematics domain: floating-point
+behaviour and integrator stability account for a large share of engine defects.
 
 ---
 
-## Status markers
+## Optional subjects
 
-Roadmaps also carry status. A subject is marked *in progress* once it has real notes, and the roadmap links to them directly instead of describing them.
+Material that is worthwhile but not required is marked optional and kept, together with the
+conditions that would make it worth studying.
 
-This keeps the roadmap honest as the domain fills in: it starts as a plan and gradually becomes an index.
+Geometric algebra is the current example: it unifies the intersection formulas in the
+geometry notes into a single operation, and no mainstream engine is built on it.
+
+---
+
+## Status
+
+A subject is marked *in progress* once it has notes, and the roadmap links to them directly
+rather than describing them. A roadmap begins as a plan and becomes an index.

@@ -1,43 +1,48 @@
-# Why Relative Markdown Links, Not Wikilinks
+# Link Format
 
----
-
-## The problem
-
-Obsidian's `[[wikilink]]` syntax is not markdown. It is an Obsidian extension, and GitHub has no idea what to do with it — so a note written like this:
+Cross-references use standard markdown links with relative paths.
 
 ```markdown
-Unlike the [[02_Dot_Product|dot product]] which gives a number, the cross product gives a vector.
+the [cross product](../02_Vectors/04_Cross_Product.md) produces ...
 ```
-
-renders on GitHub as the literal text `[[02_Dot_Product|dot product]]`, brackets and pipe included. Every cross-reference in the vault was unreadable there.
-
-## The fix
-
-Standard markdown links with relative paths work in **both** tools:
-
-```markdown
-Unlike the [dot product](../02_Vectors/02_Dot_Product.md) which gives a number, the cross product gives a vector.
-```
-
-Obsidian resolves relative markdown links and counts them in Graph View and the backlinks panel, so nothing is lost by avoiding wikilinks. GitHub renders them as ordinary links. The vault reads correctly on both surfaces from the same source.
-
-## The cost
-
-Wikilinks are location-independent: `[[02_Dot_Product]]` resolves no matter where either file sits. Relative links are not — move a file and its links break.
-
-That is a real trade, and it is why moves in this repository are always followed by a link-rewriting pass and a verification sweep that resolves every relative target against the filesystem. The tooling makes the cost manageable; the alternative was notes that only worked in one of the two places they are read.
 
 ---
 
-## The one exception
+## Surfaces
 
-Transclusion (`![[Note]]`) has no markdown equivalent. Nothing in standard markdown embeds one file's rendered content inside another.
+Notes are read in two places, and the link syntax must work in both.
 
-It survives in exactly one place: the generated `Daily_Practice.md`, which inlines the day's questions into a single note. That file is gitignored and read only inside Obsidian, so it never reaches GitHub and the limitation costs nothing.
+| Syntax | Obsidian | GitHub |
+| :--- | :--- | :--- |
+| `[label](relative/path.md)` | Resolves; counted in Graph View and backlinks | Renders as a link |
+| `[[wikilink]]` | Resolves | Renders as literal text, brackets included |
+
+Wikilinks are an Obsidian extension rather than markdown, so GitHub does not interpret them.
+Relative markdown links carry no such restriction and lose nothing in Obsidian.
 
 ---
 
-## Convention
+## Trade-off
 
-Full rules in [Naming and note conventions](../references/NamingConventions.md). In short: relative markdown links everywhere, link the first meaningful mention, verify targets resolve after any move.
+Wikilinks are location-independent: `[[02_Dot_Product]]` resolves from anywhere. Relative
+links are position-dependent and break when either file moves.
+
+Every move is therefore followed by a link-rewriting pass and
+[`scripts/check_links.py`](../../scripts/check_links.py), which resolves every relative
+target against the filesystem and exits non-zero on failure. CI runs it on each push.
+
+---
+
+## Transclusion
+
+`![[Note]]` embeds one file's rendered content inside another. Markdown has no equivalent.
+
+It appears only in the generated `Daily_Practice.md`, which is gitignored and read only in
+Obsidian.
+
+---
+
+## Conventions
+
+See [Naming and note conventions](../references/NamingConventions.md) for link forms, and
+[The Knowledge Graph](KnowledgeGraph.md) for what to link.

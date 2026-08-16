@@ -62,6 +62,7 @@ Documentation lives in [00_Documentation](00_Documentation/) and follows the [Di
 * [Naming Conventions](00_Documentation/references/NamingConventions.md) — file names, frontmatter, link forms
 * [Math Formatting](00_Documentation/references/MathFormatting.md) — LaTeX that renders in both Obsidian and GitHub
 * [Randomizer](00_Documentation/references/Randomizer.md) — full CLI documentation
+* [Code Conventions](00_Documentation/references/CodeConventions.md) — module structure, includes, tests
 * [Build Requirements](00_Documentation/references/BuildRequirements.md) — toolchain, targets, compile flags
 
 ### Explanation

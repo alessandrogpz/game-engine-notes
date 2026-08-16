@@ -1,6 +1,6 @@
 # The Knowledge Graph
 
-The point of this vault is not the notes. It is the links between them.
+Notes are connected by links. This describes which links exist and which to add.
 
 ---
 
@@ -32,11 +32,13 @@ As practice accumulates, solved problems cluster around the concepts they exerci
 
 ---
 
-## Why questions and solutions are separate files
+## Separate question and solution files
 
-Keeping them in one file would be simpler to write and useless to study from: the answer would always be one scroll away. Separation makes it possible to attempt a problem honestly, and the **Check Answer** link makes verification one click rather than a search.
+Questions and solutions are separate files so a problem can be attempted without the answer
+visible. The **Check Answer** link connects them.
 
-It also means the randomizer can transclude questions into a practice note without dragging the answers along.
+Separation also lets the randomizer transclude questions into a practice note without
+including the answers.
 
 ---
 

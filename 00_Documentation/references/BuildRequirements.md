@@ -38,13 +38,6 @@ CMake Generate step failed.  Build files cannot be regenerated correctly.
 
 The fix is `-G Ninja`.
 
-> [!NOTE]
-> The project previously used `import std;` (standard library modules). That is a C++23
-> feature whose CMake support is experimental, gated behind an activation UUID that changes
-> every release, and it requires a very recent toolchain. It was dropped in favour of
-> ordinary `#include` inside a global module fragment, so the project now builds with any
-> compiler supporting C++23 and modules — and CI can build it.
-
 ---
 
 ## Standalone examples

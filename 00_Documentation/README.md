@@ -33,6 +33,7 @@ The distinction matters: a tutorial that stops to explain design decisions stops
 * [Naming Conventions](references/NamingConventions.md)
 * [Math Formatting](references/MathFormatting.md)
 * [Randomizer](references/Randomizer.md)
+* [Code Conventions](references/CodeConventions.md)
 * [Build Requirements](references/BuildRequirements.md)
 
 ## Explanation
