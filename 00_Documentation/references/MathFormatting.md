@@ -65,7 +65,28 @@ Do not use the LaTeX `\tag{...}` command to number equations.
 
 ---
 
-## 2. Inline Math (`$ ... $`)
+### E. No `\operatorname{...}`
+
+GitHub's MathJax runs a **restricted macro allowlist**, and `\operatorname` is not on it.
+*   **Problem:** the equation is replaced entirely by an error box reading *"The following macros are not allowed: operatorname"*. It renders fine in Obsidian, so the breakage is invisible until the note is viewed on GitHub.
+*   **Correct:** use `\mathrm{...}` for operator names — it is a font command in the base set rather than a macro, and renders identically upright.
+    ```markdown
+    $\mathrm{adj}(\mathbf{M})$      not  $\operatorname{adj}(\mathbf{M})$
+    $\mathrm{diag}(1, 1, 2)$        not  $\operatorname{diag}(1, 1, 2)$
+    ```
+*   Operators with a built-in command — `\det`, `\sin`, `\cos`, `\log`, `\lim`, `\max`, `\min`, `\gcd` — already work and need no wrapper.
+
+---
+
+## 2. Environments
+
+These are supported and safe to use: `bmatrix`, `pmatrix`, `vmatrix`, `array`, `cases`, `aligned`.
+
+Avoid the bare `align` and `equation` environments — GitHub does not support them. Where multi-line alignment is needed, use `aligned` nested inside a `$$` block.
+
+---
+
+## 3. Inline Math (`$ ... $`)
 
 Inline math should be kept simple. Do not put complex structures inside single dollar signs:
 
@@ -92,7 +113,7 @@ Avoid having multiple subscripts using underscores (`_`) on the same line in inl
 
 ---
 
-## 3. Summary Cheat Sheet
+## 4. Summary Cheat Sheet
 
 | Feature | Formatting Pattern |
 | :--- | :--- |
@@ -100,4 +121,5 @@ Avoid having multiple subscripts using underscores (`_`) on the same line in inl
 | **Display Math** | `$$` block starting at column 0, surrounded by blank lines |
 | **Matrix Row Breaks** | Use `\\\\` (quadruple backslashes) |
 | **Equation Labels** | `**(2.1)**` on the line above the `$$` block |
+| **Operator Names** | `\mathrm{adj}` — never `\operatorname{adj}` |
 | **Subscript Operations** | Put in `$$` blocks to avoid underscore-italics conflict |
