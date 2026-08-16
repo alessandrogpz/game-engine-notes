@@ -32,17 +32,22 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # The runner's default GCC 13 cannot scan C++ module dependencies —
-      # CMake needs P1689 dependency scanning, first implemented in GCC 14.
-      # Ninja is required for the same reason: Makefiles have no dyndep.
-      - name: Install GCC 14 and Ninja
-        run: sudo apt-get update && sudo apt-get install -y g++-14 ninja-build
+      # C++ module support improves sharply across GCC releases: 13 cannot scan
+      # dependencies at all, 14 scans but corrupts its own module cache, 16
+      # builds this project cleanly. 15 is the newest reachable on a runner.
+      # Ninja is required regardless — Makefiles have no dyndep support.
+      - name: Install GCC 15 and Ninja
+        run: |
+          sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+          sudo apt-get update
+          sudo apt-get install -y g++-15 ninja-build
+          g++-15 --version
 
       - name: Configure
         run: >
           cmake -S 90_Code -B build -G Ninja
           -DCMAKE_BUILD_TYPE=Debug
-          -DCMAKE_CXX_COMPILER=g++-14
+          -DCMAKE_CXX_COMPILER=g++-15
 
       # GCC 14's module cache is racy under parallel builds — "failed to read
       # compiled module cluster / Bad file data". Serial keeps it honest.
