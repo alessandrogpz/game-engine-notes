@@ -6,11 +6,6 @@ on:
   pull_request:
   workflow_dispatch:
 
-# The C++ build is deliberately not run here. C++20 modules need a compiler
-# newer than the runners ship, and chasing that across toolchain versions cost
-# more than it returned — the build is exercised locally on every change. These
-# checks are the ones that catch failures which actually recur: links that break
-# when a file moves, and LaTeX that renders in Obsidian but not on GitHub.
 jobs:
   vault:
     name: Links and math
@@ -30,3 +25,27 @@ jobs:
       # unsupported macro replaces the whole equation with an error box.
       - name: Check math renders on GitHub
         run: python3 scripts/check_math.py
+
+  code:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      # The runner's default GCC 13 cannot scan C++ module dependencies —
+      # CMake needs P1689 dependency scanning, first implemented in GCC 14.
+      # Ninja is required for the same reason: Makefiles have no dyndep.
+      - name: Install GCC 14 and Ninja
+        run: sudo apt-get update && sudo apt-get install -y g++-14 ninja-build
+
+      - name: Configure
+        run: >
+          cmake -S 90_Code -B build -G Ninja
+          -DCMAKE_BUILD_TYPE=Debug
+          -DCMAKE_CXX_COMPILER=g++-14
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
