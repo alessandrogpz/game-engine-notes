@@ -44,8 +44,10 @@ jobs:
           -DCMAKE_BUILD_TYPE=Debug
           -DCMAKE_CXX_COMPILER=g++-14
 
+      # GCC 14's module cache is racy under parallel builds — "failed to read
+      # compiled module cluster / Bad file data". Serial keeps it honest.
       - name: Build
-        run: cmake --build build
+        run: cmake --build build -j 1
 
       - name: Test
         run: ctest --test-dir build --output-on-failure

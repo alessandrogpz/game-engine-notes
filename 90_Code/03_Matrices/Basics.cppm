@@ -2,7 +2,8 @@
 module;
 
 #include <cstddef>
-#include <format>
+#include <iomanip>
+#include <ios>
 #include <iostream>
 
 export module matrices_basics;
@@ -90,15 +91,24 @@ export namespace matrices {
     // 7. 4x4 ASCII Matrix Printer
     void print(const Matrix4x4& m)
     {
+        // setw/setprecision are sticky on the stream, so the caller's
+        // formatting is saved and restored around the printout.
+        const std::ios_base::fmtflags savedFlags = std::cout.flags();
+        const std::streamsize savedPrecision = std::cout.precision();
+        std::cout << std::fixed << std::setprecision(4);
+
         for (std::size_t row = 0; row < 4; ++row)
         {
             std::cout << "[ ";
             for (std::size_t col = 0; col < 4; ++col)
             {
-                std::cout << std::format("{:>8.4f} ", m[row, col]);
+                std::cout << std::setw(8) << m[row, col] << ' ';
             }
             std::cout << "]" << std::endl;
         }
+
+        std::cout.flags(savedFlags);
+        std::cout.precision(savedPrecision);
     }
 
     [[nodiscard]]
