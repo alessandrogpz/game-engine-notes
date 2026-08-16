@@ -11,9 +11,9 @@ jobs:
     name: Links and math
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -34,7 +34,7 @@ jobs:
     # dropped: the build is exercised locally, and the vault job above is what
     # catches the failures that actually recur.
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # CMake gates `import std;` behind an activation UUID that changes every
       # release. 90_Code/CMakeLists.txt tracks the value per version, so CI is
