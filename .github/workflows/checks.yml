@@ -51,11 +51,19 @@ jobs:
           sudo ./llvm.sh 21
           sudo apt-get install -y libc++-21-dev libc++abi-21-dev ninja-build
 
+      # CMake locates libc++'s std module relative to the compiler binary. The
+      # /usr/bin/clang++-21 symlink makes it resolve a bogus /lib prefix, so
+      # point at the real binary inside the LLVM tree.
+      - name: Locate the libc++ std module
+        run: |
+          ls -l /usr/lib/llvm-21/share/libc++/v1/ || true
+          find / -name 'std.compat.cppm' 2>/dev/null || true
+
       - name: Configure
         run: >
           cmake -S 90_Code -B build -G Ninja
           -DCMAKE_BUILD_TYPE=Debug
-          -DCMAKE_CXX_COMPILER=clang++-21
+          -DCMAKE_CXX_COMPILER=/usr/lib/llvm-21/bin/clang++
           -DCMAKE_CXX_FLAGS="-stdlib=libc++"
 
       - name: Build
