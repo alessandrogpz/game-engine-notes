@@ -48,6 +48,17 @@ g++ -std=c++23 -g -O1 -pthread -fsanitize=thread <file>.cpp -o main
 
 ---
 
+## Not covered by CI
+
+The build is **not** run in continuous integration. C++20 modules need a newer compiler than
+GitHub's runners provide, and getting one installed reliably proved to cost more than it
+returned. CI runs the link and math checks only.
+
+That means the build is verified **locally, by you, on every change** — run the commands
+above before committing anything under `90_Code/`.
+
+---
+
 ## Stale build directories
 
 CMake caches absolute paths. If the repository is moved or renamed, delete the build directory and reconfigure rather than trying to repair it.
