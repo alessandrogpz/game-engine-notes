@@ -5,7 +5,7 @@ A quick-reference guide to all the multithreading concepts, classes, and functio
 > [!NOTE]
 > **In this folder**
 > * [`concurrency_cpp17.md`](./Concurrency_Cpp17.md) — The full explanation behind every entry here, with synchronization cost measurements.
-> * [`multi_threading.md`](./Multi_Threading.md) — The DOD angle: why a fast program avoids these primitives in hot loops.
+> * [`multi_threading.md`](../../08_Systems_and_Performance/01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md) — The DOD angle: why a fast program avoids these primitives in hot loops.
 > * [`multi_threading.cpp`](./multi_threading.cpp) — Chef-customer queue simulation.
 
 ---
@@ -122,4 +122,4 @@ A quick-reference guide to all the multithreading concepts, classes, and functio
     ```
 
 ---
-*Back to **[multi_threading](./Multi_Threading.md)** · **[README](../README.md)***
+*Back to **[multi_threading](../../08_Systems_and_Performance/01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md)** · **[Concurrency and Parallelism](../00_Roadmap.md)***

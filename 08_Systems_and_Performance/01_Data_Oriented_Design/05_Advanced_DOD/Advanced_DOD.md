@@ -29,7 +29,7 @@ std::vector<ParticleBlock> particleBlocks;
 
 ## 2. SIMD & Vectorization
 
-**SIMD** (Single Instruction, Multiple Data) is a hardware feature allowing a CPU core to perform a single arithmetic operation (like addition or square root) on multiple values in a single instruction cycle.
+**SIMD** (Single Instruction, Multiple Data — see [04_SIMD](../../00_Roadmap.md)) is a hardware feature allowing a CPU core to perform a single arithmetic operation (like addition or square root) on multiple values in a single instruction cycle.
 
 * **Registers:** Modern CPUs contain vector registers:
   * **SSE (128-bit):** Can process 4 floats simultaneously.
@@ -45,7 +45,7 @@ std::vector<ParticleBlock> particleBlocks;
 
 ## 3. ECS (Entity Component System)
 
-**ECS** is an architectural pattern that implements DOD principles. It decouples state and behavior entirely.
+**ECS** is an architectural pattern that implements DOD principles, covered as an engine subsystem under [03_Entity_Systems](../../../04_Engine_Architecture/00_Roadmap.md). It decouples state and behavior entirely.
 
 ```
        ┌───────────┐
@@ -72,7 +72,7 @@ std::vector<ParticleBlock> particleBlocks;
 
 ## 4. Custom Memory Allocators
 
-General-purpose heap allocation (`new` or `malloc`) is slow and causes memory fragmentation because the allocator must search for a free memory block. In DOD, custom memory allocators allocate large blocks of memory upfront and partition them manually.
+General-purpose heap allocation (`new` or `malloc`) — see [02_Memory_Management](../../../04_Engine_Architecture/00_Roadmap.md) for allocators as an engine subsystem — is slow and causes memory fragmentation because the allocator must search for a free memory block. In DOD, custom memory allocators allocate large blocks of memory upfront and partition them manually.
 
 ### Arena (Stack) Allocator
 * **Mechanism:** Allocates a single large buffer. When memory is requested, it simply increments an offset pointer. 

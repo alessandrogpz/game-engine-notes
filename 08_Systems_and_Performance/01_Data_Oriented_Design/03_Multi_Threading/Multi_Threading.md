@@ -4,9 +4,9 @@ This note covers how to write high-performance multi-threaded code by aligning s
 
 > [!NOTE]
 > **In this folder**
-> * [`concurrency_cpp17.md`](./Concurrency_Cpp17.md) — The language primitives: threads, mutexes, atomics, condition variables, deadlock.
-> * [`concurrency_glossary.md`](./Concurrency_Glossary.md) — One-line lookup for each class and function.
-> * [`multi_threading.cpp`](./multi_threading.cpp) — Chef-customer queue simulation.
+> * [`concurrency_cpp17.md`](../../../07_Concurrency_and_Parallelism/01_Foundations/Concurrency_Cpp17.md) — The language primitives: threads, mutexes, atomics, condition variables, deadlock.
+> * [`concurrency_glossary.md`](../../../07_Concurrency_and_Parallelism/01_Foundations/Concurrency_Glossary.md) — One-line lookup for each class and function.
+> * [`multi_threading.cpp`](../../../07_Concurrency_and_Parallelism/01_Foundations/multi_threading.cpp) — Chef-customer queue simulation.
 
 ---
 
@@ -21,7 +21,7 @@ To leverage modern multi-core processors, you must keep cores busy with **indepe
 
 ## Race Conditions & Synchronization Costs
 
-In [multi_threading.cpp](./multi_threading.cpp), we see a race condition where multiple threads attempt to modify a single global variable concurrently:
+In [multi_threading.cpp](../../../07_Concurrency_and_Parallelism/01_Foundations/multi_threading.cpp), we see a race condition where multiple threads attempt to modify a single global variable concurrently:
 
 ```cpp
 int counter = 0;

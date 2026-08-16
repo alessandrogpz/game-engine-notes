@@ -3,24 +3,25 @@
 Using more than one core without introducing bugs that only appear on someone else's machine. Modern engines are fundamentally parallel; this stops being optional quickly.
 
 > [!NOTE]
-> Placeholder. Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
+> [01_Foundations](01_Foundations/) is populated. The remaining subjects are placeholders.
 
 ---
 
 ## Suggested Subjects
 
-### 01_Foundations
-* Threads, and why raw threads are the wrong abstraction for a frame loop
-* Data races vs race conditions; what undefined behaviour actually means here
-* Mutexes, condition variables, and the cost of contention
-* Deadlock, livelock, priority inversion
+### 01_Foundations — *in progress*
+* [Concurrency_Cpp17](01_Foundations/Concurrency_Cpp17.md) — launching threads, join/detach, race conditions and ThreadSanitizer, mutexes and lock granularity, atomics, the cost of synchronization, condition variables, deadlock, and what C++20 adds
+* [Concurrency_Glossary](01_Foundations/Concurrency_Glossary.md) — one-line lookup for each class and function
+* [multi_threading.cpp](01_Foundations/multi_threading.cpp) — chef-customer queue simulation
+
+Still to cover: why raw threads are the wrong abstraction for a frame loop; livelock and priority inversion.
 
 ### 02_Memory_Model
 The part that is genuinely hard and genuinely necessary.
 * Sequential consistency, acquire/release, relaxed ordering
 * Compiler and CPU reordering; why "it works on my machine" proves nothing
 * Atomics and compare-and-swap
-* Cache coherence, false sharing
+* Cache coherence, and false sharing — mechanism covered in [Multi_Threading](../08_Systems_and_Performance/01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md)
 
 ### 03_Job_Systems
 How engines actually parallelize.

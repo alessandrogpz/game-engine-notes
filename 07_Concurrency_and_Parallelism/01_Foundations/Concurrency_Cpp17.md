@@ -7,7 +7,7 @@ scope here is the correctness and cost of the primitives themselves.
 
 > [!NOTE]
 > **In this folder**
-> * [`multi_threading.md`](./Multi_Threading.md) — The DOD angle: why a fast program avoids these primitives in hot loops.
+> * [`multi_threading.md`](../../08_Systems_and_Performance/01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md) — The DOD angle: why a fast program avoids these primitives in hot loops.
 > * [`concurrency_glossary.md`](./Concurrency_Glossary.md) — One-line lookup for each class and function.
 > * [`multi_threading.cpp`](./multi_threading.cpp) — Chef-customer queue simulation.
 
@@ -250,7 +250,7 @@ Two threads, 1,000,000 increments each. Expected count: 2,000,000.
 Read as a hierarchy: **no sharing > atomic > mutex**. Even the atomic costs 9×
 the single-threaded run, because every increment has to be made visible to the
 other core. This is the measurement behind the DOD advice in
-**[multi_threading](./Multi_Threading.md)** — give each thread its own
+**[multi_threading](../../08_Systems_and_Performance/01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md)** — give each thread its own
 destination and combine the results once at the end, so no synchronization is
 needed in the hot loop at all.
 
@@ -473,4 +473,4 @@ cancellation via `std::stop_token`), `std::latch` and `std::barrier`,
 Covered in **[[concurrency_cpp20]]**.
 
 ---
-*Back to **[multi_threading](./Multi_Threading.md)** · **[README](../README.md)***
+*Back to **[multi_threading](../../08_Systems_and_Performance/01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md)** · **[Concurrency and Parallelism](../00_Roadmap.md)***

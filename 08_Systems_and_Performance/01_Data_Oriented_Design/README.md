@@ -26,11 +26,9 @@ bullets under it list everything else in that folder.
 2.  **[memory_alignment](./02_Memory_Alignment/Memory_Alignment.md)**
     *   *Concept:* Learn about hardware word sizes, compiler padding, and struct sorting rules to maximize cache line density.
     *   *Companion Code:* [`alignment.cpp`](./02_Memory_Alignment/alignment.cpp) (Size comparison of aligned vs. padded structures).
-3.  **[multi_threading](./03_Multi_Threading/Multi_Threading.md)**
-    *   *Concept:* Design lock-free parallel systems, analyze race conditions, and avoid False Sharing (cache line ping-ponging).
-    *   *Companion Code:* [`multi_threading.cpp`](./03_Multi_Threading/multi_threading.cpp) (Chef-customer queue concurrency simulation).
-    *   *Primitives:* [`concurrency_cpp17.md`](./03_Multi_Threading/Concurrency_Cpp17.md) (Threads, mutexes, atomics, condition variables, and deadlock, with synchronization cost measurements).
-    *   *Glossary:* [`concurrency_glossary.md`](./03_Multi_Threading/Concurrency_Glossary.md) (Reference guide for C++ concurrency terms and primitives).
+3.  **[Multi_Threading](./03_Multi_Threading/Multi_Threading.md)**
+    *   *Concept:* Avoid False Sharing (cache line ping-ponging) — how threading interacts with the memory hierarchy.
+    *   *See also:* the language primitives themselves live in [07_Concurrency_and_Parallelism](../../07_Concurrency_and_Parallelism/00_Roadmap.md) — [Concurrency_Cpp17](../../07_Concurrency_and_Parallelism/01_Foundations/Concurrency_Cpp17.md) (threads, mutexes, atomics, condition variables, deadlock, with synchronization cost measurements), [Concurrency_Glossary](../../07_Concurrency_and_Parallelism/01_Foundations/Concurrency_Glossary.md), and the [chef-customer simulation](../../07_Concurrency_and_Parallelism/01_Foundations/multi_threading.cpp).
 4.  **[dod_optimizations](./04_DOD_Optimizations/DOD_Optimizations.md)**
     *   *Concept:* A practical, 8-step guide to refactoring OOP entities into DOD structures, achieving up to a 40x speedup.
 5.  **[advanced_dod](./05_Advanced_DOD/Advanced_DOD.md)**
@@ -40,7 +38,7 @@ bullets under it list everything else in that folder.
 
 ## Compiling & Running the Programs
 
-All examples in this project use **C++23**. You can compile and run any of the C++ files from the root of the repository using this general command:
+All examples in this subject use **C++23** (as does [multi_threading.cpp](../../07_Concurrency_and_Parallelism/01_Foundations/multi_threading.cpp), which moved to the concurrency domain). Compile and run any of them with:
 
 ```bash
 g++ -std=c++23 -O3 -pthread <path_to_file.cpp> -o main
@@ -59,7 +57,7 @@ g++ -std=c++23 -O3 -pthread <path_to_file.cpp> -o main
 g++ -std=c++23 -g -O0 -pthread <path_to_file.cpp> -o main
 ```
 
-**Race detection** — instruments memory accesses and reports data races even when the timing happened to work out. Costs a 5–15× slowdown, so it is a debug tool only (see [`concurrency_cpp17.md`](./03_Multi_Threading/Concurrency_Cpp17.md)):
+**Race detection** — instruments memory accesses and reports data races even when the timing happened to work out. Costs a 5–15× slowdown, so it is a debug tool only (see [Concurrency_Cpp17](../../07_Concurrency_and_Parallelism/01_Foundations/Concurrency_Cpp17.md)):
 
 ```bash
 g++ -std=c++23 -g -O1 -pthread -fsanitize=thread <path_to_file.cpp> -o main
