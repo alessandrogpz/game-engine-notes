@@ -11,7 +11,7 @@ Code appears in two places in this repository, and the split is deliberate rathe
 It is centralized because its parts depend on each other:
 
 * `00_Utils/` provides `floatEqual`, used across every topic. Scattering the modules would mean duplicating that helper or reaching across the notes tree to include it.
-* `linear_algebra.cppm` re-exports every sub-module, so it needs them in one module graph.
+* `engine_notes.cppm` re-exports every sub-module, so it needs them in one module graph.
 * One test suite, one `ctest` invocation, one place where a build failure shows up.
 
 Fragmenting it across `Concepts/` folders would trade all of that for filesystem adjacency to the notes — and the notes already link to the code explicitly.

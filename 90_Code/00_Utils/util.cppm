@@ -1,4 +1,4 @@
-export module linear_algebra_util;
+export module engine_notes_util;
 
 import std;
 

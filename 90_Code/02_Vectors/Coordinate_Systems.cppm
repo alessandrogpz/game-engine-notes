@@ -4,7 +4,7 @@ export module vectors_coordinate_systems;
 import std;
 import vectors_basics;
 import vectors_cross_product;
-import linear_algebra_util;
+import engine_notes_util;
 
 export namespace vectors {
 

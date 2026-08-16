@@ -21,7 +21,7 @@ if(NOT DEFINED LA_IMPORT_STD_UUID)
 endif()
 set(CMAKE_EXPERIMENTAL_CXX_IMPORT_STD "${LA_IMPORT_STD_UUID}")
 
-project(LinearAlgebra C CXX)
+project(EngineNotes C CXX)
 
 # Fail here, with an actionable message, rather than at generate time.
 if(NOT CMAKE_CXX_COMPILER_IMPORT_STD)
@@ -39,13 +39,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_MODULE_STD ON)
 
 # Define static library for linear algebra modules
-add_library(LinearAlgebraLib STATIC)
+add_library(EngineNotesLib STATIC)
 
 # Define target C++ module interface files (.cppm) on the library target
-target_sources(LinearAlgebraLib
+target_sources(EngineNotesLib
   PUBLIC
     FILE_SET CXX_MODULES FILES
-        "linear_algebra.cppm"
+        "engine_notes.cppm"
         "00_Utils/util.cppm"
         "01_Systems_of_Equations/Linear_Systems.cppm"
         "02_Vectors/Basics.cppm"
@@ -80,14 +80,14 @@ target_sources(LinearAlgebraLib
 
 # Set compile flags on the library target
 if(MSVC)
-    target_compile_options(LinearAlgebraLib PRIVATE /W4)
+    target_compile_options(EngineNotesLib PRIVATE /W4)
 else()
-    target_compile_options(LinearAlgebraLib PRIVATE -Wall -Wextra -Wpedantic -mavx)
+    target_compile_options(EngineNotesLib PRIVATE -Wall -Wextra -Wpedantic -mavx)
 endif()
 
 # Define main application executable linking to our library
-add_executable(LinearAlgebra main.cpp)
-target_link_libraries(LinearAlgebra PRIVATE LinearAlgebraLib)
+add_executable(EngineNotes main.cpp)
+target_link_libraries(EngineNotes PRIVATE EngineNotesLib)
 
 # Fetch GoogleTest
 include(FetchContent)

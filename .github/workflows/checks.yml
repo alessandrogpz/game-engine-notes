@@ -1,0 +1,52 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  vault:
+    name: Links and math
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Relative links break silently whenever a file moves.
+      - name: Check links resolve
+        run: python3 scripts/check_links.py
+
+      # LaTeX that renders in Obsidian can still fail on GitHub, where an
+      # unsupported macro replaces the whole equation with an error box.
+      - name: Check math renders on GitHub
+        run: python3 scripts/check_math.py
+
+  code:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # `import std;` needs a recent toolchain and the Ninja generator.
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build clang-19 libc++-19-dev libc++abi-19-dev
+
+      - name: Configure
+        run: >
+          cmake -S 90_Code -B build -G Ninja
+          -DCMAKE_BUILD_TYPE=Debug
+          -DCMAKE_CXX_COMPILER=clang++-19
+          -DCMAKE_CXX_FLAGS="-stdlib=libc++"
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Test
+        run: ctest --test-dir build --output-on-failure

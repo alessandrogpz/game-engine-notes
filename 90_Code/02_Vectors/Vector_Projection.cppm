@@ -3,7 +3,7 @@ export module vectors_projection;
 
 import vectors_basics;
 import vectors_dot_product;
-import linear_algebra_util;
+import engine_notes_util;
 
 
 export namespace vectors {

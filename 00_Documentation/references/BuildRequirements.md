@@ -22,9 +22,9 @@ ctest --test-dir build --output-on-failure
 
 | Target | What it is |
 | :--- | :--- |
-| `LinearAlgebraLib` | Static library; every `.cppm` module |
-| `LinearAlgebra` | Executable entry point (`main.cpp`) |
-| `LinearAlgebraTests` | GoogleTest suite |
+| `EngineNotesLib` | Static library; every `.cppm` module |
+| `EngineNotes` | Executable entry point (`main.cpp`) |
+| `EngineNotesTests` | GoogleTest suite |
 
 ### If configuration fails
 

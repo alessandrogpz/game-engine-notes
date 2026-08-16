@@ -4,7 +4,7 @@ export module transforms_quaternions;
 import std;
 
 import vectors_basics;
-import linear_algebra_util;
+import engine_notes_util;
 
 export namespace transforms {
     struct alignas(16) Quaternion

@@ -20,7 +20,7 @@ New here? Start with [Your First Study Session](00_Documentation/tutorials/First
 
 | Domain                                                                         | Covers                                                                      | Coverage                                                                                             |
 | :----------------------------------------------------------------------------- | :-------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
-| [01_Mathematics](01_Mathematics/00_Roadmap.md)                                 | Linear algebra, calculus, numerical methods, probability, signal processing | **Under study** — [Linear Algebra](01_Mathematics/01_Linear_Algebra/): 35 notes, 32 exercise pairs    |
+| [01_Mathematics](01_Mathematics/00_Roadmap.md)                                 | Linear algebra, calculus, numerical methods, probability, signal processing | **Under study** — [Linear Algebra](01_Mathematics/01_Linear_Algebra/README.md): 35 notes, 32 exercise pairs |
 | [02_Rendering](02_Rendering/00_Roadmap.md)                                     | MVP, rasterization, graphics APIs, shading, shadows                         | Roadmap — *next up*                                                                                  |
 | [03_Physics](03_Physics/00_Roadmap.md)                                         | Collision primitives, GJK/SAT, rigid body dynamics                          | Roadmap                                                                                              |
 | [04_Engine_Architecture](04_Engine_Architecture/00_Roadmap.md)                 | Game loop, memory, ECS, resources, tooling patterns                         | Roadmap                                                                                              |
@@ -81,6 +81,7 @@ Documentation lives in [00_Documentation](00_Documentation/) and follows the [Di
 | `randomizer.py` | Picks practice questions and scaffolds new exercise pairs — [reference](00_Documentation/references/Randomizer.md) |
 | `90_Code/` | C++23 CMake project with a GoogleTest suite — [build guide](00_Documentation/how-to/BuildAndTest.md) |
 | `99_Templates/` | Question and solution templates used by the scaffolder |
+| `scripts/` | Link and math checkers — run in CI on every push |
 
 ```bash
 python3 randomizer.py -n 3 --practice     # today's practice

@@ -20,7 +20,7 @@ ctest --test-dir build --output-on-failure
 Build a single target rather than everything:
 
 ```bash
-cmake --build build --target LinearAlgebraLib
+cmake --build build --target EngineNotesLib
 ```
 
 ## Standalone examples

@@ -2,7 +2,7 @@
 include(GoogleTest)
 
 # Define test executable containing all unit test files
-add_executable(LinearAlgebraTests
+add_executable(EngineNotesTests
     Systems_of_Equations/Linear_Systems_tests.cpp
     Vectors/Basics_tests.cpp
     Vectors/Coordinate_Systems_tests.cpp
@@ -26,22 +26,22 @@ add_executable(LinearAlgebraTests
 )
 
 # Set standards and modules
-target_compile_features(LinearAlgebraTests PRIVATE cxx_std_23)
-set_target_properties(LinearAlgebraTests PROPERTIES CXX_MODULE_STD ON)
+target_compile_features(EngineNotesTests PRIVATE cxx_std_23)
+set_target_properties(EngineNotesTests PROPERTIES CXX_MODULE_STD ON)
 
 # Compiler options
 if(MSVC)
-    target_compile_options(LinearAlgebraTests PRIVATE /W4)
+    target_compile_options(EngineNotesTests PRIVATE /W4)
 else()
-    target_compile_options(LinearAlgebraTests PRIVATE -Wall -Wextra -Wpedantic -mavx)
+    target_compile_options(EngineNotesTests PRIVATE -Wall -Wextra -Wpedantic -mavx)
 endif()
 
 # Link with our C++ module library and GoogleTest
-target_link_libraries(LinearAlgebraTests
+target_link_libraries(EngineNotesTests
     PRIVATE
-        LinearAlgebraLib
+        EngineNotesLib
         GTest::gtest_main
 )
 
 # Discover tests automatically
-gtest_discover_tests(LinearAlgebraTests)
+gtest_discover_tests(EngineNotesTests)

@@ -3,7 +3,7 @@ export module vectors_basics;
 
 import std;
 import matrices_basics;
-import linear_algebra_util;
+import engine_notes_util;
 
 export namespace vectors {
 

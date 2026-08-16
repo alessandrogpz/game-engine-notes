@@ -44,7 +44,7 @@ game-engine-notes/
 │   ├── 00_Utils/                      #   Shared helpers (float comparison)
 │   ├── 01_Systems_of_Equations/       #   One .cppm per concept note
 │   ├── 02_Vectors/ … 05_Geometry/
-│   ├── linear_algebra.cppm            #   Umbrella module re-exporting each sub-module
+│   ├── engine_notes.cppm              #   Umbrella module re-exporting each sub-module
 │   ├── tests/                         #   GoogleTest, one file per module
 │   └── CMakeLists.txt
 │
@@ -52,6 +52,10 @@ game-engine-notes/
 │   ├── Template_Question.md
 │   └── Template_Solution.md
 │
+├── scripts/                           # Verification checks, also run in CI
+│   ├── check_links.py                 #   Every relative link resolves
+│   └── check_math.py                  #   LaTeX renders on GitHub, not just Obsidian
+├── .github/workflows/checks.yml       # Runs both checks plus the build and tests
 ├── randomizer.py                      # Practice picker and exercise scaffolder
 ├── TODO.md                            # Pending solutions and unimplemented modules
 └── README.md                          # Entry point and domain index

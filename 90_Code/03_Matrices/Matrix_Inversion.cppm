@@ -5,7 +5,7 @@ import std;
 
 import matrices_basics;
 import matrices_determinants;
-import linear_algebra_util;
+import engine_notes_util;
 
 export namespace matrices {
 

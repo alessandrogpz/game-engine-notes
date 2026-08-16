@@ -4,7 +4,7 @@ export module vectors_dot_product;
 import std;
 
 import vectors_basics;
-import linear_algebra_util;
+import engine_notes_util;
 
 export namespace vectors {
 
