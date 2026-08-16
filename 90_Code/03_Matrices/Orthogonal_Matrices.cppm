@@ -1,7 +1,9 @@
 // Related Concept: [05_Orthogonal_Matrices](../../01_Mathematics/01_Linear_Algebra/Concepts/03_Matrices/05_Orthogonal_Matrices.md)
-export module matrices_orthogonal;
+module;
 
-import std;
+#include <cmath>
+
+export module matrices_orthogonal;
 
 import matrices_basics;
 import vectors_basics;

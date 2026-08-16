@@ -1,7 +1,11 @@
 // Related Concept: [01_Basics](../../01_Mathematics/01_Linear_Algebra/Concepts/03_Matrices/01_Basics.md)
-export module matrices_basics;
+module;
 
-import std;
+#include <cstddef>
+#include <format>
+#include <iostream>
+
+export module matrices_basics;
 
 export namespace matrices {
     struct Matrix4x4

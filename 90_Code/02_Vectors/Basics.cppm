@@ -1,7 +1,10 @@
 // Related Concept: [01_Basics](../../01_Mathematics/01_Linear_Algebra/Concepts/02_Vectors/01_Basics.md)
+module;
+
+#include <cmath>
+
 export module vectors_basics;
 
-import std;
 import matrices_basics;
 import engine_notes_util;
 

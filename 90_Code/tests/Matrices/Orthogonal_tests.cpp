@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
-import std;
+#include <cmath>
+#include <numbers>
 import matrices_basics;
 import matrices_orthogonal;
 

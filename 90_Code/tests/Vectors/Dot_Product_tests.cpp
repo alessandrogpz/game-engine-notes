@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-import std;
+#include <numbers>
 import vectors_basics;
 import vectors_dot_product;
 

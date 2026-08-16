@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-import std;
+
 import vectors_basics;
 import transforms_scales;
 

@@ -15,7 +15,7 @@ ctest --test-dir build --output-on-failure
 ```
 
 > [!IMPORTANT]
-> The **Ninja generator is required**. `import std;` is not supported under Unix Makefiles, and configuring without `-G Ninja` fails with an unsupported-generator error.
+> The **Ninja generator is required**. C++ modules need dyndep support to discover compile order, which Unix Makefiles cannot provide — configuring without `-G Ninja` fails at the generate step.
 
 Build a single target rather than everything:
 

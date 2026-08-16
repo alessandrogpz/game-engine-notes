@@ -1,7 +1,9 @@
 // Related Concept: [06_Reflection_Through_Plane](../../01_Mathematics/01_Linear_Algebra/Concepts/05_Geometry/06_Reflection_Through_Plane.md)
-export module geometry_reflection_through_plane;
+module;
 
-import std;
+#include <iostream>
+
+export module geometry_reflection_through_plane;
 
 export namespace geometry {
     void test_geometry_reflection_through_plane() {

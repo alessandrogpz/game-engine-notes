@@ -1,42 +1,10 @@
 cmake_minimum_required(VERSION 3.28)
 set(CMAKE_SUPPRESS_DEVELOPER_WARNINGS ON CACHE INTERNAL "Suppress dev warnings" FORCE)
 
-# `import std;` is still an experimental CMake feature, gated behind an
-# activation UUID that changes with EVERY CMake release. A stale value is
-# silently ignored and only surfaces later as an unhelpful "requires toolchain
-# support" error at generate time, so the value is tracked here per version and
-# verified below.
-#
-# When a newer CMake is not in this table, look up its value in
-# Help/dev/experimental.rst in that version's source tree, then either add it
-# here or pass -DLA_IMPORT_STD_UUID=<uuid> on the command line.
-if(NOT DEFINED LA_IMPORT_STD_UUID)
-    if(CMAKE_VERSION VERSION_GREATER_EQUAL "4.4.0")
-        set(LA_IMPORT_STD_UUID "f35a9ac6-8463-4d38-8eec-5d6008153e7d")
-    elseif(CMAKE_VERSION VERSION_GREATER_EQUAL "4.3.0")
-        set(LA_IMPORT_STD_UUID "451f2fe2-a8a2-47c3-bc32-94786d8fc91b")
-    else()
-        set(LA_IMPORT_STD_UUID "d0edc3af-4c50-42ea-a356-e2862fe7a444")
-    endif()
-endif()
-set(CMAKE_EXPERIMENTAL_CXX_IMPORT_STD "${LA_IMPORT_STD_UUID}")
-
 project(EngineNotes C CXX)
-
-# Fail here, with an actionable message, rather than at generate time.
-if(NOT CMAKE_CXX_COMPILER_IMPORT_STD)
-    message(FATAL_ERROR
-        "`import std;` support was not enabled for CMake ${CMAKE_VERSION}.\n"
-        "Reason: ${CMAKE_CXX_COMPILER_IMPORT_STD_ERROR_MESSAGE}\n"
-        "The activation UUID tried was ${LA_IMPORT_STD_UUID}, which this CMake "
-        "does not accept. Find the correct value for this release in "
-        "Help/dev/experimental.rst of its source tree and reconfigure with "
-        "-DLA_IMPORT_STD_UUID=<uuid>.")
-endif()
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_MODULE_STD ON)
 
 # Define static library for linear algebra modules
 add_library(EngineNotesLib STATIC)

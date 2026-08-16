@@ -1,7 +1,9 @@
 // Related Concept: [01_Linear_Systems](../../01_Mathematics/01_Linear_Algebra/Concepts/01_Systems_of_Equations/01_Linear_Systems.md)
-export module systems_linear_systems;
+module;
 
-import std;
+#include <iostream>
+
+export module systems_linear_systems;
 
 export namespace systems {
     void test_systems_linear_systems() {

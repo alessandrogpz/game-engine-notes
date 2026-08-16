@@ -1,7 +1,9 @@
 // Related Concept: [03_Determinants](../../01_Mathematics/01_Linear_Algebra/Concepts/03_Matrices/03_Determinants.md)
-export module matrices_determinants;
+module;
 
-import std;
+#include <cstddef>
+
+export module matrices_determinants;
 
 import matrices_basics;
 

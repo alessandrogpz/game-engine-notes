@@ -1,7 +1,7 @@
 // Related Concept: [04_Scales](../../01_Mathematics/01_Linear_Algebra/Concepts/04_Transforms/04_Scales.md)
-export module transforms_scales;
+module;
 
-import std;
+export module transforms_scales;
 
 import matrices_basics;
 import vectors_basics;

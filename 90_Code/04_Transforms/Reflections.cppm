@@ -1,7 +1,7 @@
 // Related Concept: [03_Reflections](../../01_Mathematics/01_Linear_Algebra/Concepts/04_Transforms/03_Reflections.md)
-export module transforms_reflections;
+module;
 
-import std;
+export module transforms_reflections;
 
 import vectors_basics;
 import matrices_basics;

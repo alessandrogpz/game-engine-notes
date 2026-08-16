@@ -1,7 +1,11 @@
 // Related Concept: [03_Coordinate_Systems](../../01_Mathematics/01_Linear_Algebra/Concepts/02_Vectors/03_Coordinate_Systems.md)
+module;
+
+#include <algorithm>
+#include <cmath>
+
 export module vectors_coordinate_systems;
 
-import std;
 import vectors_basics;
 import vectors_cross_product;
 import engine_notes_util;

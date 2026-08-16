@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
-import std;
+#include <cmath>
+#include <numbers>
 import vectors_basics;
 import vectors_coordinate_systems;
 

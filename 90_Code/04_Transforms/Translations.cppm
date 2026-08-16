@@ -1,7 +1,9 @@
 // Related Concept: [06_Translations](../../01_Mathematics/01_Linear_Algebra/Concepts/04_Transforms/06_Translations.md)
-export module transforms_translations;
+module;
 
-import std;
+#include <iostream>
+
+export module transforms_translations;
 
 import matrices_basics;
 import vectors_basics;

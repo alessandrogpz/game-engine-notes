@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-import std;
+
 import vectors_basics;
 import vectors_cross_product;
 import vectors_scalar_triple_product;

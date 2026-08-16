@@ -27,7 +27,6 @@ add_executable(EngineNotesTests
 
 # Set standards and modules
 target_compile_features(EngineNotesTests PRIVATE cxx_std_23)
-set_target_properties(EngineNotesTests PROPERTIES CXX_MODULE_STD ON)
 
 # Compiler options
 if(MSVC)

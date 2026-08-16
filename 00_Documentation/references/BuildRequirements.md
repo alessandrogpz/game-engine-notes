@@ -7,7 +7,7 @@
 | | |
 | :--- | :--- |
 | Language standard | C++23 |
-| Required feature | `import std;` (standard library modules) |
+| Required feature | C++20 modules (`export module`) |
 | Generator | **Ninja** — Unix Makefiles are unsupported |
 | Test framework | GoogleTest, fetched automatically by CMake |
 | Build types | `Debug`, `Release` |
@@ -28,14 +28,22 @@ ctest --test-dir build --output-on-failure
 
 ### If configuration fails
 
-`import std;` support is gated behind a generator check and a CMake-version-specific activation UUID. Configuring under Makefiles produces:
+C++ modules need a generator that supports **dyndep** — dynamic dependency discovery —
+because the compile order cannot be known until module dependencies are scanned. Unix
+Makefiles cannot do this, so configuring without `-G Ninja` fails at the generate step:
 
 ```
-`import std;` support was not enabled for CMake <version>.
-Reason: Unsupported generator: Unix Makefiles
+CMake Generate step failed.  Build files cannot be regenerated correctly.
 ```
 
 The fix is `-G Ninja`.
+
+> [!NOTE]
+> The project previously used `import std;` (standard library modules). That is a C++23
+> feature whose CMake support is experimental, gated behind an activation UUID that changes
+> every release, and it requires a very recent toolchain. It was dropped in favour of
+> ordinary `#include` inside a global module fragment, so the project now builds with any
+> compiler supporting C++23 and modules — and CI can build it.
 
 ---
 

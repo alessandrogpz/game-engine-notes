@@ -1,7 +1,10 @@
 // Related Concept: [05_Skews](../../01_Mathematics/01_Linear_Algebra/Concepts/04_Transforms/05_Skews.md)
-export module transforms_skews;
+module;
 
-import std;
+#include <cmath>
+#include <numbers>
+
+export module transforms_skews;
 
 import matrices_basics;
 import vectors_basics;

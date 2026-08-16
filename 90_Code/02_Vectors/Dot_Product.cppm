@@ -1,7 +1,10 @@
 // Related Concept: [02_Dot_Product](../../01_Mathematics/01_Linear_Algebra/Concepts/02_Vectors/02_Dot_Product.md)
-export module vectors_dot_product;
+module;
 
-import std;
+#include <algorithm>
+#include <cmath>
+
+export module vectors_dot_product;
 
 import vectors_basics;
 import engine_notes_util;

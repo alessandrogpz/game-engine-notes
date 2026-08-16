@@ -1,7 +1,9 @@
 // Related Concept: [02_Matrix_Multiplication](../../01_Mathematics/01_Linear_Algebra/Concepts/03_Matrices/02_Matrix_Multiplication.md)
-export module matrices_multiplication;
+module;
 
-import std;
+#include <cstddef>
+
+export module matrices_multiplication;
 
 import vectors_basics;
 import matrices_basics;

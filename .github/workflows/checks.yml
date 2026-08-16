@@ -29,42 +29,15 @@ jobs:
   code:
     name: Build and test
     runs-on: ubuntu-latest
-    # `import std;` needs a bleeding-edge toolchain — newer than anything the
-    # runner ships by default. If this job proves unmaintainable it can be
-    # dropped: the build is exercised locally, and the vault job above is what
-    # catches the failures that actually recur.
     steps:
       - uses: actions/checkout@v5
 
-      # CMake gates `import std;` behind an activation UUID that changes every
-      # release. 90_Code/CMakeLists.txt tracks the value per version, so CI is
-      # pinned to a version that table knows about.
-      - name: Install CMake 4.4
-        uses: jwlawson/actions-setup-cmake@v2
-        with:
-          cmake-version: "4.4.2"
-
-      - name: Install Clang 21 and libc++
-        run: |
-          wget -q https://apt.llvm.org/llvm.sh
-          chmod +x llvm.sh
-          sudo ./llvm.sh 21
-          sudo apt-get install -y libc++-21-dev libc++abi-21-dev ninja-build
-
-      # CMake locates libc++'s std module relative to the compiler binary. The
-      # /usr/bin/clang++-21 symlink makes it resolve a bogus /lib prefix, so
-      # point at the real binary inside the LLVM tree.
-      - name: Locate the libc++ std module
-        run: |
-          ls -l /usr/lib/llvm-21/share/libc++/v1/ || true
-          find / -name 'std.compat.cppm' 2>/dev/null || true
+      # C++ modules need a generator with dyndep support; Makefiles cannot do it.
+      - name: Install Ninja
+        run: sudo apt-get update && sudo apt-get install -y ninja-build
 
       - name: Configure
-        run: >
-          cmake -S 90_Code -B build -G Ninja
-          -DCMAKE_BUILD_TYPE=Debug
-          -DCMAKE_CXX_COMPILER=/usr/lib/llvm-21/bin/clang++
-          -DCMAKE_CXX_FLAGS="-stdlib=libc++"
+        run: cmake -S 90_Code -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
 
       - name: Build
         run: cmake --build build

@@ -1,7 +1,9 @@
 // Related Concept: [10_Transforming_Planes](../../01_Mathematics/01_Linear_Algebra/Concepts/05_Geometry/10_Transforming_Planes.md)
-export module geometry_transforming_planes;
+module;
 
-import std;
+#include <iostream>
+
+export module geometry_transforming_planes;
 
 export namespace geometry {
     void test_geometry_transforming_planes() {

@@ -1,7 +1,9 @@
 // Related Concept: [02_Normal_Vectors](../../01_Mathematics/01_Linear_Algebra/Concepts/05_Geometry/02_Normal_Vectors.md)
-export module geometry_normal_vectors;
+module;
 
-import std;
+#include <iostream>
+
+export module geometry_normal_vectors;
 
 export namespace geometry {
     void test_geometry_normal_vectors() {

@@ -1,4 +1,4 @@
-import std;
+#include <iostream>
 
 int main() {
     std::cout << "Linear Algebra Application Executed Successfully!" << std::endl;

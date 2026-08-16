@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-import std;
+
 import geometry_normal_vectors;
 
 TEST(GeometryNormalVectors, Initialization) {

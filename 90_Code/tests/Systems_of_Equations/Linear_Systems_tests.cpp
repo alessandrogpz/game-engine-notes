@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-import std;
+
 import systems_linear_systems;
 
 TEST(SystemsLinearSystems, Initialization) {

@@ -1,7 +1,9 @@
 // Related Concept: [04_Matrix_Inversion](../../01_Mathematics/01_Linear_Algebra/Concepts/03_Matrices/04_Matrix_Inversion.md)
-export module matrices_inversion;
+module;
 
-import std;
+#include <cstddef>
+
+export module matrices_inversion;
 
 import matrices_basics;
 import matrices_determinants;

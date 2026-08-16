@@ -1,6 +1,8 @@
-export module engine_notes_util;
+module;
 
-import std;
+#include <cmath>
+
+export module engine_notes_util;
 
 export namespace util {
 
