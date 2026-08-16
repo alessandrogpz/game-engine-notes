@@ -18,21 +18,23 @@ New here? Start with [Your First Study Session](00_Documentation/tutorials/First
 
 ## Domains
 
-| Domain | Covers | Status |
-| :--- | :--- | :--- |
-| [01_Mathematics](01_Mathematics/00_Roadmap.md) | Linear algebra, calculus, numerical methods, probability, signal processing | **[Linear Algebra](01_Mathematics/01_Linear_Algebra/) complete** — 35 concept notes, 32 exercise pairs |
-| [02_Rendering](02_Rendering/00_Roadmap.md) | MVP, rasterization, graphics APIs, shading, shadows | Roadmap |
-| [03_Physics](03_Physics/00_Roadmap.md) | Collision primitives, GJK/SAT, rigid body dynamics | Roadmap |
-| [04_Engine_Architecture](04_Engine_Architecture/00_Roadmap.md) | Game loop, memory, ECS, resources, tooling patterns | Roadmap |
-| [05_Data_Structures](05_Data_Structures/00_Roadmap.md) | Spatial structures, cache-aware containers | Roadmap |
-| [06_Algorithms](06_Algorithms/00_Roadmap.md) | Computational geometry, pathfinding, procedural generation | Roadmap |
-| [07_Concurrency_and_Parallelism](07_Concurrency_and_Parallelism/00_Roadmap.md) | Memory model, job systems, lock-free structures | **[Foundations](07_Concurrency_and_Parallelism/01_Foundations/) in progress** |
-| [08_Systems_and_Performance](08_Systems_and_Performance/00_Roadmap.md) | Cache hierarchy, data-oriented design, SIMD, profiling | **[Data-Oriented Design](08_Systems_and_Performance/01_Data_Oriented_Design/README.md) in progress** |
-| [09_Tools_and_Pipeline](09_Tools_and_Pipeline/00_Roadmap.md) | Asset pipeline, serialization, build systems, editor tooling | Roadmap |
-| [10_Audio](10_Audio/00_Roadmap.md) | Real-time audio, mixing, spatialization, DSP | Roadmap |
-| [11_Networking](11_Networking/00_Roadmap.md) | Transport, state sync, latency hiding, determinism | Roadmap |
+| Domain                                                                         | Covers                                                                      | Coverage                                                                                             |
+| :----------------------------------------------------------------------------- | :-------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
+| [01_Mathematics](01_Mathematics/00_Roadmap.md)                                 | Linear algebra, calculus, numerical methods, probability, signal processing | **Under study** — [Linear Algebra](01_Mathematics/01_Linear_Algebra/): 35 notes, 32 exercise pairs    |
+| [02_Rendering](02_Rendering/00_Roadmap.md)                                     | MVP, rasterization, graphics APIs, shading, shadows                         | Roadmap — *next up*                                                                                  |
+| [03_Physics](03_Physics/00_Roadmap.md)                                         | Collision primitives, GJK/SAT, rigid body dynamics                          | Roadmap                                                                                              |
+| [04_Engine_Architecture](04_Engine_Architecture/00_Roadmap.md)                 | Game loop, memory, ECS, resources, tooling patterns                         | Roadmap                                                                                              |
+| [05_Data_Structures](05_Data_Structures/00_Roadmap.md)                         | Spatial structures, cache-aware containers                                  | Roadmap                                                                                              |
+| [06_Algorithms](06_Algorithms/00_Roadmap.md)                                   | Computational geometry, pathfinding, procedural generation                  | Roadmap                                                                                              |
+| [07_Concurrency_and_Parallelism](07_Concurrency_and_Parallelism/00_Roadmap.md) | Memory model, job systems, lock-free structures                             | **Under study** — [Foundations](07_Concurrency_and_Parallelism/01_Foundations/): 2 notes             |
+| [08_Systems_and_Performance](08_Systems_and_Performance/00_Roadmap.md)         | Cache hierarchy, data-oriented design, SIMD, profiling                      | **Under study** — [Data-Oriented Design](08_Systems_and_Performance/01_Data_Oriented_Design/): 5 notes |
+| [09_Tools_and_Pipeline](09_Tools_and_Pipeline/00_Roadmap.md)                   | Asset pipeline, serialization, build systems, editor tooling                | Roadmap                                                                                              |
+| [10_Audio](10_Audio/00_Roadmap.md)                                             | Real-time audio, mixing, spatialization, DSP                                | Roadmap                                                                                              |
+| [11_Networking](11_Networking/00_Roadmap.md)                                   | Transport, state sync, latency hiding, determinism                          | Roadmap                                                                                              |
 
-Outstanding work is tracked in [TODO.md](TODO.md).
+**Roadmap** means the study plan exists but no notes yet. **Under study** means notes exist and are actively being added to and revised.
+
+Nothing here is ever finished — notes get revisited and deepened as the material gets used, and a domain reaching the end of its roadmap only means the first pass is done. Open threads are tracked in [TODO.md](TODO.md).
 
 ---
 
@@ -40,11 +42,11 @@ Outstanding work is tracked in [TODO.md](TODO.md).
 
 Documentation lives in [00_Documentation](00_Documentation/) and follows the [Diátaxis](https://diataxis.fr/) framework — separated by what you need at the moment you open it.
 
-### Tutorials — *learning-oriented*
+### Tutorials
 
 * [Your First Study Session](00_Documentation/tutorials/FirstStudySession.md) — one complete practice cycle, start to finish
 
-### How-to Guides — *task-oriented*
+### How-to Guides
 
 * [Run a Practice Session](00_Documentation/how-to/RunPracticeSession.md) — filter by topic, difficulty or tag
 * [Add a New Exercise](00_Documentation/how-to/AddExercise.md)
@@ -54,7 +56,7 @@ Documentation lives in [00_Documentation](00_Documentation/) and follows the [Di
 * [Build and Test the Code](00_Documentation/how-to/BuildAndTest.md)
 * [Use the Templates](00_Documentation/how-to/UseTemplates.md)
 
-### Reference — *information-oriented*
+### Reference
 
 * [Repository Structure](00_Documentation/references/RepositoryStructure.md) — the full tree and common relative paths
 * [Naming Conventions](00_Documentation/references/NamingConventions.md) — file names, frontmatter, link forms
@@ -62,7 +64,7 @@ Documentation lives in [00_Documentation](00_Documentation/) and follows the [Di
 * [Randomizer](00_Documentation/references/Randomizer.md) — full CLI documentation
 * [Build Requirements](00_Documentation/references/BuildRequirements.md) — toolchain, targets, compile flags
 
-### Explanation — *understanding-oriented*
+### Explanation
 
 * [Vault Organization](00_Documentation/explanation/VaultOrganization.md) — why domain first, and why one vault rather than many
 * [The Knowledge Graph](00_Documentation/explanation/KnowledgeGraph.md) — how notes link, and what to link
