@@ -1,8 +1,5 @@
 # Templates
 
-The two files [randomizer.py](../randomizer.py) reads when scaffolding an exercise pair.
-Nothing else belongs in this folder — the scaffolder copies whatever it finds here verbatim.
-
 | Template | Produces |
 | :--- | :--- |
 | [Template_Question.md](Template_Question.md) | `Q_<NN>_<Name>.md` — frontmatter, Part 1 calculation, Part 2 conceptual, footer to the solution |

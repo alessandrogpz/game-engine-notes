@@ -43,7 +43,7 @@ Nothing here is ever finished — notes get revisited and deepened as the materi
 
 ## Documentation
 
-Documentation lives in [00_Documentation](00_Documentation/README.md), indexed there in full. It follows the [Diátaxis](https://diataxis.fr/) framework — separated by what you need at the moment you open it.
+Documentation lives in [00_Documentation](00_Documentation/README.md), indexed there in full. It follows the [Diátaxis](https://diataxis.fr/) framework.
 
 * [Tutorials](00_Documentation/README.md#tutorials)
 * [How-to Guides](00_Documentation/README.md#how-to-guides)

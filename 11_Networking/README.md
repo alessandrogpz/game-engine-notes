@@ -1,8 +1,5 @@
 # Networking
 
-Multiplayer as an engine subsystem — only relevant if the games you want require it, but if
-they do, it constrains architecture deeply enough that retrofitting is painful.
-
 > [!NOTE]
 > **No notes yet.** This domain is at the roadmap stage. The plan — subjects, resources, and
 > the order to take them in — is in [00_Roadmap.md](00_Roadmap.md).

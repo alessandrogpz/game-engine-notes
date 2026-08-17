@@ -1,8 +1,5 @@
 # Algorithms
 
-Algorithmic technique, scoped to what engines actually run — computational geometry and
-pathfinding carry far more weight here than a typical curriculum would suggest.
-
 > [!NOTE]
 > **No notes yet.** This domain is at the roadmap stage. The plan — subjects, resources, and
 > what to deliberately de-emphasize — is in [00_Roadmap.md](00_Roadmap.md).

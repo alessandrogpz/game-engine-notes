@@ -1,8 +1,5 @@
 # Audio
 
-A smaller domain than rendering, but a real-time system with harder latency constraints and no
-tolerance for a dropped buffer.
-
 > [!NOTE]
 > **No notes yet.** This domain is at the roadmap stage. The plan — subjects, resources, and
 > the order to take them in — is in [00_Roadmap.md](00_Roadmap.md).

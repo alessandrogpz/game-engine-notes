@@ -1,11 +1,5 @@
 # Documentation
 
-Organized by the [Diátaxis](https://diataxis.fr/) framework, which separates documentation by what you need at the moment you open it.
-
-The distinction matters: a tutorial that stops to explain design decisions stops being followable, and a reference that teaches stops being scannable.
-
----
-
 ## Tutorials
 
 * [Your First Study Session](tutorials/FirstStudySession.md) — one complete practice cycle, start to finish

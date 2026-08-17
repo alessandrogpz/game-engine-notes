@@ -1,8 +1,5 @@
 # Engine Architecture
 
-How the pieces fit together — the domain that turns a renderer and a physics library into an
-*engine*, and the one least covered by mathematics books.
-
 > [!NOTE]
 > **No notes yet.** This domain is at the roadmap stage. The plan — subjects, resources, and
 > the order to take them in — is in [00_Roadmap.md](00_Roadmap.md).

@@ -1,15 +1,5 @@
 # Linear Algebra
 
-The mathematical foundation everything else in this vault builds on — vectors and matrices,
-the transforms an engine applies to them, and the geometry those transforms operate on.
-
-Worked from Eric Lengyel's *Foundations of Game Engine Development, Volume 1*, with
-derivations expanded where the book is terse and exercises added throughout.
-
-**35 concept notes · 32 exercise pairs · 5 topics**
-
----
-
 ## 01_Systems_of_Equations
 
 Solving simultaneous equations, and what the solution set looks like geometrically.
@@ -131,14 +121,3 @@ Planes, lines and their intersections — the machinery behind culling, collisio
 [Q_08_Intersection_Three_Planes](Exercises/05_Geometry/Questions/Q_08_Intersection_Three_Planes.md) ·
 [Q_09_Intersection_Two_Planes](Exercises/05_Geometry/Questions/Q_09_Intersection_Two_Planes.md) ·
 [Q_10_Transforming_Planes](Exercises/05_Geometry/Questions/Q_10_Transforming_Planes.md)
-
----
-
-## Related
-
-* [Mathematics](../README.md) — the domain index; the rest of its subjects
-* [Mathematics roadmap](../00_Roadmap.md) — the remaining subjects and how much of each to learn
-* [C++ implementations](../../90_Code/README.md) — one module per concept note, with tests
-* Figures live in `Assets/`, embedded by the notes that use them
-
-Open threads for this subject are in [TODO.md](../../TODO.md).

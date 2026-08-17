@@ -1,9 +1,5 @@
 # Scripts
 
-The two verification checks. Both read the git index rather than the working tree, exit
-non-zero on failure, and run in CI on every push — see
-[checks.yml](../.github/workflows/checks.yml).
-
 | Script | Enforces |
 | :--- | :--- |
 | [check_links.py](check_links.py) | Every relative link and image source resolves, **and none points at a folder** |

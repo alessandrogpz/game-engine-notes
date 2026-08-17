@@ -1,7 +1,5 @@
 # Physics
 
-Collision detection and rigid body simulation.
-
 > [!NOTE]
 > **No notes yet.** This domain is at the roadmap stage. The plan — subjects, resources, and
 > the order to take them in — is in [00_Roadmap.md](00_Roadmap.md).

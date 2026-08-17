@@ -1,19 +1,15 @@
 # Systems and Performance
 
-What the hardware actually does, and how to write code that suits it.
-
----
-
 ## Subjects
 
-| Subject | Status | Contents |
-| :--- | :--- | :--- |
-| [01_Data_Oriented_Design](01_Data_Oriented_Design/README.md) | **Under study** | 5 notes, each with a runnable companion program |
-| `02_Memory_Hierarchy` | Planned | Cache levels and associativity, locality, prefetching, TLB |
-| `03_CPU_Architecture` | Planned | Pipelining, branch prediction, ILP, out-of-order execution |
-| `04_SIMD` | Planned | SSE/AVX and NEON, intrinsics vs autovectorization, SoA as prerequisite |
-| `05_Profiling_and_Measurement` | Planned | Sampling vs instrumenting, flame graphs, `perf` counters |
-| `06_Compilers_and_Toolchain` | Planned | Optimization levels, inlining, aliasing, reading disassembly |
+| Subject | Covers |
+| :--- | :--- |
+| [01_Data_Oriented_Design](01_Data_Oriented_Design/README.md) | Cache locality, memory alignment, false sharing, AoSoA and SIMD |
+| `02_Memory_Hierarchy` | Cache levels and associativity, locality, prefetching, TLB |
+| `03_CPU_Architecture` | Pipelining, branch prediction, ILP, out-of-order execution |
+| `04_SIMD` | SSE/AVX and NEON, intrinsics vs autovectorization, SoA as prerequisite |
+| `05_Profiling_and_Measurement` | Sampling vs instrumenting, flame graphs, `perf` counters |
+| `06_Compilers_and_Toolchain` | Optimization levels, inlining, aliasing, reading disassembly |
 
 [00_Roadmap.md](00_Roadmap.md) covers the planned subjects and the order to take them in.
 

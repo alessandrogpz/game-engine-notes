@@ -1,13 +1,5 @@
 # Foundations
 
-The C++ concurrency primitives themselves — what each one does, what it costs, and how each
-one fails. Everything later in this domain assumes these.
-
-This subject is notes beside a runnable program rather than `Concepts/` + `Exercises/`; the
-demonstrations are the exercise.
-
----
-
 ## Notes
 
 ### [Concurrency_Cpp17](Concurrency_Cpp17.md)

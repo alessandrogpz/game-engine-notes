@@ -1,7 +1,5 @@
 # Data Structures
 
-Structures chosen for cache behaviour and access pattern, not asymptotic elegance.
-
 > [!NOTE]
 > **No notes yet.** This domain is at the roadmap stage. The plan — subjects, resources, and
 > what to deliberately de-emphasize — is in [00_Roadmap.md](00_Roadmap.md).

@@ -1,13 +1,5 @@
 # Code
 
-One buildable C++23 project. Every concept note that has an implementation has exactly one
-module here, and the folder layout mirrors the topic folders in
-[01_Linear_Algebra](../01_Mathematics/01_Linear_Algebra/README.md).
-
-**30 modules · GoogleTest suite · CMake + Ninja**
-
----
-
 ## Build
 
 ```bash
@@ -57,12 +49,3 @@ A new module is registered in two places: [engine_notes.cppm](engine_notes.cppm)
 `target_sources` list in [CMakeLists.txt](CMakeLists.txt).
 
 Full rules in [Code Conventions](../00_Documentation/references/CodeConventions.md).
-
----
-
-## Related
-
-* [Linear Algebra](../01_Mathematics/01_Linear_Algebra/README.md) — the notes these modules implement
-* [Code Placement](../00_Documentation/explanation/CodePlacement.md) — why some code lives here
-  and some lives beside its note
-* Unimplemented modules are tracked in [TODO.md](../TODO.md)
