@@ -57,7 +57,7 @@ Linear maps as objects — and the properties that decide whether a map can be u
 > [!NOTE]
 > `06_Projection_Matrices` is the *linear algebra* sense — projecting onto a subspace,
 > $\mathbf{P} = \hat{u}\hat{u}^T$. Perspective projection is a different operation entirely and
-> belongs to [02_Rendering](../../02_Rendering/README.md).
+> belongs to [02_Rendering](../../02_Rendering/00_Roadmap.md).
 
 ---
 
