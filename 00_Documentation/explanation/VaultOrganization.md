@@ -56,7 +56,7 @@ age differently, so they are separate files.
 
 ```text
 01_Mathematics/
-├── README.md         # what exists: subjects, note counts, links in
+├── README.md         # what exists: the subjects, and links into them
 └── 00_Roadmap.md     # what does not: subjects to cover, and how much of each
 ```
 
@@ -67,6 +67,30 @@ which also carries the build instructions for its own examples.
 
 Folders below subject level — `Concepts/`, `Assets/`, `Exercises/<Topic>/Questions/` — hold
 leaf content and get no index; the subject index already lists what is in them.
+
+---
+
+## An index is a list, not a page
+
+An index carries navigation and nothing else. Anything a reader could get from the folder name,
+or from the file one click away, is duplication that will fall out of date on its own.
+
+| Kept out | Why |
+| :--- | :--- |
+| A description paragraph under the title | The folder name already said it |
+| A `Status` column | A subject that exists is a link; a planned one is a code span. The list already shows which is which |
+| Note, exercise or module counts | Wrong the next time anything is added, and nothing depends on the number |
+| A table of a subject's contents | That is the subject index, one click away and maintained in one place |
+| A trailing `Related` or `Builds on` section | Those pointers belong beside the material that discusses them, which is the roadmap |
+| A `— description` after each link in a list | Titles like *Build Requirements* are already self-describing |
+
+Scoping markers stay, because they record a decision rather than progress:
+`` `06_Geometric_Algebra` *(optional)* `` sits in the subject cell rather than earning a column.
+
+> [!IMPORTANT]
+> This applies to indexes only. A concept note still opens by stating what the concept **is**
+> before any derivation — see [Add a Concept Note](../how-to/AddConceptNote.md). Stripping
+> prose out of a note makes it worse, not tighter.
 
 ---
 
