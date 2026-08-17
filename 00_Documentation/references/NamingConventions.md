@@ -42,7 +42,9 @@ tags: [exercise, solution, intersection-two-planes, cross-product]
 ---
 ```
 
-`difficulty` is `Easy`, `Medium` or `Hard`, and is what `randomizer.py -d` filters on. Tags are what `-t` filters on, so keep them consistent across related exercises.
+`difficulty` is `Easy`, `Medium` or `Hard`. Nothing on the command line reads these — the [randomizer](Randomizer.md) only picks at random — but Obsidian's search and tag pane do, so keep tags consistent across related exercises.
+
+The `<NN>` in a question or solution name is the number of the concept note it practises: `Q_06_Projection_Properties.md` exercises `06_Vector_Projection.md`. Several exercises may share a number.
 
 ---
 

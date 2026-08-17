@@ -32,5 +32,5 @@ equation with an error box. Local preview therefore proves nothing. See
 
 ## Related
 
-* [randomizer.py](../randomizer.py) — practice picker and exercise scaffolder, documented in
+* [randomizer.py](../randomizer.py) — picks one random question to practise, documented in
   [Randomizer](../00_Documentation/references/Randomizer.md)

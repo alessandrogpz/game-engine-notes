@@ -1,43 +1,49 @@
 # Run a Practice Session
 
-Filter the exercise pool by topic, difficulty or tag.
+Pick a question, solve it on paper, check it against the solution.
 
 ---
 
-## Pick questions
+## Pick a question
+
+From the repository root:
 
 ```bash
-python3 randomizer.py geometry -n 5       # one topic, five questions
-python3 randomizer.py -d Hard -n 3        # by difficulty
-python3 randomizer.py -t cross-product    # by frontmatter tag
-python3 randomizer.py                     # random difficulty distribution
+python3 randomizer.py
 ```
 
-The topic argument matches any topic folder by substring, so `vectors`, `geometry` and `transforms` all work regardless of their numeric prefix.
-
-## Generate a workspace
-
-Add `--practice` to any of the above to also write `Daily_Practice.md` in the root, with each selected question transcluded inline:
+One question, drawn from anywhere in the vault. To stay inside a domain, subject or topic,
+name it:
 
 ```bash
-python3 randomizer.py geometry -d Medium -n 4 --practice
+python3 randomizer.py mathematics          # anywhere in 01_Mathematics
+python3 randomizer.py "linear algebra"     # anywhere in 01_Linear_Algebra
+python3 randomizer.py geometry             # 05_Geometry only
 ```
 
-`Daily_Practice.md` is gitignored — delete it when finished.
+Numeric prefixes are ignored and underscores read as spaces, so `vectors` finds `02_Vectors`.
+If the scope matches nothing, the tool lists the ones it knows rather than silently widening
+to the whole vault. Every flag is in the [randomizer reference](../references/Randomizer.md).
 
-## Combine filters
+## Work it
 
-Filters stack. Topic, difficulty and tag can be applied together:
+Open the file it printed. Every question has two parts:
 
-```bash
-python3 randomizer.py geometry -d Hard -t implicit-plane -n 2
-```
+* **Part 1: Calculation** — work the numbers by hand. Writing the derivation out is the point.
+* **Part 2: Conceptual Understanding** — why the method works, and what breaks in the
+  degenerate cases.
 
-If no questions match, the tool reports the filters it applied rather than failing silently.
+## Check it
+
+The **Check Answer** link at the bottom of the question opens the solution, which gives the
+full derivation rather than just the result. From there, **Related Concepts** leads back to
+the theory note the exercise came from.
+
+That round trip — question, solution, concept — is the habit the vault is built around.
 
 ---
 
 ## See also
 
-* [Randomizer reference](../references/Randomizer.md) — every flag
-* [Add a new exercise](AddExercise.md)
+* [Randomizer reference](../references/Randomizer.md)
+* [Add a new exercise](AddExercise.md) — when you find a problem worth keeping

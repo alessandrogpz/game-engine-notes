@@ -56,12 +56,12 @@ Documentation lives in [00_Documentation](00_Documentation/README.md), indexed t
 
 | | |
 | :--- | :--- |
-| [randomizer.py](randomizer.py) | Picks practice questions and scaffolds new exercise pairs — [reference](00_Documentation/references/Randomizer.md) |
+| [randomizer.py](randomizer.py) | Picks one random question to practise — [reference](00_Documentation/references/Randomizer.md) |
 | [90_Code](90_Code/README.md) | C++23 CMake project with a GoogleTest suite — [build guide](00_Documentation/how-to/BuildAndTest.md) |
-| [99_Templates](99_Templates/README.md) | Question and solution templates used by the scaffolder |
+| [99_Templates](99_Templates/README.md) | Question and solution templates |
 | [scripts](scripts/README.md) | Link and math checkers — run in CI on every push |
 
 ```bash
-python3 randomizer.py -n 3 --practice     # today's practice
+python3 randomizer.py                     # one question to practise
 cmake -S 90_Code -B build -G Ninja        # configure the code project
 ```

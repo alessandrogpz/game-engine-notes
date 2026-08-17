@@ -66,7 +66,7 @@ game-engine-notes/
 │   ├── check_links.py                 #   Links resolve, and none points at a folder
 │   └── check_math.py                  #   LaTeX renders on GitHub, not just Obsidian
 ├── .github/workflows/checks.yml       # Runs both checks plus the build and tests
-├── randomizer.py                      # Practice picker and exercise scaffolder
+├── randomizer.py                      # Picks one random question to practise
 ├── TODO.md                            # Pending solutions and unimplemented modules
 └── README.md                          # Entry point and domain index
 ```

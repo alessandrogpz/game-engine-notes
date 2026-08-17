@@ -1,6 +1,6 @@
 # Use the Templates
 
-Exercise notes are scaffolded from the templates in `99_Templates/`. The [randomizer](../references/Randomizer.md) fills them in automatically with `--new`; this describes using them by hand from inside Obsidian.
+Exercise notes are built from the two templates in [99_Templates](../../99_Templates/README.md). This describes inserting them from inside Obsidian; [Add a new exercise](AddExercise.md) covers what to put in them afterwards.
 
 ---
 
@@ -15,5 +15,5 @@ When you create a new note for a math problem, press `Ctrl/Cmd + P`, type `Inser
 
 ## See also
 
-* [Add a new exercise](AddExercise.md) — the scaffolded route
+* [Add a new exercise](AddExercise.md) — naming, frontmatter and footers
 * [Naming conventions](../references/NamingConventions.md) — frontmatter and footer forms

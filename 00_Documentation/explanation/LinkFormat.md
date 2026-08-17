@@ -64,10 +64,11 @@ target against the filesystem and exits non-zero on failure. CI runs it on each 
 
 ## Transclusion
 
-`![[Note]]` embeds one file's rendered content inside another. Markdown has no equivalent.
+`![[Note]]` embeds one file's rendered content inside another. Markdown has no equivalent, so
+it would render as literal text on GitHub.
 
-It appears only in the generated `Daily_Practice.md`, which is gitignored and read only in
-Obsidian.
+Nothing in the vault uses it. It is available in Obsidian for scratch notes that are never
+committed, but no committed file may rely on it.
 
 ---
 

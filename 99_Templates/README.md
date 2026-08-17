@@ -9,14 +9,12 @@
 
 ## Use
 
-Scaffold both halves of a pair at once rather than copying by hand — the tool fills in the
-frontmatter and both footers:
-
-```bash
-python3 randomizer.py <topic> --new <Name> --difficulty <Easy|Medium|Hard>
-```
-
-Then replace the `Concept_Name` placeholder in both footers with the real concept note.
+Copy both into the topic's `Questions/` and `Solutions/` folders, or insert them from inside
+Obsidian — see [Use the Templates](../00_Documentation/how-to/UseTemplates.md). Then fill in
+the frontmatter and replace the placeholder names in both footers with the real files, as
+[Add a New Exercise](../00_Documentation/how-to/AddExercise.md) describes.
 
 The placeholder links inside these two files point at names that do not exist, so
 [check_links.py](../scripts/check_links.py) skips them by path.
+
+Nothing else belongs in this folder.

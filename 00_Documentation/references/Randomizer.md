@@ -1,76 +1,66 @@
-# Exercise Randomizer & Scaffolder
+# Randomizer
 
-A powerful Python command-line utility to manage, filter, and practice math exercises in your Obsidian repository.
-
-## Features
-
-- **Smart Topic Matching:** No need to type the full numbered prefixes (e.g. `02_Vectors`). Enter `vectors`, `Vectors`, or even `vec` and the utility will automatically resolve the correct directory.
-- **Advanced Filtering:** Filter questions dynamically using YAML frontmatter tags (`-t` / `--tag`) and difficulty ratings (`-d` / `--difficulty`).
-- **Obsidian Daily Practice Note:** Generate a `Daily_Practice.md` note in the root directory that embeds selected exercises using Obsidian's transclusion syntax (`![[Note]]`), enabling a consolidated workspace.
-- **Frictionless Scaffolding:** Create new question-solution note pairs from your templates in seconds using `--new`. It automatically sets up frontmatter, tags, headings, and relative cross-links.
-
----
-
-## Default Study Practice
-
-If you run the script **without any filtering or count flags** (e.g. `python3 randomizer.py` or `python3 randomizer.py --practice`), it will automatically and randomly select exactly **one random question** with an **equal chance** between the available difficulty levels (Easy, Medium, or Hard) to keep your study sessions focused and balanced.
-
----
-
-## Command Line Usage
-
-Run the utility from the root of the repository:
+Picks one random question to practise. That is the whole tool.
 
 ```bash
-python3 randomizer.py [topic] [flags]
+python3 randomizer.py [scope]
 ```
 
-### Searching & Filtering Flags
-
-| Flag | Name | Type | Description |
-| :--- | :--- | :--- | :--- |
-| `topic` | Topic | Positional | Optional folder substring to match (e.g., `vectors`, `matrices`, `systems`). |
-| `-n`, `--number` | Count | Integer | Number of questions to random-sample (default: `5`). |
-| `-d`, `--difficulty`| Difficulty | String | Filter by YAML frontmatter difficulty level (`Easy`, `Medium`, `Hard`). |
-| `-t`, `--tag` | Tag | String | Filter by YAML frontmatter tag (e.g., `dot-product`, `orthogonality`). |
-| `-p`, `--practice` | Practice Note| Flag | Generates `Daily_Practice.md` in the root with Obsidian transclusions. |
-
-### Scaffolding Flags
-
-| Flag | Name | Type | Description |
-| :--- | :--- | :--- | :--- |
-| `--new` | Create | String | Scaffolds a new Question and Solution file. Must be used with a topic. |
+Run it from the repository root — it discovers questions by globbing
+`*/*/Exercises/*/Questions/Q_*.md`, which is relative to the working directory.
 
 ---
 
-## Examples
+## The scope argument
 
-### 1. Daily Study and Randomization
+Optional. Without it, the pick is from every question in the vault. With it, the pick is
+restricted to a **domain**, a **subject** or a **topic** — whichever the argument names.
 
-| Goal | Command |
+| Command | Picks from |
 | :--- | :--- |
-| **Get a balanced random selection (Default)** | `python3 randomizer.py` |
-| **Get 3 random questions** | `python3 randomizer.py -n 3` |
-| **Get 3 Easy questions from Vectors** | `python3 randomizer.py vectors -d Easy -n 3` |
-| **Get questions matching tag "dot-product"**| `python3 randomizer.py -t dot-product` |
-| **Generate a Daily Practice Workspace note**| `python3 randomizer.py matrices -n 3 --practice` |
+| `python3 randomizer.py` | Every question in the vault |
+| `python3 randomizer.py mathematics` | Every subject in `01_Mathematics` |
+| `python3 randomizer.py "linear algebra"` | Every topic in `01_Linear_Algebra` |
+| `python3 randomizer.py vectors` | `02_Vectors` only |
 
-### 2. Scaffold a New Exercise Note-Pair
+Matching ignores numeric prefixes and reads underscores as spaces, so `02_Vectors` answers to
+`vectors`, and `01_Linear_Algebra` to `linear algebra`, `linear_algebra` or `linear`. An exact
+name wins over a substring; failing both, any scope containing the query matches.
 
-To create a new question and solution pair for vectors named `Q_Angle_Between_Vectors.md` and `S_Angle_Between_Vectors.md`:
+## Output
 
-```bash
-python3 randomizer.py vectors --new Angle_Between_Vectors --difficulty Easy
+The question name, how many were in scope, and the path:
+
+```
+Q_09_Intersection_Two_Planes  (10 available in geometry)
+01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Questions/Q_09_Intersection_Two_Planes.md
 ```
 
-This command will:
-1. Smart-resolve `vectors` to `01_Mathematics/01_Linear_Algebra/Exercises/02_Vectors/`.
-2. Retrieve templates `Template_Question.md` and `Template_Solution.md` from `99_Templates/`.
-3. Create `Questions/Q_Angle_Between_Vectors.md` with:
-   - Topic metadata filled.
-   - Difficulty metadata filled.
-   - Interactive Check Answer link `[S_Angle_Between_Vectors](../Solutions/S_Angle_Between_Vectors.md)`.
-4. Create `Solutions/S_Angle_Between_Vectors.md` with:
-   - Topic metadata filled.
-   - Interactive Back to Question link `[Q_Angle_Between_Vectors](../Questions/Q_Angle_Between_Vectors.md)`.
+## When nothing matches
 
+The tool exits non-zero and lists every scope it does know, rather than quietly falling back
+to the whole vault:
+
+```
+Nothing matches 'rendering'.
+
+Available scopes:
+  geometry
+  linear algebra
+  mathematics
+  matrices
+  systems of equations
+  transforms
+  vectors
+```
+
+---
+
+## What it does not do
+
+Filtering by difficulty or tag, picking several questions at once, scaffolding new exercise
+pairs, and generating a transcluded practice note were all removed. The tool does one thing.
+
+* To create an exercise pair, see [Add a New Exercise](../how-to/AddExercise.md).
+* `difficulty` and `tags` stay in question frontmatter — Obsidian's own search and tag pane
+  read them, even though this tool no longer does.

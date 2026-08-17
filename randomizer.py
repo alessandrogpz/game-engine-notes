@@ -1,385 +1,98 @@
-import os
-import glob
-import random
+#!/usr/bin/env python3
+"""Pick one random question to practise.
+
+Usage:
+    python3 randomizer.py                    # anywhere in the vault
+    python3 randomizer.py vectors            # only 02_Vectors
+    python3 randomizer.py "linear algebra"   # every topic in 01_Linear_Algebra
+    python3 randomizer.py mathematics        # every subject in 01_Mathematics
+
+The scope argument matches a domain, a subject or a topic folder. Numeric
+prefixes are ignored and underscores read as spaces, so `02_Vectors` answers to
+`vectors`, and `01_Linear_Algebra` to `linear algebra`, `linear_algebra` or
+`linear`.
+"""
+
+from __future__ import annotations
+
 import argparse
+import glob
+import os
+import random
 import re
-from datetime import datetime
+import sys
 
-# Exercises live at <NN_Domain>/<NN_Subject>/Exercises/<NN_Topic>/{Questions,Solutions}
-EXERCISES_GLOB = os.path.join("*", "*", "Exercises")
+# Exercises live at <NN_Domain>/<NN_Subject>/Exercises/<NN_Topic>/Questions/Q_*.md
+QUESTION_GLOB = os.path.join("*", "*", "Exercises", "*", "Questions", "Q_*.md")
 
-
-def all_topic_folders():
-    """Every <domain>/<subject>/Exercises/<topic> directory in the vault."""
-    return sorted(d for d in glob.glob(os.path.join(EXERCISES_GLOB, "*")) if os.path.isdir(d))
+# Path components that name something a scope can match: domain, subject, topic.
+SCOPE_PARTS = (0, 1, 3)
 
 
-def question_files(search_path=None):
-    """All Q_*.md files, optionally restricted to a single topic folder."""
-    if search_path:
-        return sorted(glob.glob(os.path.join(search_path, "**", "Questions", "Q_*.md"), recursive=True))
-    return sorted(glob.glob(os.path.join(EXERCISES_GLOB, "*", "Questions", "Q_*.md")))
+def question_files() -> list[str]:
+    return sorted(glob.glob(QUESTION_GLOB))
 
 
-def topic_names():
-    """Human-readable topic names for error messages."""
-    return [re.sub(r'^\d+_', '', os.path.basename(d)) for d in all_topic_folders()]
-
-def find_topic_folder(topic_query, base_path=None):
-    """
-    Finds a topic folder anywhere in the vault matching topic_query.
-    Supports case-insensitive exact matching, numbered prefix ignoring, and substring matching.
-    """
-    if not topic_query:
-        return None
-
-    subdirs = all_topic_folders()
-    query_clean = topic_query.lower().strip()
-
-    # 1. Try exact or clean match (ignoring prepended numbers like "02_")
-    for d in subdirs:
-        d_clean = os.path.basename(d).lower()
-        d_no_prefix = re.sub(r'^\d+_', '', d_clean)
-        if query_clean == d_clean or query_clean == d_no_prefix:
-            return d
-
-    # 2. Try substring match
-    for d in subdirs:
-        d_clean = os.path.basename(d).lower()
-        d_no_prefix = re.sub(r'^\d+_', '', d_clean)
-        if query_clean in d_clean or query_clean in d_no_prefix:
-            return d
-
-    return None
-
-def parse_frontmatter(file_path):
-    """
-    Parses YAML frontmatter (topic, difficulty, tags) from a markdown file.
-    Does not require external libraries.
-    """
-    metadata = {"topic": None, "difficulty": None, "tags": []}
-    if not os.path.exists(file_path):
-        return metadata
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            content = f.read()
-        if not content.startswith("---"):
-            return metadata
-        parts = content.split("---", 2)
-        if len(parts) < 3:
-            return metadata
-        frontmatter_text = parts[1]
-        for line in frontmatter_text.splitlines():
-            line = line.strip()
-            if not line or ":" not in line:
-                continue
-            key, val = line.split(":", 1)
-            key = key.strip().lower()
-            val = val.strip()
-            if key == "topic":
-                metadata["topic"] = val
-            elif key == "difficulty":
-                metadata["difficulty"] = val
-            elif key == "tags":
-                # Handle tags as inline array e.g. [tag1, tag2] or simple values
-                val_clean = val.strip("[]").strip()
-                if val_clean:
-                    metadata["tags"] = [t.strip().lower() for t in val_clean.split(",") if t.strip()]
-    except Exception as e:
-        print(f"Warning: Error parsing frontmatter for {file_path}: {e}")
-    return metadata
-
-def scaffold_new_question(name, topic_query, difficulty=None, base_path=None, templates_path="99_Templates"):
-    """
-    Generates a new question and solution file based on templates, with prefilled linking and frontmatter.
-    """
-    # 1. Resolve topic folder
-    topic_folder = find_topic_folder(topic_query, base_path)
-    if not topic_folder:
-        print(f"Error: Topic '{topic_query}' not found in the vault.")
-        print(f"Available topics: {', '.join(topic_names())}")
-        return False
-    
-    # Extract clean topic name (e.g. "Vectors" from "02_Vectors")
-    folder_name = os.path.basename(topic_folder)
-    clean_topic_name = re.sub(r'^\d+_', '', folder_name).replace("_", " ").title()
-    
-    # Normalize name: strip Q_ or S_ if provided
-    base_name = name
-    if base_name.startswith("Q_"):
-        base_name = base_name[2:]
-    elif base_name.startswith("S_"):
-        base_name = base_name[2:]
-        
-    q_file_name = f"Q_{base_name}.md"
-    s_file_name = f"S_{base_name}.md"
-    
-    q_dir = os.path.join(topic_folder, "Questions")
-    s_dir = os.path.join(topic_folder, "Solutions")
-    
-    os.makedirs(q_dir, exist_ok=True)
-    os.makedirs(s_dir, exist_ok=True)
-    
-    q_path = os.path.join(q_dir, q_file_name)
-    s_path = os.path.join(s_dir, s_file_name)
-    
-    if os.path.exists(q_path) or os.path.exists(s_path):
-        print(f"Error: Question or Solution file already exists:")
-        print(f"  Question: {q_path} (Exists: {os.path.exists(q_path)})")
-        print(f"  Solution: {s_path} (Exists: {os.path.exists(s_path)})")
-        return False
-        
-    # Templates
-    q_template_path = os.path.join(templates_path, "Template_Question.md")
-    s_template_path = os.path.join(templates_path, "Template_Solution.md")
-    
-    if not os.path.exists(q_template_path) or not os.path.exists(s_template_path):
-        print(f"Error: Templates not found under '{templates_path}'.")
-        print("Please check that 'Template_Question.md' and 'Template_Solution.md' exist.")
-        return False
-        
-    try:
-        # Read templates
-        with open(q_template_path, "r", encoding="utf-8") as f:
-            q_content = f.read()
-        with open(s_template_path, "r", encoding="utf-8") as f:
-            s_content = f.read()
-            
-        # Prefill Question template
-        diff_val = difficulty.capitalize() if difficulty else ""
-        q_content = q_content.replace("topic: ", f"topic: {clean_topic_name}")
-        q_content = q_content.replace("difficulty: ", f"difficulty: {diff_val}")
-        q_content = q_content.replace("[Solution_Name](../Solutions/Solution_Name.md)", f"[S_{base_name}](../Solutions/S_{base_name}.md)")
-        
-        # Prefill Solution template
-        s_content = s_content.replace("topic: ", f"topic: {clean_topic_name}")
-        s_content = s_content.replace("[Question_Name](../Questions/Question_Name.md)", f"[Q_{base_name}](../Questions/Q_{base_name}.md)")
-        
-        # Write outputs
-        with open(q_path, "w", encoding="utf-8") as f:
-            f.write(q_content)
-        with open(s_path, "w", encoding="utf-8") as f:
-            f.write(s_content)
-            
-        print(f"Successfully scaffolded new exercise under '{clean_topic_name}':")
-        print(f"  Question file: {q_path} -> [[{q_file_name[:-3]}]]")
-        print(f"  Solution file: {s_path} -> [[{s_file_name[:-3]}]]")
-        return True
-    except Exception as e:
-        print(f"Error during scaffolding: {e}")
-        return False
-
-def generate_daily_practice(questions, output_path="Daily_Practice.md"):
-    """
-    Creates a Daily_Practice.md file in the root folder transcluding selected questions.
-    """
-    try:
-        date_str = datetime.now().strftime("%Y-%m-%d")
-        content = []
-        content.append(f"# Daily Practice - {date_str}")
-        content.append("")
-        content.append("Use these Obsidian transclusions to practice today's exercises directly in this note. Click on the question links or solutions to check your answers.")
-        content.append("")
-        
-        for i, q_path in enumerate(questions, 1):
-            q_base = os.path.basename(q_path)
-            q_name = q_base[:-3]  # Strip .md
-            content.append(f"## {i}. [[{q_name}]]")
-            content.append(f"![[{q_name}]]")
-            content.append("")
-            content.append("---")
-            
-        # Clean up trailing divider
-        if content and content[-1] == "---":
-            content.pop()
-            
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write("\n".join(content))
-            
-        print(f"\nCreated Daily Practice Note: '{output_path}' with {len(questions)} transcluded questions!")
-        return True
-    except Exception as e:
-        print(f"Error generating Daily Practice note: {e}")
-        return False
-
-def get_default_distribution_questions(base_path=None):
-    """
-    Scans the repository and randomly picks exactly one question,
-    with an equal (1/3) chance for each difficulty level (Easy, Medium, Hard).
-    """
-    all_questions = question_files()
-    
-    easy_q = []
-    medium_q = []
-    hard_q = []
-    
-    for q_path in all_questions:
-        metadata = parse_frontmatter(q_path)
-        diff = metadata["difficulty"]
-        if diff:
-            diff_clean = diff.strip().lower()
-            if diff_clean == "easy":
-                easy_q.append(q_path)
-            elif diff_clean == "medium":
-                medium_q.append(q_path)
-            elif diff_clean == "hard":
-                hard_q.append(q_path)
-                
-    # Determine which difficulties have at least one question available
-    available_difficulties = []
-    if easy_q:
-        available_difficulties.append("Easy")
-    if medium_q:
-        available_difficulties.append("Medium")
-    if hard_q:
-        available_difficulties.append("Hard")
-        
-    if not available_difficulties:
-        return [], "No questions found"
-        
-    # Pick a difficulty level with equal probability
-    chosen_difficulty = random.choice(available_difficulties)
-    
-    selected = []
-    if chosen_difficulty == "Easy":
-        selected.append(random.choice(easy_q))
-    elif chosen_difficulty == "Medium":
-        selected.append(random.choice(medium_q))
-    elif chosen_difficulty == "Hard":
-        selected.append(random.choice(hard_q))
-        
-    desc = f"Random {chosen_difficulty} Question"
-    return selected, desc
+def normalize(name: str) -> str:
+    """`01_Linear_Algebra` -> `linear algebra`, so a query can be typed naturally."""
+    return re.sub(r"^\d+_", "", name).replace("_", " ").strip().lower()
 
 
-def get_random_questions(count=None, topic_query=None, difficulty_filter=None, tag_filter=None, practice=False, base_path=None):
-    """
-    Walks through topic folders, parses metadata, filters by criteria, and prints random questions.
-    If no filtering or count flags are specified, runs the default randomized category distribution.
-    Optionally calls Daily Practice generation.
-    """
-    # Check if this is a default run where no query options are provided
-    is_default_run = (
-        count is None and
-        topic_query is None and
-        difficulty_filter is None and
-        tag_filter is None
+def scopes_of(path: str) -> list[str]:
+    """The domain, subject and topic names a question path sits under."""
+    parts = path.split(os.sep)
+    return [normalize(parts[i]) for i in SCOPE_PARTS if i < len(parts)]
+
+
+def matching(paths: list[str], query: str) -> list[str]:
+    """Questions whose domain, subject or topic matches. Exact wins over substring."""
+    q = normalize(query)
+    exact = [p for p in paths if q in scopes_of(p)]
+    if exact:
+        return exact
+    return [p for p in paths if any(q in s for s in scopes_of(p))]
+
+
+def available_scopes(paths: list[str]) -> list[str]:
+    """Every name a scope argument could take, for the error message."""
+    return sorted({s for p in paths for s in scopes_of(p)})
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Pick one random question to practise.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="The scope matches a domain, subject or topic folder — "
+               'e.g. "vectors", "linear algebra", "mathematics".',
     )
-    
-    if is_default_run:
-        selected, desc = get_default_distribution_questions(base_path)
-        if not selected:
-            print("No questions found in the repository.")
-            return
-            
-        print(f"--- Default Study Practice ({len(selected)} questions | {desc}) ---")
-        for i, path in enumerate(selected, 1):
-            print(f"{i}. [[{os.path.basename(path)[:-3]}]] (Path: {path})")
-            
-        if practice:
-            generate_daily_practice(selected)
-        return
+    parser.add_argument(
+        "scope",
+        nargs="?",
+        help="Optional domain, subject or topic to pick from (default: anywhere)",
+    )
+    args = parser.parse_args()
 
-    # Fallback default count if explicitly filtered but no count was specified
-    final_count = count if count is not None else 5
+    questions = question_files()
+    if not questions:
+        print("No questions found. Run from the repository root.", file=sys.stderr)
+        return 1
 
-    # 1. Resolve search path
-    search_path = None
-    resolved_topic_name = None
-    if topic_query:
-        topic_folder = find_topic_folder(topic_query, base_path)
-        if topic_folder:
-            search_path = topic_folder
-            folder_name = os.path.basename(topic_folder)
-            resolved_topic_name = re.sub(r'^\d+_', '', folder_name).replace("_", " ").title()
-        else:
-            print(f"Warning: Topic folder for '{topic_query}' not found in the vault. Searching all topics instead.")
+    label = "the whole vault"
+    if args.scope:
+        questions = matching(questions, args.scope)
+        if not questions:
+            print(f"Nothing matches {args.scope!r}.\n", file=sys.stderr)
+            print("Available scopes:", file=sys.stderr)
+            for scope in available_scopes(question_files()):
+                print(f"  {scope}", file=sys.stderr)
+            return 1
+        label = args.scope
 
-    # 2. Collect question files
-    all_questions = question_files(search_path)
-    
-    if not all_questions:
-        print("No questions found.")
-        return
-        
-    # 3. Apply YAML frontmatter filters
-    filtered_questions = []
-    for q_path in all_questions:
-        metadata = parse_frontmatter(q_path)
-        
-        # Difficulty filtering
-        if difficulty_filter:
-            q_diff = metadata["difficulty"]
-            if not q_diff or q_diff.lower() != difficulty_filter.lower():
-                continue
-                
-        # Tag filtering
-        if tag_filter:
-            q_tags = metadata["tags"]
-            if tag_filter.lower() not in [t.lower() for t in q_tags]:
-                continue
-                
-        filtered_questions.append(q_path)
-        
-    if not filtered_questions:
-        filters_str = []
-        if difficulty_filter:
-            filters_str.append(f"difficulty='{difficulty_filter}'")
-        if tag_filter:
-            filters_str.append(f"tag='{tag_filter}'")
-        filter_msg = f" with filters ({', '.join(filters_str)})" if filters_str else ""
-        topic_msg = f" for topic '{resolved_topic_name}'" if resolved_topic_name else " across all topics"
-        print(f"No questions found{topic_msg}{filter_msg}.")
-        return
+    chosen = random.choice(questions)
+    print(f"{os.path.basename(chosen)[:-3]}  ({len(questions)} available in {label})")
+    print(chosen)
+    return 0
 
-    # 4. Sample and display
-    sample_size = min(final_count, len(filtered_questions))
-    selected = random.sample(filtered_questions, sample_size)
-    
-    topic_str = f"Topic: {resolved_topic_name}" if resolved_topic_name else "All Topics"
-    filters_display = []
-    if difficulty_filter:
-        filters_display.append(f"Difficulty: {difficulty_filter.capitalize()}")
-    if tag_filter:
-        filters_display.append(f"Tag: {tag_filter}")
-    filters_str = f" | {', '.join(filters_display)}" if filters_display else ""
-    
-    print(f"--- Random Selection ({sample_size} of {len(filtered_questions)} available | {topic_str}{filters_str}) ---")
-    for i, path in enumerate(selected, 1):
-        print(f"{i}. [[{os.path.basename(path)[:-3]}]] (Path: {path})")
-        
-    # 5. Generate daily practice transcluded file
-    if practice:
-        generate_daily_practice(selected)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Pick or scaffold math questions.")
-    
-    # Scaffolding group
-    scaffold_group = parser.add_argument_group("Scaffolding new questions")
-    scaffold_group.add_argument("--new", type=str, metavar="NAME", help="Create a new Question and Solution file from templates (e.g. Angle_Between_Vectors)")
-    
-    # Query/Filtering group
-    query_group = parser.add_argument_group("Searching & Filtering")
-    query_group.add_argument("topic", nargs="?", default=None, help="Optional topic folder substring to filter within (e.g., Vectors)")
-    query_group.add_argument("-n", "--number", type=int, default=None, help="Number of questions to pick (default: 5, or randomized distribution if no flags specified)")
-    query_group.add_argument("-d", "--difficulty", type=str, default=None, help="Filter by difficulty level (Easy, Medium, Hard)")
-    query_group.add_argument("-t", "--tag", type=str, default=None, help="Filter by frontmatter tag")
-    query_group.add_argument("-p", "--practice", action="store_true", help="Generate a Daily_Practice.md file with transcluded questions in the root directory")
-    
-    args = parser.parse_args()
-    
-    if args.new:
-        if not args.topic:
-            parser.error("The 'topic' argument is required when using --new to specify where the question should be created.")
-        scaffold_new_question(args.new, args.topic, args.difficulty)
-    else:
-        get_random_questions(
-            count=args.number,
-            topic_query=args.topic,
-            difficulty_filter=args.difficulty,
-            tag_filter=args.tag,
-            practice=args.practice
-        )
-
-
+    raise SystemExit(main())

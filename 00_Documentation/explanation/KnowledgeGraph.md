@@ -37,8 +37,8 @@ As practice accumulates, solved problems cluster around the concepts they exerci
 Questions and solutions are separate files so a problem can be attempted without the answer
 visible. The **Check Answer** link connects them.
 
-Separation also lets the randomizer transclude questions into a practice note without
-including the answers.
+Separation is also what lets the randomizer offer a question — it picks from `Q_*.md` only, so
+the answer never arrives alongside the problem.
 
 ---
 
