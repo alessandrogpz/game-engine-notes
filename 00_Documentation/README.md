@@ -2,13 +2,6 @@
 
 Organized by the [Diátaxis](https://diataxis.fr/) framework, which separates documentation by what you need at the moment you open it.
 
-|                                     | Serves        | Answers                                   |
-| :---------------------------------- | :------------ | :---------------------------------------- |
-| **[Tutorials](#tutorials)**         | Learning      | *"I'm new — take me through it."*         |
-| **[How-to Guides](#how-to-guides)** | A task        | *"I need to do this specific thing."*     |
-| **[Reference](#reference)**         | Lookup        | *"What is the exact name, path or flag?"* |
-| **[Explanation](#explanation)**     | Understanding | *"Why is it built this way?"*             |
-
 The distinction matters: a tutorial that stops to explain design decisions stops being followable, and a reference that teaches stops being scannable.
 
 ---
@@ -19,7 +12,7 @@ The distinction matters: a tutorial that stops to explain design decisions stops
 
 ## How-to Guides
 
-* [Run a Practice Session](how-to/RunPracticeSession.md)
+* [Run a Practice Session](how-to/RunPracticeSession.md) — filter by topic, difficulty or tag
 * [Add a New Exercise](how-to/AddExercise.md)
 * [Add a Concept Note](how-to/AddConceptNote.md)
 * [Add a Subject or Domain](how-to/AddSubjectOrDomain.md)
@@ -29,20 +22,20 @@ The distinction matters: a tutorial that stops to explain design decisions stops
 
 ## Reference
 
-* [Repository Structure](references/RepositoryStructure.md)
-* [Naming Conventions](references/NamingConventions.md)
-* [Math Formatting](references/MathFormatting.md)
-* [Randomizer](references/Randomizer.md)
-* [Code Conventions](references/CodeConventions.md)
-* [Build Requirements](references/BuildRequirements.md)
+* [Repository Structure](references/RepositoryStructure.md) — the full tree and common relative paths
+* [Naming Conventions](references/NamingConventions.md) — file names, frontmatter, link forms
+* [Math Formatting](references/MathFormatting.md) — LaTeX that renders in both Obsidian and GitHub
+* [Randomizer](references/Randomizer.md) — full CLI documentation
+* [Code Conventions](references/CodeConventions.md) — module structure, includes, tests
+* [Build Requirements](references/BuildRequirements.md) — toolchain, targets, compile flags
 
 ## Explanation
 
-* [Vault Organization](explanation/VaultOrganization.md)
-* [The Knowledge Graph](explanation/KnowledgeGraph.md)
-* [Link Format](explanation/LinkFormat.md)
-* [Code Placement](explanation/CodePlacement.md)
-* [Roadmap Scoping](explanation/RoadmapScoping.md)
+* [Vault Organization](explanation/VaultOrganization.md) — why domain first, and why one vault rather than many
+* [The Knowledge Graph](explanation/KnowledgeGraph.md) — how notes link, and what to link
+* [Link Format](explanation/LinkFormat.md) — why relative markdown links instead of wikilinks
+* [Code Placement](explanation/CodePlacement.md) — why some code is centralized and some is not
+* [Roadmap Scoping](explanation/RoadmapScoping.md) — why roadmaps state what to skip
 
 ---
 
