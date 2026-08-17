@@ -2,11 +2,11 @@
 
 ## Tutorials
 
-* [Your First Study Session](tutorials/FirstStudySession.md) — one complete practice cycle, start to finish
+* [Your First Study Session](tutorials/FirstStudySession.md)
 
 ## How-to Guides
 
-* [Run a Practice Session](how-to/RunPracticeSession.md) — filter by topic, difficulty or tag
+* [Run a Practice Session](how-to/RunPracticeSession.md)
 * [Add a New Exercise](how-to/AddExercise.md)
 * [Add a Concept Note](how-to/AddConceptNote.md)
 * [Add a Subject or Domain](how-to/AddSubjectOrDomain.md)
@@ -16,20 +16,20 @@
 
 ## Reference
 
-* [Repository Structure](references/RepositoryStructure.md) — the full tree and common relative paths
-* [Naming Conventions](references/NamingConventions.md) — file names, frontmatter, link forms
-* [Math Formatting](references/MathFormatting.md) — LaTeX that renders in both Obsidian and GitHub
-* [Randomizer](references/Randomizer.md) — full CLI documentation
-* [Code Conventions](references/CodeConventions.md) — module structure, includes, tests
-* [Build Requirements](references/BuildRequirements.md) — toolchain, targets, compile flags
+* [Repository Structure](references/RepositoryStructure.md)
+* [Naming Conventions](references/NamingConventions.md)
+* [Math Formatting](references/MathFormatting.md)
+* [Randomizer](references/Randomizer.md)
+* [Code Conventions](references/CodeConventions.md)
+* [Build Requirements](references/BuildRequirements.md)
 
 ## Explanation
 
-* [Vault Organization](explanation/VaultOrganization.md) — why domain first, and why one vault rather than many
-* [The Knowledge Graph](explanation/KnowledgeGraph.md) — how notes link, and what to link
-* [Link Format](explanation/LinkFormat.md) — why relative markdown links instead of wikilinks
-* [Code Placement](explanation/CodePlacement.md) — why some code is centralized and some is not
-* [Roadmap Scoping](explanation/RoadmapScoping.md) — why roadmaps state what to skip
+* [Vault Organization](explanation/VaultOrganization.md)
+* [The Knowledge Graph](explanation/KnowledgeGraph.md)
+* [Link Format](explanation/LinkFormat.md)
+* [Code Placement](explanation/CodePlacement.md)
+* [Roadmap Scoping](explanation/RoadmapScoping.md)
 
 ---
 

@@ -13,13 +13,3 @@
 [00_Roadmap.md](00_Roadmap.md) covers the planned subjects and why a job system comes before
 lock-free programming.
 
----
-
-## Foundations at a glance
-
-| Note | Covers |
-| :--- | :--- |
-| [Concurrency_Cpp17](01_Foundations/Concurrency_Cpp17.md) | Threads, join/detach, races and ThreadSanitizer, mutexes, atomics, condition variables, deadlock |
-| [Concurrency_Glossary](01_Foundations/Concurrency_Glossary.md) | One-line lookup for each class and function |
-| [multi_threading.cpp](01_Foundations/multi_threading.cpp) | Chef-customer queue simulation |
-

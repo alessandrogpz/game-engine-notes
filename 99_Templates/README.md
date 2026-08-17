@@ -20,11 +20,3 @@ Then replace the `Concept_Name` placeholder in both footers with the real concep
 
 The placeholder links inside these two files point at names that do not exist, so
 [check_links.py](../scripts/check_links.py) skips them by path.
-
----
-
-## Related
-
-* [Add a New Exercise](../00_Documentation/how-to/AddExercise.md) — the full workflow
-* [Use the Templates](../00_Documentation/how-to/UseTemplates.md) — inserting one by hand from Obsidian
-* [Naming Conventions](../00_Documentation/references/NamingConventions.md) — frontmatter and footer forms

@@ -2,29 +2,14 @@
 
 ## Subjects
 
-| Subject | Covers |
-| :--- | :--- |
-| [01_Data_Oriented_Design](01_Data_Oriented_Design/README.md) | Cache locality, memory alignment, false sharing, AoSoA and SIMD |
-| `02_Memory_Hierarchy` | Cache levels and associativity, locality, prefetching, TLB |
-| `03_CPU_Architecture` | Pipelining, branch prediction, ILP, out-of-order execution |
-| `04_SIMD` | SSE/AVX and NEON, intrinsics vs autovectorization, SoA as prerequisite |
-| `05_Profiling_and_Measurement` | Sampling vs instrumenting, flame graphs, `perf` counters |
-| `06_Compilers_and_Toolchain` | Optimization levels, inlining, aliasing, reading disassembly |
+| Subject                                                      | Covers                                                                 |
+| :----------------------------------------------------------- | :--------------------------------------------------------------------- |
+| [01_Data_Oriented_Design](01_Data_Oriented_Design/README.md) | Cache locality, memory alignment, false sharing, AoSoA and SIMD        |
+| `02_Memory_Hierarchy`                                        | Cache levels and associativity, locality, prefetching, TLB             |
+| `03_CPU_Architecture`                                        | Pipelining, branch prediction, ILP, out-of-order execution             |
+| `04_SIMD`                                                    | SSE/AVX and NEON, intrinsics vs autovectorization, SoA as prerequisite |
+| `05_Profiling_and_Measurement`                               | Sampling vs instrumenting, flame graphs, `perf` counters               |
+| `06_Compilers_and_Toolchain`                                 | Optimization levels, inlining, aliasing, reading disassembly           |
 
 [00_Roadmap.md](00_Roadmap.md) covers the planned subjects and the order to take them in.
-
----
-
-## Data-Oriented Design at a glance
-
-Its own [index](01_Data_Oriented_Design/README.md) carries the reading order and the compile
-commands. The notes:
-
-| Note | Covers |
-| :--- | :--- |
-| [Cache_Locality](01_Data_Oriented_Design/01_Cache_Locality/Cache_Locality.md) | Memory latency tiers, 64-byte cache lines, AoS vs SoA |
-| [Memory_Alignment](01_Data_Oriented_Design/02_Memory_Alignment/Memory_Alignment.md) | Word sizes, compiler padding, struct field ordering |
-| [Multi_Threading](01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md) | False sharing and cache line ping-ponging |
-| [DOD_Optimizations](01_Data_Oriented_Design/04_DOD_Optimizations/DOD_Optimizations.md) | An 8-step OOP-to-DOD refactor |
-| [Advanced_DOD](01_Data_Oriented_Design/05_Advanced_DOD/Advanced_DOD.md) | AoSoA, SIMD, ECS, custom allocators, instruction cache |
 

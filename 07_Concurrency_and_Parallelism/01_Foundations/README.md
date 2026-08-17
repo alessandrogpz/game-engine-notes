@@ -41,10 +41,3 @@ Add `-fsanitize=thread` (with `-O1 -g`) to check for races.
 
 Why raw threads are the wrong abstraction for a frame loop; livelock and priority inversion.
 
----
-
-## Related
-
-* [Concurrency and Parallelism](../README.md) — the rest of the domain
-* [Multi_Threading](../../08_Systems_and_Performance/01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md)
-  — false sharing: the same synchronization seen from the cache's side
