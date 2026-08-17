@@ -1,5 +1,8 @@
 # Build Requirements
 
+What the toolchain must provide. The commands to run are in
+[Build and test](../how-to/BuildAndTest.md).
+
 ---
 
 ## The CMake project (`90_Code/`)
@@ -8,15 +11,24 @@
 | :--- | :--- |
 | Language standard | C++23 |
 | Required feature | C++20 modules (`export module`) |
+| Compiler | **GCC 15 or newer** |
 | Generator | **Ninja** — Unix Makefiles are unsupported |
+| CMake | 3.28 or newer, for `FILE_SET CXX_MODULES` |
 | Test framework | GoogleTest, fetched automatically by CMake |
 | Build types | `Debug`, `Release` |
 
-```bash
-cmake -S 90_Code -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
-cmake --build build
-ctest --test-dir build --output-on-failure
-```
+### Why the compiler version
+
+Module support improves sharply across GCC releases, and the failures are not obvious:
+
+| Version | Behaviour |
+| :--- | :--- |
+| GCC 13 | Cannot scan module dependencies at all |
+| GCC 14 | Scans, but corrupts its own module cache under parallel builds — *"failed to read compiled module cluster"* |
+| GCC 15+ | Builds this project cleanly |
+
+CI installs GCC 15 and builds serially (`-j 1`), which is what keeps the GCC 14 cache
+behaviour from mattering if an older compiler is ever used.
 
 ### Targets
 
@@ -40,15 +52,9 @@ The fix is `-G Ninja`.
 
 ---
 
-## Standalone examples
+## Compile flags
 
-Single-file programs compiled directly, outside CMake:
-
-| Purpose | Command |
-| :--- | :--- |
-| Benchmark / normal run | `g++ -std=c++23 -O3 -pthread <file>.cpp -o main` |
-| Debugging | `g++ -std=c++23 -g -O0 -pthread <file>.cpp -o main` |
-| Race detection | `g++ -std=c++23 -g -O1 -pthread -fsanitize=thread <file>.cpp -o main` |
+Applied to the library target by CMake, and typed by hand for the standalone demos:
 
 | Flag | Why |
 | :--- | :--- |
@@ -56,6 +62,4 @@ Single-file programs compiled directly, outside CMake:
 | `-O3` | Mandatory for cache benchmarks — without inlining, call overhead masks the effect |
 | `-pthread` | Required by the threading examples; sets `-D_REENTRANT` |
 | `-fsanitize=thread` | Reports data races regardless of timing; 5–15× slowdown |
-
-> [!WARNING]
-> `-O3` is a capital letter O. Lowercase `-o3` is an output directive that writes an executable named `3` and enables no optimization at all.
+| `-Wall -Wextra -Wpedantic -mavx` | Set on `EngineNotesLib` (`/W4` on MSVC). Warnings are fixed, never suppressed |

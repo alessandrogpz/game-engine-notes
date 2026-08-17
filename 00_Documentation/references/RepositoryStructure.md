@@ -39,9 +39,9 @@ game-engine-notes/
 ├── 04_Engine_Architecture/            # README.md + 00_Roadmap.md; no notes yet
 ├── 05_Data_Structures/                # README.md + 00_Roadmap.md; no notes yet
 ├── 06_Algorithms/                     # README.md + 00_Roadmap.md; no notes yet
-├── 07_Concurrency_and_Parallelism/
+├── 07_Concurrency_and_Parallelism/    # README.md + 00_Roadmap.md
 │   └── 01_Foundations/                #   C++ primitives, glossary, runnable demo
-├── 08_Systems_and_Performance/
+├── 08_Systems_and_Performance/        # README.md + 00_Roadmap.md
 │   └── 01_Data_Oriented_Design/       #   Notes beside runnable examples
 ├── 09_Tools_and_Pipeline/             # README.md + 00_Roadmap.md; no notes yet
 ├── 10_Audio/                          # README.md + 00_Roadmap.md; no notes yet

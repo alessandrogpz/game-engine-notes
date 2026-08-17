@@ -36,7 +36,10 @@ export namespace geometry {
 | Global module fragment | `module;` followed by `#include` directives |
 | Module name | `<topic>_<name>`, lowercase — `geometry_planes`, `vectors_dot_product` |
 | Module imports | After `export module`, never inside the fragment |
-| Namespace | Per topic — `geometry`, `vectors`, `matrices`, `transforms` |
+| Namespace | Per topic — `systems`, `vectors`, `matrices`, `transforms`, `geometry` |
+
+`00_Utils/util.cppm` is the one exception to the first rule: it is a shared utility rather than
+the implementation of a concept, so there is no note for it to link.
 
 ---
 
@@ -52,6 +55,7 @@ Include only what the file uses:
 | `std::size_t` | `<cstddef>` |
 | `std::cout`, `std::endl` | `<iostream>` |
 | `std::setw`, `std::setprecision` | `<iomanip>` |
+| `std::ios_base::fmtflags`, `std::streamsize` | `<ios>` |
 | `std::cos`, `sin`, `tan`, `sqrt`, `abs`, `acos`, `atan2` | `<cmath>` |
 | `std::numbers` | `<numbers>` |
 | `std::clamp` | `<algorithm>` |
@@ -118,6 +122,6 @@ fixed.
 
 ## See also
 
-* [Build requirements](BuildRequirements.md) — toolchain and targets
-* [Build and test](../how-to/BuildAndTest.md) — commands
-* [Code placement](../explanation/CodePlacement.md) — which code lives where
+* [Build requirements](BuildRequirements.md)
+* [Build and test](../how-to/BuildAndTest.md)
+* [Code placement](../explanation/CodePlacement.md)

@@ -16,6 +16,8 @@ ctest --test-dir build --output-on-failure
 
 > [!IMPORTANT]
 > The **Ninja generator is required**. C++ modules need dyndep support to discover compile order, which Unix Makefiles cannot provide — configuring without `-G Ninja` fails at the generate step.
+>
+> **GCC 15 or newer** is required too. Older releases fail in ways that do not name the compiler as the cause — see [Build requirements](../references/BuildRequirements.md).
 
 Build a single target rather than everything:
 
