@@ -4,6 +4,14 @@
 Relative markdown links are fragile by design — moving a file breaks every link
 into it. This is the sweep that makes that trade acceptable.
 
+Two failure modes are reported:
+
+  * **broken** — the target does not exist.
+  * **folder** — the target is a directory. GitHub renders these as a folder
+    listing, so they look fine there, but Obsidian resolves links against files
+    only: clicking one offers to create a new note instead of navigating. Link
+    the folder's ``README.md`` explicitly.
+
 Usage:
     python3 scripts/check_links.py            # check tracked files
     python3 scripts/check_links.py --verbose  # also print the totals per file
@@ -47,29 +55,34 @@ def tracked_files() -> list[str]:
     ]
 
 
-def scan(path: str) -> list[tuple[str, str]]:
-    """Return (file, target) for every relative link that does not resolve."""
+def scan(path: str) -> tuple[list[tuple[str, str]], list[tuple[str, str]]]:
+    """Return (broken, folder) lists of (file, target) for one file."""
     text = open(path, encoding="utf-8").read()
     text = FENCE_RE.sub("", text)   # fenced code blocks
     text = INLINE_RE.sub("", text)  # inline code spans
 
     base = os.path.dirname(path) or "."
-    broken = []
+    broken: list[tuple[str, str]] = []
+    folder: list[tuple[str, str]] = []
     for match in LINK_RE.finditer(text):
         target = (match.group(1) or match.group(2)).split("#")[0]
         if not target or target.startswith(("http://", "https://", "mailto:")):
             continue
         if path.endswith((".cppm", ".cpp")) and CPP_FALSE_POSITIVE.search(target):
             continue  # operator[](...) and lambdas, not links
-        if not os.path.exists(os.path.normpath(os.path.join(base, target))):
+        resolved = os.path.normpath(os.path.join(base, target))
+        if not os.path.exists(resolved):
             broken.append((path, target))
-    return broken
+        elif os.path.isdir(resolved):
+            folder.append((path, target))
+    return broken, folder
 
 
 def main() -> int:
     verbose = "--verbose" in sys.argv
     files = tracked_files()
     broken: list[tuple[str, str]] = []
+    folder: list[tuple[str, str]] = []
     checked = 0
 
     for path in files:
@@ -77,16 +90,24 @@ def main() -> int:
             continue
         text = FENCE_RE.sub("", open(path, encoding="utf-8").read())
         checked += len(LINK_RE.findall(INLINE_RE.sub("", text)))
-        broken.extend(scan(path))
+        file_broken, file_folder = scan(path)
+        broken.extend(file_broken)
+        folder.extend(file_folder)
 
     print(f"Scanned {len(files)} files, {checked} relative links.")
     if broken:
-        print(f"\n{len(broken)} broken:\n")
+        print(f"\n{len(broken)} broken — target does not exist:\n")
         for path, target in broken:
             print(f"  {path}\n      -> {target}")
+    if folder:
+        print(f"\n{len(folder)} point at a folder — Obsidian cannot resolve these.")
+        print("Link the folder's README.md instead:\n")
+        for path, target in folder:
+            print(f"  {path}\n      -> {target}")
+    if broken or folder:
         return 1
 
-    print("All links resolve.")
+    print("All links resolve, and none point at a folder.")
     return 0
 
 
