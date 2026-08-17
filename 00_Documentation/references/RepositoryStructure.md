@@ -56,7 +56,7 @@ game-engine-notes/
 │   ├── tests/                         #   GoogleTest, one file per module
 │   └── CMakeLists.txt
 │
-├── 99_Templates/                      # Scaffolder inputs
+├── 99_Templates/                      # Question and solution templates
 │   ├── README.md
 │   ├── Template_Question.md
 │   └── Template_Solution.md

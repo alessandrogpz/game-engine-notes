@@ -7,8 +7,9 @@ Exercises come in pairs: a question note and a solution note, cross-linked to ea
 ## Create the pair
 
 Copy the two templates in [99_Templates](../../99_Templates/README.md) into the topic's
-`Questions/` and `Solutions/` folders, or insert them from inside Obsidian — see
-[Use the templates](UseTemplates.md).
+`Questions/` and `Solutions/` folders. From inside Obsidian, create the note first, then press
+`Ctrl/Cmd + P`, type `Insert template`, and pick the question or solution template — the
+templates folder is already configured in the committed `.obsidian/` settings.
 
 Name both after the concept note the exercise practises, carrying its number:
 
@@ -71,6 +72,5 @@ If the solution is left unwritten, add a line to [TODO.md](../../TODO.md) so it 
 ## See also
 
 * [Add a concept note](AddConceptNote.md)
-* [Use the templates](UseTemplates.md)
-* [Math formatting](../references/MathFormatting.md) — LaTeX that renders in both Obsidian and GitHub
+* [Math formatting](../references/MathFormatting.md)
 * [Naming conventions](../references/NamingConventions.md)

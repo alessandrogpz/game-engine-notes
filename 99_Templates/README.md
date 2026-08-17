@@ -10,8 +10,8 @@
 ## Use
 
 Copy both into the topic's `Questions/` and `Solutions/` folders, or insert them from inside
-Obsidian — see [Use the Templates](../00_Documentation/how-to/UseTemplates.md). Then fill in
-the frontmatter and replace the placeholder names in both footers with the real files, as
+Obsidian with `Ctrl/Cmd + P` → `Insert template`. Then fill in the frontmatter and replace the
+placeholder names in both footers with the real files, as
 [Add a New Exercise](../00_Documentation/how-to/AddExercise.md) describes.
 
 The placeholder links inside these two files point at names that do not exist, so

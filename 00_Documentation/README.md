@@ -12,7 +12,6 @@
 * [Add a Subject or Domain](how-to/AddSubjectOrDomain.md)
 * [Add a Figure](how-to/AddFigure.md)
 * [Build and Test the Code](how-to/BuildAndTest.md)
-* [Use the Templates](how-to/UseTemplates.md)
 
 ## Reference
 
