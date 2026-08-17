@@ -1,8 +1,7 @@
 # Tools and Pipeline
 
 > [!NOTE]
-> **No notes yet.** This domain is at the roadmap stage. The plan — subjects, resources, and
-> the order to take them in — is in [00_Roadmap.md](00_Roadmap.md).
+> **No notes yet.** This domain is at the roadmap stage.
 
 ---
 
@@ -18,3 +17,8 @@
 
 Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
 
+---
+
+## Roadmap
+
+[00_Roadmap.md](00_Roadmap.md)

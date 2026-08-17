@@ -87,6 +87,10 @@ or from the file one click away, is duplication that will fall out of date on it
 Scoping markers stay, because they record a decision rather than progress:
 `` `06_Geometric_Algebra` *(optional)* `` sits in the subject cell rather than earning a column.
 
+Every domain index ends with the same `## Roadmap` section, holding the link and nothing else.
+A one-line summary of what that roadmap covers reads as useful until it appears eleven times in
+eleven slightly different wordings, each needing to stay true as its domain changes.
+
 > [!IMPORTANT]
 > This applies to indexes only. A concept note still opens by stating what the concept **is**
 > before any derivation — see [Add a Concept Note](../how-to/AddConceptNote.md). Stripping

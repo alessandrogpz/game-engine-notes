@@ -20,7 +20,7 @@ The randomizer discovers new questions automatically by globbing `*/*/Exercises/
 ## Add a new domain
 
 1. Create `<NN>_<Domain_Name>/` using the next free number below `89`.
-2. Write a `README.md` — the domain **index**. Until notes exist it is three things: a "no notes yet" callout pointing at the roadmap, a `## Planned subjects` table, and one line noting that subjects gain their folders as work begins. No description paragraph under the title, and no cross-domain links. See [02_Rendering](../../02_Rendering/README.md).
+2. Write a `README.md` — the domain **index**. Until notes exist it is a `> [!NOTE] **No notes yet.**` callout, a `## Planned subjects` table, the line about subjects gaining their folders, and the `## Roadmap` section. No description paragraph under the title, and no cross-domain links. See [02_Rendering](../../02_Rendering/README.md).
 3. Write a `00_Roadmap.md` — the **plan**: subjects to cover, resources worth using, and, for broad academic fields, what to deliberately skip. See [Roadmap scoping](../explanation/RoadmapScoping.md) for why the exclusions matter.
 4. Add a row to the domain table in the [root README](../../README.md), linking the **index**, not the roadmap.
 5. Add a line to the [repository structure](../references/RepositoryStructure.md).

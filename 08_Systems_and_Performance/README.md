@@ -11,5 +11,8 @@
 | `05_Profiling_and_Measurement`                               | Sampling vs instrumenting, flame graphs, `perf` counters               |
 | `06_Compilers_and_Toolchain`                                 | Optimization levels, inlining, aliasing, reading disassembly           |
 
-[00_Roadmap.md](00_Roadmap.md) covers the planned subjects and the order to take them in.
+---
 
+## Roadmap
+
+[00_Roadmap.md](00_Roadmap.md)

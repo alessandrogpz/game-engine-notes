@@ -11,6 +11,8 @@
 | `05_Signal_Processing`                           | Nyquist, aliasing, convolution, reconstruction                  |
 | `06_Geometric_Algebra` *(optional)*              | Bivectors, Plücker coordinates, motors                          |
 
-Every subject listed as planned is a full academic field. [00_Roadmap.md](00_Roadmap.md) scopes
-each one — what to study, and what to deliberately skip.
+---
 
+## Roadmap
+
+[00_Roadmap.md](00_Roadmap.md)

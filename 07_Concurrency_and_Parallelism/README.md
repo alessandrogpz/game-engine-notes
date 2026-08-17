@@ -10,6 +10,8 @@
 | `04_Lock_Free_Structures` | SPSC and MPMC queues, the ABA problem |
 | `05_Parallel_Patterns_in_Engines` | Render vs simulation threads, buffering, async loading |
 
-[00_Roadmap.md](00_Roadmap.md) covers the planned subjects and why a job system comes before
-lock-free programming.
+---
 
+## Roadmap
+
+[00_Roadmap.md](00_Roadmap.md)
