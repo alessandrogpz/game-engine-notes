@@ -50,4 +50,13 @@ geometry notes into a single operation, and no mainstream engine is built on it.
 ## Status
 
 A subject is marked *in progress* once it has notes, and the roadmap links to them directly
-rather than describing them. A roadmap begins as a plan and becomes an index.
+rather than describing them.
+
+A roadmap does **not** become the domain's index, though. That is what
+`<Domain>/README.md` is for, and it is where the root README links: an inventory of what
+exists, which links on to the roadmap for what does not.
+
+Keeping them separate keeps each honest. A roadmap that doubles as an index accumulates
+completed material until the scoping decisions — the "Skip" sections that are the point of the
+file — are buried under a list of finished work. See
+[Vault Organization](VaultOrganization.md).

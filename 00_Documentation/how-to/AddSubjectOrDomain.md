@@ -12,17 +12,23 @@ The vault is organized domain first: each top-level numbered folder is a domain,
 mkdir -p 02_Rendering/01_Model_View_Projection/{Concepts,Exercises,Assets}
 ```
 
-2. Add the subject to that domain's `00_Roadmap.md`, marking it *in progress* and linking to its notes as they appear.
-3. If the subject grows its own build instructions or a long index, give it a `README.md` — see [Data-Oriented Design](../../08_Systems_and_Performance/01_Data_Oriented_Design/README.md) for the pattern.
+2. Give the subject a `README.md` indexing its notes — this is what links point at, since a link to a bare folder does not resolve in Obsidian. See [Data-Oriented Design](../../08_Systems_and_Performance/01_Data_Oriented_Design/README.md) or [Linear Algebra](../../01_Mathematics/01_Linear_Algebra/README.md) for the pattern.
+3. Add the subject to the domain's `README.md` subject table, and to its `00_Roadmap.md`, marking it *in progress*.
 
 The randomizer discovers new topic folders automatically by globbing `*/*/Exercises/*`. No configuration is needed.
 
 ## Add a new domain
 
 1. Create `<NN>_<Domain_Name>/` using the next free number below `89`.
-2. Write a `00_Roadmap.md` listing the subjects to cover, the resources worth using, and — for broad academic fields — what to deliberately skip. See [Roadmap scoping](../explanation/RoadmapScoping.md) for why the exclusions matter.
-3. Add a row to the domain table in the [root README](../../README.md).
-4. Add a line to the [repository structure](../references/RepositoryStructure.md).
+2. Write a `README.md` — the domain **index**. Until notes exist it is short: one line on what the domain covers, a table of planned subjects, a "no notes yet" callout pointing at the roadmap, and links to the domains it builds on. See [02_Rendering](../../02_Rendering/README.md).
+3. Write a `00_Roadmap.md` — the **plan**: subjects to cover, resources worth using, and, for broad academic fields, what to deliberately skip. See [Roadmap scoping](../explanation/RoadmapScoping.md) for why the exclusions matter.
+4. Add a row to the domain table in the [root README](../../README.md), linking the **index**, not the roadmap.
+5. Add a line to the [repository structure](../references/RepositoryStructure.md).
+
+> [!NOTE]
+> The index and the roadmap answer different questions — what exists versus what is planned —
+> and are kept as separate files for that reason. [Vault organization](../explanation/VaultOrganization.md)
+> explains the split.
 
 ## Numbering
 

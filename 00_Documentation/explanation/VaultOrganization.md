@@ -36,13 +36,37 @@ one `TODO.md`.
 
 ---
 
-## Subject READMEs
+## Folder indexes
 
-A subject carries its own `README.md` when it has build instructions of its own, or enough
-notes that their reading order is not evident from the filenames. See
-[Data-Oriented Design](../../08_Systems_and_Performance/01_Data_Oriented_Design/README.md).
+Every domain, every subject, and each top-level tooling folder carries a `README.md`: an index
+of **what is in that folder now**.
 
-The root README navigates to subjects. Each subject README documents its own contents.
+Two things make this mandatory rather than optional.
+
+**Navigation has to land somewhere.** A link to a bare folder does not resolve in Obsidian —
+it offers to create a note instead. An index file gives every folder a real target, and
+GitHub renders it automatically when browsing to the folder, so one file serves both surfaces.
+See [Link Format](LinkFormat.md).
+
+**An index is not a plan.** A domain's `00_Roadmap.md` describes what to study and what to
+skip; it is deliberately about material that does not exist yet. Landing there from the root
+README means arriving at a list of things that have not been written. The index is the
+inventory, and it links on to the roadmap — plan and inventory answer different questions and
+age differently, so they are separate files.
+
+```text
+01_Mathematics/
+├── README.md         # what exists: subjects, note counts, links in
+└── 00_Roadmap.md     # what does not: subjects to cover, and how much of each
+```
+
+The root README navigates to domains. Each domain index navigates to its subjects. Each subject
+index documents its own contents — see
+[Data-Oriented Design](../../08_Systems_and_Performance/01_Data_Oriented_Design/README.md),
+which also carries the build instructions for its own examples.
+
+Folders below subject level — `Concepts/`, `Assets/`, `Exercises/<Topic>/Questions/` — hold
+leaf content and get no index; the subject index already lists what is in them.
 
 ---
 
