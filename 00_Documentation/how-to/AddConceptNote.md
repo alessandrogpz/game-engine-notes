@@ -40,5 +40,5 @@ Display math must sit at column 0 with blank lines around it, and matrix rows br
 
 ## See also
 
-* [Add an exercise](AddExercise.md) — to give the concept something to practise against
+* [Add an exercise](AddExercise.md)
 * [The knowledge graph](../explanation/KnowledgeGraph.md)

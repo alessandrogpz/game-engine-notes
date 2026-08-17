@@ -40,5 +40,5 @@ Leave gaps if a domain logically belongs between two existing ones; renumbering 
 
 ## See also
 
-* [Vault organization](../explanation/VaultOrganization.md) — why domain first
+* [Vault organization](../explanation/VaultOrganization.md)
 * [Naming conventions](../references/NamingConventions.md)

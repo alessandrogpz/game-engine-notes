@@ -46,4 +46,4 @@ That round trip — question, solution, concept — is the habit the vault is bu
 ## See also
 
 * [Randomizer reference](../references/Randomizer.md)
-* [Add a new exercise](AddExercise.md) — when you find a problem worth keeping
+* [Add a new exercise](AddExercise.md)
