@@ -20,9 +20,3 @@ Structures chosen for cache behaviour and access pattern, not asymptotic eleganc
 
 Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
 
----
-
-## Related
-
-* [08_Systems_and_Performance](../08_Systems_and_Performance/README.md) — overlaps heavily;
-  the cache behaviour that motivates the choices here is already written up there

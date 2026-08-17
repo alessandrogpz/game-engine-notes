@@ -21,11 +21,3 @@ Getting geometry onto a screen, correctly and quickly.
 
 Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
 
----
-
-## Builds on
-
-* [Linear Algebra](../01_Mathematics/01_Linear_Algebra/README.md) — the transforms, planes and
-  point-plane distances that are the machinery of the pipeline
-* [04_Transforms](../01_Mathematics/01_Linear_Algebra/README.md#04_transforms) in particular,
-  and [07_Homogeneous_Coordinates](../01_Mathematics/01_Linear_Algebra/Concepts/04_Transforms/07_Homogeneous_Coordinates.md)

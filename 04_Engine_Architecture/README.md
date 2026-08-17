@@ -23,9 +23,3 @@ How the pieces fit together — the domain that turns a renderer and a physics l
 
 Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
 
----
-
-## Related
-
-* [Data-Oriented Design](../08_Systems_and_Performance/01_Data_Oriented_Design/README.md) — the
-  memory-layout reasoning behind ECS and custom allocators, already covered

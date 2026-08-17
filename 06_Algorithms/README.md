@@ -21,9 +21,3 @@ pathfinding carry far more weight here than a typical curriculum would suggest.
 
 Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
 
----
-
-## Builds on
-
-* [05_Geometry](../01_Mathematics/01_Linear_Algebra/README.md#05_geometry) — computational
-  geometry continues directly from the intersection and distance work already done

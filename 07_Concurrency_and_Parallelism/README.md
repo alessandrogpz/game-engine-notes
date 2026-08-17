@@ -14,6 +14,9 @@ Using more than one core without introducing bugs that only appear on someone el
 | `04_Lock_Free_Structures` | Planned | SPSC and MPMC queues, the ABA problem |
 | `05_Parallel_Patterns_in_Engines` | Planned | Render vs simulation threads, buffering, async loading |
 
+[00_Roadmap.md](00_Roadmap.md) covers the planned subjects and why a job system comes before
+lock-free programming.
+
 ---
 
 ## Foundations at a glance
@@ -24,11 +27,3 @@ Using more than one core without introducing bugs that only appear on someone el
 | [Concurrency_Glossary](01_Foundations/Concurrency_Glossary.md) | One-line lookup for each class and function |
 | [multi_threading.cpp](01_Foundations/multi_threading.cpp) | Chef-customer queue simulation |
 
----
-
-## Related
-
-* [00_Roadmap.md](00_Roadmap.md) — the remaining subjects, resources, and why a job system
-  comes before lock-free programming
-* [Multi_Threading](../08_Systems_and_Performance/01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md)
-  — false sharing, the hardware side of the same story

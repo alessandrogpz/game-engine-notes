@@ -21,11 +21,3 @@ Collision detection and rigid body simulation.
 
 Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
 
----
-
-## Builds on
-
-* [05_Geometry](../01_Mathematics/01_Linear_Algebra/README.md#05_geometry) — the intersection
-  and distance machinery every collision query is built from
-* [Numerical Methods](../01_Mathematics/00_Roadmap.md) — integrator stability decides whether a
-  simulation holds together

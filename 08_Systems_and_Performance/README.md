@@ -15,6 +15,8 @@ What the hardware actually does, and how to write code that suits it.
 | `05_Profiling_and_Measurement` | Planned | Sampling vs instrumenting, flame graphs, `perf` counters |
 | `06_Compilers_and_Toolchain` | Planned | Optimization levels, inlining, aliasing, reading disassembly |
 
+[00_Roadmap.md](00_Roadmap.md) covers the planned subjects and the order to take them in.
+
 ---
 
 ## Data-Oriented Design at a glance
@@ -30,12 +32,3 @@ commands. The notes:
 | [DOD_Optimizations](01_Data_Oriented_Design/04_DOD_Optimizations/DOD_Optimizations.md) | An 8-step OOP-to-DOD refactor |
 | [Advanced_DOD](01_Data_Oriented_Design/05_Advanced_DOD/Advanced_DOD.md) | AoSoA, SIMD, ECS, custom allocators, instruction cache |
 
----
-
-## Related
-
-* [00_Roadmap.md](00_Roadmap.md) — the remaining subjects and the order to take them in
-* [07_Concurrency_and_Parallelism](../07_Concurrency_and_Parallelism/README.md) — the language
-  primitives whose hardware cost the false-sharing note measures
-* [05_Data_Structures](../05_Data_Structures/README.md) — the same cache reasoning, applied to
-  container choice

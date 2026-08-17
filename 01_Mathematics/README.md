@@ -16,6 +16,9 @@ analytical tools the later domains depend on.
 | `05_Signal_Processing` | Planned | Nyquist, aliasing, convolution, reconstruction |
 | `06_Geometric_Algebra` | Optional | Bivectors, Plücker coordinates, motors |
 
+Every subject listed as planned is a full academic field. [00_Roadmap.md](00_Roadmap.md) scopes
+each one — what to study, and what to deliberately skip.
+
 ---
 
 ## Linear Algebra at a glance
@@ -31,13 +34,4 @@ note and exercise; the topics are:
 | [04_Transforms](01_Linear_Algebra/README.md#04_transforms) | Rotations, reflections, homogeneous coordinates, quaternions |
 | [05_Geometry](01_Linear_Algebra/README.md#05_geometry) | Planes, lines, distances and intersections |
 
-Worked from Eric Lengyel's *Foundations of Game Engine Development, Volume 1*.
 
----
-
-## Related
-
-* [00_Roadmap.md](00_Roadmap.md) — the remaining subjects, and **how much of each is worth
-  learning**. The exclusions are the point: every subject listed is a full academic field.
-* [90_Code](../90_Code/README.md) — one C++23 module per linear algebra concept note, with tests
-* Open threads for this domain are in [TODO.md](../TODO.md)

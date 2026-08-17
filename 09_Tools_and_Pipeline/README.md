@@ -20,9 +20,3 @@ Everything between an artist's file and bytes the runtime can consume.
 
 Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
 
----
-
-## Related
-
-* [90_Code](../90_Code/README.md) — the CMake + C++23 modules project in this repository is a
-  working example of the build-system material

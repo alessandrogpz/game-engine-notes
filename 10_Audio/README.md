@@ -21,9 +21,3 @@ tolerance for a dropped buffer.
 
 Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
 
----
-
-## Builds on
-
-* [Signal processing](../01_Mathematics/00_Roadmap.md) — Nyquist and aliasing are the same
-  theory the rendering antialiasing work needs, planned under mathematics

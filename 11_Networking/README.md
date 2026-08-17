@@ -22,9 +22,3 @@ they do, it constrains architecture deeply enough that retrofitting is painful.
 
 Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
 
----
-
-## Related
-
-* [06_Algorithms](../06_Algorithms/README.md) — quantization and bit packing are shared with
-  the compression material planned there
