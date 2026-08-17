@@ -14,6 +14,22 @@ $$
 [\vec{a}, \vec{b}, \vec{c}] = (\vec{a} \times \vec{b}) \cdot \vec{c}
 $$
 
+## The Bracket Notation
+
+$[\vec{a}, \vec{b}, \vec{c}]$ is shorthand for that expression — a single **scalar**, despite the brackets. Cyclic rotation leaves the value unchanged, so the cross product may sit on either side:
+
+$$
+[\vec{a}, \vec{b}, \vec{c}] = (\vec{a} \times \vec{b}) \cdot \vec{c} = \vec{a} \cdot (\vec{b} \times \vec{c})
+$$
+
+It is also the [determinant](../03_Matrices/03_Determinants.md) of the matrix whose **rows** are the three vectors, which is what makes the coplanarity test a determinant test:
+
+$$
+[\vec{a}, \vec{b}, \vec{c}] = \begin{vmatrix} a_x & a_y & a_z \\\\ b_x & b_y & b_z \\\\ c_x & c_y & c_z \end{vmatrix}
+$$
+
+That is why it appears as the denominator when solving for the [intersection of three planes](../05_Geometry/08_Intersection_Three_Planes.md).
+
 ## Properties
 | Property | Formula / Description |
 | :--- | :--- |

@@ -38,6 +38,18 @@ $$
 
 ---
 
+## Notation: The Bracket Form
+
+$[\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3]$ is shorthand for the [scalar triple product](../02_Vectors/05_Scalar_Triple_Product.md) — a single **scalar**, despite the brackets:
+
+$$
+[\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3] = (\mathbf{n}_1 \times \mathbf{n}_2) \cdot \mathbf{n}_3 = \mathbf{n}_1 \cdot (\mathbf{n}_2 \times \mathbf{n}_3) = \det \mathbf{A}
+$$
+
+Cyclic rotation of the arguments leaves the value unchanged, so the [cross product](../02_Vectors/04_Cross_Product.md) may sit on either side; the shorthand avoids committing to one grouping. Because it equals $\det \mathbf{A}$, dividing by it below is dividing by the [determinant](../03_Matrices/03_Determinants.md).
+
+---
+
 ## When a Unique Solution Exists
 
 The behaviour of the system is decided entirely by whether $\mathbf{A}$ is invertible:
@@ -58,13 +70,13 @@ In the second, all three planes share a **common line**, so every point along th
 </center>
 
 > [!NOTE]
-> $\det \mathbf{A}$ is exactly the [scalar triple product](../02_Vectors/05_Scalar_Triple_Product.md) $[\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3] = \mathbf{n}_1 \cdot (\mathbf{n}_2 \times \mathbf{n}_3)$, which measures the **volume of the parallelepiped** spanned by the three normals. A volume of zero means the three normals are coplanar — they no longer span 3D space, and so they cannot pin down a single point in it.
+> $\det \mathbf{A}$ is exactly the scalar triple product $[\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3]$, which measures the **volume of the parallelepiped** spanned by the three normals. A volume of zero means the three normals are coplanar — they no longer span 3D space, and so they cannot pin down a single point in it.
 
 ---
 
 ## Solving for $\mathbf{p}$
 
-Granting $\mathbf{A}$ is invertible, we can solve for $\mathbf{p}$ by multiplying both sides by $\mathbf{A}^{-1}$. For a matrix whose *rows* are $\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3$, the [inverse](../03_Matrices/04_Matrix_Inversion.md) is the matrix whose *columns* are the cross products of the other two normals, scaled by the reciprocal of the [determinant](../03_Matrices/03_Determinants.md):
+Granting $\mathbf{A}$ is invertible, we can solve for $\mathbf{p}$ by multiplying both sides by $\mathbf{A}^{-1}$. For a matrix whose *rows* are $\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3$, the [inverse](../03_Matrices/04_Matrix_Inversion.md) is the matrix whose *columns* are the cross products of the other two normals, scaled by the reciprocal of the determinant:
 
 $$
 \mathbf{A}^{-1} = \frac{1}{[\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3]} \begin{bmatrix} \uparrow & \uparrow & \uparrow \\\\ \mathbf{n}_2 \times \mathbf{n}_3 & \mathbf{n}_3 \times \mathbf{n}_1 & \mathbf{n}_1 \times \mathbf{n}_2 \\\\ \downarrow & \downarrow & \downarrow \end{bmatrix}
@@ -82,7 +94,7 @@ $$
 \mathbf{p} = \frac{d_1(\mathbf{n}_3 \times \mathbf{n}_2) + d_2(\mathbf{n}_1 \times \mathbf{n}_3) + d_3(\mathbf{n}_2 \times \mathbf{n}_1)}{[\mathbf{n}_1, \mathbf{n}_2, \mathbf{n}_3]}
 $$
 
-The order of the factors in each cross product has been **reversed** to cancel the minus sign. This works because the [cross product](../02_Vectors/04_Cross_Product.md) is anti-commutative:
+The order of the factors in each cross product has been **reversed** to cancel the minus sign. This works because the cross product is anti-commutative:
 
 $$
 \mathbf{a} \times \mathbf{b} = -(\mathbf{b} \times \mathbf{a})
