@@ -26,7 +26,7 @@ A standard algorithms course is calibrated for interviews and theory. An engine 
 * Divide and conquer, greedy, dynamic programming — recognition-level fluency
 
 ### 02_Computational_Geometry
-The most engine-relevant branch, and where [05_Geometry](../01_Mathematics/01_Linear_Algebra/Concepts/05_Geometry/) continues.
+The most engine-relevant branch, and where [05_Geometry](../01_Mathematics/01_Linear_Algebra/README.md#05_geometry) continues.
 * Orientation and in-circle predicates; **robustness and exact arithmetic**
 * Convex hulls: quickhull, gift wrapping
 * Polygon triangulation, ear clipping

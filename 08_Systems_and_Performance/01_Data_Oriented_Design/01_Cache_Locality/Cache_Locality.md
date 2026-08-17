@@ -56,7 +56,7 @@ The CPU retrieves memory in linear **64-byte chunks** (Cache Lines). Requesting 
 
 ### AoS (Array of Structures) vs. SoA (Structure of Arrays)
 
-How you arrange structures in memory dramatically affects cache line utilization. The same trade-off drives container choice in [05_Data_Structures](../../../05_Data_Structures/00_Roadmap.md).
+How you arrange structures in memory dramatically affects cache line utilization. The same trade-off drives container choice in [05_Data_Structures](../../../05_Data_Structures/README.md).
 
 ```
 AoS (OOP Style):   [ X, Y, Z, R, G, B ][ X, Y, Z, R, G, B ][ X, Y, Z, R, G, B ]

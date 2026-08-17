@@ -1,6 +1,8 @@
 # Mathematics — Study Roadmap
 
-The mathematics an engine actually runs on. [01_Linear_Algebra](01_Linear_Algebra/) is complete; this roadmap covers the remaining subjects and, crucially, **how much of each is worth learning**.
+The mathematics an engine actually runs on. [01_Linear_Algebra](01_Linear_Algebra/README.md) is complete; this roadmap covers the remaining subjects and, crucially, **how much of each is worth learning**.
+
+What already exists in this domain is indexed in [README.md](README.md); this file is the plan for what does not.
 
 > [!IMPORTANT]
 > Every subject here is a full academic field. An engine needs a specific slice of each. The "Skip" sections are as important as the "Study" sections — they are what keeps this finite.
@@ -64,7 +66,7 @@ The theory behind aliasing, which is the root cause of a surprising share of vis
 
 Grassmann algebra, bivectors and Plücker coordinates — Chapter 4 of Lengyel Volume 1, deliberately deferred.
 
-Unifies the intersection formulas already derived in [05_Geometry](01_Linear_Algebra/Concepts/05_Geometry/) into a single operation, and generalizes quaternions to include translation (motors). Intellectually excellent, practically optional: no mainstream engine is built on it, and the pieces that proved their worth — quaternions, dual quaternions — were absorbed under other names.
+Unifies the intersection formulas already derived in [05_Geometry](01_Linear_Algebra/README.md#05_geometry) into a single operation, and generalizes quaternions to include translation (motors). Intellectually excellent, practically optional: no mainstream engine is built on it, and the pieces that proved their worth — quaternions, dual quaternions — were absorbed under other names.
 
 Good triggers to come back: writing watertight ray–triangle intersection, or wanting to know why all those formulas rhyme.
 

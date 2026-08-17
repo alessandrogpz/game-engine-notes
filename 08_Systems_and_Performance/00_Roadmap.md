@@ -4,6 +4,8 @@ What the hardware actually does, and how to write code that suits it.
 
 > [!NOTE]
 > [01_Data_Oriented_Design](01_Data_Oriented_Design/README.md) is migrated and in progress. The remaining subjects are placeholders.
+> What already exists in this domain is indexed in [README.md](README.md); this file is the plan
+> for what does not.
 
 ---
 
@@ -13,7 +15,7 @@ What the hardware actually does, and how to write code that suits it.
 Covered so far, each note with a runnable companion program:
 * [Cache_Locality](01_Data_Oriented_Design/01_Cache_Locality/Cache_Locality.md) — memory latency tiers, 64-byte cache lines, AoS vs SoA
 * [Memory_Alignment](01_Data_Oriented_Design/02_Memory_Alignment/Memory_Alignment.md) — word sizes, compiler padding, struct field ordering
-* [Multi_Threading](01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md) — false sharing and cache line ping-ponging (the language primitives live in [07_Concurrency_and_Parallelism](../07_Concurrency_and_Parallelism/00_Roadmap.md))
+* [Multi_Threading](01_Data_Oriented_Design/03_Multi_Threading/Multi_Threading.md) — false sharing and cache line ping-ponging (the language primitives live in [07_Concurrency_and_Parallelism](../07_Concurrency_and_Parallelism/README.md))
 * [DOD_Optimizations](01_Data_Oriented_Design/04_DOD_Optimizations/DOD_Optimizations.md) — an 8-step OOP-to-DOD refactor
 * [Advanced_DOD](01_Data_Oriented_Design/05_Advanced_DOD/Advanced_DOD.md) — AoSoA, SIMD, ECS, custom allocators, instruction cache
 

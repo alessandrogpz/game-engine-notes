@@ -46,7 +46,7 @@ The engine-specific heart of this domain.
 ### 05_Memory_Aware_Design
 * AoS vs SoA; structure splitting by access frequency
 * Cache lines, false sharing, prefetching
-* Overlaps heavily with [08_Systems_and_Performance](../08_Systems_and_Performance/00_Roadmap.md)
+* Overlaps heavily with [08_Systems_and_Performance](../08_Systems_and_Performance/README.md)
 
 ---
 

@@ -8,7 +8,9 @@ It is an **Obsidian** vault that stays fully readable on **GitHub**. Every cross
 
 ## Overview
 
-The vault is organized **domain first**. Each top-level numbered folder is a domain, each domain holds subjects, and every subject carries its own `Concepts/`, `Exercises/` and `Assets/`. Domains that have not been started yet contain only a roadmap — a scoped study plan naming the subjects to cover and what to deliberately skip.
+The vault is organized **domain first**. Each top-level numbered folder is a domain, each domain holds subjects, and every subject carries its own `Concepts/`, `Exercises/` and `Assets/`.
+
+Every domain has two files at its root: a `README.md` indexing what exists there now, and a `00_Roadmap.md` — a scoped study plan naming the subjects to cover and what to deliberately skip. Domains that have not been started yet have only the roadmap's worth of content.
 
 Exercises are bound to the theory they practise: every question links to its solution, and every solution links back to the concept note it came from. Practice and theory stay connected rather than drifting apart.
 
@@ -20,17 +22,20 @@ New here? Start with [Your First Study Session](00_Documentation/tutorials/First
 
 | Domain                                                                         | Covers                                                                      | Coverage                                                                                             |
 | :----------------------------------------------------------------------------- | :-------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
-| [01_Mathematics](01_Mathematics/00_Roadmap.md)                                 | Linear algebra, calculus, numerical methods, probability, signal processing | **Under study** — [Linear Algebra](01_Mathematics/01_Linear_Algebra/README.md): 35 notes, 32 exercise pairs |
-| [02_Rendering](02_Rendering/00_Roadmap.md)                                     | MVP, rasterization, graphics APIs, shading, shadows                         | Roadmap — *next up*                                                                                  |
-| [03_Physics](03_Physics/00_Roadmap.md)                                         | Collision primitives, GJK/SAT, rigid body dynamics                          | Roadmap                                                                                              |
-| [04_Engine_Architecture](04_Engine_Architecture/00_Roadmap.md)                 | Game loop, memory, ECS, resources, tooling patterns                         | Roadmap                                                                                              |
-| [05_Data_Structures](05_Data_Structures/00_Roadmap.md)                         | Spatial structures, cache-aware containers                                  | Roadmap                                                                                              |
-| [06_Algorithms](06_Algorithms/00_Roadmap.md)                                   | Computational geometry, pathfinding, procedural generation                  | Roadmap                                                                                              |
-| [07_Concurrency_and_Parallelism](07_Concurrency_and_Parallelism/00_Roadmap.md) | Memory model, job systems, lock-free structures                             | **Under study** — [Foundations](07_Concurrency_and_Parallelism/01_Foundations/): 2 notes             |
-| [08_Systems_and_Performance](08_Systems_and_Performance/00_Roadmap.md)         | Cache hierarchy, data-oriented design, SIMD, profiling                      | **Under study** — [Data-Oriented Design](08_Systems_and_Performance/01_Data_Oriented_Design/): 5 notes |
-| [09_Tools_and_Pipeline](09_Tools_and_Pipeline/00_Roadmap.md)                   | Asset pipeline, serialization, build systems, editor tooling                | Roadmap                                                                                              |
-| [10_Audio](10_Audio/00_Roadmap.md)                                             | Real-time audio, mixing, spatialization, DSP                                | Roadmap                                                                                              |
-| [11_Networking](11_Networking/00_Roadmap.md)                                   | Transport, state sync, latency hiding, determinism                          | Roadmap                                                                                              |
+| [01_Mathematics](01_Mathematics/README.md)                                 | Linear algebra, calculus, numerical methods, probability, signal processing | **Under study** — [Linear Algebra](01_Mathematics/01_Linear_Algebra/README.md): 35 notes, 32 exercise pairs |
+| [02_Rendering](02_Rendering/README.md)                                     | MVP, rasterization, graphics APIs, shading, shadows                         | Roadmap — *next up*                                                                                  |
+| [03_Physics](03_Physics/README.md)                                         | Collision primitives, GJK/SAT, rigid body dynamics                          | Roadmap                                                                                              |
+| [04_Engine_Architecture](04_Engine_Architecture/README.md)                 | Game loop, memory, ECS, resources, tooling patterns                         | Roadmap                                                                                              |
+| [05_Data_Structures](05_Data_Structures/README.md)                         | Spatial structures, cache-aware containers                                  | Roadmap                                                                                              |
+| [06_Algorithms](06_Algorithms/README.md)                                   | Computational geometry, pathfinding, procedural generation                  | Roadmap                                                                                              |
+| [07_Concurrency_and_Parallelism](07_Concurrency_and_Parallelism/README.md) | Memory model, job systems, lock-free structures                             | **Under study** — [Foundations](07_Concurrency_and_Parallelism/01_Foundations/README.md): 2 notes             |
+| [08_Systems_and_Performance](08_Systems_and_Performance/README.md)         | Cache hierarchy, data-oriented design, SIMD, profiling                      | **Under study** — [Data-Oriented Design](08_Systems_and_Performance/01_Data_Oriented_Design/README.md): 5 notes |
+| [09_Tools_and_Pipeline](09_Tools_and_Pipeline/README.md)                   | Asset pipeline, serialization, build systems, editor tooling                | Roadmap                                                                                              |
+| [10_Audio](10_Audio/README.md)                                             | Real-time audio, mixing, spatialization, DSP                                | Roadmap                                                                                              |
+| [11_Networking](11_Networking/README.md)                                   | Transport, state sync, latency hiding, determinism                          | Roadmap                                                                                              |
+
+Each domain link lands on that domain's **index** — what exists there now. The index links on to
+`00_Roadmap.md`, the study plan for what does not exist yet.
 
 **Roadmap** means the study plan exists but no notes yet. **Under study** means notes exist and are actively being added to and revised.
 
@@ -40,7 +45,7 @@ Nothing here is ever finished — notes get revisited and deepened as the materi
 
 ## Documentation
 
-Documentation lives in [00_Documentation](00_Documentation/) and follows the [Diátaxis](https://diataxis.fr/) framework — separated by what you need at the moment you open it.
+Documentation lives in [00_Documentation](00_Documentation/README.md) and follows the [Diátaxis](https://diataxis.fr/) framework — separated by what you need at the moment you open it.
 
 ### Tutorials
 
@@ -79,10 +84,10 @@ Documentation lives in [00_Documentation](00_Documentation/) and follows the [Di
 
 | | |
 | :--- | :--- |
-| `randomizer.py` | Picks practice questions and scaffolds new exercise pairs — [reference](00_Documentation/references/Randomizer.md) |
-| `90_Code/` | C++23 CMake project with a GoogleTest suite — [build guide](00_Documentation/how-to/BuildAndTest.md) |
-| `99_Templates/` | Question and solution templates used by the scaffolder |
-| `scripts/` | Link and math checkers — run in CI on every push |
+| [randomizer.py](randomizer.py) | Picks practice questions and scaffolds new exercise pairs — [reference](00_Documentation/references/Randomizer.md) |
+| [90_Code](90_Code/README.md) | C++23 CMake project with a GoogleTest suite — [build guide](00_Documentation/how-to/BuildAndTest.md) |
+| [99_Templates](99_Templates/README.md) | Question and solution templates used by the scaffolder |
+| [scripts](scripts/README.md) | Link and math checkers — run in CI on every push |
 
 ```bash
 python3 randomizer.py -n 3 --practice     # today's practice

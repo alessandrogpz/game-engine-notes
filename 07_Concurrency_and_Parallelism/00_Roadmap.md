@@ -3,7 +3,9 @@
 Using more than one core without introducing bugs that only appear on someone else's machine. Modern engines are fundamentally parallel; this stops being optional quickly.
 
 > [!NOTE]
-> [01_Foundations](01_Foundations/) is populated. The remaining subjects are placeholders.
+> [01_Foundations](01_Foundations/README.md) is populated. The remaining subjects are placeholders.
+> What already exists in this domain is indexed in [README.md](README.md); this file is the plan
+> for what does not.
 
 ---
 

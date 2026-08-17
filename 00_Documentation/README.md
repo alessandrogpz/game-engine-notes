@@ -2,12 +2,12 @@
 
 Organized by the [Diátaxis](https://diataxis.fr/) framework, which separates documentation by what you need at the moment you open it.
 
-| | Serves | Answers |
-| :--- | :--- | :--- |
-| **[tutorials/](tutorials/)** | Learning | *"I'm new — take me through it."* |
-| **[how-to/](how-to/)** | A task | *"I need to do this specific thing."* |
-| **[references/](references/)** | Lookup | *"What is the exact name, path or flag?"* |
-| **[explanation/](explanation/)** | Understanding | *"Why is it built this way?"* |
+|                                     | Serves        | Answers                                   |
+| :---------------------------------- | :------------ | :---------------------------------------- |
+| **[Tutorials](#tutorials)**         | Learning      | *"I'm new — take me through it."*         |
+| **[How-to Guides](#how-to-guides)** | A task        | *"I need to do this specific thing."*     |
+| **[Reference](#reference)**         | Lookup        | *"What is the exact name, path or flag?"* |
+| **[Explanation](#explanation)**     | Understanding | *"Why is it built this way?"*             |
 
 The distinction matters: a tutorial that stops to explain design decisions stops being followable, and a reference that teaches stops being scannable.
 

@@ -26,7 +26,7 @@ Multiplayer as an engine subsystem. Only relevant if the games you want require 
 * Snapshot interpolation
 * Delta compression against acknowledged baselines
 * Relevancy and interest management
-* Quantization and bit packing — connects to [06_Algorithms](../06_Algorithms/00_Roadmap.md)
+* Quantization and bit packing — connects to [06_Algorithms](../06_Algorithms/README.md)
 
 ### 04_Latency_Hiding
 The techniques that make an unresponsive medium feel responsive.

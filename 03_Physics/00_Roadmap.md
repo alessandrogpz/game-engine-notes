@@ -1,6 +1,6 @@
 # Physics — Study Roadmap
 
-Collision detection and rigid body simulation. Heavily dependent on [05_Geometry](../01_Mathematics/01_Linear_Algebra/Concepts/05_Geometry/) and on numerical stability.
+Collision detection and rigid body simulation. Heavily dependent on [05_Geometry](../01_Mathematics/01_Linear_Algebra/README.md#05_geometry) and on numerical stability.
 
 > [!NOTE]
 > Placeholder. Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins.
@@ -23,7 +23,7 @@ Collision detection and rigid body simulation. Heavily dependent on [05_Geometry
 
 ### 03_Broad_Phase
 * Sweep and prune, spatial hashing, dynamic BVH
-* Shares structures with [05_Data_Structures](../05_Data_Structures/00_Roadmap.md) and rendering culling
+* Shares structures with [05_Data_Structures](../05_Data_Structures/README.md) and rendering culling
 
 ### 04_Rigid_Body_Dynamics
 * Linear and angular motion; inertia tensors

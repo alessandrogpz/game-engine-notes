@@ -1,6 +1,6 @@
 # Rendering — Study Roadmap
 
-Getting geometry onto a screen, correctly and quickly. This is the domain with the most direct payoff from the [linear algebra](../01_Mathematics/01_Linear_Algebra/) already covered — transforms, planes and point-plane distance are the machinery of the pipeline.
+Getting geometry onto a screen, correctly and quickly. This is the domain with the most direct payoff from the [linear algebra](../01_Mathematics/01_Linear_Algebra/README.md) already covered — transforms, planes and point-plane distance are the machinery of the pipeline.
 
 > [!NOTE]
 > Placeholder. Subjects gain `Concepts/`, `Exercises/` and `Assets/` folders as work begins, following the layout in the root README.
@@ -10,7 +10,7 @@ Getting geometry onto a screen, correctly and quickly. This is the domain with t
 ## Suggested Subjects
 
 ### 01_Model_View_Projection
-The single highest-value topic to start with. Builds directly on [04_Transforms](../01_Mathematics/01_Linear_Algebra/Concepts/04_Transforms/) and [07_Homogeneous_Coordinates](../01_Mathematics/01_Linear_Algebra/Concepts/04_Transforms/07_Homogeneous_Coordinates.md).
+The single highest-value topic to start with. Builds directly on [04_Transforms](../01_Mathematics/01_Linear_Algebra/README.md#04_transforms) and [07_Homogeneous_Coordinates](../01_Mathematics/01_Linear_Algebra/Concepts/04_Transforms/07_Homogeneous_Coordinates.md).
 
 * Model, view and projection matrices, and why the order is what it is
 * Perspective vs orthographic projection; deriving the perspective matrix

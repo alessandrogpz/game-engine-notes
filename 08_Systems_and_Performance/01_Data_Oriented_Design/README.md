@@ -28,7 +28,7 @@ bullets under it list everything else in that folder.
     *   *Companion Code:* [`alignment.cpp`](./02_Memory_Alignment/alignment.cpp) (Size comparison of aligned vs. padded structures).
 3.  **[Multi_Threading](./03_Multi_Threading/Multi_Threading.md)**
     *   *Concept:* Avoid False Sharing (cache line ping-ponging) — how threading interacts with the memory hierarchy.
-    *   *See also:* the language primitives themselves live in [07_Concurrency_and_Parallelism](../../07_Concurrency_and_Parallelism/00_Roadmap.md) — [Concurrency_Cpp17](../../07_Concurrency_and_Parallelism/01_Foundations/Concurrency_Cpp17.md) (threads, mutexes, atomics, condition variables, deadlock, with synchronization cost measurements), [Concurrency_Glossary](../../07_Concurrency_and_Parallelism/01_Foundations/Concurrency_Glossary.md), and the [chef-customer simulation](../../07_Concurrency_and_Parallelism/01_Foundations/multi_threading.cpp).
+    *   *See also:* the language primitives themselves live in [07_Concurrency_and_Parallelism](../../07_Concurrency_and_Parallelism/README.md) — [Concurrency_Cpp17](../../07_Concurrency_and_Parallelism/01_Foundations/Concurrency_Cpp17.md) (threads, mutexes, atomics, condition variables, deadlock, with synchronization cost measurements), [Concurrency_Glossary](../../07_Concurrency_and_Parallelism/01_Foundations/Concurrency_Glossary.md), and the [chef-customer simulation](../../07_Concurrency_and_Parallelism/01_Foundations/multi_threading.cpp).
 4.  **[dod_optimizations](./04_DOD_Optimizations/DOD_Optimizations.md)**
     *   *Concept:* A practical, 8-step guide to refactoring OOP entities into DOD structures, achieving up to a 40x speedup.
 5.  **[advanced_dod](./05_Advanced_DOD/Advanced_DOD.md)**
