@@ -5,7 +5,7 @@ items are kept rather than deleted — they record what has been worked through.
 
 | Domain | Open |
 | :--- | :--- |
-| [Mathematics](#mathematics) | 3 solutions · 11 modules |
+| [Mathematics](#mathematics) | 2 solutions · 11 modules |
 
 ---
 
@@ -24,7 +24,7 @@ Solution files still holding an `[Insert ...]` placeholder.
 - [x] **Distance Between a Point and a Plane** — plane normalization and signed distance: [S_05](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_05_Distance_Point_and_Plane.md)
 - [x] **Reflection Through a Plane** — closest-point and reflected-point calculations, $4 \times 4$ reflection matrix: [S_06](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_06_Reflection_Through_Plane.md)
 - [x] **Intersection of a Line and a Plane** — solving for $t$, parallel-case classification, ray sign conditions: [S_07](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_07_Intersection_Line_and_Plane.md)
-- [ ] **Intersection of Three Planes** — linear system setup, scalar triple product, cross-product solution, singular cases: [S_08](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_08_Intersection_Three_Planes.md)
+- [x] **Intersection of Three Planes** — linear system setup, scalar triple product, cross-product solution, singular cases: [S_08](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_08_Intersection_Three_Planes.md)
 - [ ] **Intersection of Two Planes** — direction via cross product, third-plane construction, closest-point property, parallel cases: [S_09](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_09_Intersection_Two_Planes.md)
 - [ ] **Transforming Planes** — adjugate normal transform, $d^B$ derivation, shear and reflection cases, determinant sign: [S_10](01_Mathematics/01_Linear_Algebra/Exercises/05_Geometry/Solutions/S_10_Transforming_Planes.md)
 
