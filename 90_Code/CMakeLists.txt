@@ -59,10 +59,14 @@ target_link_libraries(EngineNotes PRIVATE EngineNotesLib)
 
 # Fetch GoogleTest
 include(FetchContent)
+# A release archive rather than a git clone: FetchContent's GIT_REPOSITORY mode
+# leaves a nested .git inside the build tree, which IDEs register as a VCS root
+# and then report as an invalid mapping once the build directory is regenerated.
+# The hash also pins the contents, which a mutable tag does not.
 FetchContent_Declare(
   googletest
-  GIT_REPOSITORY https://github.com/google/googletest.git
-  GIT_TAG        v1.15.2
+  URL      https://github.com/google/googletest/archive/refs/tags/v1.15.2.tar.gz
+  URL_HASH SHA256=7b42b4d6ed48810c5362c265a17faebe90dc2373c885e5216439d37927f02926
 )
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
