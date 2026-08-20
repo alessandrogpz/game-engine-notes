@@ -23,6 +23,7 @@ add_executable(EngineNotesTests
         Transforms/Quaternions_tests.cpp
         Geometry/Triangle_Meshes_tests.cpp
         Geometry/Normal_Vectors_tests.cpp
+        Geometry/Lines_and_Rays_tests.cpp
 )
 
 # Set standards and modules

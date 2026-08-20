@@ -5,7 +5,7 @@ items are kept rather than deleted — they record what has been worked through.
 
 | Domain | Open |
 | :--- | :--- |
-| [Mathematics](#mathematics) | 1 solution · 10 modules |
+| [Mathematics](#mathematics) | 1 solution · 9 modules |
 
 ---
 
@@ -41,7 +41,7 @@ placeholders too, and become real tests once the module is implemented.
 
 - [ ] **Triangle Meshes** — indexed vertex/index buffers, closed-mesh validation: [Triangle_Meshes.cppm](90_Code/05_Geometry/Triangle_Meshes.cppm)
 - [x] **Normal Vectors** — face normal via cross product, inverse-transpose transform: [Normal_Vectors.cppm](90_Code/05_Geometry/Normal_Vectors.cppm)
-- [ ] **Lines and Rays** — point-to-line and skew/parallel line distances: [Lines_and_Rays.cppm](90_Code/05_Geometry/Lines_and_Rays.cppm)
+- [x] **Lines and Rays** — point-to-line and skew/parallel line distances: [Lines_and_Rays.cppm](90_Code/05_Geometry/Lines_and_Rays.cppm)
 - [ ] **Planes** — parametric plane, implicit plane dot product, 4D plane vector: [Planes.cppm](90_Code/05_Geometry/Planes.cppm)
 - [ ] **Distance Between a Point and a Plane** — normalization, signed distance evaluation: [Distance_Point_and_Plane.cppm](90_Code/05_Geometry/Distance_Point_and_Plane.cppm)
 - [ ] **Reflection Through a Plane** — closest point, reflected point, $4 \times 4$ matrix: [Reflection_Through_Plane.cppm](90_Code/05_Geometry/Reflection_Through_Plane.cppm)
