@@ -6,7 +6,7 @@ module;
 export module vectors_basics;
 
 import matrices_basics;
-import engine_notes_util;
+import engine_util;
 
 export namespace vectors {
 

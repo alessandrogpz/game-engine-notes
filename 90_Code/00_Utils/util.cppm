@@ -2,7 +2,7 @@ module;
 
 #include <cmath>
 
-export module engine_notes_util;
+export module engine_util;
 
 export namespace util {
 

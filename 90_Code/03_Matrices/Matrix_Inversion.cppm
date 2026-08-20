@@ -7,7 +7,7 @@ export module matrices_inversion;
 
 import matrices_basics;
 import matrices_determinants;
-import engine_notes_util;
+import engine_util;
 
 export namespace matrices {
 

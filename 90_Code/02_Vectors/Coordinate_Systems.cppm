@@ -8,7 +8,7 @@ export module vectors_coordinate_systems;
 
 import vectors_basics;
 import vectors_cross_product;
-import engine_notes_util;
+import engine_util;
 
 export namespace vectors {
 

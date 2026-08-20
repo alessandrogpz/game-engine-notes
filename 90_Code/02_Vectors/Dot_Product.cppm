@@ -7,7 +7,7 @@ module;
 export module vectors_dot_product;
 
 import vectors_basics;
-import engine_notes_util;
+import engine_util;
 
 export namespace vectors {
 
